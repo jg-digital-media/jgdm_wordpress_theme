@@ -1,0 +1,337 @@
+/* styles.scss - starts here */ 
+
+body {
+    
+    background: $color-main;
+    font-family: $font-main;
+    
+    section {
+        
+        display: grid;
+        grid-template-columns: 65% 1fr;
+        
+        /* border: solid red 1px; */
+        
+        .primary {
+            
+            width: 85%;
+            /* border: solid green 1px; */           
+            
+            h2 {
+                
+                
+                text-align: center;
+                margin: 20px 0;
+                
+                span {
+                    
+                    color: darkolivegreen;
+                    font-size: 14px;
+                }
+            }            
+            
+            .pagination {
+                
+                display: block;
+                margin: 10px auto; 
+                padding: 10px 5px;
+                background: $background-pagination; 
+                border: solid green 1px;               
+                color: $color-main;
+                width: 95%;
+                height: 40px;
+                text-align: center;
+                font-size: 17pt;
+                border-radius: 10px;
+                border: solid 3px black;
+                
+                a {
+                    
+                    color: $color-pagination-href;
+                    font-size: 15px;  
+                    display: inline-block;
+                    margin-left: 5px;
+                    text-decoration: none;
+                    padding: 10px 0px;
+                    transition: color .3s;
+                    font-weight: bold;
+                    
+                    &:hover {
+                        
+                        color: $color-pagination-href-hvr;
+                    }
+                    
+                    &.current-page {
+
+                        color: black;
+                        font-weight: bold;
+                    }
+                }   
+                
+                .nav-links {
+                    
+                    .current {
+
+                        color: black;
+                        font-size: 15px;
+                        font-weight: bold;
+                        padding: 10px 0px;
+                        padding: 0;
+                        margin-left: 5px;
+                    }
+                    
+                    .page-numbers {
+                        
+                        padding: 0;
+                    }
+                    
+                    .dots {
+                        
+                        color: #555555;
+                        font-size: 18pt;
+                    }
+                }
+                
+            }
+            
+            .entry {
+                
+                
+                display: block;
+                margin: 10px auto;
+                padding: 10px 5px;
+                background: $background-blog-entry;
+                transition: background 0.3s;
+                min-height: 50px;
+                width: 95%;
+                border-radius: 10px;
+                border: solid 2px black;
+
+                h3 {
+                    
+                    span {
+                        font-size: 10pt;
+                    }
+                }
+                
+                min-height: 50px;
+                
+                p {
+                    margin: 10px 0;
+                
+                }
+                
+                &:hover {
+                    
+                    background: darken( $background-blog-entry, 17% );
+                    // background: white;
+                }
+                
+                a {
+                    
+                    color: $color-href;
+                    transition: color .3s;
+                    
+                    &:hover {
+                        
+                        color: $color-href-hvr;
+                    }
+                }
+            }            
+        }
+        
+        .single,
+        .page {
+            
+            display: block;
+            margin: 0 auto;
+            width: 1000px;
+        }
+        
+        .secondary {
+            
+            /* border: solid green 1px; */
+            
+            h2 {
+                
+                text-align: center;
+                margin: 20px 0;
+            }
+            
+            aside {
+                
+                display: block;
+                margin: 0 auto;
+            }
+            
+            .widget_area {
+                
+                display: block;
+                background: yellow;
+                margin: 10px 10px;
+                padding: 4px;
+                width: 80%;
+                border: solid black 3px;
+                
+                h3 {
+                    
+                    text-align: center;
+                    margin: 10px 0;
+                }
+                
+                p {
+                    
+                    line-height: 1.6;
+                }
+                
+            }
+            
+            .widget_html,
+            .widget_search,
+            .widget_recent,
+            .widget_archive {
+                
+                .widget_block {
+                    
+                    list-style: none;
+                }
+                
+            }
+            
+            .widget_html {
+                
+                
+                p {
+                    /* color: red; */
+                }
+                
+                span {
+                    
+                    color: red;                    
+                }
+                
+                div {
+                    
+                    color: red;                    
+                }
+                
+                em, i {
+                    
+                    color: green;
+                }
+                
+                strong, b {
+                    
+                    color: green;
+                }
+            }
+            
+            .widget_search {
+                
+                label {
+                    
+                    display: inline-block;
+                    color: black;
+                    margin-top: 20px;
+                    margin: 15px 0;
+                    font-size: 15pt;
+                    font-weight: bold;
+                    text-align: center;
+                }
+                
+                .wp-block-search__inside-wrapper {
+                    
+                    .wp-block-search__input {
+                    
+                        border: solid 3px black;
+                        padding: 10px;
+                        border-radius: 5px;
+                        font-size: 14pt;
+                        transition: background .3s;
+                        
+                        &:hover {
+                            
+                            background: lightyellow;
+                        }
+                    }
+                
+                
+                    .wp-block-search__button {
+                        
+                        background: yellow;
+                        width: 50px;
+                        border: solid 3px black;
+                        padding: 0 5px;
+                    
+                    }
+                }
+            }
+            
+            .widget_recent {
+                
+                .widget_block {
+                
+                    h3 {
+                        
+                        text-align: center;
+                    }
+                    
+                    ul {
+                    
+                        li {
+                            
+                            /* list-style: square; */
+                            padding-left: 5px;
+                            line-height: 1.7;
+                            font-weight: bold;
+
+                            a {
+
+                                color: red;
+                                transition: color .3s;
+                                
+                                &:hover {
+                                    
+                                    color: green;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .widget_archive {
+                
+                .widget_block {
+                    
+                    list-style: none;
+                    
+                    .wp-block-archives {
+                        
+                        margin: 10px 0;
+                        
+                        li {
+                            
+                            list-style: none;
+                            color: red;
+                            font-weight: bold;
+                            
+                            a {
+                                
+                                color: green;
+                                transition: color .3s;
+                                
+                                &:hover {
+                                    
+                                    color: red;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+

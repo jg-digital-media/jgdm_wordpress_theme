@@ -1,0 +1,599 @@
+    
+    section.single_php {
+        
+        grid-template-columns: 1fr;   
+        width: 60%;
+        margin: 0 auto;      
+                         
+            
+        article {
+            
+            display: block;
+            margin: 0 auto;
+            
+            h2.post_headline {
+                
+                text-align: center;
+                border-bottom: solid black 2px;
+            }  
+            
+            .align-center {
+                
+                border-bottom: solid 2px red;
+                text-align: center;
+            }  
+            
+            div {
+                
+                background: #ade0f1;
+                padding: 10px;
+                border-radius: 10px;
+                margin: 10px auto;
+                transition: background .2s; 
+                width: 70%;
+                display: block;
+                
+                
+                &:hover {
+                    
+                    background: #64cfca;
+                }                
+                
+            }
+            
+            h3 {  
+                
+                .the_category_list {
+
+                    /* border: solid red 1px */
+
+                    a {
+                        color: $color-href-two;
+                        transition: color .2s;
+
+                        &:hover {
+
+                            color: $color-href-two-hvr;
+                        }
+                    }
+                }
+                
+            }
+            
+            p.posts_available {
+                
+                text-align: center;
+                font-weight: bold;
+                
+                .total_results {
+                    
+                    color: red;
+                }
+                
+            }
+            
+            nav.pagination {
+                
+                /* border: solid blue 1px; */
+                
+                .nav-links {
+                    
+                    text-align: center;
+                    
+                    .prev {
+                        
+                        /* color: red; */
+                        //border: solid yellow 1px;
+                        
+                    }
+                    
+                    .current {
+                        
+                        /* color: red; */
+                        //border: solid yellow 1px;
+                        font-weight: bold;
+                        
+                    }
+                    
+                    .dots {
+                        
+                        /* color: red; */
+                        //border: solid yellow 1px;
+                        
+                    }
+                    
+                    .page-numbers {
+                        
+                        /* color: red; */
+                        //border: solid yellow 1px;
+                        
+                    }
+                    
+                    .next {
+                        
+                        /* color: red; */
+                        //border: solid yellow 1px;
+                        
+                    }
+                    
+                    
+                }
+            }
+        }
+        
+        .single, .page, .author, .archive {
+
+            width: 80%;
+            
+            hr {
+
+                /* width: 50%; */
+                width: 100%;
+            }
+        
+            p {
+
+                line-height: 2;
+                margin-top: 5px;
+            }
+            
+            .number_of_results {
+                
+                font-weight: bold;
+                
+                .total_results {
+                    
+                    color: red;
+                }
+            }
+            
+            a {
+                
+                font-weight: bold;
+                color: $color-href-two;
+                transition: color .2s;
+                
+                &:hover {
+                    
+                    color: $color-href-two-hvr;
+                }
+            }
+
+            strong, b {
+
+                color: red;
+            }
+
+            em, i {
+
+                color: bisque;
+            }
+
+            h2, h3, h4, h5, h6 {
+
+                margin-top: 15pt;
+            }
+            
+            // styling lists
+            ul, ol {
+                
+                margin-left: 30px;
+                margin-top: 10px;
+                line-height: 1.4;
+            }
+
+            // container element for Wordpress code Snippets
+            .hcb_wrap.hcb_wrap {
+
+                width: 90%;          
+
+
+                // c
+                .hcb_wrap.hcb_wrap code, 
+                .hcb_wrap.hcb_wrap pre {
+
+                    border: solid red 1px;
+                }
+                
+                .hcb-clipboard {
+                    
+                    font-weight: bold;
+                    color: red;
+                }
+
+                pre {
+
+                    border: solid red 2px;
+                    background: $background-code-snippet;
+                    width: 100%;
+                    line-height: 1.6;
+                    
+                    &::before {
+                        
+                        right: 26px;
+                        font-size: 18pt;
+                        color: purple;
+                        border-bottom: azuresolid;
+                        box-shadow: yellowgreen 1px 3px;
+                    }
+                    
+                    code {
+                        
+                        width: 100%;
+                        word-break: break-all;
+                        background: $background-code-snippet;
+                        white-space: pre-wrap;
+                    }
+                }
+            }
+            
+            .wp-caption {
+                
+                display: block;
+                margin: 0 auto;
+                
+                
+                &.aligncenter {
+                    
+                    text-align: center;
+                    margin: 0 auto;
+                }
+                
+                &.alignleft {
+                    
+                    text-align: left;
+                    margin: 0 0 0 0;
+                }
+                
+                &.alignright {
+                    
+                    text-align: right;
+                    margin: 0px 0 0 70%;
+                }
+                
+            }   
+            
+            
+            // Wordpress categories list  - wp_list_categories()
+            h3 {
+                
+                // - wp_list_categories()
+                .categories {
+                    
+                    /* background: green; */
+                    list-style: none;
+                    
+                    ul {
+                        
+                        /* border-bottom: red 3px solid; */
+                        
+                        li {
+                            
+                            display: inline-block;
+                            
+                            &::after {
+                                
+                                content: ">>";
+                                color: aqua;
+                                color: black;
+                                
+                                & :last-child {
+
+                                    content: "";
+                                }
+                            }                            
+                            
+                            a {
+                                color: darkred;
+                                transition: .2s color;
+                                
+                                &:hover {
+                                    color: red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .post_authors {   
+                    
+                /* background: green; */
+                
+                // list-style: none;
+
+                ul {
+                    
+                    font-size: 15pt;
+                    
+                    li:first-child {
+                        
+                        display: none;
+                    }
+                    
+                    li {
+                        
+                        list-style: none;
+                        
+                        a {                            
+                            
+                            color: $color-href-three;
+                            transition: color .2s;
+                            
+                            &:hover {
+                                
+                                color: $color-href-three-hvr;
+                                text-decoration: none;
+                            }
+                        }
+                    
+                    }
+                }
+                
+            }
+            
+            .blog_post_single {
+                
+                background: #69e9cb;
+                border: solid red 1px;
+                border-radius: 5px;
+                padding: 15px;
+                margin: 15px auto;
+                
+                h3 {
+                    
+                    text-align: center;
+                    margin-bottom: 10px;
+                    margin-top: 3px;
+                    font-size: 13pt;
+                    
+                    span {
+                        
+                        color: red;
+                        display: inline-block;
+                        vertical-align: middle;
+                        bottom: 0;
+                    }
+                }
+                
+                .posts_available {
+                    
+                    color: red;
+                    text-align: center;
+                    
+                    span.total_results {
+                        
+                        /* width: 0; */
+                        font-weight: bold;
+                    }
+                    
+                }
+                
+                span {
+                    
+                    text-align: center;
+                    display: block;
+                    /* margin-bottom: 30px; */
+                    position: relative;
+                    bottom: 10px;
+                    font-size: 13px;
+                    font-weight: bold;
+                    font-style: italic;
+                    color: #ab2323;
+                }
+                
+                aside {
+                    
+                    display: flex;
+                    background: #72f9ff;
+                    justify-content: space-around;
+                    margin: 3px auto;
+                    border-radius: 10px;
+                    font-size: 13px;
+                    
+                    a {
+                        
+                        color: $color-href;
+                        transition: .2s color;
+                        
+                        
+                        &:hover {
+                            
+                            color: $color-href-hvr;
+                        }
+                    }
+                    
+                }
+            }
+            
+            .blog_posts_archive {
+                
+                /* border: solid red 1px; */
+                
+                ul {
+                    
+                    font-size: 15pt;
+                    
+                    li:first-child {
+                        
+                        display: none;
+                        
+                    }
+                    
+                    li {
+                        
+                        list-style: none;
+                        
+                        a {                            
+                            
+                            color: $color-href-three;
+                            transition: color .2s;
+                            
+                            &:hover {
+                                
+                                color: $color-href-three-hvr;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        
+        .author {
+            
+            /* border: solid red 1px; */
+            
+            h3 {
+                
+                text-align: center;
+            }
+            
+            .posts_available {
+                
+                text-align: center;
+            }
+                
+            
+            .pagination {
+
+                /* border: solid yellow 1px; */
+
+                .nav-links {
+
+                    font-size: 15px;
+                    /* color: yellow; */
+                    color: black;
+                    font-weight: bold;
+                    text-align: center;
+
+                    bottom: 0;
+
+                    .page-numbers {
+
+                        bottom: 0;
+
+                    }
+
+                    .current {
+
+                    }
+                }
+            }            
+        }
+        
+        .archive {
+            
+            /* border: solid red 1px; */
+            
+            
+            .archive-entry {
+                
+                background: #ade0f1;
+                padding: 10px;
+                border-radius: 10px;
+                margin: 10px auto;
+                transition: background .2s; 
+                display: block;
+                
+                &:hover {
+                    
+                    background: #64cfca;
+                }
+                
+                span {
+                    
+                    color: black;
+                    font-size: 14px;
+                }
+            }
+                
+            .pagination {
+
+                /* border: solid yellow 1px; */
+
+                .nav-links {
+
+                    font-size: 15px;
+                    /* color: yellow; */
+                    color: black;
+                    font-weight: bold;
+                    text-align: center;
+
+                    bottom: 0;
+
+                    .page-numbers {
+
+                        bottom: 0;
+
+                    }
+
+                    .current {
+
+                    }
+                }
+            }            
+            
+            
+        }
+        
+        .page {
+            
+            .search-entry {
+                
+                background: #ade0f1;
+                padding: 10px;
+                border-radius: 10px;
+                margin: 10px auto;
+                transition: background .2s; 
+                width: 70%;
+                display: block;
+                
+                &:hover {
+                    
+                    background: #64cfca;
+                }   
+                
+                &.no-result {
+                    
+                    font-weight: bold;
+                    text-align: center;
+                    
+                    
+                    background: #ade0f1;
+                    
+                    &:hover {                        
+                        
+                        background: #ade0f1;
+                    }
+                }
+                
+                
+                .post_headline {
+                    
+                    
+                    
+                }
+                
+                
+                
+                
+            }
+            
+                
+            h2 {
+                
+                text-align: center;
+            }
+                
+            .number_of_results {
+
+                margin: 0;
+                bottom: 10px;
+                text-align: center;
+            }
+            
+        }
+        
+    }

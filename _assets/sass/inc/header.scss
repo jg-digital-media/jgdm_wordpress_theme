@@ -1,0 +1,37 @@
+header {
+    
+    background: $background-secondary;
+    height: 80px;
+    
+    h1 {
+        
+        text-align: center;
+        color: $color-secondary;
+    }
+    
+    nav.navigation {
+        
+        display: block;
+        padding: 20px auto;
+        /* width: 13%; */
+        text-align: center;
+        
+        li {
+            
+            height: auto;
+            
+            display: inline-block;
+            
+            a {
+                
+                color: $color-nav;
+                
+                &:hover {
+                    
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    
+}
