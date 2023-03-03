@@ -1,8 +1,8 @@
-# JGDM Blog for 2023 - 03/03/2023 - 15:18
+# JGDM Blog for 2023 - 03/03/2023 - 16:14
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023)
 
-`cd: wordpress/jgdmblog_2023`
+`git clone https://github.com/jg-digital-media/jgdm_wordpress_theme`
 
 ## Goals:   
 
@@ -14,7 +14,7 @@
 + `[TODO: ]` - Search Templates 
 + `[TODO: ]` - Single post comment templates
 + A newer fresher redesign for my blog
-+ To explore and recognise errors with displaying code snippets when posting code with [N] Plugin
++ To explore and recognise errors with displaying code snippets when posting code with `Highlighting Code Block`  Plugin
 + Build out the templates to build a blog with added custom post type
 
 ## Files required
@@ -26,21 +26,17 @@
   + favicon.png (optional)
 
 ## Directories required
-  + assets
+  + assets  
+  + inc/
   + template-parts
-    + inc/
   + img
   + scripts/
   + sass/  
 
 ## Build out the templates to build a blog with added custom post type
-  + **Posts**
-  + Categories
-  + Taxonomies
-  + Archives
-  + 
 
   + Custom Templates
+    + index.php
     + privacy.php
     + 404.php
     + home.php
@@ -49,9 +45,12 @@
     + page.php
     + search.php
     + category.php
+      +category-category_name.php
     + date.php
-    + article.php
     + archive.php
+      +archive-post_type_name.php
+    + author.php
+      +author-author_name.php
     + category.php
     + author.php
 
