@@ -1,8 +1,5 @@
-# JGDM Blog for 2023 - 06/03/2023 - 15:28 v1.2
-v1.2
-<pre>
+# JGDM Blog for 2023 - 06/03/2023 - 15:28 (v1.2)
 
-</pre>
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023)
 
 `git clone https://github.com/jg-digital-media/jgdm_wordpress_theme`
