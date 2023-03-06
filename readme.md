@@ -1,7 +1,7 @@
 # JGDM Blog for 2023 - 06/03/2023 - 15:28
 v1.2
 
-<br />
+<br/>
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023)
 
 `git clone https://github.com/jg-digital-media/jgdm_wordpress_theme`
