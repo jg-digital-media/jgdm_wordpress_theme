@@ -52,8 +52,6 @@
       +archive-post_type_name.php
     + author.php
       +author-author_name.php
-    + category.php
-    + author.php
 
 
     + Enable widgets
