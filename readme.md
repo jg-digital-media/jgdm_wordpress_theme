@@ -1,10 +1,21 @@
-# JGDM Blog for 2023 - 06/03/2023 - 15:06
+# JGDM Blog for 2023 - 06/03/2023 - 15:24
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023)
 
 `git clone https://github.com/jg-digital-media/jgdm_wordpress_theme`
 
-## Goals:   
+
+## **Sections**
+
+  + [Goals](#goals)
+  + [Files Required](#files-required)
+  + [Code Snippets](#code-snippets)
+  + [Plugins](#plugins)
+  + [Links](#links)
+  + [To Do](#to-do)
+
+## Goals:  
+[Back to Top](#sections) 
 
 + `[DONE]` - Export the Database from blog.jonniegrieve.co.uk and import into a fresh wordpress installation.
 + `[DONE]` - Enqueue Styling
@@ -19,6 +30,8 @@
 + Build out the templates to build a blog with added custom post type
 
 ## Files required
+[Back to Top](#sections)
+
   + index.php
   + functions.php
   + style.css
@@ -26,7 +39,7 @@
   + sass.scss (optional)
   + favicon.png (optional)
 
-## Directories required
+### Directories required
   + assets  
   + inc/
   + template-parts
@@ -35,6 +48,7 @@
   + sass/  
 
 ## Build out the templates to build a blog with added custom post type
+[Back to Top](#sections)
 
   + Custom Templates
     + index.php
@@ -57,8 +71,9 @@
     + Enable widgets
     
 ## Code Snippets	
+[Back to Top](#sections)
 
-	### WordPress Loop
+### WordPress Loop
 
 ```php 
         
@@ -113,7 +128,7 @@
 	<?php endif; ?>      
 ```
 
-	### Post Pagination
+### Post Pagination
 
 
 <!-- WordPress Core Posts Pagination -->
@@ -176,7 +191,7 @@
 
 ```
 
-	### WordPress Menu Areas
+### WordPress Menu Areas
 
 ```php
 
@@ -209,7 +224,7 @@
                     
 ```
 
-	### Enqueuing Assets into your theme
+### Enqueuing Assets into your theme
 
 ```php 
 
@@ -228,7 +243,7 @@
 
 ```
 
-	### Widget Areas
+### Widget Areas
 
 ```php 
 
@@ -246,7 +261,7 @@
     <?php dynamic_sidebar( "widget_area_identifier" ); ?>   
 ```
 
-	### Search
+### Search
 
 ```php 
 
@@ -296,7 +311,7 @@
     <?php endif; ?>   
 	
 ```
-	### Author and Archival Templates
+### Author and Archival Templates
 
 ```php 
 
@@ -317,7 +332,7 @@
 
 ```
 
-	### Customise the admin area
+### Customise the admin area
 
 ```php 
 
@@ -326,7 +341,7 @@
 
 ```
 
-	### Plugin Development
+### Plugin Development
 
 ```php 
 
@@ -335,51 +350,6 @@
 
 ```
 
-
-	
-## Plugins
-
-+ Advanced Custom Fields - `Version 6.0.7 | By Delicious Brains | Activated`
-
-+ Advanced Editor Tools (previously TinyMCE Advanced) - `Version 5.6.0 | By Automattic | Deactivated`
-
-+ Akismet Anti-Spam - `Version 5.0.2 | By Automattic | Deactivated`
-
-+ APH Prism Syntax Highlighter - `Version 1.4.1 | By Agus Prawoto Hadi | Deactivated`
-
-+ Better Search Replace - `Version 1.4.2 | By WP Engine | Activated`
-
-+ Code Snippets - `Version 3.2.2 | By Code Snippets Pro | Deactivated`
-
-+ Code Syntax Block - `Version 3.1.1 | By Marcus Kazmierczak | Activated`
-
-+ Coming Soon Page, Maintenance Mode, Landing Pages & WordPress Website Builder by SeedProd - `Version 6.15.7 | By SeedProd | Deactivated`
-
-+ CookieYes | GDPR Cookie Consent - `Version 3.0.8 | By CookieYes | Deactivated`
-
-+ CSS & JavaScript Toolbox - `Version 11.5 | By Wipeout Media | Deactivated`
-
-+ Custom Post Type Date archives - `Version 2.7.1 | By keesiemijer | Activated`
-
-+ Custom Post Type UI -  `Version 1.13.4 | By WebDevStudios | Activated`
-
-+ Easy Video Player - `Version 1.2.2.3 | By naa986 | Deactivated`
-
-+ Select Hello Dolly - `Version 1.7.2 | By Matt Mullenweg | Deactivated`
-
-+ Highlighting Code Block - `Version 1.6.1 | By LOOS, Inc. | Activated`
-
-+ JGDM Development Plugin - `Version 1.0.0 | By Jonathan Grieve @jg_digitalMedia | Deactivated`
-
-+ Select LightStart - `Version 2.6.2 | By Themeisle | Activated`
-
-+ My Syntax Highlighter - `Version 2.58 | By Space X-Chimp | Deactivated`
-
-+ SyntaxHighlighter Evolved - `Version 3.6.2 | Alex Mills (Viper007Bond) | Activated`
-
-+ WP-Paginate - `Version 2.2.0 | By Max Foundry | Dectivated`
-
-+ Yoast SEO - `Version 20.0 | By Team Yoast | Deactivated`
   
 ## The Loop
 
@@ -505,7 +475,54 @@
     <?php //echo get_usermeta($post->post_author,'author_url', 'a'); ?>  
 ```
 
+	
+## Plugins
+[Back to Top](#sections)
+
++ Advanced Custom Fields - `Version 6.0.7 | By Delicious Brains | Activated`
+
++ Advanced Editor Tools (previously TinyMCE Advanced) - `Version 5.6.0 | By Automattic | Deactivated`
+
++ Akismet Anti-Spam - `Version 5.0.2 | By Automattic | Deactivated`
+
++ APH Prism Syntax Highlighter - `Version 1.4.1 | By Agus Prawoto Hadi | Deactivated`
+
++ Better Search Replace - `Version 1.4.2 | By WP Engine | Activated`
+
++ Code Snippets - `Version 3.2.2 | By Code Snippets Pro | Deactivated`
+
++ Code Syntax Block - `Version 3.1.1 | By Marcus Kazmierczak | Activated`
+
++ Coming Soon Page, Maintenance Mode, Landing Pages & WordPress Website Builder by SeedProd - `Version 6.15.7 | By SeedProd | Deactivated`
+
++ CookieYes | GDPR Cookie Consent - `Version 3.0.8 | By CookieYes | Deactivated`
+
++ CSS & JavaScript Toolbox - `Version 11.5 | By Wipeout Media | Deactivated`
+
++ Custom Post Type Date archives - `Version 2.7.1 | By keesiemijer | Activated`
+
++ Custom Post Type UI -  `Version 1.13.4 | By WebDevStudios | Activated`
+
++ Easy Video Player - `Version 1.2.2.3 | By naa986 | Deactivated`
+
++ Select Hello Dolly - `Version 1.7.2 | By Matt Mullenweg | Deactivated`
+
++ Highlighting Code Block - `Version 1.6.1 | By LOOS, Inc. | Activated`
+
++ JGDM Development Plugin - `Version 1.0.0 | By Jonathan Grieve @jg_digitalMedia | Deactivated`
+
++ Select LightStart - `Version 2.6.2 | By Themeisle | Activated`
+
++ My Syntax Highlighter - `Version 2.58 | By Space X-Chimp | Deactivated`
+
++ SyntaxHighlighter Evolved - `Version 3.6.2 | Alex Mills (Viper007Bond) | Activated`
+
++ WP-Paginate - `Version 2.2.0 | By Max Foundry | Dectivated`
+
++ Yoast SEO - `Version 20.0 | By Team Yoast | Deactivated`
+
 ## Links 
+[Back to Top](#sections)
 
 ### Fixing Pagination links for Custom Post Types - [Link] (https://wordpress.stackexchange.com/questions/120407/how-to-fix-pagination-for-custom-loops)
 
