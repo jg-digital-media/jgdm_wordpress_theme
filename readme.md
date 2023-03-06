@@ -533,7 +533,8 @@
 
 ### current author variable method. -  [Codex: Author Templates](https://codex.wordpress.org/Author_Templates)
 
-## Todo
+## To-do:
+[Back to Top](#sections)
 
 + Pagination links - current page link - visited page link
   + Pagination for category templates
