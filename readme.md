@@ -1,21 +1,10 @@
-# JGDM Blog for 2023 - 06/03/2023 - 15:28 (v1.2)
+# JGDM Blog for 2023 - 07/03/2023 - 15:15
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023)
 
 `git clone https://github.com/jg-digital-media/jgdm_wordpress_theme`
 
-
-## **Sections**
-
-  + [Goals](#goals)
-  + [Files Required](#files-required)
-  + [Code Snippets](#code-snippets)
-  + [Plugins](#plugins)
-  + [Links](#links)
-  + [To Do](#to-do)
-
-## Goals:  
-[Back to Top](#sections) 
+## Goals:   
 
 + `[DONE]` - Export the Database from blog.jonniegrieve.co.uk and import into a fresh wordpress installation.
 + `[DONE]` - Enqueue Styling
@@ -30,8 +19,6 @@
 + Build out the templates to build a blog with added custom post type
 
 ## Files required
-[Back to Top](#sections)
-
   + index.php
   + functions.php
   + style.css
@@ -39,7 +26,7 @@
   + sass.scss (optional)
   + favicon.png (optional)
 
-### Directories required
+## Directories required
   + assets  
   + inc/
   + template-parts
@@ -48,7 +35,6 @@
   + sass/  
 
 ## Build out the templates to build a blog with added custom post type
-[Back to Top](#sections)
 
   + Custom Templates
     + index.php
@@ -66,12 +52,13 @@
       +archive-post_type_name.php
     + author.php
       +author-author_name.php
+    + category.php
+    + author.php
 
 
     + Enable widgets
     
 ## Code Snippets	
-[Back to Top](#sections)
 
 ### WordPress Loop
 
@@ -224,7 +211,7 @@
                     
 ```
 
-### Enqueuing Assets into your theme
+	### Enqueuing Assets into your theme
 
 ```php 
 
@@ -261,7 +248,7 @@
     <?php dynamic_sidebar( "widget_area_identifier" ); ?>   
 ```
 
-### Search
+	### Search
 
 ```php 
 
@@ -332,7 +319,7 @@
 
 ```
 
-### Customise the admin area
+	### Customise the admin area
 
 ```php 
 
@@ -341,7 +328,7 @@
 
 ```
 
-### Plugin Development
+### Plugin Development (in code)
 
 ```php 
 
@@ -476,8 +463,7 @@
 ```
 
 	
-## Plugins
-[Back to Top](#sections)
+## Plugin List
 
 + Advanced Custom Fields - `Version 6.0.7 | By Delicious Brains | Activated`
 
@@ -522,7 +508,6 @@
 + Yoast SEO - `Version 20.0 | By Team Yoast | Deactivated`
 
 ## Links 
-[Back to Top](#sections)
 
 ### Fixing Pagination links for Custom Post Types - [Link] (https://wordpress.stackexchange.com/questions/120407/how-to-fix-pagination-for-custom-loops)
 
@@ -533,8 +518,7 @@
 
 ### current author variable method. -  [Codex: Author Templates](https://codex.wordpress.org/Author_Templates)
 
-## To-do:
-[Back to Top](#sections)
+## Todo
 
 + Pagination links - current page link - visited page link
   + Pagination for category templates
