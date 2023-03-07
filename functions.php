@@ -3,7 +3,7 @@
     // add theme supports
     add_theme_support( "widgets" );
 
-    add_theme_support( "menus" );
+    //add_theme_support( "menus" );
 
     // Remove wp version number from scripts and styles
     function remove_css_js_version( $src ) {
