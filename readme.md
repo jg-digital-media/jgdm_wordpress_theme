@@ -1,10 +1,28 @@
-# JGDM Blog for 2023 - 07/03/2023 - 15:15
+# JGDM Blog Theme  (2023) - 07/03/2023 - 15:15
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023)
 
 `git clone https://github.com/jg-digital-media/jgdm_wordpress_theme`
 
-## Goals:   
+
+
+## **Sections**
+
+  + [Goals](#goals)
+
+  + [Setup](#setup)
+
+  + [Code Snippets](#code-snippets)
+
+  + [Plugun List](#plugin-list)
+  
+  + [Links](#links)
+  
+  + [Todo](#todo)
+
+
+## Goals:  
+[Back to Top](#sections) 
 
 + `[DONE]` - Export the Database from blog.jonniegrieve.co.uk and import into a fresh wordpress installation.
 + `[DONE]` - Enqueue Styling
@@ -18,7 +36,25 @@
 + To explore and recognise errors with displaying code snippets when posting code with `Highlighting Code Block`  Plugin
 + Build out the templates to build a blog with added custom post type
 
-## Files required
+## Setup: 
+[Back to Top](#sections)
+
+1. setup theme supports.
+2. Enqueue Styles and Scripts
+3. Menu
+
+   + link to index.php
+   + link to home.php
+   + links to pages (page.php)
+
+4. Setup widgets
+
+5. post pagination
+
+6. Custom post typesd
+
+
+### Files required
   + index.php
   + functions.php
   + style.css
@@ -26,7 +62,7 @@
   + sass.scss (optional)
   + favicon.png (optional)
 
-## Directories required
+### Directories required
   + assets  
   + inc/
   + template-parts
@@ -34,7 +70,7 @@
   + scripts/
   + sass/  
 
-## Build out the templates to build a blog with added custom post type
+### Build out the templates to build a blog with added custom post type
 
   + Custom Templates
     + index.php
@@ -58,7 +94,9 @@
 
     + Enable widgets
     
-## Code Snippets	
+
+## Code Snippets
+[Back to Top](#sections)
 
 ### WordPress Loop
 
@@ -115,6 +153,131 @@
 	<?php endif; ?>      
 ```
 
+### The Loop
+
+```php
+
+<?php if( have_posts() ) : while ( have_posts() ) the_post(); ?>
+
+    // the loop block 
+ 
+<?php endwhile; else :  ?>
+
+    // no content block
+
+<?php endif;?>
+```
+
+### The Loop with WP Query
+```php
+<?php 
+        
+        $args = array( 'post_type' => 'blog_posts' );
+        
+        // wp query
+        $main_blog = new WP_Query( $args )
+                
+        ?>
+        
+        <h2>Latest Blogs</h2> 
+        
+        <nav class="pagination">        
+        
+            <a href="#" class="current-page">1</a> |
+            <a href="#">2</a> |
+            <a href="#">3</a> |
+            <a href="#">4</a>
+            
+        </nav>        
+        
+        
+        <?php if ( $main_blog->have_posts() ) : while ( $main_blog->have_posts() ) : $main_blog->the_post(); ?>
+        
+            <div class = "entry">
+    
+        ... 
+
+
+```
+
+### Category Methods
+
+```php
+
+    <!-- WP list categproes  -->
+    <p>wp_list_categories();</p>
+
+    <?php $args = array ("separator => ' - ' ") ?>
+    <h3><?php wp_list_categories( $args ); //get_categories(); ?></h3>
+```
+
+```php
+
+    <!-- WP list categproes  -->
+    <h3> 
+    <?php foreach( (get_the_category() ) as $category) {
+    
+        echo "<a href = '" . get_category_link( $category ) . "'> " . $category->cat_name . "</a>";
+        echo $category->cat_name . " - ";
+    
+    } ?> </h3>
+```
+
+```php
+
+    <!-- Full list of categories -->
+    <h3><?php 
+        the_category( " - "); 
+        //get_categories(); ?>
+    </h3> 
+
+```
+
+### Archive Methods
+
+```php
+
+<div class="blog_posts_archive">
+    <ul>
+        <li><?php wp_get_archives('post_type=blog_posts'); ?></li>
+    </ul>
+            
+</div> 
+```
+
+```php
+
+<h4>Authors list</h4>
+        
+<div class="post_authors">
+        
+    <ul>
+        <li><?php wp_list_authors(); ?></li>
+    </ul>
+</div>
+
+```
+
+```php
+<?php echo get_the_author(); ?>  - outputs the text of the author of a post. It can be placed in a link but doesn't link to the page for an author.
+
+<?php echo the_author_posts_link(); ?> - outputs a link to the author page
+
+<?php echo get_the_author_meta( 'nicename', $author_id ); ?>   -
+```
+
+`
+
+```php
+
+    <?php the_post(); ?> 
+    <?php echo the_author_posts_link(); ?>
+    <?php //echo get_the_author(); ?>
+    <?php //the_post(); ?>
+    <?php //echo get_usermeta($post->post_author,'author_url', 'a'); ?>  
+```
+
+	
 ### Post Pagination
 
 
@@ -338,132 +501,9 @@
 ```
 
   
-## The Loop
 
-```php
-
-<?php if( have_posts() ) : while ( have_posts() ) the_post(); ?>
-
-    // the loop block 
- 
-<?php endwhile; else :  ?>
-
-    // no content block
-
-<?php endif;?>
-```
-
-### The Loop with WP Query
-```php
-<?php 
-        
-        $args = array( 'post_type' => 'blog_posts' );
-        
-        // wp query
-        $main_blog = new WP_Query( $args )
-                
-        ?>
-        
-        <h2>Latest Blogs</h2> 
-        
-        <nav class="pagination">        
-        
-            <a href="#" class="current-page">1</a> |
-            <a href="#">2</a> |
-            <a href="#">3</a> |
-            <a href="#">4</a>
-            
-        </nav>        
-        
-        
-        <?php if ( $main_blog->have_posts() ) : while ( $main_blog->have_posts() ) : $main_blog->the_post(); ?>
-        
-            <div class = "entry">
-    
-        ... 
-
-
-```
-
-### Category Methods
-
-```php
-
-    <!-- WP list categproes  -->
-    <p>wp_list_categories();</p>
-
-    <?php $args = array ("separator => ' - ' ") ?>
-    <h3><?php wp_list_categories( $args ); //get_categories(); ?></h3>
-```
-
-```php
-
-    <!-- WP list categproes  -->
-    <h3> 
-    <?php foreach( (get_the_category() ) as $category) {
-    
-        echo "<a href = '" . get_category_link( $category ) . "'> " . $category->cat_name . "</a>";
-        echo $category->cat_name . " - ";
-    
-    } ?> </h3>
-```
-
-```php
-
-    <!-- Full list of categories -->
-    <h3><?php 
-        the_category( " - "); 
-        //get_categories(); ?>
-    </h3> 
-
-```
-
-### Archive Methods
-
-```php
-
-<div class="blog_posts_archive">
-    <ul>
-        <li><?php wp_get_archives('post_type=blog_posts'); ?></li>
-    </ul>
-            
-</div> 
-```
-
-```php
-
-<h4>Authors list</h4>
-        
-<div class="post_authors">
-        
-    <ul>
-        <li><?php wp_list_authors(); ?></li>
-    </ul>
-</div>
-
-```
-
-```php
-<?php echo get_the_author(); ?>  - outputs the text of the author of a post. It can be placed in a link but doesn't link to the page for an author.
-
-<?php echo the_author_posts_link(); ?> - outputs a link to the author page
-
-<?php echo get_the_author_meta( 'nicename', $author_id ); ?>   -
-```
-
-`
-
-```php
-
-    <?php the_post(); ?> 
-    <?php echo the_author_posts_link(); ?>
-    <?php //echo get_the_author(); ?>
-    <?php //the_post(); ?>
-    <?php //echo get_usermeta($post->post_author,'author_url', 'a'); ?>  
-```
-
-	
 ## Plugin List
+[Back to Top](#sections)
 
 + Advanced Custom Fields - `Version 6.0.7 | By Delicious Brains | Activated`
 
@@ -508,6 +548,7 @@
 + Yoast SEO - `Version 20.0 | By Team Yoast | Deactivated`
 
 ## Links 
+[Back to Top](#sections)
 
 ### Fixing Pagination links for Custom Post Types - [Link] (https://wordpress.stackexchange.com/questions/120407/how-to-fix-pagination-for-custom-loops)
 
@@ -519,6 +560,7 @@
 ### current author variable method. -  [Codex: Author Templates](https://codex.wordpress.org/Author_Templates)
 
 ## Todo
+[Back to Top](#sections)
 
 + Pagination links - current page link - visited page link
   + Pagination for category templates
