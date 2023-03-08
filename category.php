@@ -6,7 +6,9 @@
         
         <?php 
         
-            $args = array( 'post_type' => 'blog_posts' );
+            $args = array(
+                'post_type' => 'blog_posts' 
+            );
 
             // wp query
             $main_blog = new WP_Query( $args )
@@ -39,7 +41,10 @@
         <!--  No Post Found -->
         <?php endif; ?>
             
-        <!-- post pagination -->        
+        <!-- post pagination -->
+        
+        
+        
         <?php  
         
             // Reset the posts data 
