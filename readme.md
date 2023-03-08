@@ -1,4 +1,4 @@
-# JGDM Blog Theme  (2023) - 07/03/2023 - 14:00
+# JGDM Blog Theme  (2023) - 08/03/2023 - 16:27
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023)
 
@@ -558,6 +558,8 @@
 + using `prism.js`
 
 ### current author variable method. -  [Codex: Author Templates](https://codex.wordpress.org/Author_Templates)
+
+### [Category Pagination](https://www.trickyenough.com/pagination-in-wordpress/)
 
 ## Todo
 [Back to Top](#sections)
