@@ -62,7 +62,9 @@ require "inc/header.php"; ?>
             <div class="search-entry">
 
                 <h5><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h5>
-                <?php the_content(); ?>
+                
+                <p><?php the_field( "article_blurb" ); ?></p>
+                <p><?php the_excerpt(); ?></p>
 
             </div>        
         
