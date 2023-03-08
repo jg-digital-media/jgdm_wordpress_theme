@@ -6,14 +6,18 @@
         
         <?php 
         
-            $args = array( 'post_type' => 'blog_posts', 'category_name' => 'hundred_days_code');
+            $args = array( 
+                'post_type' => 'post',
+                //'post_type' => 'blog_posts', 
+                'category_name' => 'hundred_days_code'
+            );
 
             // wp query
             $main_blog = new WP_Query( $args )
                 
         ?>
 
-        <h2 class="post_headline"> <p>category.php (hundred days)</p>  <!-- get categories --> </h2>
+        <h2 class="post_headline"> <p>category.php (hundred days)</p>  </h2>
         
         <?php require "template-parts/category-list.php"; ?>
 
@@ -24,20 +28,24 @@
         <?php
             global $wp_query;
             $total_results = $wp_query->found_posts;
+            //$main_blog->blog_count;
         ?> 
 
-        <?php echo "<p class='posts_available'>Posts Available: " . "<span class='total_results'>" . $total_results . "</span></p>"; ?>
+        <?php echo "<p class='posts_available'>Posts Available: " . "<span class='total_results'>" . $total_results . "</span></p>"; 
+        ?>
+        
+        <?php //echo $main_blog->post_count; ?>
 
-        <!-- Post pagination for Searches -->
+        <!-- Post pagination for Hundred Days Category -->
         <?php
             $custom_query_args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 
             // pagination method
             the_posts_pagination();  
 
-            $temp_query = $wp_query;
-            $wp_query = NULL;
-            $wp_query = $main_blog; ?>
+            //$temp_query = $wp_query;
+            //$wp_query = NULL;
+            //$wp_query = $main_blog; ?>
 
         
         <!-- The WordPress Loop Begins -->
@@ -52,6 +60,7 @@
                 <h5> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h5>
 
                 <p> <?php the_excerpt(); the_field( "article_blurb" ); ?> </p>
+                
             </div>
 
         <?php endwhile; ?>
@@ -61,13 +70,16 @@
         <!--  No Post Found -->
         <?php endif; ?>
             
-        <!-- post pagination -->        
+        <!-- post pagination -->   
+        
+        
+        
         <?php  
         
             // Reset the posts data 
             wp_reset_postdata(); 
         
-            // the_posts_pagination(); 
+            the_posts_pagination(); 
         
             $wp_query = NULL;
             $wp_query = $temp_query;
