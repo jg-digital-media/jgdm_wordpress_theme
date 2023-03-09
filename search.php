@@ -20,11 +20,12 @@ require "inc/header.php"; ?>
 
         <?php
 
-            //global $query_string;
+            global $query_string;
 
-            //wp_parse_str( $query_string, $search_query );
-            //$search = new WP_Query( $search_query );
+            wp_parse_str( $query_string, $search_query );
+            $search = new WP_Query( $search_query );
 
+            echo $query_string;
         ?>      
  
         <!-- Get the number of search results -->
