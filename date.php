@@ -34,7 +34,7 @@
         <?php echo "<p class='posts_available'>Posts Available: " . "<span class='total_results'>" . $total_results . "</span></p>"; ?>
 
         
-        <!-- Post pagination for Searches -->
+        <!-- Post pagination -->
         <?php
             $custom_query_args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 
