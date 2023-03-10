@@ -41,6 +41,266 @@
                 
             }
             
+            // Styling the WordPess Comments List 
+            .comments-area {
+                
+                background: #ade0f1;
+                
+                &:hover {
+                    background: #ade0f1;
+                }
+                
+                .comments-title {
+                    
+                    font-size: 16pt;
+                    text-align: center;
+                    
+                }
+                
+                .comment-navigation {
+                    
+                    
+                    // pagination
+                    // previous_comments_link() 
+                    // next_comments_link()
+                    .nav-previous,
+                    .nav-next {
+                        
+                        font-size: 8pt;
+                        
+                        &:hover {
+                            
+                            background: none;
+                        }
+                        
+                        a {
+                            
+                            color: $color-href-two;
+                            
+                            &:hover {
+                                color: $color-href-two-hvr;
+                            }
+                            
+                        }
+                    }
+                    
+                }
+                
+                .pagination {
+                    
+                    background: none;
+                    
+                    &:hover {
+                        
+                    }
+                    
+                    .prev, 
+                    .next {
+                        
+                    }
+                    
+                    .page-numbers {
+                        
+                    }
+                }
+                
+                .comment-list {
+                    
+                    background: #ade0f1;
+                    
+                    &:hover {
+                        
+                        background: #ade0f1;
+                    }
+                    
+                    .byuser,
+                    .comment {
+                        
+                        .comment-body {
+                            
+                            p {
+                                font-size: 10pt;
+                                font-weight: bold;
+                                line-height: 2;
+                                margin: 20px 0;
+                            }
+                            
+                            .comment-author {
+                                
+                                font-size: 12px;
+                                background: #ade0f1;
+                                background: none;
+                                    
+                                &:hover {
+                                    
+                                    background: #ade0f1;
+                                    background: none;
+                                }
+                                
+                                img,
+                                .avatar,
+                                .photo {
+                                    
+                                }
+                                
+                                .avatar {
+                                    
+                                    border: solid 3px white;
+                                    border-radius: 50%;
+                                    vertical-align: middle;
+                                    width: 55px;
+                                    height: 55px;
+                                }
+                                
+                                .fn {
+                                    
+                                    a {
+
+                                    }
+                                    
+                                }
+                                
+                                .says {
+                                    
+                                }
+                                
+                            }
+                            
+                            .comment-meta {    
+                                
+                                background: none;                                
+                                
+                                font-size: 12px; 
+                                
+                                p {
+                                    
+                                }
+                                
+                                
+                                a {
+                                    
+                                    color: $color-href-two;
+                                    
+                                    &:hover {
+                                        color: $color-href-two-hvr;
+                                    }
+                                    
+                                }
+                                
+                                a.comment-link-edit {
+                                    
+                                }
+                            }
+                            
+                            
+                                
+                            .reply {
+                                
+                                font-size: 12px;
+                                background: none;
+                                margin: 0;
+                                padding: 0;
+
+                                a {
+                                    
+                                    color: $color-href-two;
+                                    
+                                    &:hover {
+                                        color: $color-href-two-hvr;
+                                    }
+
+                                }
+                            }
+                            
+                            .vcard {
+                                
+                            }
+                            
+                        }
+                    }
+                }
+                
+            }
+            
+            // Styling the WordPress Comment Form
+            .comment-respond {
+                
+                background: #ade0f1;
+                
+                &:hover {
+                    background: #ade0f1;
+                }
+
+                .comment-reply-title {
+
+                }   
+
+                .comment-form {
+
+                    .logged-in-as {
+
+                        font-size: 12px;
+
+                        a {
+                            
+                            color: $color-href-two;
+                            
+                            &:hover {
+                                color: $color-href-two-hvr;
+                            }
+                            
+                        }
+
+                        .required-field-message {
+
+                            .required {
+
+                                color: red;
+                                font-weight: bold;
+
+                            }
+                        }
+                    }
+
+                    .comment-form-comment {
+
+                        label {
+                            .required {
+
+                                color: red;
+                                font-weight: bold;
+
+                            }
+                        }
+
+                        #comment {
+
+                            background: antiquewhite;
+                            border-radius: 7px;
+                            border: solid 2px black;
+                            padding: 10px;
+                            line-height: 1.7;
+                            vertical-align: middle;
+
+                        }
+                    }
+
+                    .form-submit {
+
+                        .submit {
+
+                            background: antiquewhite;
+                            border-radius: 7px;
+                            border: solid 2px black;
+                            padding: 6px;
+                            line-height: 1.7;
+                            vertical-align: middle;
+
+                        }
+                    }
+            }
+            }
+            
             h3 {  
                 
                 .the_category_list {
@@ -75,6 +335,11 @@
             nav.pagination {
                 
                 /* border: solid blue 1px; */
+                background: #64cfca;
+                
+                &:hover {
+                    background: #64cfca;
+                }
                 
                 .nav-links {
                     
@@ -124,6 +389,18 @@
         .single, .page, .author, .archive {
 
             width: 80%;
+                
+                .post_headline {
+                    
+                    line-height: 1;
+                    text-align: center;
+                    color: #4a4949;
+                    font-size: 14px;                     
+                }
+            
+            
+            
+            
             
             hr {
 
@@ -440,7 +717,7 @@
             }
 
         }
-        
+                
         .author {
             
             /* border: solid red 1px; */
@@ -572,8 +849,9 @@
                 
                 .post_headline {
                     
-                    
-                    
+                    line-height: 1;
+                    text-align: center;
+                    color: red;
                 }
                 
                 
