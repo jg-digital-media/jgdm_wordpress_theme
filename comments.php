@@ -9,14 +9,11 @@
     
             <h2 class="comments-title">  View comments people have posted: </h2>
 
-            <!-- sorry - comments are closed - comments closed message 
+            <!-- Comments are closed message -->
 
                 <?php if ( ! comments_open() && get_comments_number() ) : ?>
                     <p class="no-comments"><?php _e( 'Comments are closed.', 'jgdm_blog' ); ?></p>
-                <?php endif; ?>
-            -->
-            
-            
+                <?php endif; ?>    
 
             <!-- Pagination -->
             <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
@@ -31,20 +28,20 @@
 
             <?php endif; // Check for comment navigation ?>
 
-                <!-- Numbered pagination links -->
-                <div class="pagination">
-                    <?php paginate_comments_links(); ?>
-                </div>
+            <!-- Numbered pagination links -->
+            <div class="pagination">
+                <?php paginate_comments_links(); ?>
+            </div>
 
-                <ol class="comment-list">
-                    <?php
-                        wp_list_comments( array(
-                            'style'       => 'ol',
-                            'short_ping'  => true,
-                            'avatar_size' => 74,
-                        ) );
-                   ?>
-                </ol><!-- .comment-list -->
+            <ol class="comment-list">
+                <?php
+                    wp_list_comments( array(
+                        'style'       => 'ol',
+                        'short_ping'  => true,
+                        'avatar_size' => 74,
+                    ) );
+               ?>
+            </ol><!-- .comment-list -->
     
         </div>
 
