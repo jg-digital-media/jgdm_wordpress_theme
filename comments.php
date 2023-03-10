@@ -12,7 +12,7 @@
             <!-- sorry - comments are closed - comments closed message 
 
                 <?php if ( ! comments_open() && get_comments_number() ) : ?>
-                    <p class="no-comments"><?php _e( 'Comments are closed.', 'twentythirteen' ); ?></p>
+                    <p class="no-comments"><?php _e( 'Comments are closed.', 'jgdm_blog' ); ?></p>
                 <?php endif; ?>
             -->
     
