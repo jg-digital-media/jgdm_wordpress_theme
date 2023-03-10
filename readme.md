@@ -1,4 +1,4 @@
-# JGDM Blog Theme  (2023) - 08/03/2023 - 16:27
+# JGDM Blog Theme  (2023) - 10/03/2023 - 09:44
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023)
 
@@ -51,7 +51,9 @@
 
 5. post pagination
 
-6. Custom post typesd
+6. Custom post types
+
+7. Single Post Page Comments - `upcoming`
 
 
 ### Files required
