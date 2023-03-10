@@ -1,4 +1,4 @@
-/* Last Update: 03/03/2023 - 12:23 */
+/* Last Update: 10/03/2023 - 15:48 */
 /*
 Theme Name: Jonnie Grieve Digital Media: Blog
 Theme URI: https://blog.jonniegrieve.co.uk
@@ -284,6 +284,134 @@ section.single_php article div {
 section.single_php article div:hover {
   background: #64cfca;
 }
+section.single_php article .comments-area {
+  background: #ade0f1;
+}
+section.single_php article .comments-area:hover {
+  background: #ade0f1;
+}
+section.single_php article .comments-area .comments-title {
+  font-size: 16pt;
+  text-align: center;
+}
+section.single_php article .comments-area .comment-navigation .nav-previous,
+section.single_php article .comments-area .comment-navigation .nav-next {
+  font-size: 8pt;
+}
+section.single_php article .comments-area .comment-navigation .nav-previous:hover,
+section.single_php article .comments-area .comment-navigation .nav-next:hover {
+  background: none;
+}
+section.single_php article .comments-area .comment-navigation .nav-previous a,
+section.single_php article .comments-area .comment-navigation .nav-next a {
+  color: green;
+}
+section.single_php article .comments-area .comment-navigation .nav-previous a:hover,
+section.single_php article .comments-area .comment-navigation .nav-next a:hover {
+  color: red;
+}
+section.single_php article .comments-area .pagination {
+  background: none;
+}
+section.single_php article .comments-area .comment-list {
+  background: #ade0f1;
+}
+section.single_php article .comments-area .comment-list:hover {
+  background: #ade0f1;
+}
+section.single_php article .comments-area .comment-list .byuser .comment-body p,
+section.single_php article .comments-area .comment-list .comment .comment-body p {
+  font-size: 10pt;
+  font-weight: bold;
+  line-height: 2;
+  margin: 20px 0;
+}
+section.single_php article .comments-area .comment-list .byuser .comment-body .comment-author,
+section.single_php article .comments-area .comment-list .comment .comment-body .comment-author {
+  font-size: 12px;
+  background: #ade0f1;
+  background: none;
+}
+section.single_php article .comments-area .comment-list .byuser .comment-body .comment-author:hover,
+section.single_php article .comments-area .comment-list .comment .comment-body .comment-author:hover {
+  background: #ade0f1;
+  background: none;
+}
+section.single_php article .comments-area .comment-list .byuser .comment-body .comment-author .avatar,
+section.single_php article .comments-area .comment-list .comment .comment-body .comment-author .avatar {
+  border: solid 3px white;
+  border-radius: 50%;
+  vertical-align: middle;
+  width: 55px;
+  height: 55px;
+}
+section.single_php article .comments-area .comment-list .byuser .comment-body .comment-meta,
+section.single_php article .comments-area .comment-list .comment .comment-body .comment-meta {
+  background: none;
+  font-size: 12px;
+}
+section.single_php article .comments-area .comment-list .byuser .comment-body .comment-meta a,
+section.single_php article .comments-area .comment-list .comment .comment-body .comment-meta a {
+  color: green;
+}
+section.single_php article .comments-area .comment-list .byuser .comment-body .comment-meta a:hover,
+section.single_php article .comments-area .comment-list .comment .comment-body .comment-meta a:hover {
+  color: red;
+}
+section.single_php article .comments-area .comment-list .byuser .comment-body .reply,
+section.single_php article .comments-area .comment-list .comment .comment-body .reply {
+  font-size: 12px;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+section.single_php article .comments-area .comment-list .byuser .comment-body .reply a,
+section.single_php article .comments-area .comment-list .comment .comment-body .reply a {
+  color: green;
+}
+section.single_php article .comments-area .comment-list .byuser .comment-body .reply a:hover,
+section.single_php article .comments-area .comment-list .comment .comment-body .reply a:hover {
+  color: red;
+}
+section.single_php article .comment-respond {
+  background: #ade0f1;
+}
+section.single_php article .comment-respond:hover {
+  background: #ade0f1;
+}
+section.single_php article .comment-respond .comment-form .logged-in-as {
+  font-size: 12px;
+}
+section.single_php article .comment-respond .comment-form .logged-in-as a {
+  color: green;
+}
+section.single_php article .comment-respond .comment-form .logged-in-as a:hover {
+  color: red;
+}
+section.single_php article .comment-respond .comment-form .logged-in-as .required-field-message .required {
+  color: red;
+  font-weight: bold;
+}
+section.single_php article .comment-respond .comment-form .comment-form-comment label .required {
+  color: red;
+  font-weight: bold;
+}
+section.single_php article .comment-respond .comment-form .comment-form-comment #comment {
+  background: antiquewhite;
+  border-radius: 7px;
+  border: solid 2px black;
+  padding: 10px;
+  line-height: 1.7;
+  vertical-align: middle;
+}
+section.single_php article .comment-respond .comment-form .form-submit .submit {
+  background: antiquewhite;
+  border-radius: 7px;
+  border: solid 2px black;
+  padding: 6px;
+  line-height: 1.7;
+  vertical-align: middle;
+}
 section.single_php article h3 .the_category_list {
   /* border: solid red 1px */
 }
@@ -303,6 +431,10 @@ section.single_php article p.posts_available .total_results {
 }
 section.single_php article nav.pagination {
   /* border: solid blue 1px; */
+  background: #64cfca;
+}
+section.single_php article nav.pagination:hover {
+  background: #64cfca;
 }
 section.single_php article nav.pagination .nav-links {
   text-align: center;
@@ -325,6 +457,12 @@ section.single_php article nav.pagination .nav-links .next {
 }
 section.single_php .single, section.single_php .page, section.single_php .author, section.single_php .archive {
   width: 80%;
+}
+section.single_php .single .post_headline, section.single_php .page .post_headline, section.single_php .author .post_headline, section.single_php .archive .post_headline {
+  line-height: 1;
+  text-align: center;
+  color: #4a4949;
+  font-size: 14px;
 }
 section.single_php .single hr, section.single_php .page hr, section.single_php .author hr, section.single_php .archive hr {
   /* width: 50%; */
@@ -603,6 +741,11 @@ section.single_php .page .search-entry.no-result {
 }
 section.single_php .page .search-entry.no-result:hover {
   background: #ade0f1;
+}
+section.single_php .page .search-entry .post_headline {
+  line-height: 1;
+  text-align: center;
+  color: red;
 }
 section.single_php .page h2 {
   text-align: center;
