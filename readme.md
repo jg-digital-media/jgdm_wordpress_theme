@@ -1,6 +1,6 @@
-# JGDM Blog Theme  (2023) - 10/03/2023 - 14:29
+# JGDM Blog Theme  (2023) - 10/03/2023 - 15:05
 
-**URL:** [Local](http://localhost/wordpress/jgdmblog_2023)
+**URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
 `git clone https://github.com/jg-digital-media/jgdm_wordpress_theme`
 
@@ -39,19 +39,144 @@
 ## Setup: 
 [Back to Top](#sections)
 
-1. setup theme supports.
+1. Setup theme supports.
+
+Make sure to include support for dynamic menus for navigation and widgets in your theme.
+
+   ```php
+
+    <?php
+        add_theme_support( "widget" );
+        add_theme_support( "menus" );
+   ```
 2. Enqueue Styles and Scripts
+
+    ```php
+
+        <?php
+        // Add and Enqueue Theme Assets 
+        function add_theme_assets() {
+
+               // register styles
+            wp_enqueue_style( 'style', get_stylesheet_uri() );     
+
+
+            // register scripts
+            wp_enqueue_script( 'app', get_template_directory_uri() . '/_assets/scripts/app.js' );
+
+        }
+    ```
 3. Menu
 
-   + link to index.php
-   + link to home.php
-   + links to pages (page.php)
+   + link to index.php `http://localhost/jgdm_blog/blog_posts/2/page/1/` 
+   + link to home.php `(http://localhost/blog_posts)`
+   + links to pages `(page.php)`
 
-4. Setup widgets
+4. Setup Widgets
+
+  + Use functions.php to register an individual widget area
+  
+  
+
+    ```php
+
+        <?php
+          register_sidebar( array (
+
+                'name' => __( 'HTML Block 1'),
+                'id' => 'jgblog_html_one',
+                'description' => __( 'HTML Block 1 - Enter the custom html for this widget area') 
+               )
+            ); 
+
+        ?>
+    ``` 
+
++ Call the dynamic sidebar function and put it in your chosen place for your design.
+
+```php
+   <?php dynamic_sidebar( "jgblog_html_one" ); ?>  
+```
 
 5. post pagination
 
+
+
+Paged query...
+
+```php
+
+
+    <?php
+        $custom_query_args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+
+        // pagination method
+        the_posts_pagination(); ?>
+
+```
+
+```php
+        <!-- The Loop -->
+```
+
+Reset the post data 
+
+```php
+        <!-- post pagination -->        
+        <?php  
+
+            // Reset the posts data 
+            wp_reset_postdata(); 
+
+            the_posts_pagination(); 
+        ?>           
+```  
+
+```upcoming  - WP QUERY Pagination``` 
+
+
+
+
 6. Custom post types
+
+```not currently created in code  - uses 
+
+Plugins 
+-> Advanced Custom Fields by WP Engine
+-> Custom Post Type UI: by WebDev Studios
+
+``` 
+
+Blog Posts - Custom Post Type. 
+
+```php
+
+    $custom_query_args = array(
+
+        'post_type' => 'blog_posts',
+        'post_status' => 'publish' 
+    );
+
+    // wp query
+    $main_blog = new WP_Query( $custom_query_args ); 
+
+
+    <?php if ( $main_blog->have_posts() ):  ?> 
+
+    <?php while ( $main_blog->have_posts() ) : $main_blog->the_post(); ?>
+
+    <!-- Content -->
+    
+    <?php endwhile; ?>  
+        
+    <?php else: ?>        
+
+    <p>No content</p>
+
+    <?php endif; ?>     
+
+```
+
 
 7. Single Post Page Comments
 
