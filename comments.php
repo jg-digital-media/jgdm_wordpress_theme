@@ -15,7 +15,8 @@
                     <p class="no-comments"><?php _e( 'Comments are closed.', 'jgdm_blog' ); ?></p>
                 <?php endif; ?>
             -->
-    
+            
+            
 
             <!-- Pagination -->
             <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
@@ -43,13 +44,13 @@
                             'avatar_size' => 74,
                         ) );
                    ?>
-                </ol><!-- .comment-list -->    
-
-                <?php comment_form(); ?>
+                </ol><!-- .comment-list -->
     
         </div>
 
-    <?php endif; ?>
+    <?php endif; ?>    
+
+    <?php comment_form(); ?>
 
 
 
