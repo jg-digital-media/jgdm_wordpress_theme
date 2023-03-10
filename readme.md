@@ -1,4 +1,4 @@
-# JGDM Blog Theme  (2023) - 10/03/2023 - 12:50
+# JGDM Blog Theme  (2023) - 10/03/2023 - 14:29
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023)
 
@@ -82,16 +82,17 @@
     + 404.php
     + home.php
     + single.php
+      + single-blog_posts.php
     + post_type-single.php
     + page.php
     + search.php
     + category.php
-      +category-category_name.php
+      + category-category_name.php
     + date.php
     + archive.php
-      +archive-post_type_name.php
+      + archive-post_type_name.php
     + author.php
-      +author-author_name.php
+      + author-author_name.php
     + category.php
     + author.php
 
