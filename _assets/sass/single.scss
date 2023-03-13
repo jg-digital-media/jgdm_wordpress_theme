@@ -473,21 +473,13 @@
                 text-align: center;
                 
                 #s {
-                    padding: 7px;
-                    border-radius: 5px;
-                    transition: background 0.3s;
-                    font-size: 12px;
-                    background: lightyellow;
                     
+                    @extend %search_input;                    
                 }
                 
                 #searchsubmit {
                     
-                    background: lightyellow;
-                    padding: 7px;
-                    border-radius: 5px;
-                    cursor: pointer;
-                    
+                    @extend %search_btn;                    
                 }
             }
 
@@ -909,15 +901,14 @@
                             transition: background 0.3s;
                             font-size: 12px;
                             
-                            background: lightyellow;
+                            @extend %search_input;
+                            
                         }
                         
                         .wp-block-search__button, #searchsubmit {
                             
-                            background: lightyellow;
-                            padding: 7px;
-                            border-radius: 5px;
-                            cursor: pointer;
+                            
+                            @extend %search_btn;
                         }
                     }
                 }

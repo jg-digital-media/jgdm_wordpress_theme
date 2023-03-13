@@ -1,0 +1,55 @@
+%search_btn {
+    
+    background: wheat;
+    width: auto;
+    border: solid 3px black;
+    padding: 7px;  
+    transition: background 0.3s; 
+    cursor: pointer;
+    
+    &:hover {
+        
+        background: lightyellow;
+    } 
+}
+
+%search_btn_widget {
+    
+    background: yellow;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;    
+    width: auto;
+    border: solid black 3px;
+}
+
+%search_input {    
+    
+    padding: 7px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    border: solid 3px black;
+    font-size: 12px;
+    background: wheat;    
+    
+    &:hover {
+        
+        background: lightyellow;
+    }
+}
+
+%search_input_widget {
+
+    border: solid 3px black;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14pt;
+    transition: background .3s;
+    background: yellow;
+    border: solid 3px black;
+                        
+    &:hover {
+
+        background: lightyellow;
+    }
+}

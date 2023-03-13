@@ -243,25 +243,13 @@ body {
                     
                     .wp-block-search__input {
                     
-                        border: solid 3px black;
-                        padding: 10px;
-                        border-radius: 5px;
-                        font-size: 14pt;
-                        transition: background .3s;
-                        
-                        &:hover {
-                            
-                            background: lightyellow;
-                        }
+                        @extend %search_input_widget;
                     }
                 
                 
                     .wp-block-search__button {
                         
-                        background: yellow;
-                        width: 50px;
-                        border: solid 3px black;
-                        padding: 0 5px;
+                        @extend %search_btn_widget;
                     
                     }
                 }
