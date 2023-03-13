@@ -1,4 +1,4 @@
-# JGDM Blog Theme  (2023) - 13/03/2023 - 15:41
+# JGDM Blog Theme  (2023) - 13/03/2023 - 16:06
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -42,6 +42,17 @@
 ## Setup: 
 [Back to Top](#sections)
 
+Make sure your WordPress theme has the following minimum files
+
+
+### Files required
+  + index.php
+  + functions.php
+  + style.css
+  + screenshot.png
+  + sass.scss (optional)
+  + favicon.png (optional)
+
 1. Setup theme supports.
 
 Make sure to include support for dynamic menus for navigation and widgets in your theme.
@@ -54,9 +65,12 @@ Make sure to include support for dynamic menus for navigation and widgets in you
    ```
 2. Enqueue Styles and Scripts
 
+
     ```php
 
-        <?php
+    <?php
+        // in functions.php
+
         // Add and Enqueue Theme Assets 
         function add_theme_assets() {
 
@@ -78,8 +92,6 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 4. Setup Widgets
 
   + Use functions.php to register an individual widget area
-  
-  
 
     ```php
 
@@ -185,14 +197,6 @@ Blog Posts - Custom Post Type.
 
   + Allow post discussion in admin area
 
-
-### Files required
-  + index.php
-  + functions.php
-  + style.css
-  + screenshot.png
-  + sass.scss (optional)
-  + favicon.png (optional)
 
 ### Directories required
   + assets  
