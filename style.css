@@ -1,4 +1,4 @@
-/* Last Update: 10/03/2023 - 15:48 */
+/* Last Update: 13/03/2023 - 14:52 */
 /*
 Theme Name: Jonnie Grieve Digital Media: Blog
 Theme URI: https://blog.jonniegrieve.co.uk
@@ -19,6 +19,52 @@ Use it to make something cool, have fun, and share what you've learned with othe
 * {
   padding: 0;
   margin: 0;
+}
+
+section.single_php .page .search-entry .searchform div .wp-block-search__button, section.single_php .page .search-entry .searchform div #searchsubmit, section.single_php .single .searchform #searchsubmit, section.single_php .page .searchform #searchsubmit, section.single_php .author .searchform #searchsubmit, section.single_php .archive .searchform #searchsubmit {
+  background: wheat;
+  width: auto;
+  border: solid 3px black;
+  padding: 7px;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+section.single_php .page .search-entry .searchform div .wp-block-search__button:hover, section.single_php .page .search-entry .searchform div #searchsubmit:hover, section.single_php .single .searchform #searchsubmit:hover, section.single_php .page .searchform #searchsubmit:hover, section.single_php .author .searchform #searchsubmit:hover, section.single_php .archive .searchform #searchsubmit:hover {
+  background: lightyellow;
+}
+
+body section .secondary .widget_search .wp-block-search__inside-wrapper .wp-block-search__button {
+  background: yellow;
+  padding: 7px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto;
+  border: solid black 3px;
+}
+
+section.single_php .page .search-entry .searchform div #s, section.single_php .single .searchform #s, section.single_php .page .searchform #s, section.single_php .author .searchform #s, section.single_php .archive .searchform #s {
+  padding: 7px;
+  border-radius: 5px;
+  transition: background 0.3s;
+  border: solid 3px black;
+  font-size: 12px;
+  background: wheat;
+}
+section.single_php .page .search-entry .searchform div #s:hover, section.single_php .single .searchform #s:hover, section.single_php .page .searchform #s:hover, section.single_php .author .searchform #s:hover, section.single_php .archive .searchform #s:hover {
+  background: lightyellow;
+}
+
+body section .secondary .widget_search .wp-block-search__inside-wrapper .wp-block-search__input {
+  border: solid 3px black;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14pt;
+  transition: background 0.3s;
+  background: yellow;
+  border: solid 3px black;
+}
+body section .secondary .widget_search .wp-block-search__inside-wrapper .wp-block-search__input:hover {
+  background: lightyellow;
 }
 
 header {
@@ -203,22 +249,6 @@ body section .secondary .widget_search label {
   font-size: 15pt;
   font-weight: bold;
   text-align: center;
-}
-body section .secondary .widget_search .wp-block-search__inside-wrapper .wp-block-search__input {
-  border: solid 3px black;
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 14pt;
-  transition: background 0.3s;
-}
-body section .secondary .widget_search .wp-block-search__inside-wrapper .wp-block-search__input:hover {
-  background: lightyellow;
-}
-body section .secondary .widget_search .wp-block-search__inside-wrapper .wp-block-search__button {
-  background: yellow;
-  width: 50px;
-  border: solid 3px black;
-  padding: 0 5px;
 }
 body section .secondary .widget_recent .widget_block h3 {
   text-align: center;
@@ -431,10 +461,12 @@ section.single_php article p.posts_available .total_results {
 }
 section.single_php article nav.pagination {
   /* border: solid blue 1px; */
-  background: #64cfca;
+  /* background: #64cfca; */
+  background: none;
 }
 section.single_php article nav.pagination:hover {
-  background: #64cfca;
+  /* background: #64cfca; */
+  background: none;
 }
 section.single_php article nav.pagination .nav-links {
   text-align: center;
@@ -472,6 +504,9 @@ section.single_php .single p, section.single_php .page p, section.single_php .au
   line-height: 2;
   margin-top: 5px;
 }
+section.single_php .single .form-submit .submit, section.single_php .page .form-submit .submit, section.single_php .author .form-submit .submit, section.single_php .archive .form-submit .submit {
+  cursor: pointer;
+}
 section.single_php .single .number_of_results, section.single_php .page .number_of_results, section.single_php .author .number_of_results, section.single_php .archive .number_of_results {
   font-weight: bold;
 }
@@ -499,6 +534,9 @@ section.single_php .single ul, section.single_php .single ol, section.single_php
   margin-left: 30px;
   margin-top: 10px;
   line-height: 1.4;
+}
+section.single_php .single .searchform, section.single_php .page .searchform, section.single_php .author .searchform, section.single_php .archive .searchform {
+  text-align: center;
 }
 section.single_php .single .hcb_wrap.hcb_wrap, section.single_php .page .hcb_wrap.hcb_wrap, section.single_php .author .hcb_wrap.hcb_wrap, section.single_php .archive .hcb_wrap.hcb_wrap {
   width: 90%;
@@ -610,7 +648,7 @@ section.single_php .single .blog_post_single h3, section.single_php .page .blog_
 section.single_php .single .blog_post_single h3 span, section.single_php .page .blog_post_single h3 span, section.single_php .author .blog_post_single h3 span, section.single_php .archive .blog_post_single h3 span {
   color: red;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: unset;
   bottom: 0;
 }
 section.single_php .single .blog_post_single .posts_available, section.single_php .page .blog_post_single .posts_available, section.single_php .author .blog_post_single .posts_available, section.single_php .archive .blog_post_single .posts_available {
@@ -746,6 +784,19 @@ section.single_php .page .search-entry .post_headline {
   line-height: 1;
   text-align: center;
   color: red;
+}
+section.single_php .page .search-entry .searchform div {
+  background: #ade0f1;
+}
+section.single_php .page .search-entry .searchform div:hover {
+  background: #ade0f1;
+}
+section.single_php .page .search-entry .searchform div #s {
+  border: solid 3px black;
+  padding: 7px;
+  border-radius: 5px;
+  transition: background 0.3s;
+  font-size: 12px;
 }
 section.single_php .page h2 {
   text-align: center;
