@@ -6,7 +6,12 @@
         
         <?php 
         
-            $args = array( 'post_type' => 'blog_posts', 'category_name' => 'webdesign_news_comment');
+            $args = array(
+                
+                'post_type' => 'blog_posts',
+                //'post_type' => 'blog_posts', 
+                'category_name' => 'webdesign_news_comment'
+            );
 
             // wp query
             $main_blog = new WP_Query( $args )

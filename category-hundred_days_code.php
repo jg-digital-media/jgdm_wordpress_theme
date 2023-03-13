@@ -7,6 +7,7 @@
         <?php 
         
             $args = array( 
+                
                 'post_type' => 'post',
                 //'post_type' => 'blog_posts', 
                 'category_name' => 'hundred_days_code'
@@ -17,7 +18,7 @@
                 
         ?>
 
-        <h2 class="post_headline"> <p>category.php (hundred days)</p>  </h2>
+        <h2 class="post_headline"> <p>category.php (hundred_days_code)</p>  </h2>
         
         <?php require "template-parts/category-list.php"; ?>
 
@@ -43,9 +44,9 @@
             // pagination method
             the_posts_pagination();  
 
-            //$temp_query = $wp_query;
-            //$wp_query = NULL;
-            //$wp_query = $main_blog; ?>
+            $temp_query = $wp_query;
+            $wp_query = NULL;
+            $wp_query = $main_blog; ?>
 
         
         <!-- The WordPress Loop Begins -->
@@ -70,10 +71,7 @@
         <!--  No Post Found -->
         <?php endif; ?>
             
-        <!-- post pagination -->   
-        
-        
-        
+        <!-- post pagination --> 
         <?php  
         
             // Reset the posts data 

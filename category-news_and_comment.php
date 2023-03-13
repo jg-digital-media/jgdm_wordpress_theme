@@ -6,7 +6,11 @@
         
         <?php 
         
-            $args = array( 'post_type' => 'blog_posts', 'category_name' => 'news_and_comment');
+            $args = array(
+                
+                'post_type' => 'blog_posts',
+                'category_name' => 'news_and_comment'
+            );
 
             // wp query
             $main_blog = new WP_Query( $args )

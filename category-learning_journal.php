@@ -6,7 +6,12 @@
         
         <?php 
         
-            $args = array( 'post_type' => 'blog_posts', 'category_name' => 'learning_journal');
+            $args = array(
+                
+                'post_type' => 'blog_posts',
+                //'post_type' => 'blog_posts', 
+                'category_name' => 'learning_journal'
+            );
 
             // wp query
             $main_blog = new WP_Query( $args )

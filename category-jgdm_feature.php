@@ -6,7 +6,12 @@
         
         <?php 
         
-            $args = array( 'post_type' => 'blog_posts', 'category_name' => 'jgdm_feature');
+            $args = array(
+                
+                'post_type' => 'blog_posts',
+                //'post_type' => 'blog_posts', 
+                'category_name' => 'jgdm_feature'
+            );
 
             // wp query
             $main_blog = new WP_Query( $args )

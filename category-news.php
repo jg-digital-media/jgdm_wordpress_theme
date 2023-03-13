@@ -6,7 +6,12 @@
         
         <?php 
         
-            $args = array( 'post_type' => 'blog_posts', 'category_name' => 'news');
+            $args = array(
+                
+                'post_type' => 'blog_posts',
+                //'post_type' => 'blog_posts', 
+                'category_name' => 'news'
+            );
 
             // wp query
             $main_blog = new WP_Query( $args )
