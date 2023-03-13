@@ -6,11 +6,11 @@
         
         <?php 
         
-            $args = array(
+            $args = array( 
                 
-                'post_type' => 'blog_posts',
+                'post_type' => 'post',
                 //'post_type' => 'blog_posts', 
-                'category_name' => 'webdesign_news_comment'
+                'category_name' => 'hundred_days_code'
             );
 
             // wp query
@@ -18,12 +18,35 @@
                 
         ?>
 
-        <h2 class="post_headline"> <p>category.php (web design news and comment)</p>  <!-- get categories --> </h2>
+        <h2 class="post_headline"> <p>category.php (hundred_days_code)</p>  </h2>
         
         <?php require "template-parts/category-list.php"; ?>
 
         <!-- <p> wp_list_categories(); </p>
-        <h3><?php wp_list_categories('post_type=blog_posts'); get_categories(); ?></h3>-->  
+        <h3><?php wp_list_categories('post_type=blog_posts'); get_categories(); ?></h3>-->   
+
+        <!-- Get total number of posts -->
+        <?php
+            global $wp_query;
+            $total_results = $wp_query->found_posts;
+            //$main_blog->blog_count;
+        ?> 
+
+        <?php echo "<p class='posts_available'>Posts Available: " . "<span class='total_results'>" . $total_results . "</span></p>"; 
+        ?>
+        
+        <?php //echo $main_blog->post_count; ?>
+
+        <!-- Post pagination for Hundred Days Category -->
+        <?php
+            $custom_query_args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+
+            // pagination method
+            the_posts_pagination();  
+
+            $temp_query = $wp_query;
+            $wp_query = NULL;
+            $wp_query = $main_blog; ?>
         
         <!-- The WordPress Loop Begins -->
         <?php if ( $main_blog->have_posts() ) : ?>
@@ -37,6 +60,7 @@
                 <h5> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h5>
 
                 <p> <?php the_excerpt(); the_field( "article_blurb" ); ?> </p>
+                
             </div>
 
         <?php endwhile; ?>
@@ -46,14 +70,13 @@
         <!--  No Post Found -->
         <?php endif; ?>
             
-        <!-- post pagination -->        
+        <!-- post pagination --> 
         <?php  
         
             // Reset the posts data 
             wp_reset_postdata(); 
         
             the_posts_pagination(); 
-        
         
             $wp_query = NULL;
             $wp_query = $temp_query;

@@ -21,29 +21,6 @@
         <h2 class="post_headline"> <p>category.php (web design)</p>  <!-- get categories --> </h2>
         
         <?php require "template-parts/category-list.php"; ?>
-
-        <!-- <p> wp_list_categories(); </p>
-        <h3><?php wp_list_categories('post_type=blog_posts'); get_categories(); ?></h3>-->   
-
-        <!-- Get total number of posts -->
-        <?php
-            global $wp_query;
-            $total_results = $wp_query->found_posts;
-        ?> 
-
-        <?php echo "<p class='posts_available'>Posts Available: " . "<span class='total_results'>" . $total_results . "</span></p>"; ?>
-
-        <!-- Post pagination for Searches -->
-        <?php
-            $custom_query_args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
-
-            // pagination method
-            the_posts_pagination();  
-
-            $temp_query = $wp_query;
-            $wp_query = NULL;
-            $wp_query = $main_blog; ?>
-
         
         <!-- The WordPress Loop Begins -->
         <?php if ( $main_blog->have_posts() ) : ?>
@@ -65,18 +42,6 @@
 
         <!--  No Post Found -->
         <?php endif; ?>
-            
-        <!-- post pagination -->        
-        <?php  
-        
-            // Reset the posts data 
-            wp_reset_postdata(); 
-        
-            // the_posts_pagination();  
-        
-            $wp_query = NULL;
-            $wp_query = $temp_query;
-        ?>
         
         <h4>Blog Post Archives (by date)</h4>
         
