@@ -1,4 +1,18 @@
-<?php echo "<p>comments.php - successfully retrieved</p>"; ?>
+<?php echo "<p>comments.php - successfully retrieved</p>"; 
+
+/** 
+
+* The template for displaying Comments. 
+* 
+* The area of the page that contains comments and the comment form. 
+*
+* @package WordPress 
+* @subpackage JGDM Blog
+* @since JGDM Blog 1.0 
+*/
+
+?>
+
 
 
 <!-- Check that the given post has comments -->
@@ -7,16 +21,19 @@
 
         <div id="comments" class="comments-area">
     
-            <h2 class="comments-title">  View comments people have posted: </h2>
+            <h2 class="comments-title"> View comments people have posted: </h2>
 
             <!-- Comments are closed message -->
 
-                <?php if ( ! comments_open() && get_comments_number() ) : ?>
+                <?php if ( ! comments_open() && get_comments_number() ) : ?> 
+            
                     <p class="no-comments"><?php _e( 'Comments are closed.', 'jgdm_blog' ); ?></p>
+            
                 <?php endif; ?>    
 
             <!-- Pagination -->
-            <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
+            <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>    
+             
 
                 <nav class="navigation comment-navigation" role="navigation">
 
