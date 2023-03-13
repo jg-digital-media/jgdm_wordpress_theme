@@ -1,4 +1,4 @@
-# JGDM Blog Theme  (2023) - 13/03/2023 - 15:14
+# JGDM Blog Theme  (2023) - 13/03/2023 - 15:41
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -27,13 +27,16 @@
 + `[DONE]` - Export the Database from blog.jonniegrieve.co.uk and import into a fresh wordpress installation.
 + `[DONE]` - Enqueue Styling
 + `[DONE]` - Start with a plain design
-+ `[DONE]` - Working with Post pagination
-+ `[TODO: ]` - Archive Templates 
-+ `[TODO: ]` - Search Templates 
-+ `[TODO: ]` - Single post comment templates
++ `[DONE]` - Working with Post Pagination
++ `[DONE]` - Archive Templates 
++ `[DONE]` - Search Templates 
++ `[DONE]` - Single post Templates
++ `[TODO: ]` - Comment templates
++ `[TODO: ]` - Simply Markup and CSS Styling
 + `[TODO: ]` - Code Snippets
++ `[TODO: ]` - Categories - Listings and Pagination for individual categories
 + A newer fresher redesign for my blog
-+ To explore and recognise errors with displaying code snippets when posting code with `Highlighting Code Block`  Plugin
++ To explore and recognise errors with displaying code snippets when posting code with `Highlighting Code Block` plugin
 + Build out the templates to build a blog with added custom post type
 
 ## Setup: 
