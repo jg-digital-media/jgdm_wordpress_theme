@@ -467,6 +467,29 @@
                 margin-top: 10px;
                 line-height: 1.4;
             }
+            
+            .searchform {
+                
+                text-align: center;
+                
+                #s {
+                    padding: 7px;
+                    border-radius: 5px;
+                    transition: background 0.3s;
+                    font-size: 12px;
+                    background: lightyellow;
+                    
+                }
+                
+                #searchsubmit {
+                    
+                    background: lightyellow;
+                    padding: 7px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    
+                }
+            }
 
             // container element for Wordpress code Snippets
             .hcb_wrap.hcb_wrap {

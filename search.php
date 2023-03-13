@@ -39,7 +39,8 @@ require "inc/header.php"; ?>
 
         <h2>
             <?php printf( __( 'Search Results for: %s' ), '"<span>' .  get_search_query() . '</span>"'); ?>
-        </h2>        
+        </h2>     
+        
         
         <?php echo "<p class='number_of_results'>Number of results:  " . "<span class='total_results'>" . $total_results . "</span></p>"; ?>
         
@@ -56,6 +57,12 @@ require "inc/header.php"; ?>
 
         <!-- The WordPress Loop Begins -->
         <?php if ( have_posts() ) : ?>
+        
+        
+        
+                <p>Look at the results list below or try another search</p>
+                
+                <?php get_search_form(); ?>
 
         <!-- html -->      
         <?php while ( have_posts() ) : the_post(); ?>
