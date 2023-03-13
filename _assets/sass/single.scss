@@ -335,10 +335,12 @@
             nav.pagination {
                 
                 /* border: solid blue 1px; */
-                background: #64cfca;
+                /* background: #64cfca; */
+                background: none;
                 
                 &:hover {
-                    background: #64cfca;
+                    /* background: #64cfca; */
+                    background: none;
                 }
                 
                 .nav-links {
@@ -414,6 +416,13 @@
                 margin-top: 5px;
             }
             
+            .form-submit {
+                
+                .submit {
+                    
+                    cursor: pointer;
+                }
+            }
             .number_of_results {
                 
                 font-weight: bold;
@@ -628,7 +637,7 @@
                         
                         color: red;
                         display: inline-block;
-                        vertical-align: middle;
+                        vertical-align: unset;
                         bottom: 0;
                     }
                 }
@@ -852,6 +861,42 @@
                     line-height: 1;
                     text-align: center;
                     color: red;
+                }
+                
+                
+                    
+                .searchform {
+
+                    div {
+                        
+                        background: #ade0f1;
+                        
+                        &:hover {
+                            
+                            background: #ade0f1;
+                            
+                        }
+                        
+                        #s {
+                            
+                            
+                            border: solid 3px black;
+                            padding: 7px;
+                            border-radius: 5px;
+                            transition: background 0.3s;
+                            font-size: 12px;
+                            
+                            background: lightyellow;
+                        }
+                        
+                        .wp-block-search__button, #searchsubmit {
+                            
+                            background: lightyellow;
+                            padding: 7px;
+                            border-radius: 5px;
+                            cursor: pointer;
+                        }
+                    }
                 }
                 
                 

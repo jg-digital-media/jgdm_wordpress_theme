@@ -16,7 +16,7 @@ require "inc/header.php"; ?>
         <a href="<?php bloginfo("home"); ?>">Home</a> 
         
         
-        <a href="search-page/" title="Search Page">Search Page</a>
+        <!--<a href="search-page/" title="Search Page">Search Page</a>-->
 
         <?php
 
@@ -25,7 +25,7 @@ require "inc/header.php"; ?>
             wp_parse_str( $query_string, $search_query );
             $search = new WP_Query( $search_query );
 
-            echo $query_string;
+            // echo $query_string;
         ?>      
  
         <!-- Get the number of search results -->
@@ -77,6 +77,10 @@ require "inc/header.php"; ?>
             <div class="search-entry no-result">
             
                 <p>Sorry! there was no result returned for that term.</p>
+                
+                <p>Try another search</p>
+                
+                <?php get_search_form(); ?>
                 
             </div>
         
