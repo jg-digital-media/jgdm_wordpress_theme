@@ -1,4 +1,4 @@
-# JGDM Blog Theme  (2023) - 14/03/2023 - 14:27
+# JGDM Blog Theme  (2023) - 14/03/2023 - 16:25
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
