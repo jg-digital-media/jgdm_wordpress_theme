@@ -17,8 +17,8 @@
         
         <h2 class="post_headline"> <p>category.php</p> </h2>
             
-        <h3><?php wp_list_categories('post_type=blog_posts'); get_categories(); ?></h3>
-
+        <h3> <?php wp_list_categories('post_type=blog_posts'); ?> </h3>
+        
         
         <!-- The WordPress Loop Begins -->
         <?php if ( $main_blog->have_posts() ) : ?>
