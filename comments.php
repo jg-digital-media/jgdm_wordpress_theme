@@ -13,8 +13,6 @@
 
 ?>
 
-
-
 <!-- Check that the given post has comments -->
 
 	<?php if ( have_comments() ) : ?>
