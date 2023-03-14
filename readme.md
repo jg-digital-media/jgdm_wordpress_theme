@@ -1,4 +1,4 @@
-# JGDM Blog Theme  (2023) - 13/03/2023 - 16:06
+# JGDM Blog Theme  (2023) - 14/03/2023 - 13:30
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -31,13 +31,15 @@
 + `[DONE]` - Archive Templates 
 + `[DONE]` - Search Templates 
 + `[DONE]` - Single post Templates
-+ `[TODO: ]` - Comment templates
-+ `[TODO: ]` - Simply Markup and CSS Styling
 + `[TODO: ]` - Code Snippets
++ `[TODO: ]` - Comment templates
++ `[TODO: ]` - Simpifly Markup and CSS Styling
 + `[TODO: ]` - Categories - Listings and Pagination for individual categories
-+ A newer fresher redesign for my blog
-+ To explore and recognise errors with displaying code snippets when posting code with `Highlighting Code Block` plugin
-+ Build out the templates to build a blog with added custom post type
++ `[TODO: ]` - Customise the admin area
++ `[TODO: ]` - A newer fresher redesign for my blog
++ `[TODO: ]` - Plugin Development
++ `[TODO: ]` - To explore and recognise errors with displaying code snippets when posting code with `Highlighting Code Block` plugin
++ `[TODO: ]` - Build out the templates to build a blog with added custom post type
 
 ## Setup: 
 [Back to Top](#sections)
@@ -619,7 +621,7 @@ Blog Posts - Custom Post Type.
 
 ```
 
-	### Customise the admin area
+### Customise the admin area
 
 ```php 
 
