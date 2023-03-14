@@ -1,4 +1,4 @@
-# JGDM Blog Theme  (2023) - 14/03/2023 - 13:30
+# JGDM Blog Theme  (2023) - 14/03/2023 - 14:27
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -237,7 +237,7 @@ Blog Posts - Custom Post Type.
 ## Code Snippets
 [Back to Top](#sections)
 
-### WordPress Loop
+### The WordPress Loop
 
 ```php 
         
@@ -257,102 +257,100 @@ Blog Posts - Custom Post Type.
 
 ```
 
-<!-- using a WP Query -->
+### WordPress Loop (Using a WP Query)
+
 ```php
 
-	$custom_query_args = array(
+    <?php
 
-		'post_type' => 'blog_posts',
-		'post_status' => 'publish',
-		//'format' => '/page/%#%',
-		//'posts_per_page' => 8,
-		// 'paged' => $paged
-		
-	)
+        // custom query arguments
+        $custom_query_args = array(
+
+            'post_type' => 'blog_posts',
+            'post_status' => 'publish',
+            //'format' => '/page/%#%',
+            //'posts_per_page' => 8,
+            // 'paged' => $paged
+
+        );
 	
-	// define a new WP Query
+        // define a new WP Query
+        $main_blog = new WP_Query( $custom_query_args ); 
+    ?>
 	
-	// wp query
-		$main_blog = new WP_Query( $custom_query_args ); 
-		
-		
-	
-	<?php if ( $main_blog->have_posts() ):  ?> 
-	 
-	<?php while ( $main_blog->have_posts() ) : $main_blog->the_post(); ?>
-	
-		<!-- Looped Content -->
-	
-	<?php endwhile; ?>  
-	
-	<?php else: ?>        
-	
-	   <p>No content</p>
-	
-	<?php endif; ?>      
+    <!-- The Loop -->
+    <?php if ( $main_blog->have_posts() ):  ?> 
+
+    <?php while ( $main_blog->have_posts() ) : $main_blog->the_post(); ?>
+
+      <!-- Looped Content -->
+
+    <?php endwhile; ?>  
+
+    <?php else: ?>        
+
+       <p>No content</p>
+
+    <?php endif; ?>      
 ```
 
-### The Loop
+### The Loop (altermative Syntax)
 
 ```php
 
-<?php if( have_posts() ) : while ( have_posts() ) the_post(); ?>
+    <?php if( have_posts() ) : while ( have_posts() ) the_post(); ?>
 
-    // the loop block 
- 
-<?php endwhile; else :  ?>
+        <!-- the loop block -->
 
-    // no content block
+    <?php endwhile; else : ?>
 
-<?php endif;?>
-```
+        <!-- no content block -->
 
-### The Loop with WP Query
-```php
-<?php 
+    <?php endif; ?>
+
+
+
+    <!-- The Loop with WP Query -->
+
+    <?php 
         
         $args = array( 'post_type' => 'blog_posts' );
-        
-        // wp query
-        $main_blog = new WP_Query( $args )
-                
-        ?>
-        
-        <h2>Latest Blogs</h2> 
-        
-        <nav class="pagination">        
-        
-            <a href="#" class="current-page">1</a> |
-            <a href="#">2</a> |
-            <a href="#">3</a> |
-            <a href="#">4</a>
-            
-        </nav>        
-        
-        
-        <?php if ( $main_blog->have_posts() ) : while ( $main_blog->have_posts() ) : $main_blog->the_post(); ?>
-        
-            <div class = "entry">
-    
-        ... 
 
+        // define a new WP Query
+        $main_blog = new WP_Query( $args )    
+
+        <?php if ( $main_blog->have_posts() ) : while ( $main_blog->have_posts() ) : $main_blog->the_post(); ?>
+
+        <div class = "entry"> . . . </div> 
+
+        <?php endwhile; ?>  
+
+        <?php else: ?>        
+
+            <p>No content</p>
+
+        <?php endif; ?>      
+
+    ?>
 
 ```
+
 
 ### Category Methods
 
 ```php
 
-    <!-- WP list categproes  -->
+    <!-- WP list categories - wp_list_categories()  -->
     <p>wp_list_categories();</p>
 
     <?php $args = array ("separator => ' - ' ") ?>
-    <h3><?php wp_list_categories( $args ); //get_categories(); ?></h3>
+
+    <h3><?php wp_list_categories( $args );  ?></h3>
 ```
 
 ```php
 
-    <!-- WP list categproes  -->
+    <!-- WP list categories (get_the_category() alternative syntax)  -->
     <h3> 
     <?php foreach( (get_the_category() ) as $category) {
     
@@ -364,11 +362,29 @@ Blog Posts - Custom Post Type.
 
 ```php
 
-    <!-- Full list of categories -->
-    <h3><?php 
+    <!-- Categories assigned to a particular posy -->
+    <h3>
+    <?php 
         the_category( " - "); 
-        //get_categories(); ?>
+    ?>
     </h3> 
+
+```
+
+```php
+
+    <?php 
+
+        get_categories();
+
+        function get_category( $args ) {
+
+            $defaults  = array( 'taxonomy' => 'category' );
+            $args     = wp_parse_args( $args, $defaults );
+        }
+
+    ?>       
+
 
 ```
 
@@ -376,85 +392,77 @@ Blog Posts - Custom Post Type.
 
 ```php
 
-<div class="blog_posts_archive">
-    <ul>
-        <li><?php wp_get_archives('post_type=blog_posts'); ?></li>
-    </ul>
-            
+    <div class="blog_posts_archive">
+        <ul>
+            <li><?php wp_get_archives('post_type=blog_posts'); ?></li>
+        </ul>
+
 </div> 
 ```
 
 ```php
 
-<h4>Authors list</h4>
-        
-<div class="post_authors">
-        
-    <ul>
-        <li><?php wp_list_authors(); ?></li>
-    </ul>
-</div>
+    <h4>Authors list</h4>
+
+    <div class="post_authors">
+
+        <ul>
+            <li><?php wp_list_authors(); ?></li>
+        </ul>
+    </div>
 
 ```
 
-```php
-<?php echo get_the_author(); ?>  - outputs the text of the author of a post. It can be placed in a link but doesn't link to the page for an author.
++ <?php echo `get_the_author();` ?> - outputs the text of the author of a post. It can be placed in a link but doesn't link to the page for an author.
 
-<?php echo the_author_posts_link(); ?> - outputs a link to the author page
++ <?php echo `the_author_posts_link();` ?> - outputs a link to the author page
 
-<?php echo get_the_author_meta( 'nicename', $author_id ); ?>   -
-```
++ <?php echo `get_the_author_meta( 'nicename', $author_id );` ?> -
 
-`
++ <?php `the_post();` ?> - helps WordPress identify the correct post to use and then gives access to all the author methods
 
-```php
-
-    <?php the_post(); ?> 
-    <?php echo the_author_posts_link(); ?>
-    <?php //echo get_the_author(); ?>
-    <?php //the_post(); ?>
-    <?php //echo get_usermeta($post->post_author,'author_url', 'a'); ?>  
-```
++ <?php //echo get_usermeta($post->post_author,'author_url', 'a'); ?>  
 
 	
-### Post Pagination
+### WordPress Pagination
 
 
 <!-- WordPress Core Posts Pagination -->
 ```php 
 
-<?php 
-        
-    $custom_query_args = array(
+    <?php 
 
-		'post_type' => 'post',
-		'post_status' => 'publish',
-		//'posts_per_page' => 8,
-		// 'paged' => $paged,
-		'paged' => $paged,
-		'total' => $main_blog->max_num_pages,
-		'order' => 'DESC'
-	);
-        
-		
-    $custom_query_args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+        $custom_query_args = array(
+
+            'post_type' => 'post',
+            'post_status' => 'publish',
+            //'posts_per_page' => 8,
+            // 'paged' => $paged,
+            'paged' => $paged,
+            'total' => $main_blog->max_num_pages,
+            'order' => 'DESC'
+        );
+
+		// paged query
+        $custom_query_args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 			
 			
-	// wp query
-	$main_blog = new WP_Query( $custom_query_args ); 
+        // define a new WP Query
+        $main_blog = new WP_Query( $custom_query_args ); 
 
-	$temp_query = $wp_query;
-	$wp_query = NULL;
-	$wp_query = $main_blog; 
+        $temp_query = $wp_query;
+        $wp_query = NULL;
+        $wp_query = $main_blog; 
+    ?>
 
 	<!-- Pagination --> 
 	<?php the_posts_pagination(); ?>
 	
 	<?php if ( have_posts() ):  ?> 
 	 
-	<?php while ( have_posts() ) : the_post(); ?>        
+	<?php while ( have_posts() ) : the_post(); ?>       
 	
-			       
+        <!-- Looped Query -->
         
     <?php endwhile; ?>  
         
@@ -469,13 +477,13 @@ Blog Posts - Custom Post Type.
 		// Reset the posts data 
 		wp_reset_postdata(); 
 	
+        // Pagination Links
 		the_posts_pagination(); 
 	
 		$wp_query = NULL;
 		$wp_query = $temp_query;
 	
-	?>
-        
+	?>       
 
 
 ```
@@ -484,21 +492,22 @@ Blog Posts - Custom Post Type.
 
 ```php
 
-    // Register Navigation menu(s)
-    function main_jgdm_menu(){
-        
-        register_nav_menus( array(
-            'main_menu' => __( 'main_site_menu', 'jgdm_blog' )
-        ) );
-    }
+    <?php
 
-    add_action( 'init', 'main_jgdm_menu' );  
+        // Register Navigation menu(s)
+        function main_jgdm_menu(){
+
+            register_nav_menus( array(
+                'main_menu' => __( 'main_site_menu', 'jgdm_blog' )
+            ) );
+        }
+
+        add_action( 'init', 'main_jgdm_menu' );  
 
 
 ```
 
 ```php 
-
                     
 	<!-- Main Nav Menu settings -->
 	<?php wp_nav_menu( array( 
@@ -513,22 +522,23 @@ Blog Posts - Custom Post Type.
                     
 ```
 
-	### Enqueuing Assets into your theme
+### Enqueuing website assets into your theme
 
 ```php 
 
-<?php 
-	// Add and Enqueue Theme Assets 
-	function add_theme_assets() {
+    <?php 
 
-        // register styles
-        wp_enqueue_style( 'style', get_stylesheet_uri() );     
-    
-        
-        // register scripts
-        wp_enqueue_script( 'app', get_template_directory_uri() . '/path/to/app.js' );
-        
-    }
+        // Add and Enqueue Theme Assets 
+        function add_theme_assets() {
+
+            // register styles
+            wp_enqueue_style( 'style', get_stylesheet_uri() );     
+
+
+            // register scripts
+            wp_enqueue_script( 'app', get_template_directory_uri() . '/path/to/app.js' );
+
+        }
 
 ```
 
@@ -536,21 +546,22 @@ Blog Posts - Custom Post Type.
 
 ```php 
 
-<?php 
-	// Register a sidebar area
-    register_sidebar( array (
+    <?php 
 
-        'name' => __( 'HTML Block 1'),
-        'id' => 'widget_area_identifier',
-        'description' => __( 'HTML Block 1 - Enter the custom html for this widget area') 
-       )
-    );  
-	
-	// place widget someoneqhere in your template 	
-    <?php dynamic_sidebar( "widget_area_identifier" ); ?>   
+        // Register a sidebar area
+        register_sidebar( array (
+
+            'name' => __( 'HTML Block 1'),
+            'id' => 'widget_area_identifier',
+            'description' => __( 'HTML Block 1 - Enter the custom html for this widget area') 
+           )
+        );  
+
+        // place widget someoneqhere in your template 	
+        <?php dynamic_sidebar( "widget_area_identifier" ); ?>   
 ```
 
-	### Search
+### Search
 
 ```php 
 
@@ -572,16 +583,9 @@ Blog Posts - Custom Post Type.
 
 ```php
 
-<?php
-	// Use the loop to get list of returned search results
-	
-	
-        
-
-    <!-- The WordPress Loop Begins -->
+	<!-- Use the WordPress Loop to get list of returned search results -->    
     <?php if ( have_posts() ) : ?>
 
-    <!-- html -->      
     <?php while ( have_posts() ) : the_post(); ?>
 	
 		<!-- The Loop Content -->
@@ -602,22 +606,20 @@ Blog Posts - Custom Post Type.
 ```
 ### Author and Archival Templates
 
-```php 
+```php
 
-
-        <!-- categories for this post --> 
-        <div class="the_category_list">
-        <h3> the_category() - Categories related to this post </h3>
-           <?php the_category(' - '); ?> 
-        </div>
-        <hr />
+    <!-- categories for this post --> 
+    <div class="the_category_list">
+    <h3> the_category() - Categories related to this post </h3>
+       <?php the_category(' - '); ?> 
+    </div>
+    <hr />
 		
-		
-		<?php echo get_the_author(); ?>  - outputs the text of the author of a post. It can be placed in a link but doesn't link to the page for an author.
+    <?php echo get_the_author(); ?>  - outputs the text of the author of a post. It can be placed in a link but doesn't link to the page for an author.
 
-		<?php echo the_author_posts_link(); ?> - outputs a link to the author page
+    <?php echo the_author_posts_link(); ?> - outputs a link to the author page
 
-		<?php echo get_the_author_meta( 'nicename', $author_id ); ?>   -
+    <?php echo get_the_author_meta( 'nicename', $author_id ); ?>   -
 
 ```
 
@@ -635,7 +637,7 @@ Blog Posts - Custom Post Type.
 ```php 
 
 <?php
-	// To come 
+	// To Come:
 
 ```
 
