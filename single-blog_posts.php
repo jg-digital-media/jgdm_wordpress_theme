@@ -40,10 +40,18 @@ require "inc/header.php"; ?>
         
        
         
-        <div class="blog_post_single">
-             
+        <div class="blog_post_single">                
+            
+            <div class="posts-toggling">
+                
+                <?php previous_post_link( $format = "<< %link", "Previous Post" ); ?>
+                | 
+                <?php next_post_link( $format = "%link >>", "Next Post" ); ?>
+                
+            </div> 
                 
             <?php the_post(); ?> 
+            
             <aside> 
                 Author Name - <a class="author-link" href="#">
                     <?php //echo get_the_author_meta( 'nicename', $author_id ); ?>
@@ -69,7 +77,16 @@ require "inc/header.php"; ?>
                     <?php //the_post(); ?>
                     <?php //echo get_usermeta($post->post_author,'author_url', 'a'); ?> </a> | 
                 
-                <a class="author-link" href="#">( <!-- 00 September 00 : 11:33pm --> <?php echo get_the_date('d M Y'); ?>)</a> </aside>       
+                <a class="author-link" href="#">( <!-- 00 September 00 : 11:33pm --> <?php echo get_the_date('d M Y'); ?>)</a> 
+            </aside>                  
+            
+            <div class="posts-toggling">
+                
+                <?php previous_post_link( $format = "<< %link", "Previous Post" ); ?>
+                | 
+                <?php next_post_link( $format = "%link >>", "Next Post" ); ?>
+                
+            </div>        
 
         </div>
         
