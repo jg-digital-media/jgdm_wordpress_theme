@@ -1,4 +1,10 @@
-<?php require "inc/header.php"; ?>
+<?php
+
+/*
+   Template Name: Author Date Template
+*/
+
+require "inc/header.php"; ?>
 
 <section class="single_php">
     

@@ -4,7 +4,7 @@
    Template Name: Category Template 
 */
 
-<?php require "inc/header.php"; ?>
+require "inc/header.php"; ?>
 
 <section class="single_php">
     
