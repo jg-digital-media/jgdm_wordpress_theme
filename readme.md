@@ -1,9 +1,8 @@
-# JGDM Blog Theme  (2023) - 14/03/2023 - 16:25
+# JGDM Blog Theme  (2023) - 15/03/2023 - 11:53
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
 `git clone https://github.com/jg-digital-media/jgdm_wordpress_theme`
-
 
 
 ## **Sections**
@@ -17,29 +16,32 @@
   + [Plugin List](#plugin-list)
   
   + [Links](#links)
-  
-  + [Todo](#todo)
 
 
 ## Goals:  
 [Back to Top](#sections) 
 
-+ `[DONE]` - Export the Database from blog.jonniegrieve.co.uk and import into a fresh wordpress installation.
-+ `[DONE]` - Enqueue Styling
-+ `[DONE]` - Start with a plain design
+
++ Start with a plain design
++ A newer fresher redesign for my blog
++ To explore and recognise errors with displaying code snippets when posting code with `Highlighting Code Block` plugin
++ Build out the templates to build a blog with added custom post type
++ Export the Database from blog.jonniegrieve.co.uk and import into a fresh wordpress installation.
+
+### TODO's
++ `[DONE]` - Enqueue styling and script file
 + `[DONE]` - Working with Post Pagination
 + `[DONE]` - Archive Templates 
 + `[DONE]` - Search Templates 
 + `[DONE]` - Single post Templates
++ `[DONE]` - Comment templates
 + `[TODO: ]` - Code Snippets
-+ `[TODO: ]` - Comment templates
-+ `[TODO: ]` - Simpifly Markup and CSS Styling
++ `[TODO: ]` - Simpifly Markup and CSS Styling - Requires reformat of markup
 + `[TODO: ]` - Categories - Listings and Pagination for individual categories
-+ `[TODO: ]` - Customise the admin area
-+ `[TODO: ]` - A newer fresher redesign for my blog
++ `[TODO: ]` - Customise the admin area with code
 + `[TODO: ]` - Plugin Development
-+ `[TODO: ]` - To explore and recognise errors with displaying code snippets when posting code with `Highlighting Code Block` plugin
-+ `[TODO: ]` - Build out the templates to build a blog with added custom post type
++ `[TODO: ]` - Pagination links
+
 
 ## Setup: 
 [Back to Top](#sections)
@@ -59,24 +61,24 @@ Make sure your WordPress theme has the following minimum files
 
 Make sure to include support for dynamic menus for navigation and widgets in your theme.
 
-   ```php
+```php
 
     <?php
         add_theme_support( "widget" );
         add_theme_support( "menus" );
-   ```
+```
+    
 2. Enqueue Styles and Scripts
 
 
-    ```php
+```php
 
     <?php
-        // in functions.php
 
-        // Add and Enqueue Theme Assets 
+        // in functions.php - Add and Enqueue Theme Assets 
         function add_theme_assets() {
 
-               // register styles
+            // register styles
             wp_enqueue_style( 'style', get_stylesheet_uri() );     
 
 
@@ -84,7 +86,8 @@ Make sure to include support for dynamic menus for navigation and widgets in you
             wp_enqueue_script( 'app', get_template_directory_uri() . '/_assets/scripts/app.js' );
 
         }
-    ```
+```
+
 3. Menu
 
    + link to index.php `http://localhost/jgdm_blog/blog_posts/2/page/1/` 
@@ -93,36 +96,36 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 
 4. Setup Widgets
 
-  + Use functions.php to register an individual widget area
-
-    ```php
-
-        <?php
-          register_sidebar( array (
-
-                'name' => __( 'HTML Block 1'),
-                'id' => 'jgblog_html_one',
-                'description' => __( 'HTML Block 1 - Enter the custom html for this widget area') 
-               )
-            ); 
-
-        ?>
-    ``` 
-
-+ Call the dynamic sidebar function and put it in your chosen place for your design.
+Use functions.php to register an individual widget area
 
 ```php
-   <?php dynamic_sidebar( "jgblog_html_one" ); ?>  
+
+    <?php
+        register_sidebar( array (
+
+            'name' => __( 'HTML Block 1'),
+            'id' => 'jgblog_html_one',
+            'description' => __( 'HTML Block 1 - Widget Description Goes Here') 
+           )
+        ); 
+
+    ?>
+``` 
+
+Call the dynamic sidebar function and put it in your chosen place for your design.
+
+```php
+
+    <?php 
+        dynamic_sidebar( "jgblog_html_one" ); 
+    ?>  
 ```
 
-5. post pagination
+5. Post Pagination
 
-
-
-Paged query...
+### Paged query to prepare for pagination
 
 ```php
-
 
     <?php
         $custom_query_args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
@@ -130,62 +133,65 @@ Paged query...
         // pagination method
         the_posts_pagination(); ?>
 
-```
-
-```php
         <!-- The Loop -->
+
 ```
 
-Reset the post data 
+### Reset the post data 
 
 ```php
-        <!-- post pagination -->        
-        <?php  
+      
+    <?php  
 
-            // Reset the posts data 
-            wp_reset_postdata(); 
+        <!-- post pagination -->  
 
-            the_posts_pagination(); 
-        ?>           
+        // Reset the posts data 
+        wp_reset_postdata(); 
+
+        // pagination metod
+        the_posts_pagination(); 
+    ?> 
+
 ```  
 
-```upcoming  - WP QUERY Pagination``` 
+```upcoming - WP QUERY Pagination``` 
 
 
+6. Custom Post Types
 
+```not currently created in code - uses Plugins
 
-6. Custom post types
-
-```not currently created in code  - uses 
-
-Plugins 
--> Advanced Custom Fields by WP Engine
--> Custom Post Type UI: by WebDev Studios
+   Plugins 
+   - Advanced Custom Fields by WP Engine
+   - Custom Post Type UI: by WebDev Studios
 
 ``` 
 
-Blog Posts - Custom Post Type. 
+### Blog Posts - Custom Post Type 
 
 ```php
 
-    $custom_query_args = array(
+    <?php
 
-        'post_type' => 'blog_posts',
-        'post_status' => 'publish' 
-    );
+        $custom_query_args = array(
 
-    // wp query
-    $main_blog = new WP_Query( $custom_query_args ); 
+            'post_type' => 'blog_posts',
+            'post_status' => 'publish' 
+        );
 
+        // wp query
+        $main_blog = new WP_Query( $custom_query_args ); 
+    ?>
 
-    <?php if ( $main_blog->have_posts() ):  ?> 
+    <!-- The WordPress Loop -->
+    <?php if ( $main_blog->have_posts() ): ?> 
 
     <?php while ( $main_blog->have_posts() ) : $main_blog->the_post(); ?>
 
-    <!-- Content -->
-    
+        <!-- Content -->
+
     <?php endwhile; ?>  
-        
+
     <?php else: ?>        
 
     <p>No content</p>
@@ -201,6 +207,7 @@ Blog Posts - Custom Post Type.
 
 
 ### Directories required
+
   + assets  
   + inc/
   + template-parts
@@ -245,7 +252,7 @@ Blog Posts - Custom Post Type.
 	 
 	<?php while ( have_posts() ) : the_post(); ?>        
 	
-	<div class = "entry"> . . . </div>
+	   <div class = "entry"> . . . </div>
 	
 	<?php endwhile; ?>  
 	
@@ -308,10 +315,7 @@ Blog Posts - Custom Post Type.
 
     <?php endif; ?>
 
-
-
     <!-- The Loop with WP Query -->
-
     <?php 
         
         $args = array( 'post_type' => 'blog_posts' );
@@ -335,7 +339,6 @@ Blog Posts - Custom Post Type.
 
 ```
 
-
 ### Category Methods
 
 ```php
@@ -350,25 +353,25 @@ Blog Posts - Custom Post Type.
 
 ```php
 
-    <!-- WP list categories (get_the_category() alternative syntax)  -->
+    <!-- WP list categories - get_the_category() alternative syntax -->
     <h3> 
-    <?php foreach( (get_the_category() ) as $category) {
+        <?php foreach( (get_the_category() ) as $category) {
+
+            echo "<a href = '" . get_category_link( $category ) . "'> " . $category->cat_name . "</a>";
+            echo $category->cat_name . " - ";
     
-        echo "<a href = '" . get_category_link( $category ) . "'> " . $category->cat_name . "</a>";
-        echo $category->cat_name . " - ";
-    
-    } ?> </h3>
+        } ?> 
+    </h3>
 ```
 
 ```php
 
-    <!-- Categories assigned to a particular posy -->
+    <!-- Categories assigned to a particular post -->
     <h3>
-    <?php 
-        the_category( " - "); 
-    ?>
+        <?php 
+            the_category( " - "); 
+        ?>
     </h3> 
-
 ```
 
 ```php
@@ -379,13 +382,11 @@ Blog Posts - Custom Post Type.
 
         function get_category( $args ) {
 
-            $defaults  = array( 'taxonomy' => 'category' );
-            $args     = wp_parse_args( $args, $defaults );
+            $defaults = array( 'taxonomy' => 'category' );
+            $args = wp_parse_args( $args, $defaults );
         }
 
-    ?>       
-
-
+    ?> 
 ```
 
 ### Archive Methods
@@ -397,7 +398,7 @@ Blog Posts - Custom Post Type.
             <li><?php wp_get_archives('post_type=blog_posts'); ?></li>
         </ul>
 
-</div> 
+    </div> 
 ```
 
 ```php
@@ -421,17 +422,43 @@ Blog Posts - Custom Post Type.
 
 + <?php `the_post();` ?> - helps WordPress identify the correct post to use and then gives access to all the author methods
 
-+ <?php //echo get_usermeta($post->post_author,'author_url', 'a'); ?>  
++ <?php `//echo get_usermeta($post->post_author,'author_url', 'a');` ?>  
 
 	
 ### WordPress Pagination
 
-
 <!-- WordPress Core Posts Pagination -->
+
+```php
+        
+    <!-- Pagination --> 
+    <?php the_posts_pagination(); ?>
+
+    <?php if ( have_posts() ):  ?> 
+
+    <?php while ( have_posts() ) : the_post(); ?>        
+
+    <div class = "entry"> . . . </div>
+
+    <?php endwhile; ?>  
+
+    <?php else: ?>        
+
+    <p>No content</p>
+
+    <?php endif; ?>         
+
+    ?>
+
+    <!-- Pagination --> 
+    <?php the_posts_pagination(); ?>
+```
+
 ```php 
 
     <?php 
 
+        // WordPress Custom Post Type Pagination
         $custom_query_args = array(
 
             'post_type' => 'post',
@@ -540,6 +567,9 @@ Blog Posts - Custom Post Type.
 
         }
 
+        // action hook
+        add_action( 'wp_enqueue_scripts', 'add_theme_assets' );  
+
 ```
 
 ### Widget Areas
@@ -548,7 +578,7 @@ Blog Posts - Custom Post Type.
 
     <?php 
 
-        // Register a sidebar area
+        // Register a Widget Area
         register_sidebar( array (
 
             'name' => __( 'HTML Block 1'),
@@ -557,7 +587,7 @@ Blog Posts - Custom Post Type.
            )
         );  
 
-        // place widget someoneqhere in your template 	
+        // place widget somewhere in your template 	
         <?php dynamic_sidebar( "widget_area_identifier" ); ?>   
 ```
 
@@ -608,7 +638,7 @@ Blog Posts - Custom Post Type.
 
 ```php
 
-    <!-- categories for this post --> 
+    <!-- Categories for this post --> 
     <div class="the_category_list">
     <h3> the_category() - Categories related to this post </h3>
        <?php the_category(' - '); ?> 
@@ -619,7 +649,7 @@ Blog Posts - Custom Post Type.
 
     <?php echo the_author_posts_link(); ?> - outputs a link to the author page
 
-    <?php echo get_the_author_meta( 'nicename', $author_id ); ?>   -
+    <?php echo get_the_author_meta( 'nicename', $author_id ); ?> - 
 
 ```
 
@@ -627,8 +657,8 @@ Blog Posts - Custom Post Type.
 
 ```php 
 
-<?php 
-	// To Come:	
+    <?php 
+        // To Come:	
 
 ```
 
@@ -636,12 +666,10 @@ Blog Posts - Custom Post Type.
 
 ```php 
 
-<?php
-	// To Come:
+    <?php
+        // To Come:
 
-```
-
-  
+```  
 
 ## Plugin List
 [Back to Top](#sections)
@@ -698,12 +726,6 @@ Blog Posts - Custom Post Type.
 ### Higlighting Code Block is the plugin used for code snippers 
 + using `prism.js`
 
-### current author variable method. -  [Codex: Author Templates](https://codex.wordpress.org/Author_Templates)
+### Current author variable method. -  [Codex: Author Templates](https://codex.wordpress.org/Author_Templates)
 
 ### [Category Pagination](https://www.trickyenough.com/pagination-in-wordpress/)
-
-## Todo
-[Back to Top](#sections)
-
-+ Pagination links - current page link - visited page link
-  + Pagination for category templates
