@@ -19,7 +19,7 @@
    // Add and Enqueue Theme Assets 
    function add_theme_assets() {
 
-           // register styles
+        // register styles
         wp_enqueue_style( 'style', get_stylesheet_uri() );     
     
         
