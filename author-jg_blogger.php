@@ -1,7 +1,7 @@
 <?php
 
 /*
-   Template Name: author-jg_blogger.php 
+   Template Name: Author Template author-jg_blogger.php 
 */
 
 require "inc/header.php"; ?>
