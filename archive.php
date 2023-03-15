@@ -1,3 +1,9 @@
+<?php
+
+/*
+   Template Name: Archive Template
+*/
+
 <?php require "inc/header.php"; ?>
 
 <section class="single_php">

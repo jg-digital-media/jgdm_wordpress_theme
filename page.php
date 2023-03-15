@@ -1,7 +1,7 @@
 <?php
 
 /*
-   Template Name: page.php 
+   Template Name: Page Template
 */
 
 require "inc/header.php"; ?>

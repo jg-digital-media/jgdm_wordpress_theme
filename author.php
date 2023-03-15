@@ -1,7 +1,7 @@
 <?php
 
 /*
-   Template Name: author.php 
+   Template Name: Author Template
 */
 
 require "inc/header.php"; ?>

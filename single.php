@@ -1,7 +1,7 @@
 <?php
 
 /*
-   Template Name: single.php 
+   Template Name: Single Post Template
 */
 
 require "inc/header.php"; ?>
@@ -35,10 +35,7 @@ require "inc/header.php"; ?>
         </div>
 
         
-        <!-- blog content -->
-        
-       
-        
+        <!-- blog content -->        
         <div class="blog_post_single">            
             
             <div class="posts-toggling">
