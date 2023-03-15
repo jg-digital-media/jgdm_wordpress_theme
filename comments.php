@@ -1,5 +1,6 @@
 <?php // echo "<p>comments.php - successfully retrieved</p>"; ?>
 
+<?php
 /** 
 
 * The template for displaying Comments. 
