@@ -1,4 +1,4 @@
-# JGDM Blog Theme  (2023) - 15/03/2023 - 12:29
+# JGDM Blog Theme  (2023) - 15/03/2023 - 12:54
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -90,8 +90,8 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 
 3. Menu
 
-   + link to index.php `http://localhost/jgdm_blog/blog_posts/2/page/1/` 
-   + link to home.php `(http://localhost/blog_posts)`
+   + link to index.php (e.g. `http://localhost/jgdm_blog/blog_posts/2/page/1/`)
+   + link to home.php (e.g. `http://localhost/blog_posts`)
    + links to pages `(page.php)`
 
 4. Setup Widgets
@@ -104,7 +104,7 @@ Use functions.php to register an individual widget area
         register_sidebar( array (
 
             'name' => __( 'HTML Block 1'),
-            'id' => 'jgblog_html_one',
+            'id' => 'html_block_one',
             'description' => __( 'HTML Block 1 - Widget Description Goes Here') 
            )
         ); 
@@ -117,7 +117,7 @@ Call the dynamic sidebar function and put it in your chosen place for your desig
 ```php
 
     <?php 
-        dynamic_sidebar( "jgblog_html_one" ); 
+        dynamic_sidebar( "html_block_one" ); 
     ?>  
 ```
 
@@ -203,8 +203,70 @@ Call the dynamic sidebar function and put it in your chosen place for your desig
 
 7. Single Post Page Comments
 
-  + Allow post discussion in admin area
+Allow post discussion in admin area
 
+```php
+        
+    <?php
+    
+        // single.php - Pull in the comments template - If comments are open or we have at least one comment, load up the comment template.
+        if ( comments_open() || get_comments_number() ) :
+
+            comments_template();
+        endif;
+        
+    ?>
+```
+
+```php
+
+	<?php if ( have_comments() ) : ?>
+
+    <?php endif; ?>
+
+```
+
+```php
+
+    <!-- Comments are closed message -->
+    <?php if ( !comments_open() && get_comments_number() ) : ?> 
+            
+        <p class="no-comments"><?php _e( 'Comments are closed.', 'textdomain' ); ?></p>
+            
+    <?php endif; ?>
+    
+```
+
+```php 
+
+    <!-- Numbered Pagination Links using paginage_comment_links() -->
+    <div class="pagination">
+        <?php paginate_comments_links(); ?>
+    </div>
+
+```
+
+```php 
+
+    <!-- Pagination -->
+    <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>                 
+
+    <nav class="navigation comment-navigation" role="navigation">
+
+        <h3 class="screen-reader-text section-heading"><?php _e( 'Comment navigation', 'textdomain' ); ?></h3>
+        <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'textdomain' ) ); ?></div>
+        <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'textdomain' ) ); ?></div>
+
+    </nav><!-- .comment-navigation -->
+
+    <?php endif; // Check for comment navigation ?>
+
+```
+
+```php
+
+    <?php comment_form(); ?>
+```
 
 ### Directories required
 
@@ -522,14 +584,14 @@ Call the dynamic sidebar function and put it in your chosen place for your desig
     <?php
 
         // Register Navigation menu(s)
-        function main_jgdm_menu(){
+        function main_menu(){
 
             register_nav_menus( array(
-                'main_menu' => __( 'main_site_menu', 'jgdm_blog' )
+                'main_menu' => __( 'main_site_menu', 'textdomain' )
             ) );
         }
 
-        add_action( 'init', 'main_jgdm_menu' );  
+        add_action( 'init', 'main_menu' );  
 
 
 ```
