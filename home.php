@@ -2,31 +2,7 @@
 
 <section>
     
-    <article class="primary">        
-        
-        <?php 
-        
-            $custom_query_args = array(
-
-                'post_type' => 'post',
-                'post_status' => 'publish',
-                //'posts_per_page' => 8,
-                // 'paged' => $paged,
-                'paged' => $paged,
-                'total' => $main_blog->max_num_pages,
-                'order' => 'DESC'
-            );
-        
-            $custom_query_args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
-
-            // wp query
-            $main_blog = new WP_Query( $custom_query_args ); 
-
-            $temp_query = $wp_query;
-            $wp_query = NULL;
-            $wp_query = $main_blog;
-                
-        ?>
+    <article class="primary">       
         
         <h2>Latest Blogs <span><?php echo "home.php" ?></span> </h2> 
         
@@ -60,12 +36,7 @@
         <?php
             
             // Reset the posts data 
-            wp_reset_postdata(); 
-        
-            the_posts_pagination(); 
-        
-            $wp_query = NULL;
-            $wp_query = $temp_query;
+            // wp_reset_postdata(); 
         
         ?>
         
