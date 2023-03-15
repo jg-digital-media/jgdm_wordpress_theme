@@ -642,6 +642,17 @@
                 padding: 15px;
                 margin: 15px auto;
                 
+                .posts-toggling {
+                    
+                    text-align: center;
+                    background: none;
+                    
+                    &:hover {
+                        
+                        background: none;
+                    }
+                }
+                
                 h3 {
                     
                     text-align: center;
