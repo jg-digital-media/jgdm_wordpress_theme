@@ -1,4 +1,4 @@
-# JGDM Blog Theme  (2023) - 15/03/2023 - 11:53
+# JGDM Blog Theme  (2023) - 15/03/2023 - 12:29
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -634,6 +634,16 @@ Call the dynamic sidebar function and put it in your chosen place for your desig
     <?php endif; ?>   
 	
 ```
+
+```php
+    <?php 
+
+        // outputs a list of Pages in the site
+        wp_list_pages(); 
+        
+    ?>
+```
+
 ### Author and Archival Templates
 
 ```php
