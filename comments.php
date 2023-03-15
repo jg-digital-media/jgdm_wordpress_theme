@@ -36,8 +36,7 @@
             </div>
 
             <!-- Pagination -->
-            <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>    
-             
+            <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>                 
 
                 <nav class="navigation comment-navigation" role="navigation">
 
