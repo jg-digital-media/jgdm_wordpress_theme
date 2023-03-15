@@ -22,12 +22,17 @@
             <h2 class="comments-title"> View comments people have posted: </h2>
 
             <!-- Comments are closed message -->
+            <?php if ( !comments_open() && get_comments_number() ) : ?> 
+            
+                <p class="no-comments"><?php _e( 'Comments are closed.', 'jgdm_blog' ); ?></p>
+            
+            <?php endif; ?>    
+            
 
-                <?php if ( ! comments_open() && get_comments_number() ) : ?> 
-            
-                    <p class="no-comments"><?php _e( 'Comments are closed.', 'jgdm_blog' ); ?></p>
-            
-                <?php endif; ?>    
+            <!-- Numbered Pagination Links using paginage_comment_links() -->
+            <div class="pagination">
+                <?php paginate_comments_links(); ?>
+            </div>
 
             <!-- Pagination -->
             <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>    
@@ -42,11 +47,6 @@
                 </nav><!-- .comment-navigation -->
 
             <?php endif; // Check for comment navigation ?>
-
-            <!-- Numbered pagination links -->
-            <div class="pagination">
-                <?php paginate_comments_links(); ?>
-            </div>
 
             <ol class="comment-list">
                 <?php
