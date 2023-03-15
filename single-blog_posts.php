@@ -13,34 +13,35 @@ require "inc/header.php"; ?>
         
         <?php 
         
-            $args = array( 'post_type' => 'blog_posts', 
-                           'supports' => array( 'comments' ) );
+            $args = array( 
+                'post_type' => 'blog_posts', 
+                'supports' => array( 'comments' )
+            );
 
             // wp query
             $main_blog = new WP_Query( $args )
                 
         ?>
         
-        <h2 class="post_headline"> <p>bp-single.php</p> </h2>
-        <a href="<?php bloginfo("home"); ?>">Home</a> 
-
+        <h2 class="post_headline"> <p>single-blog_posts.php</p> </h2>
         
+        <a href="<?php bloginfo("home"); ?>" class="link_home" title="Goes back to homepage">Home</a> 
         
         <!-- categories for this post --> 
         <div class="the_category_list">
-            <h3> the_category() - Categories related to this post </h3>
+            
+            <h3>
+                <!-- the_category(); -->
+                Categories related to this post 
+            </h3>
             
             <?php the_category(' - '); ?> 
             
-            <hr />
         </div>
 
         
         <!-- blog content -->
-        
-       
-        
-        <div class="blog_post_single">                
+        <div class="blog_post_container">                
             
             <div class="posts-toggling">
                 

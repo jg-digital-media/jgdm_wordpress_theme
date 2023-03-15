@@ -6,7 +6,6 @@
 
 require "inc/header.php"; ?>
 
-
 <section class="single_php">
     
     <article class="single">        
@@ -21,22 +20,23 @@ require "inc/header.php"; ?>
         ?>
         
         <h2 class="post_headline"> <p>single.php</p> </h2>
-        <a href="<?php bloginfo("home"); ?>">Home</a> 
-
         
+        <a href="<?php bloginfo("home"); ?>" class="link_home" title="Goes back to homepage">Home</a> 
         
         <!-- categories for this post --> 
         <div class="the_category_list">
-            <h3> the_category() - Categories related to this post </h3>
+            
+            <h3> 
+                <!-- the_category(); -->
+                Categories related to this post 
+            </h3>
             
             <?php the_category(' - '); ?> 
             
-            <hr />
         </div>
-
         
         <!-- blog content -->        
-        <div class="blog_post_single">            
+        <div class="blog_post_container">            
             
             <div class="posts-toggling">
                 
@@ -62,7 +62,7 @@ require "inc/header.php"; ?>
             
             <span>Posted on: <?php the_date('d M Y'); ?> </span>
 
-            <p> <?php the_field( "article_content" ); the_content(); ?> </p>  
+            <p> <?php the_field( "article_content" ); the_content(); ?> </p>
             
             <aside> 
                 Author Name - <a class="author-link" href="#">
