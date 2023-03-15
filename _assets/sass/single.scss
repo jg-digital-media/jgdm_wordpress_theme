@@ -745,7 +745,7 @@ section.single_php {
                             color: darkred;
                             transition: .2s color;
 
-                            &:hover 
+                            &:hover {
 
                                 color: red;
                             }
@@ -754,6 +754,7 @@ section.single_php {
                 }
             }
         }
+    }
 
     .author {
 
