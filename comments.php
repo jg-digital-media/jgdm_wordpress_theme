@@ -1,4 +1,4 @@
-<?php echo "<p>comments.php - successfully retrieved</p>"; 
+<?php // echo "<p>comments.php - successfully retrieved</p>"; ?>
 
 /** 
 
