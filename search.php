@@ -44,8 +44,7 @@ require "inc/header.php"; ?>
         
         <?php echo "<p class='number_of_results'>Number of results:  " . "<span class='total_results'>" . $total_results . "</span></p>"; ?>
         
-        <?php // get_search_form(); ?>    
-        
+        <?php // get_search_form(); ?>
   
         <!-- Post pagination for Searches -->
         <?php
@@ -53,18 +52,14 @@ require "inc/header.php"; ?>
 
             // pagination method
             the_posts_pagination(); ?>
-        
 
         <!-- The WordPress Loop Begins -->
         <?php if ( have_posts() ) : ?>
         
-        
-        
-                <p>Look at the results list below or try another search</p>
+            <p>Look at the results list below or try another search</p>
                 
-                <?php get_search_form(); ?>
-
-        <!-- html -->      
+            <?php get_search_form(); ?>
+        
         <?php while ( have_posts() ) : the_post(); ?>
              
             <div class="search-entry">
@@ -92,9 +87,7 @@ require "inc/header.php"; ?>
             </div>
         
         <?php endif; ?>   
-        
-        <?php // wp_list_pages(); ?>
-        
+            
         
         <!-- post pagination -->        
         <?php  
@@ -107,12 +100,10 @@ require "inc/header.php"; ?>
         
     </article>
     
-   
-    
-<!--
+    <!--
 
-Include the search form 
-Include it with: get_search_form().
+        Include the search form 
+        Include it with: get_search_form().
     -->
     
 </section>
