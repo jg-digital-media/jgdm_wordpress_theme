@@ -12,7 +12,6 @@
                 'post_status' => 'publish',
                 //'format' => '/page/%#%',
                 //'posts_per_page' => 8,
-                // 'paged' => $paged,
                 'paged' => $paged,
                 'total' => $main_blog->max_num_pages,
                 'order' => 'DESC'
