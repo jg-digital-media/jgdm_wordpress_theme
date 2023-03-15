@@ -1,4 +1,4 @@
-# JGDM Blog Theme  (2023) - 15/03/2023 - 12:54
+# JGDM Blog Theme  (2023) - 15/03/2023 - 14:21
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -790,6 +790,8 @@ Allow post discussion in admin area
 
 ## Links 
 [Back to Top](#sections)
+
+### Blog Posts Archive Page - Slug: site-archive [Link](http://localhost/jgdm_blog/site-archive/)
 
 ### Fixing Pagination links for Custom Post Types - [Link] (https://wordpress.stackexchange.com/questions/120407/how-to-fix-pagination-for-custom-loops)
 
