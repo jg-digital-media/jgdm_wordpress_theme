@@ -6,10 +6,13 @@
         
         <?php 
         
-            //$args = array( 'post_type' => 'blog_posts' );
+            $args = array(
+                'post_type' => 'blog_posts', 
+                'post_type' => 'posts' 
+            );
 
             // wp query
-            //$main_blog = new WP_Query( $args )
+            $main_blog = new WP_Query( $args )
                 
         ?>
         
@@ -17,9 +20,11 @@
         <hr />
 
         <!-- Full list of categories -->
-        <h3><?php 
-            wp_list_categories( " - "); 
-            //get_categories(); ?>
+        <h3>
+            <?php 
+                wp_list_categories( " - "); 
+                // echo get_categories(); 
+            ?>
         </h3> 
 
         <!-- Align Center - start single blog entry -->
@@ -32,7 +37,6 @@
         ?> 
 
         <?php echo "<p class='posts_available'>Posts Available: " . "<span class='total_results'>" . $total_results . "</span></p>"; ?>
-
         
         <!-- Post pagination -->
         <?php
@@ -40,7 +44,6 @@
 
             // pagination method
             the_posts_pagination(); ?>
-        
         
         <!-- The WordPress Loop Begins -->
         <?php if ( have_posts() ) : ?>
