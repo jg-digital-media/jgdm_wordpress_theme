@@ -342,6 +342,7 @@ section.single_php article .comments-area .comment-navigation .nav-next a:hover 
 }
 section.single_php article .comments-area .pagination {
   background: none;
+  text-align: center;
 }
 section.single_php article .comments-area .comment-list {
   background: #ade0f1;
