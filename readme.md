@@ -1,4 +1,4 @@
-# JGDM Blog Theme v2 (2023) - 20/03/2023 - 09:30
+# JGDM Blog Theme v2 (2023) - 20/03/2023 - 14:20
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -406,12 +406,30 @@ Allow post discussion in admin area
 
 ```php
 
-    <!-- WP list categories - wp_list_categories()  -->
+    <!-- WP list categories - wp_list_categories() -->
     <p>wp_list_categories();</p>
 
     <?php $args = array ("separator => ' - ' ") ?>
 
     <h3><?php wp_list_categories( $args );  ?></h3>
+```
+
+```php
+
+    <!-- WP List Categories - wp_list_categories() (alternative syntax) -->
+    <?php
+        $wp_category_args = array(
+            "separator" => "-", 
+            "title_li" => "Full Categories List"
+        ); 
+    ?>
+
+    <h3>
+        <?php 
+            wp_list_categories( $wp_category_args ); 
+        ?>
+    </h3> 
+
 ```
 
 ```php
