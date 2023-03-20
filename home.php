@@ -4,7 +4,9 @@
     
     <article class="primary">       
         
-        <h2>Latest Blogs <span><?php echo "home.php" ?></span> </h2> 
+        <span class="post_headline"> <?php echo "home.php" ?> </span>
+        
+        <h2>Latest Blogs </h2>
         
         <!-- Pagination --> 
         <?php the_posts_pagination(); ?>

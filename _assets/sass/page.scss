@@ -10,7 +10,11 @@ body {
 
                 @extend %page_title;
             }
+            
+            @extend %link-colscheme-1;
+            
         }
 
     }
+    
 }

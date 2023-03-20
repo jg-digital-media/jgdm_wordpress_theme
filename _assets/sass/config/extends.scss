@@ -1,6 +1,13 @@
 %page_title {
     
-    color: red;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    background: gray;
+    color: white;
+    font-size: small;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 %link-colscheme-1 {
@@ -8,6 +15,7 @@
     a {
         
         color: $color-href;
+        font-weight: bold;
         transform: color .3s;
         
         &:hover {

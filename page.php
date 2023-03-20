@@ -7,7 +7,7 @@
 require "inc/header.php"; ?>
 
 
-<section class="single_php">
+<section class="section_page">
     
     <article class="page">  
         

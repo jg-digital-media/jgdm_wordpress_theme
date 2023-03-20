@@ -28,7 +28,9 @@
                 
         ?>
         
-        <h2>Latest Blogs <span><?php echo "index.php" ?></span></h2> 
+        <span class="post_headline"><?php echo "index.php" ?></span>
+        
+        <h2>Latest Blogs</h2> 
         
         <!-- Pagination -->
         <?php the_posts_pagination(); ?> 

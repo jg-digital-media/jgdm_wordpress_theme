@@ -7,19 +7,18 @@ body {
     
     section {
         
-        .primary {
-            
+        .primary {                   
             
             display: inline-block;
             width: 50%;
             vertical-align: top;
+                
+            span.post_headline {
+
+                @extend %page_title;
+            }       
             
             h2 {
-                
-                span {
-                    
-                    @extend %page_title;
-                }
             }
             
             .pagination {
@@ -31,6 +30,8 @@ body {
                 background: yellow;
                 text-align: center;
                 width: 70%;
+                
+                @extend %link-colscheme-1;
             }
             
             .entry {
@@ -40,6 +41,33 @@ body {
                 border: solid red 1px;
                 padding: 10px;
                 width: 70%;
+                
+                background: yellow;
+                transition: background .3s;
+                
+                &:hover {
+                    background: lightyellow;
+                }
+                
+                h3 {
+                    
+                    text-align: center;
+                    
+                    @extend %link-colscheme-1;
+                    
+                    span {
+                        
+                        display: inline-block;
+                        font-size: 10px;
+                        font-style: italic;
+                        
+                    }
+                }
+                
+                p {
+                    
+                    padding: 10px 0;
+                }
             }
         }
         
@@ -58,6 +86,18 @@ body {
             }
             
         }
+    }
+    
+    .section_single,
+    .section_page {
+        
+        h2 {
+            
+            @extend %page_title;
+        }
+        
+        @extend %link-colscheme-1;
+        
     }
 }
 
