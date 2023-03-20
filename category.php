@@ -8,11 +8,12 @@ require "inc/header.php"; ?>
 
 <section class="section_category">
     
-    <article class="single">        
+    <article class="page">        
         
         <?php 
         
             $args = array(
+                
                 'post_type' => 'blog_posts' 
             );
 
@@ -33,7 +34,7 @@ require "inc/header.php"; ?>
 
         <?php while ( $main_blog->have_posts() ) : $main_blog->the_post(); ?>
 
-            <div class="archive-entry">
+            <div class="category-entry">
 
                 <h5> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h5>
 
@@ -47,9 +48,7 @@ require "inc/header.php"; ?>
         <!--  No Post Found -->
         <?php endif; ?>
             
-        <!-- post pagination -->
-        
-        
+        <!-- post pagination -->  
         
         <?php  
         

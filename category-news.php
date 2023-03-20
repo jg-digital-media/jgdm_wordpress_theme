@@ -18,7 +18,7 @@
                 
         ?>
 
-        <h2 class="post_headline"> <p>category.php (news)</p>  <!-- get categories --> </h2>
+        <h2 class="post_headline"> <p>category.php (news)</p> </h2>
         
         <?php require "template-parts/category-list.php"; ?>
 
@@ -32,7 +32,7 @@
 
         <?php while ( $main_blog->have_posts() ) : $main_blog->the_post(); ?>
 
-            <div class="archive-entry">
+            <div class="category-entry">
 
                 <h5> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h5>
 
@@ -45,6 +45,8 @@
 
         <!--  No Post Found -->
         <?php endif; ?>
+            
+        <!-- post pagination -->  
         
         <h4>Blog Post Archives (by date)</h4>
         
