@@ -27,11 +27,16 @@
     }
 }
 
+%page_formatting {
+    
+    
+}
+
 %post_formatting {
     
     border: solid 2px red;
                 
-    /* background: yellow; */
+    background: yellow; 
     background: $background-page;
     display: block;
     margin: 15px auto;
@@ -48,19 +53,16 @@
     h6 {
 
         margin-top: 10pt;
-
     }
 
     strong, b {
 
         color: darkgreen;
-
     }
 
     em, i {
 
         color: 6e0e1f;
-
     }
 
     ul, ol {
@@ -77,13 +79,9 @@
 
     ul {
 
-
-
     }
 
     ol {
-
-
 
     }
 
@@ -91,36 +89,52 @@
 
         line-height: 1.7;  
         width: 90%;
+        display: block;
+        margin: 0 auto;
+        
+        s {
+            text-decoration: line-through;
+        }
+        
+        img {
+            
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            border: solid 3px black;
+        }
+    }
+    
+    .has-text-align-center {
+        
+        text-align: center;
+    }
+    
+    .has-text-align-left {
+        
+        text-align: left;
+    }
+    
+    .has-text-align-right {
+        
+        text-align: right;
     }
 
     .wp-block-image {
-
-
 
         @media (max-width: $breakpoint-sm) {
 
             width: 90%;
         }
-
-        figure {
-
-            img {
-
-                display: block;
-                width: 60%;
-                margin: 10px auto;
-                border: solid 3px black;
-                border-radius: 5px;
-
-            }
-
-            &.alignleft,
-            &.aligncenter,
-            &.alignright {
-
-            }
+        
+        // style - post formatting - wp-block-image        
+        
+        div {
+            
         }
     }
+    
+    // page formatting - wp-block-image
 }
 
 %link-colscheme-1 {

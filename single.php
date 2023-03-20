@@ -48,7 +48,7 @@ require "inc/header.php"; ?>
                 
             <?php the_post(); ?> 
             
-            <aside> 
+            <aside class="author_details"> 
                 Author Name - <a class="author-link" href="#">
                     <?php //echo get_the_author_meta( 'nicename', $author_id ); ?>
                     <?php echo the_author_posts_link(); ?>
@@ -64,7 +64,7 @@ require "inc/header.php"; ?>
 
             <p> <?php the_field( "article_content" ); the_content(); ?> </p>
             
-            <aside> 
+            <aside class="author_details"> 
                 Author Name - <a class="author-link" href="#">
                     <?php //echo get_the_author_meta( 'nicename', $author_id ); ?> 
                 

@@ -13,6 +13,34 @@ body {
             
             @extend %link-colscheme-1;
             
+            div {
+                
+                @extend %post_formatting;
+            }
+            
+            figure {
+
+                img {
+
+                    display: block;
+                    width: 35%;
+                    margin: 10px auto;
+                    border: solid 3px black;
+                    border-radius: 5px;
+                    
+                    @media (max-width: $breakpoint-sm) {
+                        
+                        width: 90%;
+                    }
+                }
+
+                &.alignleft,
+                &.aligncenter,
+                &.alignright {
+
+                }
+            }
+            
         }
 
     }
