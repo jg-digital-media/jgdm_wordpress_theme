@@ -64,22 +64,25 @@
         // single.php
         .blog_post_container {            
             
-            border: solid 2px red;
+            @extend %post_formatting;
             
-            .posts-toggling {
-                
-                a {
-                    
-                    font-weight: bold;
-                    color: red;
-                    transition: .2s color; 
-                    
-                    &:hover {
-                        
-                        color: green;
-                    }
+        }
+            
+            
+        .posts-toggling {
+
+            a {
+
+                font-weight: bold;
+                color: red;
+                transition: .2s color; 
+
+                &:hover {
+
+                    color: green;
                 }
             }
         }
-    }
+    } 
+
 }

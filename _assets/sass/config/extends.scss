@@ -27,6 +27,101 @@
     }
 }
 
+%post_formatting {
+    
+    border: solid 2px red;
+                
+    /* background: yellow; */
+    background: $background-page;
+    display: block;
+    margin: 15px auto;
+    padding: 10px;
+    width: 75%;
+    border-radius: 10px;
+    border: solid 3px black;
+
+    h1,
+    h2,
+    h3, 
+    h4, 
+    h5, 
+    h6 {
+
+        margin-top: 10pt;
+
+    }
+
+    strong, b {
+
+        color: darkgreen;
+
+    }
+
+    em, i {
+
+        color: 6e0e1f;
+
+    }
+
+    ul, ol {
+
+        padding-left: 10px;
+        padding-top: 20pt;
+
+        li {
+
+            list-style: none;
+        }
+
+    }
+
+    ul {
+
+
+
+    }
+
+    ol {
+
+
+
+    }
+
+    p {
+
+        line-height: 1.7;  
+        width: 90%;
+    }
+
+    .wp-block-image {
+
+
+
+        @media (max-width: $breakpoint-sm) {
+
+            width: 90%;
+        }
+
+        figure {
+
+            img {
+
+                display: block;
+                width: 60%;
+                margin: 10px auto;
+                border: solid 3px black;
+                border-radius: 5px;
+
+            }
+
+            &.alignleft,
+            &.aligncenter,
+            &.alignright {
+
+            }
+        }
+    }
+}
 
 %link-colscheme-1 {
     
