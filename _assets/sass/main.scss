@@ -10,9 +10,14 @@ body {
         .primary {                   
             
             display: inline-block;
-            width: 50%;
+            width: 65%;
             vertical-align: top;
+            
+            @media (max-width: $breakpoint-sm)
+            {
                 
+                width: auto;
+            }
             span.post_headline {
 
                 @extend %page_title;
@@ -74,7 +79,12 @@ body {
         .secondary {
             
             display: inline-block;
-            width: 40%;
+            width: 30%;
+            
+            @media (max-width: $breakpoint-sm) {
+                
+                width: auto;
+            }
             
             h2 {
                 
