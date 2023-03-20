@@ -199,6 +199,64 @@ body {
             padding: 15px 0;
         }
         
+        .page {
+            
+            // post formatting
+            
+            div {
+                
+                /* background: yellow; */
+                background: $background-single;
+                display: block;
+                margin: 15px auto;
+                padding: 10px;
+                width: 75%;
+                border-radius: 10px;
+                border: solid 3px black;
+                
+                h1,
+                h2,
+                h3, 
+                h4, 
+                h5, 
+                h6 {
+                    
+                    margin-top: 10pt;
+                    
+                }
+                
+                strong, b {
+                    
+                    color: darkgreen;
+                    
+                }
+                
+                em, i {
+                    
+                    color: 6e0e1f;
+                    
+                }
+                
+                p {
+                    
+                    line-height: 1.7;  
+                    width: 90%;
+                }
+                
+                .wp-block-image {
+                    
+                    width: 60%;
+                    margin: 10px auto;
+                    
+                    @media (max-width: $breakpoint-sm) {
+                        
+                        width: 90%;
+                    }
+                }
+            }
+            
+        }
+        
         div {
             
         }
@@ -231,8 +289,11 @@ body {
         .post_authors {
             
             display: block;
+            background: #77d9f9;
             margin: 20px auto;
             width: 50%;
+            padding: 15px;
+            border-radius: 10px;
             
             h4 {
                 
