@@ -34,7 +34,7 @@
         
         color: $color-href;
         font-weight: bold;
-        transform: color .3s;
+        transition: color .3s;
         
         &:hover {
             
