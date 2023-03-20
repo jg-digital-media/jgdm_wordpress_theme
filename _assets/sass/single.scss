@@ -61,62 +61,272 @@
             }
         }
         
-        // single.php
-        .blog_post_container {            
+        // single page comments area
+        .comment-respond {
             
-            @extend %post_formatting;
+            margin-top: 20px;
+            text-align: center;
             
-            figure {
-
-                img {
-
-                    display: block;
-                    width: 60%;
-                    margin: 10px auto;
-                    border: solid 3px black;
-                    border-radius: 5px;
+            h3 {
+                
+                font-size: 13pt;
+            }
+            
+            .comment-form {
+                
+                border: solid 1px red;
+                
+                .logged-in-as {
                     
-                    @media (max-width: $breakpoint-sm) {
+                    font-weight: bold;
+                    font-size: 12pt;
+                    
+                    a {
                         
-                        width: 90%;
                     }
                     
+                    .required-field-message {
+                        
+                        .required {
+                            
+                        }
+                    }
+                }
+                
+                .comment-form-comment {
                     
+                    border: solid red 1px;
+                    margin-top: 10px;
+                    
+                    label {
+                        
+                        font-weight: bold;
+                        
+                    }
+                    
+                    #comment {                        
+                        
+                        vertical-align: top;
+                        padding: 5px 10px;
+                        
+                        @extend %comment_textarea;
+                        
+                    }
                 }
-
-                &.alignleft,
-                &.aligncenter,
-                &.alignright {
-
+                
+                .form-submit {
+                    
+                    .submit {
+                        
+                        @extend %comment_btn;
+                        
+                    }
                 }
             }
             
-        }
+        }      
         
-        .author_details {
-            
-            display: block;
-            margin: 0 auto;
-            text-align: center;
-            font-size: 15px;
-            font-weight: bold;
-        }
-            
-            
-        .posts-toggling {
 
-            a {
+        .comments-area {
 
-                font-weight: bold;
-                color: red;
-                transition: .2s color; 
+            .comments-title {
+                
+            }
 
-                &:hover {
+            .pagination {
+            }
 
-                    color: green;
+            .comment-list {
+                
+                border: solid red 1px;
+                
+                .comment,
+                .byuser {
+                    
+                    
+                                
+                            
+                    &.depth-2 {
+
+                        padding-left: 20pt;
+                    }
+
+                    &.depth-3 {
+
+                        padding-left: 40pt;
+
+                    }
+                
+                    .comment-body {
+                        
+                        font-size: 12pt;
+                        margin: 10px 0;
+                        background: #ade8f1;
+                        padding: 5px;
+                        border-radius: 10px;
+                        
+                        .comment-author {
+                            
+                            img {
+                                
+                                width: 45px;
+                                height: 45px;
+                                border: solid gold 2px;
+                                border-radius: 50%;
+                                
+                            }
+                            
+                            .fn {
+                                
+                                display: inline-block;
+                                vertical-align: top;
+                                
+                                a {
+                                    
+                                }
+                            }
+                            
+                            .says {
+                                
+                                display: inline-block;
+                                vertical-align: top;
+                                
+                            }
+                        } 
+
+                        .comment-meta {
+                            
+                            display: inline-block;
+                            width: auto;
+                            margin-left: 25px;
+                            
+                            a {
+                                
+                            }
+                            
+                            a.comment-edit-link {
+                                
+                            }
+
+                        }
+
+                        p {
+                            
+                            margin-left: 25px;
+                            padding: 20px 0;
+                            font-weight: bold;
+
+                        }
+
+                        .reply {
+                            
+                            display: inline-block;
+                            width: auto;
+
+                            a.comment-reply-link {
+
+                            }
+                             
+                        }
+
+                        .children {
+                            
+                            li {
+                            }
+                            
+                            li {
+                                
+                                .comment-body {
+                                    
+                                }
+                                
+                                .children {
+                                    
+                                    .comment {
+                                        
+                                        .comment-body {
+                                            
+                                            .comment-author {
+                                                
+                                                img {
+                                                    
+                                                }
+                                                
+                                                .fn {
+                                                    
+                                                }
+                                                .says {
+                                                    
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }                            
+                        }    
+                    }   
+                }    
+            }
+        }        
+    }
+
+        
+        
+        
+    // single.php
+    .blog_post_container {            
+
+        @extend %post_formatting;
+
+        figure {
+
+            img {
+
+                display: block;
+                width: 60%;
+                margin: 10px auto;
+                border: solid 3px black;
+                border-radius: 5px;
+
+                @media (max-width: $breakpoint-sm) {
+
+                    width: 90%;
                 }
+
+
+            }
+
+            &.alignleft,
+            &.aligncenter,
+            &.alignright {
+
             }
         }
-    } 
+
+    }
+
+    .author_details {
+
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+    }            
+
+    .posts-toggling {
+
+        a {
+
+            font-weight: bold;
+            color: red;
+            transition: .2s color; 
+
+            &:hover {
+
+                color: green;
+            }
+        }
+    }   
 
 }

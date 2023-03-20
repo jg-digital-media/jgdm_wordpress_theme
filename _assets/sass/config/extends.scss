@@ -32,6 +32,41 @@
     
 }
 
+// buttons
+
+//comment button
+
+%comment_textarea {  
+    
+    background: #f7f7ab;         
+    padding: 8px;
+    margin: 10pt 0;
+    border: solid 3px black;
+    transition: background .3s;    
+    
+    &:hover {
+        
+       background: lighten( #f7f7ab, 16% );
+    }
+    
+}
+
+%comment_btn {    
+                        
+    padding: 8px;
+    background: yellow;
+    margin: 10pt 0;
+    cursor: pointer;
+    transition: background .3s;
+    border: solid 3px black;
+    
+    
+    &:hover {
+        
+       background: lighten( yellow, 16% );
+    }
+}
+
 %post_formatting {
     
     border: solid 2px red;
