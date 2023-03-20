@@ -57,14 +57,16 @@ body {
                 transition: background .3s;
                 
                 &:hover {
+                    
                     background: lightyellow;
                 }
                 
                 h3 {
                     
-                    text-align: center;
                     
                     @extend %link-colscheme-1;
+                    
+                    text-align: center;
                     
                     span {
                         
@@ -75,9 +77,25 @@ body {
                     }
                 }
                 
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
+                    margin-top: 10px;
+                    font-size: 12px;
+                    text-align: left
+                }
+                
                 p {
                     
                     padding: 10px 0;
+                    font-size: 12px
+                }
+                
+                ul, ol {
+                    font-size: 12px;
                 }
             }
         }
