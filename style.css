@@ -1,4 +1,4 @@
-/* Last Update: 20/03/2023 - 14:19 */
+/* Last Update: 20/03/2023 - 16:57 */
 /*
 Theme Name: Jonnie Grieve Digital Media: Blog
 Theme URI: https://blog.jonniegrieve.co.uk
@@ -37,16 +37,22 @@ body .section_search h2, body section .primary span.post_headline {
   letter-spacing: 2px;
 }
 
+body .section_page .author-entry,
 body .section_page .category-entry,
 body .section_page .archive-entry,
+body .section_single .author-entry,
 body .section_single .category-entry,
 body .section_single .archive-entry,
+body .section_archive .author-entry,
 body .section_archive .category-entry,
 body .section_archive .archive-entry,
+body .section_author .author-entry,
 body .section_author .category-entry,
 body .section_author .archive-entry,
+body .section_category .author-entry,
 body .section_category .category-entry,
 body .section_category .archive-entry,
+body .section_search .author-entry,
 body .section_search .category-entry,
 body .section_search .archive-entry {
   color: black;
@@ -58,22 +64,51 @@ body .section_search .archive-entry {
   background: #f5c7a6;
   transition: background 0.3s;
 }
+body .section_page .author-entry:hover,
 body .section_page .category-entry:hover,
 body .section_page .archive-entry:hover,
+body .section_single .author-entry:hover,
 body .section_single .category-entry:hover,
 body .section_single .archive-entry:hover,
+body .section_archive .author-entry:hover,
 body .section_archive .category-entry:hover,
 body .section_archive .archive-entry:hover,
+body .section_author .author-entry:hover,
 body .section_author .category-entry:hover,
 body .section_author .archive-entry:hover,
+body .section_category .author-entry:hover,
 body .section_category .category-entry:hover,
 body .section_category .archive-entry:hover,
+body .section_search .author-entry:hover,
 body .section_search .category-entry:hover,
 body .section_search .archive-entry:hover {
   background: #f8d8c2;
 }
 
-body section .page div, .section_single article.single .blog_post_container, body .section_page .page div,
+.section_single article.single .comment-respond .comment-form .comment-form-comment #comment {
+  background: #f7f7ab;
+  padding: 8px;
+  margin: 10pt 0;
+  border: solid 3px black;
+  transition: background 0.3s;
+}
+.section_single article.single .comment-respond .comment-form .comment-form-comment #comment:hover {
+  background: #fefef6;
+}
+
+.section_single article.single .comment-respond .comment-form .form-submit .submit {
+  padding: 8px;
+  background: yellow;
+  margin: 10pt 0;
+  cursor: pointer;
+  transition: background 0.3s;
+  border: solid 3px black;
+}
+.section_single article.single .comment-respond .comment-form .form-submit .submit:hover {
+  background: #ffff52;
+}
+
+body section .page div, .section_single .blog_post_container, body .section_page .page div,
 body .section_single .page div,
 body .section_archive .page div,
 body .section_author .page div,
@@ -89,14 +124,14 @@ body .section_search .page div {
   border-radius: 10px;
   border: solid 3px black;
 }
-body section .page div h1, .section_single article.single .blog_post_container h1, body .section_page .page div h1,
+body section .page div h1, .section_single .blog_post_container h1, body .section_page .page div h1,
 body .section_single .page div h1,
 body .section_archive .page div h1,
 body .section_author .page div h1,
 body .section_category .page div h1,
 body .section_search .page div h1,
 body section .page div h2,
-.section_single article.single .blog_post_container h2,
+.section_single .blog_post_container h2,
 body .section_page .page div h2,
 body .section_single .page div h2,
 body .section_archive .page div h2,
@@ -104,7 +139,7 @@ body .section_author .page div h2,
 body .section_category .page div h2,
 body .section_search .page div h2,
 body section .page div h3,
-.section_single article.single .blog_post_container h3,
+.section_single .blog_post_container h3,
 body .section_page .page div h3,
 body .section_single .page div h3,
 body .section_archive .page div h3,
@@ -112,7 +147,7 @@ body .section_author .page div h3,
 body .section_category .page div h3,
 body .section_search .page div h3,
 body section .page div h4,
-.section_single article.single .blog_post_container h4,
+.section_single .blog_post_container h4,
 body .section_page .page div h4,
 body .section_single .page div h4,
 body .section_archive .page div h4,
@@ -120,7 +155,7 @@ body .section_author .page div h4,
 body .section_category .page div h4,
 body .section_search .page div h4,
 body section .page div h5,
-.section_single article.single .blog_post_container h5,
+.section_single .blog_post_container h5,
 body .section_page .page div h5,
 body .section_single .page div h5,
 body .section_archive .page div h5,
@@ -128,7 +163,7 @@ body .section_author .page div h5,
 body .section_category .page div h5,
 body .section_search .page div h5,
 body section .page div h6,
-.section_single article.single .blog_post_container h6,
+.section_single .blog_post_container h6,
 body .section_page .page div h6,
 body .section_single .page div h6,
 body .section_archive .page div h6,
@@ -137,12 +172,12 @@ body .section_category .page div h6,
 body .section_search .page div h6 {
   margin-top: 10pt;
 }
-body section .page div strong, .section_single article.single .blog_post_container strong, body .section_page .page div strong,
+body section .page div strong, .section_single .blog_post_container strong, body .section_page .page div strong,
 body .section_single .page div strong,
 body .section_archive .page div strong,
 body .section_author .page div strong,
 body .section_category .page div strong,
-body .section_search .page div strong, body section .page div b, .section_single article.single .blog_post_container b, body .section_page .page div b,
+body .section_search .page div strong, body section .page div b, .section_single .blog_post_container b, body .section_page .page div b,
 body .section_single .page div b,
 body .section_archive .page div b,
 body .section_author .page div b,
@@ -150,12 +185,12 @@ body .section_category .page div b,
 body .section_search .page div b {
   color: darkgreen;
 }
-body section .page div em, .section_single article.single .blog_post_container em, body .section_page .page div em,
+body section .page div em, .section_single .blog_post_container em, body .section_page .page div em,
 body .section_single .page div em,
 body .section_archive .page div em,
 body .section_author .page div em,
 body .section_category .page div em,
-body .section_search .page div em, body section .page div i, .section_single article.single .blog_post_container i, body .section_page .page div i,
+body .section_search .page div em, body section .page div i, .section_single .blog_post_container i, body .section_page .page div i,
 body .section_single .page div i,
 body .section_archive .page div i,
 body .section_author .page div i,
@@ -163,12 +198,12 @@ body .section_category .page div i,
 body .section_search .page div i {
   color: 6e1f;
 }
-body section .page div ul, .section_single article.single .blog_post_container ul, body .section_page .page div ul,
+body section .page div ul, .section_single .blog_post_container ul, body .section_page .page div ul,
 body .section_single .page div ul,
 body .section_archive .page div ul,
 body .section_author .page div ul,
 body .section_category .page div ul,
-body .section_search .page div ul, body section .page div ol, .section_single article.single .blog_post_container ol, body .section_page .page div ol,
+body .section_search .page div ul, body section .page div ol, .section_single .blog_post_container ol, body .section_page .page div ol,
 body .section_single .page div ol,
 body .section_archive .page div ol,
 body .section_author .page div ol,
@@ -177,12 +212,12 @@ body .section_search .page div ol {
   padding-left: 10px;
   padding-top: 20pt;
 }
-body section .page div ul li, .section_single article.single .blog_post_container ul li, body .section_page .page div ul li,
+body section .page div ul li, .section_single .blog_post_container ul li, body .section_page .page div ul li,
 body .section_single .page div ul li,
 body .section_archive .page div ul li,
 body .section_author .page div ul li,
 body .section_category .page div ul li,
-body .section_search .page div ul li, body section .page div ol li, .section_single article.single .blog_post_container ol li, body .section_page .page div ol li,
+body .section_search .page div ul li, body section .page div ol li, .section_single .blog_post_container ol li, body .section_page .page div ol li,
 body .section_single .page div ol li,
 body .section_archive .page div ol li,
 body .section_author .page div ol li,
@@ -190,7 +225,7 @@ body .section_category .page div ol li,
 body .section_search .page div ol li {
   list-style: none;
 }
-body section .page div p, .section_single article.single .blog_post_container p, body .section_page .page div p,
+body section .page div p, .section_single .blog_post_container p, body .section_page .page div p,
 body .section_single .page div p,
 body .section_archive .page div p,
 body .section_author .page div p,
@@ -201,7 +236,7 @@ body .section_search .page div p {
   display: block;
   margin: 0 auto;
 }
-body section .page div p s, .section_single article.single .blog_post_container p s, body .section_page .page div p s,
+body section .page div p s, .section_single .blog_post_container p s, body .section_page .page div p s,
 body .section_single .page div p s,
 body .section_archive .page div p s,
 body .section_author .page div p s,
@@ -209,7 +244,7 @@ body .section_category .page div p s,
 body .section_search .page div p s {
   text-decoration: line-through;
 }
-body section .page div p img, .section_single article.single .blog_post_container p img, body .section_page .page div p img,
+body section .page div p img, .section_single .blog_post_container p img, body .section_page .page div p img,
 body .section_single .page div p img,
 body .section_archive .page div p img,
 body .section_author .page div p img,
@@ -220,7 +255,7 @@ body .section_search .page div p img {
   border-radius: 10px;
   border: solid 3px black;
 }
-body section .page div .has-text-align-center, .section_single article.single .blog_post_container .has-text-align-center, body .section_page .page div .has-text-align-center,
+body section .page div .has-text-align-center, .section_single .blog_post_container .has-text-align-center, body .section_page .page div .has-text-align-center,
 body .section_single .page div .has-text-align-center,
 body .section_archive .page div .has-text-align-center,
 body .section_author .page div .has-text-align-center,
@@ -228,7 +263,7 @@ body .section_category .page div .has-text-align-center,
 body .section_search .page div .has-text-align-center {
   text-align: center;
 }
-body section .page div .has-text-align-left, .section_single article.single .blog_post_container .has-text-align-left, body .section_page .page div .has-text-align-left,
+body section .page div .has-text-align-left, .section_single .blog_post_container .has-text-align-left, body .section_page .page div .has-text-align-left,
 body .section_single .page div .has-text-align-left,
 body .section_archive .page div .has-text-align-left,
 body .section_author .page div .has-text-align-left,
@@ -236,7 +271,7 @@ body .section_category .page div .has-text-align-left,
 body .section_search .page div .has-text-align-left {
   text-align: left;
 }
-body section .page div .has-text-align-right, .section_single article.single .blog_post_container .has-text-align-right, body .section_page .page div .has-text-align-right,
+body section .page div .has-text-align-right, .section_single .blog_post_container .has-text-align-right, body .section_page .page div .has-text-align-right,
 body .section_single .page div .has-text-align-right,
 body .section_archive .page div .has-text-align-right,
 body .section_author .page div .has-text-align-right,
@@ -245,7 +280,7 @@ body .section_search .page div .has-text-align-right {
   text-align: right;
 }
 @media (max-width: 780px) {
-  body section .page div .wp-block-image, .section_single article.single .blog_post_container .wp-block-image, body .section_page .page div .wp-block-image,
+  body section .page div .wp-block-image, .section_single .blog_post_container .wp-block-image, body .section_page .page div .wp-block-image,
 body .section_single .page div .wp-block-image,
 body .section_archive .page div .wp-block-image,
 body .section_author .page div .wp-block-image,
@@ -413,6 +448,72 @@ body .section_category h3 li ul li,
 body .section_search h3 li ul li {
   display: inline-block;
 }
+body .section_page h3.search_term,
+body .section_single h3.search_term,
+body .section_archive h3.search_term,
+body .section_author h3.search_term,
+body .section_category h3.search_term,
+body .section_search h3.search_term {
+  text-align: center;
+}
+body .section_page .number_of_results,
+body .section_single .number_of_results,
+body .section_archive .number_of_results,
+body .section_author .number_of_results,
+body .section_category .number_of_results,
+body .section_search .number_of_results {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 16pt;
+}
+body .section_page .number_of_results .total_results,
+body .section_single .number_of_results .total_results,
+body .section_archive .number_of_results .total_results,
+body .section_author .number_of_results .total_results,
+body .section_category .number_of_results .total_results,
+body .section_search .number_of_results .total_results {
+  color: red;
+}
+body .section_page .search_form p,
+body .section_single .search_form p,
+body .section_archive .search_form p,
+body .section_author .search_form p,
+body .section_category .search_form p,
+body .section_search .search_form p {
+  text-align: center;
+  font-weight: bold;
+}
+body .section_page .search_form .searchform div,
+body .section_single .search_form .searchform div,
+body .section_archive .search_form .searchform div,
+body .section_author .search_form .searchform div,
+body .section_category .search_form .searchform div,
+body .section_search .search_form .searchform div {
+  background: none;
+  border: none;
+  text-align: center;
+}
+body .section_page .search_form .searchform div #s,
+body .section_single .search_form .searchform div #s,
+body .section_archive .search_form .searchform div #s,
+body .section_author .search_form .searchform div #s,
+body .section_category .search_form .searchform div #s,
+body .section_search .search_form .searchform div #s {
+  padding: 5pt 5px;
+  background: yellow;
+  border: solid 3px black;
+  border-radius: 6px;
+}
+body .section_page .search_form .searchform div #searchsubmit,
+body .section_single .search_form .searchform div #searchsubmit,
+body .section_archive .search_form .searchform div #searchsubmit,
+body .section_author .search_form .searchform div #searchsubmit,
+body .section_category .search_form .searchform div #searchsubmit,
+body .section_search .search_form .searchform div #searchsubmit {
+  padding: 6px;
+  background: yellow;
+  border: solid 3px black;
+}
 body .section_page h4.align-center,
 body .section_single h4.align-center,
 body .section_archive h4.align-center,
@@ -465,6 +566,8 @@ body .section_search navigation {
   border: solid yellow 1px;
   text-align: center;
   padding: 15px 0;
+  color: black;
+  font-weight: bold;
 }
 body .section_page .post_authors li,
 body .section_single .post_authors li,
@@ -565,7 +668,85 @@ body .section_search .post_authors h4 {
 .section_single article.single .the_category_list a:hover {
   color: gold;
 }
-.section_single article.single .blog_post_container figure img {
+.section_single article.single .comment-respond {
+  margin-top: 20px;
+  text-align: center;
+}
+.section_single article.single .comment-respond h3 {
+  font-size: 13pt;
+}
+.section_single article.single .comment-respond .comment-form {
+  border: solid 1px red;
+}
+.section_single article.single .comment-respond .comment-form .logged-in-as {
+  font-weight: bold;
+  font-size: 12pt;
+}
+.section_single article.single .comment-respond .comment-form .comment-form-comment {
+  border: solid red 1px;
+  margin-top: 10px;
+}
+.section_single article.single .comment-respond .comment-form .comment-form-comment label {
+  font-weight: bold;
+}
+.section_single article.single .comment-respond .comment-form .comment-form-comment #comment {
+  vertical-align: top;
+  padding: 5px 10px;
+}
+.section_single article.single .comments-area .comment-list {
+  border: solid red 1px;
+}
+.section_single article.single .comments-area .comment-list .comment.depth-2,
+.section_single article.single .comments-area .comment-list .byuser.depth-2 {
+  padding-left: 20pt;
+}
+.section_single article.single .comments-area .comment-list .comment.depth-3,
+.section_single article.single .comments-area .comment-list .byuser.depth-3 {
+  padding-left: 40pt;
+}
+.section_single article.single .comments-area .comment-list .comment .comment-body,
+.section_single article.single .comments-area .comment-list .byuser .comment-body {
+  font-size: 12pt;
+  margin: 10px 0;
+  background: #ade8f1;
+  padding: 5px;
+  border-radius: 10px;
+}
+.section_single article.single .comments-area .comment-list .comment .comment-body .comment-author img,
+.section_single article.single .comments-area .comment-list .byuser .comment-body .comment-author img {
+  width: 45px;
+  height: 45px;
+  border: solid gold 2px;
+  border-radius: 50%;
+}
+.section_single article.single .comments-area .comment-list .comment .comment-body .comment-author .fn,
+.section_single article.single .comments-area .comment-list .byuser .comment-body .comment-author .fn {
+  display: inline-block;
+  vertical-align: top;
+}
+.section_single article.single .comments-area .comment-list .comment .comment-body .comment-author .says,
+.section_single article.single .comments-area .comment-list .byuser .comment-body .comment-author .says {
+  display: inline-block;
+  vertical-align: top;
+}
+.section_single article.single .comments-area .comment-list .comment .comment-body .comment-meta,
+.section_single article.single .comments-area .comment-list .byuser .comment-body .comment-meta {
+  display: inline-block;
+  width: auto;
+  margin-left: 25px;
+}
+.section_single article.single .comments-area .comment-list .comment .comment-body p,
+.section_single article.single .comments-area .comment-list .byuser .comment-body p {
+  margin-left: 25px;
+  padding: 20px 0;
+  font-weight: bold;
+}
+.section_single article.single .comments-area .comment-list .comment .comment-body .reply,
+.section_single article.single .comments-area .comment-list .byuser .comment-body .reply {
+  display: inline-block;
+  width: auto;
+}
+.section_single .blog_post_container figure img {
   display: block;
   width: 60%;
   margin: 10px auto;
@@ -573,23 +754,23 @@ body .section_search .post_authors h4 {
   border-radius: 5px;
 }
 @media (max-width: 780px) {
-  .section_single article.single .blog_post_container figure img {
+  .section_single .blog_post_container figure img {
     width: 90%;
   }
 }
-.section_single article.single .author_details {
+.section_single .author_details {
   display: block;
   margin: 0 auto;
   text-align: center;
   font-size: 15px;
   font-weight: bold;
 }
-.section_single article.single .posts-toggling a {
+.section_single .posts-toggling a {
   font-weight: bold;
   color: red;
   transition: 0.2s color;
 }
-.section_single article.single .posts-toggling a:hover {
+.section_single .posts-toggling a:hover {
   color: green;
 }
 
