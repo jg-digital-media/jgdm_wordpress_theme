@@ -174,6 +174,58 @@ body {
             
         }
         
+        h3.search_term {
+            
+            text-align: center;
+        }
+        
+        .number_of_results {
+            
+            text-align: center;
+            font-weight: bold;
+            margin-top: 16pt;
+            
+            .total_results {
+                
+                color: red;
+            }
+        }
+        
+        .search_form {
+            
+            p {
+                
+                text-align: center;
+                font-weight: bold;
+            }
+            
+            
+            .searchform {
+                
+                div {
+
+                    background: none;
+                    border: none;
+                    text-align: center;
+                    
+                    #s {   
+
+                        padding: 5pt 5px;
+                        background: yellow;
+                        border: solid 3px black;
+                        border-radius: 6px;
+                    }
+
+                    #searchsubmit {
+                        
+                        padding: 6px;
+                        background: yellow;
+                        border: solid 3px black;
+                    }
+                }
+            }
+        }
+        
         h4.align-center {
             
             margin-top: 15px;
