@@ -1,4 +1,4 @@
-/* Last Update: 20/03/2023 - 10:18 */
+/* Last Update: 20/03/2023 - 14:19 */
 /*
 Theme Name: Jonnie Grieve Digital Media: Blog
 Theme URI: https://blog.jonniegrieve.co.uk
@@ -37,6 +37,223 @@ body .section_search h2, body section .primary span.post_headline {
   letter-spacing: 2px;
 }
 
+body .section_page .category-entry,
+body .section_page .archive-entry,
+body .section_single .category-entry,
+body .section_single .archive-entry,
+body .section_archive .category-entry,
+body .section_archive .archive-entry,
+body .section_author .category-entry,
+body .section_author .archive-entry,
+body .section_category .category-entry,
+body .section_category .archive-entry,
+body .section_search .category-entry,
+body .section_search .archive-entry {
+  color: black;
+  border: solid black 2px;
+  display: block;
+  padding: 15px;
+  margin: 15px auto;
+  width: 75%;
+  background: #f5c7a6;
+  transition: background 0.3s;
+}
+body .section_page .category-entry:hover,
+body .section_page .archive-entry:hover,
+body .section_single .category-entry:hover,
+body .section_single .archive-entry:hover,
+body .section_archive .category-entry:hover,
+body .section_archive .archive-entry:hover,
+body .section_author .category-entry:hover,
+body .section_author .archive-entry:hover,
+body .section_category .category-entry:hover,
+body .section_category .archive-entry:hover,
+body .section_search .category-entry:hover,
+body .section_search .archive-entry:hover {
+  background: #f8d8c2;
+}
+
+body section .page div, .section_single article.single .blog_post_container, body .section_page .page div,
+body .section_single .page div,
+body .section_archive .page div,
+body .section_author .page div,
+body .section_category .page div,
+body .section_search .page div {
+  border: solid 2px red;
+  background: yellow;
+  background: #f5c7a6;
+  display: block;
+  margin: 15px auto;
+  padding: 10px;
+  width: 75%;
+  border-radius: 10px;
+  border: solid 3px black;
+}
+body section .page div h1, .section_single article.single .blog_post_container h1, body .section_page .page div h1,
+body .section_single .page div h1,
+body .section_archive .page div h1,
+body .section_author .page div h1,
+body .section_category .page div h1,
+body .section_search .page div h1,
+body section .page div h2,
+.section_single article.single .blog_post_container h2,
+body .section_page .page div h2,
+body .section_single .page div h2,
+body .section_archive .page div h2,
+body .section_author .page div h2,
+body .section_category .page div h2,
+body .section_search .page div h2,
+body section .page div h3,
+.section_single article.single .blog_post_container h3,
+body .section_page .page div h3,
+body .section_single .page div h3,
+body .section_archive .page div h3,
+body .section_author .page div h3,
+body .section_category .page div h3,
+body .section_search .page div h3,
+body section .page div h4,
+.section_single article.single .blog_post_container h4,
+body .section_page .page div h4,
+body .section_single .page div h4,
+body .section_archive .page div h4,
+body .section_author .page div h4,
+body .section_category .page div h4,
+body .section_search .page div h4,
+body section .page div h5,
+.section_single article.single .blog_post_container h5,
+body .section_page .page div h5,
+body .section_single .page div h5,
+body .section_archive .page div h5,
+body .section_author .page div h5,
+body .section_category .page div h5,
+body .section_search .page div h5,
+body section .page div h6,
+.section_single article.single .blog_post_container h6,
+body .section_page .page div h6,
+body .section_single .page div h6,
+body .section_archive .page div h6,
+body .section_author .page div h6,
+body .section_category .page div h6,
+body .section_search .page div h6 {
+  margin-top: 10pt;
+}
+body section .page div strong, .section_single article.single .blog_post_container strong, body .section_page .page div strong,
+body .section_single .page div strong,
+body .section_archive .page div strong,
+body .section_author .page div strong,
+body .section_category .page div strong,
+body .section_search .page div strong, body section .page div b, .section_single article.single .blog_post_container b, body .section_page .page div b,
+body .section_single .page div b,
+body .section_archive .page div b,
+body .section_author .page div b,
+body .section_category .page div b,
+body .section_search .page div b {
+  color: darkgreen;
+}
+body section .page div em, .section_single article.single .blog_post_container em, body .section_page .page div em,
+body .section_single .page div em,
+body .section_archive .page div em,
+body .section_author .page div em,
+body .section_category .page div em,
+body .section_search .page div em, body section .page div i, .section_single article.single .blog_post_container i, body .section_page .page div i,
+body .section_single .page div i,
+body .section_archive .page div i,
+body .section_author .page div i,
+body .section_category .page div i,
+body .section_search .page div i {
+  color: 6e1f;
+}
+body section .page div ul, .section_single article.single .blog_post_container ul, body .section_page .page div ul,
+body .section_single .page div ul,
+body .section_archive .page div ul,
+body .section_author .page div ul,
+body .section_category .page div ul,
+body .section_search .page div ul, body section .page div ol, .section_single article.single .blog_post_container ol, body .section_page .page div ol,
+body .section_single .page div ol,
+body .section_archive .page div ol,
+body .section_author .page div ol,
+body .section_category .page div ol,
+body .section_search .page div ol {
+  padding-left: 10px;
+  padding-top: 20pt;
+}
+body section .page div ul li, .section_single article.single .blog_post_container ul li, body .section_page .page div ul li,
+body .section_single .page div ul li,
+body .section_archive .page div ul li,
+body .section_author .page div ul li,
+body .section_category .page div ul li,
+body .section_search .page div ul li, body section .page div ol li, .section_single article.single .blog_post_container ol li, body .section_page .page div ol li,
+body .section_single .page div ol li,
+body .section_archive .page div ol li,
+body .section_author .page div ol li,
+body .section_category .page div ol li,
+body .section_search .page div ol li {
+  list-style: none;
+}
+body section .page div p, .section_single article.single .blog_post_container p, body .section_page .page div p,
+body .section_single .page div p,
+body .section_archive .page div p,
+body .section_author .page div p,
+body .section_category .page div p,
+body .section_search .page div p {
+  line-height: 1.7;
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+body section .page div p s, .section_single article.single .blog_post_container p s, body .section_page .page div p s,
+body .section_single .page div p s,
+body .section_archive .page div p s,
+body .section_author .page div p s,
+body .section_category .page div p s,
+body .section_search .page div p s {
+  text-decoration: line-through;
+}
+body section .page div p img, .section_single article.single .blog_post_container p img, body .section_page .page div p img,
+body .section_single .page div p img,
+body .section_archive .page div p img,
+body .section_author .page div p img,
+body .section_category .page div p img,
+body .section_search .page div p img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: solid 3px black;
+}
+body section .page div .has-text-align-center, .section_single article.single .blog_post_container .has-text-align-center, body .section_page .page div .has-text-align-center,
+body .section_single .page div .has-text-align-center,
+body .section_archive .page div .has-text-align-center,
+body .section_author .page div .has-text-align-center,
+body .section_category .page div .has-text-align-center,
+body .section_search .page div .has-text-align-center {
+  text-align: center;
+}
+body section .page div .has-text-align-left, .section_single article.single .blog_post_container .has-text-align-left, body .section_page .page div .has-text-align-left,
+body .section_single .page div .has-text-align-left,
+body .section_archive .page div .has-text-align-left,
+body .section_author .page div .has-text-align-left,
+body .section_category .page div .has-text-align-left,
+body .section_search .page div .has-text-align-left {
+  text-align: left;
+}
+body section .page div .has-text-align-right, .section_single article.single .blog_post_container .has-text-align-right, body .section_page .page div .has-text-align-right,
+body .section_single .page div .has-text-align-right,
+body .section_archive .page div .has-text-align-right,
+body .section_author .page div .has-text-align-right,
+body .section_category .page div .has-text-align-right,
+body .section_search .page div .has-text-align-right {
+  text-align: right;
+}
+@media (max-width: 780px) {
+  body section .page div .wp-block-image, .section_single article.single .blog_post_container .wp-block-image, body .section_page .page div .wp-block-image,
+body .section_single .page div .wp-block-image,
+body .section_archive .page div .wp-block-image,
+body .section_author .page div .wp-block-image,
+body .section_category .page div .wp-block-image,
+body .section_search .page div .wp-block-image {
+    width: 90%;
+  }
+}
 body section .page a, body .section_page a,
 body .section_single a,
 body .section_archive a,
@@ -45,7 +262,7 @@ body .section_category a,
 body .section_search a, body section .secondary .widget_area li a, body section .primary .entry h3 a, body section .primary .pagination a {
   color: red;
   font-weight: bold;
-  transform: color 0.3s;
+  transition: color 0.3s;
 }
 body section .page a:hover, body .section_page a:hover,
 body .section_single a:hover,
@@ -233,6 +450,74 @@ body .section_search h4.align-center .total_results,
 body .section_search .posts_available .total_results {
   color: red;
 }
+body .section_page .pagination, body .section_page navigation,
+body .section_single .pagination,
+body .section_single navigation,
+body .section_archive .pagination,
+body .section_archive navigation,
+body .section_author .pagination,
+body .section_author navigation,
+body .section_category .pagination,
+body .section_category navigation,
+body .section_search .pagination,
+body .section_search navigation {
+  color: green;
+  border: solid yellow 1px;
+  text-align: center;
+  padding: 15px 0;
+}
+body .section_page .post_authors li,
+body .section_single .post_authors li,
+body .section_archive .post_authors li,
+body .section_author .post_authors li,
+body .section_category .post_authors li,
+body .section_search .post_authors li {
+  list-style: none;
+}
+body .section_page .blog_posts_archive li,
+body .section_single .blog_posts_archive li,
+body .section_archive .blog_posts_archive li,
+body .section_author .blog_posts_archive li,
+body .section_category .blog_posts_archive li,
+body .section_search .blog_posts_archive li {
+  list-style: none;
+}
+body .section_page .blog_posts_archive,
+body .section_page .post_authors,
+body .section_single .blog_posts_archive,
+body .section_single .post_authors,
+body .section_archive .blog_posts_archive,
+body .section_archive .post_authors,
+body .section_author .blog_posts_archive,
+body .section_author .post_authors,
+body .section_category .blog_posts_archive,
+body .section_category .post_authors,
+body .section_search .blog_posts_archive,
+body .section_search .post_authors {
+  display: block;
+  background: #77d9f9;
+  margin: 20px auto;
+  width: 50%;
+  padding: 15px;
+  border-radius: 10px;
+}
+body .section_page .blog_posts_archive h4,
+body .section_page .post_authors h4,
+body .section_single .blog_posts_archive h4,
+body .section_single .post_authors h4,
+body .section_archive .blog_posts_archive h4,
+body .section_archive .post_authors h4,
+body .section_author .blog_posts_archive h4,
+body .section_author .post_authors h4,
+body .section_category .blog_posts_archive h4,
+body .section_category .post_authors h4,
+body .section_search .blog_posts_archive h4,
+body .section_search .post_authors h4 {
+  text-align: center;
+  margin-bottom: 10px;
+  /* border-bottom: solid red 3px; */
+  text-decoration: underline;
+}
 .section_single {
   display: block;
 }
@@ -280,19 +565,47 @@ body .section_search .posts_available .total_results {
 .section_single article.single .the_category_list a:hover {
   color: gold;
 }
-.section_single article.single .blog_post_container {
-  border: solid 2px red;
+.section_single article.single .blog_post_container figure img {
+  display: block;
+  width: 60%;
+  margin: 10px auto;
+  border: solid 3px black;
+  border-radius: 5px;
 }
-.section_single article.single .blog_post_container .posts-toggling a {
+@media (max-width: 780px) {
+  .section_single article.single .blog_post_container figure img {
+    width: 90%;
+  }
+}
+.section_single article.single .author_details {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+.section_single article.single .posts-toggling a {
   font-weight: bold;
   color: red;
   transition: 0.2s color;
 }
-.section_single article.single .blog_post_container .posts-toggling a:hover {
+.section_single article.single .posts-toggling a:hover {
   color: green;
 }
 
 /* page.scss */
+body section .page figure img {
+  display: block;
+  width: 35%;
+  margin: 10px auto;
+  border: solid 3px black;
+  border-radius: 5px;
+}
+@media (max-width: 780px) {
+  body section .page figure img {
+    width: 90%;
+  }
+}
 footer {
   width: 100%;
   background: black;
