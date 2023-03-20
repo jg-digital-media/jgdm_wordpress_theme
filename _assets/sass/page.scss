@@ -1,1 +1,16 @@
 /* page.scss */
+
+body {
+    
+    section {
+
+        .page {
+
+            h2 {
+
+                @extend %page_title;
+            }
+        }
+
+    }
+}

@@ -37,13 +37,13 @@
     <meta name="image" content="">
 
     <!-- FACEBOOK: Open Graph -->
-    <meta property="og:title" content="Blog Title">
+    <meta property="og:title" content="<?php bloginfo( "site_url" ); ?> Title">
     <meta property="og:description" content="">
     <meta property="og:image" content="">
     <meta property="og:url" content="">
 
     <!-- TWITTER: Open Graph -->
-    <meta name="twitter:title" content="Blog Title">
+    <meta name="twitter:title" content="<?php bloginfo( "site_url" ); ?> Title">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="">
     <meta name="twitter:card" content="jgdm_blog_2023">
@@ -52,7 +52,7 @@
     <link rel="canonical" href="">
 
     <!-- Page Title -->
-    <title>Blog Title</title>
+    <title><?php bloginfo( "site_url" ); ?> Title</title>
     
     </head>
     

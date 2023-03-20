@@ -4,5 +4,48 @@ body {
     
     background: $color-main;
     font-family: $font-main;
+    
+    section {
+        
+        .primary {
+            
+            
+            display: inline-block;
+            width: 50%;
+            vertical-align: top;
+            
+            h2 {
+                
+                span {
+                    
+                    @extend %page_title;
+                }
+            }
+            
+            .pagination {
+                
+                border: solid red 1px;
+                padding: 10px;
+                background: yellow;
+                text-align: center;
+            }
+        }
+        
+        .secondary {
+            
+            display: inline-block;
+            width: 40%;
+            
+            h2 {
+                
+                
+            }
+            
+            aside {
+                
+            }
+            
+        }
+    }
 }
 
