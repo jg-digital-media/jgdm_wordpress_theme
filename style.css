@@ -1,4 +1,4 @@
-/* Last Update: 20/03/2023 - 16:57 */
+/* Last Update: 20/03/2023 - 17:05 */
 /*
 Theme Name: Jonnie Grieve Digital Media: Blog
 Theme URI: https://blog.jonniegrieve.co.uk
@@ -381,8 +381,22 @@ body section .primary .entry h3 span {
   font-size: 10px;
   font-style: italic;
 }
+body section .primary .entry h1,
+body section .primary .entry h2,
+body section .primary .entry h3,
+body section .primary .entry h4,
+body section .primary .entry h5,
+body section .primary .entry h6 {
+  margin-top: 10px;
+  font-size: 12px;
+  text-align: left;
+}
 body section .primary .entry p {
   padding: 10px 0;
+  font-size: 12px;
+}
+body section .primary .entry ul, body section .primary .entry ol {
+  font-size: 12px;
 }
 body section .secondary {
   display: inline-block;
