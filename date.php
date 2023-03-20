@@ -18,7 +18,12 @@ require "inc/header.php"; ?>
             );
 
             // wp query
-            $main_blog = new WP_Query( $args )
+            $main_blog = new WP_Query( $args );
+                
+            $wp_category_args = array(
+                "separator" => "-", 
+                "title_li" => "Full Categories List"
+            );
                 
         ?>
         
@@ -28,7 +33,7 @@ require "inc/header.php"; ?>
         <!-- Full list of categories -->
         <h3>
             <?php 
-                wp_list_categories( " - "); 
+                wp_list_categories( $wp_category_args ); 
                 // echo get_categories(); 
             ?>
         </h3> 

@@ -136,11 +136,14 @@ body {
     }
     
     
-    .section_single,
     .section_page,
+    .section_single,
     .section_archive, 
     .section_author, 
-    .section_category {
+    .section_category,
+    .section_search {
+        
+        border: orange 1px solid;
         
         h2 {
             
@@ -148,6 +151,33 @@ body {
         }
         
         @extend %link-colscheme-1;
+        
+        h3 {
+            
+            li {
+                
+                list-style: none;
+                text-align: center;
+                font-weight: bold;
+                
+                ul {
+                    display: block;
+                    margin: 10px auto;
+                    text-align: center;
+                    
+                    li {
+                        
+                        display: inline-block;
+                    }
+                }
+            }
+            
+        }
+        
+    }
+    
+    .section_archive {
+        
         
     }
 }
