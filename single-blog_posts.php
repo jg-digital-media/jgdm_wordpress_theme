@@ -6,7 +6,6 @@
 
 require "inc/header.php"; ?>
 
-
 <section class="section_single">
     
     <article class="single">        

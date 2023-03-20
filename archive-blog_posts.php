@@ -1,6 +1,6 @@
 <?php require "inc/header.php"; ?>
 
-<section class="single_php">
+<section class="section_archive">
     
     <article class="archive">  
         

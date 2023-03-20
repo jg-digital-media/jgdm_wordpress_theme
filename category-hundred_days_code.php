@@ -1,8 +1,8 @@
 <?php require "inc/header.php"; ?>
 
-<section class="single_php">
+<section class="section_category">
     
-    <article class="single">        
+    <article class="page">        
         
         <?php 
         
