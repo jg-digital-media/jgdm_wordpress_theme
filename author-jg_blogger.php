@@ -18,8 +18,8 @@ require "inc/header.php"; ?>
             $main_blog = new WP_Query( $args )
                 
         ?>
-            
-        <h3>jg_blogger:  (author-jg_blogger.php): </h3>
+        
+        <h2 class="post_headline"> <p>author-jg_blogger.php</p> </h2>
 
         <!--<p> <?php the_field( "article_content" ); the_content(); ?> </p>  -->   
 

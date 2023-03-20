@@ -4,6 +4,10 @@
     
     <article class="archive">  
         
+        <h2 class="post_headline"> <p>archive-blog_posts.php</p> </h2>
+
+        <a href="<?php bloginfo("home"); ?>">Home</a>         
+        
         <h2>Archive Page (Blog Posts CPT - By Date) </h2> 
         <p>( <?php echo "archive-blog_posts.php" ?>) </p>
         

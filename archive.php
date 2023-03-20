@@ -19,7 +19,10 @@ require "inc/header.php"; ?>
                 
         ?>
         
-        <h2 class="post_headline"> <p>date.php</p>  <!-- get categories --> </h2>
+        <h2 class="post_headline"> <p>archive.php</p>  <!-- get categories --> </h2>
+
+        <a href="<?php bloginfo("home"); ?>">Home</a> 
+        
         
         <!-- categories for this post --> 
         <div class="the_category_list">

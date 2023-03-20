@@ -23,6 +23,8 @@ require "inc/header.php"; ?>
         ?>
         
         <h2 class="post_headline"> <p>category.php</p> </h2>
+
+        <a href="<?php bloginfo("home"); ?>">Home</a>         
             
         <h3> <?php wp_list_categories('post_type=blog_posts'); ?> </h3>
         

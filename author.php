@@ -17,9 +17,9 @@ require "inc/header.php"; ?>
             // wp query
             $main_blog = new WP_Query( $args )
                 
-        ?>     
-            
-        <h3>  author.php: <?php the_title(); ?> </h3>
+        ?>
+        
+        <h2 class="post_headline"> <p>author.php</p> </h2>
 
         <!--<p> <?php the_field( "article_content" ); the_content(); ?> </p>-->        
 
