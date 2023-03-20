@@ -249,6 +249,8 @@ body {
             border: solid yellow 1px;
             text-align: center;
             padding: 15px 0;
+            color: black;
+            font-weight: bold;
         }
         
         .page {
@@ -266,6 +268,7 @@ body {
             
         }
         
+        .author-entry,
         .category-entry,
         .archive-entry {
             
