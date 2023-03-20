@@ -6,20 +6,33 @@
 
 require "inc/header.php"; ?>
 
-<section class="section_author">
+<section class="section_author">  
+        
+    <h2 class="post_headline"> <p>author-jg_blogger.php</p> </h2>
     
     <article class="author">        
         
         <?php 
         
-            $args = array( 'post_type' => 'blog_posts', 'post_author' => 'jg_blogger' );
+            $args = array(
+                
+                'post_type' => 'blog_posts', 
+                'post_author' => 'jg_blogger' 
+            );
+
+            $custom_query_args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+
 
             // wp query
-            $main_blog = new WP_Query( $args )
-                
-        ?>
+            $main_blog = new WP_Query( $args ); 
+
+            $temp_query = $wp_query;
+            $wp_query = NULL;
+            $wp_query = $main_blog;
         
-        <h2 class="post_headline"> <p>author-jg_blogger.php</p> </h2>
+            // pagination method
+            the_posts_pagination(); 
+        ?>
 
         <!--<p> <?php the_field( "article_content" ); the_content(); ?> </p>  -->   
 
@@ -31,19 +44,12 @@ require "inc/header.php"; ?>
 
         <?php echo "<p class='posts_available'>Posts Available: " . "<span class='total_results'>" . $total_results . "</span></p>"; ?>
 
-        <!-- Post pagination for Searches -->
-        <?php
-            $custom_query_args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
-
-            // pagination method
-            the_posts_pagination(); ?>
-
 
         <!-- The WordPress Loop Begins -->
-        <?php if ( have_posts() ) : ?>
+        <?php if ( $main_blog->have_posts() ) : ?>
 
         <!-- html -->
-        <?php while ( have_posts() ) : the_post(); ?>
+        <?php while ( $main_blog->have_posts() ) : $main_blog->the_post(); ?>
 
             <div class="author-entry">
 
@@ -67,6 +73,9 @@ require "inc/header.php"; ?>
             wp_reset_postdata(); 
         
             the_posts_pagination(); 
+        
+            $wp_query = NULL;
+            $wp_query = $temp_query;
         ?>
         
         <div class="blog_posts_archive">
