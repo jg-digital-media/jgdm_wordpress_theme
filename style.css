@@ -1,4 +1,4 @@
-/* Last Update: 15/03/2023 - 15:52 */
+/* Last Update: 20/03/2023 - 10:18 */
 /*
 Theme Name: Jonnie Grieve Digital Media: Blog
 Theme URI: https://blog.jonniegrieve.co.uk
@@ -19,6 +19,41 @@ Use it to make something cool, have fun, and share what you've learned with othe
 * {
   padding: 0;
   margin: 0;
+}
+
+body section .page h2, body .section_page h2,
+body .section_single h2,
+body .section_archive h2,
+body .section_author h2,
+body .section_category h2,
+body .section_search h2, body section .primary span.post_headline {
+  display: block;
+  text-align: center;
+  padding: 5px;
+  background: gray;
+  color: white;
+  font-size: small;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+body section .page a, body .section_page a,
+body .section_single a,
+body .section_archive a,
+body .section_author a,
+body .section_category a,
+body .section_search a, body section .secondary .widget_area li a, body section .primary .entry h3 a, body section .primary .pagination a {
+  color: red;
+  font-weight: bold;
+  transform: color 0.3s;
+}
+body section .page a:hover, body .section_page a:hover,
+body .section_single a:hover,
+body .section_archive a:hover,
+body .section_author a:hover,
+body .section_category a:hover,
+body .section_search a:hover, body section .secondary .widget_area li a:hover, body section .primary .entry h3 a:hover, body section .primary .pagination a:hover {
+  color: green;
 }
 
 header {
@@ -47,26 +82,171 @@ header nav.navigation li a:hover {
   text-decoration: none;
 }
 
-/* styles.scss - starts here */
+/* main.scss - starts here */
 body {
   background: lightblue;
   font-family: "Quicksand";
 }
-
-.single_php {
+body section .primary {
+  display: inline-block;
+  width: 65%;
+  vertical-align: top;
+}
+@media (max-width: 780px) {
+  body section .primary {
+    width: auto;
+  }
+}
+body section .primary .pagination {
+  display: block;
+  margin: 10px auto;
+  border: solid red 1px;
+  padding: 10px;
+  background: yellow;
+  text-align: center;
+  width: 70%;
+}
+body section .primary .pagination .current {
+  font-weight: bold;
+}
+body section .primary .entry {
+  display: block;
+  margin: 10px auto;
+  border: solid red 1px;
+  padding: 10px;
+  width: 70%;
+  background: yellow;
+  transition: background 0.3s;
+}
+body section .primary .entry:hover {
+  background: lightyellow;
+}
+body section .primary .entry h3 {
+  text-align: center;
+}
+body section .primary .entry h3 span {
+  display: inline-block;
+  font-size: 10px;
+  font-style: italic;
+}
+body section .primary .entry p {
+  padding: 10px 0;
+}
+body section .secondary {
+  display: inline-block;
+  width: 30%;
+}
+@media (max-width: 780px) {
+  body section .secondary {
+    width: auto;
+  }
+}
+body section .secondary .widget_area {
+  border: solid red 1px;
+  padding: 10px 10px;
+  background: yellow;
+  transition: background 0.3s;
+  margin: 10px 0;
+}
+body section .secondary .widget_area:hover {
+  background: lightyellow;
+}
+body section .secondary .widget_area h3,
+body section .secondary .widget_area label {
+  margin-bottom: 10pt;
+  font-weight: bold;
+  font-size: 14pt;
+}
+body section .secondary .widget_area li {
+  list-style: none;
+}
+body .section_page,
+body .section_single,
+body .section_archive,
+body .section_author,
+body .section_category,
+body .section_search {
+  border: orange 1px solid;
+}
+body .section_page h3 li,
+body .section_single h3 li,
+body .section_archive h3 li,
+body .section_author h3 li,
+body .section_category h3 li,
+body .section_search h3 li {
+  list-style: none;
+  text-align: center;
+  font-weight: bold;
+}
+body .section_page h3 li ul,
+body .section_single h3 li ul,
+body .section_archive h3 li ul,
+body .section_author h3 li ul,
+body .section_category h3 li ul,
+body .section_search h3 li ul {
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+}
+body .section_page h3 li ul li,
+body .section_single h3 li ul li,
+body .section_archive h3 li ul li,
+body .section_author h3 li ul li,
+body .section_category h3 li ul li,
+body .section_search h3 li ul li {
+  display: inline-block;
+}
+body .section_page h4.align-center,
+body .section_single h4.align-center,
+body .section_archive h4.align-center,
+body .section_author h4.align-center,
+body .section_category h4.align-center,
+body .section_search h4.align-center {
+  margin-top: 15px;
+}
+body .section_page h4.align-center,
+body .section_page .posts_available,
+body .section_single h4.align-center,
+body .section_single .posts_available,
+body .section_archive h4.align-center,
+body .section_archive .posts_available,
+body .section_author h4.align-center,
+body .section_author .posts_available,
+body .section_category h4.align-center,
+body .section_category .posts_available,
+body .section_search h4.align-center,
+body .section_search .posts_available {
+  text-align: center;
+  font-weight: bold;
+}
+body .section_page h4.align-center .total_results,
+body .section_page .posts_available .total_results,
+body .section_single h4.align-center .total_results,
+body .section_single .posts_available .total_results,
+body .section_archive h4.align-center .total_results,
+body .section_archive .posts_available .total_results,
+body .section_author h4.align-center .total_results,
+body .section_author .posts_available .total_results,
+body .section_category h4.align-center .total_results,
+body .section_category .posts_available .total_results,
+body .section_search h4.align-center .total_results,
+body .section_search .posts_available .total_results {
+  color: red;
+}
+.section_single {
   display: block;
 }
-.single_php article.single {
+.section_single article.single {
   width: 760px;
   display: block;
   margin: 0 auto;
 }
 @media (max-width: 780px) {
-  .single_php article.single {
+  .section_single article.single {
     width: 90%;
   }
 }
-.single_php article.single .post_headline {
+.section_single article.single .post_headline {
   text-align: center;
   padding: 5px;
   background: gray;
@@ -74,44 +254,45 @@ body {
   font-size: small;
   letter-spacing: 2px;
 }
-.single_php article.single .link_home {
+.section_single article.single .link_home {
   color: red;
   transition: color 0.2s;
   font-weight: bold;
 }
-.single_php article.single .link_home:hover {
+.section_single article.single .link_home:hover {
   color: green;
 }
-.single_php article.single .the_category_list {
+.section_single article.single .the_category_list {
   border: solid 2px red;
   border-radius: 10px;
   text-align: center;
   background: #f2f7c4;
   margin: 5px auto;
 }
-.single_php article.single .the_category_list h2 {
+.section_single article.single .the_category_list h2 {
   font-size: 10pt;
 }
-.single_php article.single .the_category_list a {
+.section_single article.single .the_category_list a {
   font-size: 10pt;
   color: black;
   transition: 0.2s color;
 }
-.single_php article.single .the_category_list a:hover {
+.section_single article.single .the_category_list a:hover {
   color: gold;
 }
-.single_php article.single .blog_post_container {
+.section_single article.single .blog_post_container {
   border: solid 2px red;
 }
-.single_php article.single .blog_post_container .posts-toggling a {
+.section_single article.single .blog_post_container .posts-toggling a {
   font-weight: bold;
   color: red;
   transition: 0.2s color;
 }
-.single_php article.single .blog_post_container .posts-toggling a:hover {
+.section_single article.single .blog_post_container .posts-toggling a:hover {
   color: green;
 }
 
+/* page.scss */
 footer {
   width: 100%;
   background: black;
