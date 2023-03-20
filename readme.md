@@ -1,4 +1,4 @@
-# JGDM Blog Theme v2 (2023) - 20/03/2023 - 14:20
+# JGDM Blog Theme v2 (2023) - 20/03/2023 - 16:57
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -42,6 +42,7 @@
 + `[TODO: ]` - Plugin Development
 + `[TODO: ]` - Pagination links
 + `[TODO: ]` - 404 Template
++ `[TODO: ]` - Show category counts on home.php and index.php
 
 
 ## Setup: 
