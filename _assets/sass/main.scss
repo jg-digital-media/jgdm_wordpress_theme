@@ -95,7 +95,38 @@ body {
                 
             }
             
+            .widget_area {
+                
+                border: solid red 1px;
+                padding: 10px 10px;                
+                background: yellow;
+                transition: background .3s;
+                margin: 10px 0;
+                
+                &:hover {
+                    
+                    background: lightyellow;
+                }
+                
+                h3,
+                label {
+                    
+                    margin-bottom: 10pt;
+                    font-weight: bold;
+                    font-size: 14pt;
+                }
+                
+                li {
+                    
+                    list-style: none;
+                    
+                    @extend %link-colscheme-1;
+                }
+                
+            }
+            
         }
+        
     }
     
     .section_single,
