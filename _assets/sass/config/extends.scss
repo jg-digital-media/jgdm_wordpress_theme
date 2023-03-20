@@ -3,6 +3,21 @@
     color: red;
 }
 
+%link-colscheme-1 {
+    
+    a {
+        
+        color: $color-href;
+        transform: color .3s;
+        
+        &:hover {
+            
+            color: $color-href-hvr;
+            
+        }
+    }
+}
+
 %search_btn {
     
     background: wheat;
