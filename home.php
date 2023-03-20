@@ -21,8 +21,6 @@
             
             <p> <?php echo the_excerpt(); ?> </p>
             
-            <p> <?php echo the_content(); ?> </p>
-            
             <p> <?php echo the_field( "article_blurb" ) . "..."; ?> </p>
             
         </div>        
