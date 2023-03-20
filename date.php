@@ -33,8 +33,7 @@ require "inc/header.php"; ?>
         <!-- Full list of categories -->
         <h3>
             <?php 
-                wp_list_categories( $wp_category_args ); 
-                // echo get_categories(); 
+                wp_list_categories( $wp_category_args );
             ?>
         </h3> 
 

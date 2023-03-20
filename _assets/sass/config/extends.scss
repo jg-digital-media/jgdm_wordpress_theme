@@ -10,6 +10,24 @@
     letter-spacing: 2px;
 }
 
+%post_entries {
+            
+    color: black;
+    border: solid black 2px;
+    display: block;
+    padding: 15px;
+    margin: 15px auto;
+    width: 75%;
+    background: $background-post-entry;
+    transition: background .3s;
+    
+    &:hover {
+        
+        background: lighten($background-post-entry, 6%);
+    }
+}
+
+
 %link-colscheme-1 {
     
     a {

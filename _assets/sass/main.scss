@@ -191,6 +191,23 @@ body {
             }
         }
         
+        .pagination, navigation {
+            
+            color: green;
+            border: solid yellow 1px;
+            text-align: center;
+            padding: 15px 0;
+        }
+        
+        div {
+            
+        }
+        
+        .archive-entry {
+            
+            @extend %post_entries;
+        }
+        
     }
     
     .section_archive {
