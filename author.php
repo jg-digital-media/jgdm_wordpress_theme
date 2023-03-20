@@ -54,9 +54,10 @@ require "inc/header.php"; ?>
             </ul>
         </div>
         
-        <h4>Blog Post Archives (by date)</h4>
-        
         <div class="blog_posts_archive">
+        
+            <h4>Blog Post Archives (by date)</h4>
+            
             <ul>
                 <li><?php wp_get_archives('post_type=blog_posts'); ?></li>
             </ul>

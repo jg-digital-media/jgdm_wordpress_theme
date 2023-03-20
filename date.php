@@ -86,20 +86,21 @@ require "inc/header.php"; ?>
             wp_reset_postdata(); 
         
             the_posts_pagination(); 
-        ?>           
+        ?>  
         
-        <h4>List of Authors</h4>
+        <div class="post_authors">         
         
-        <div class="post_authors">
+            <h4>List of Authors</h4>
         
             <ul>
                 <li><?php wp_list_authors(); ?></li>
             </ul>
         </div>
         
-        <h4>Blog Post Archives (by date)</h4>
-        
         <div class="blog_posts_archive">
+        
+            <h4>Blog Post Archives (by date)</h4>
+            
             <ul>
                 <li><?php wp_get_archives(); ?></li>
             </ul>

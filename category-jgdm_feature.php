@@ -46,11 +46,12 @@
         <!--  No Post Found -->
         <?php endif; ?>    
             
-        <!-- post pagination -->      
-        
-        <h4>Blog Post Archives (by date)</h4>
+        <!-- post pagination -->
         
         <div class="blog_posts_archive">
+        
+            <h4>Blog Post Archives (by date)</h4>
+            
             <ul>
                 <li><?php wp_get_archives('post_type=blog_posts'); ?></li>
             </ul>

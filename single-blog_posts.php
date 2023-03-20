@@ -101,22 +101,24 @@ require "inc/header.php"; ?>
         
         ?>
         
-        <h4>Blog Post Archives (by date)</h4>
-        
         <div class="blog_posts_archive">
+        
+            <h4>Blog Post Archives (by date)</h4>
+            
             <ul>
                 <li><?php wp_get_archives('post_type=blog_posts'); ?></li>
             </ul>
             
-        </div>        
+        </div>
         
-        <h4>Authors List</h4>
+        <div class="post_authors">        
         
-        <div class="post_authors">
+            <h4>Authors List</h4>
         
             <ul>
                 <li><?php wp_list_authors(); ?></li>
             </ul>
+            
         </div>
 
     </article>
