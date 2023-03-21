@@ -288,9 +288,10 @@
     background: wheat;
     width: auto;
     border: solid 3px black;
-    padding: 7px;  
+    padding: 4px;  
     transition: background 0.3s; 
     cursor: pointer;
+    border-radius: 5px;
     
     &:hover {
         
@@ -301,16 +302,21 @@
 %search_btn_widget {
     
     background: yellow;
-    padding: 7px;
+    padding: 3px;
     border-radius: 5px;
     cursor: pointer;    
-    width: auto;
+    width: 56px;
     border: solid black 3px;
+    
+    &:hover {
+        
+        background: lightyellow;
+    } 
 }
 
 %search_input {    
     
-    padding: 7px;
+    padding: 6px;
     border-radius: 5px;
     transition: background 0.3s;
     border: solid 3px black;

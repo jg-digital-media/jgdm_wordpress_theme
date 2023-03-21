@@ -149,6 +149,20 @@ body {
                 
             }
             
+            .widget_search {
+                
+                .wp-block-search__input {
+                    
+                    @extend %search_input_widget;
+                    
+                }
+                
+                .wp-block-search__button {
+                    
+                    @extend %search_btn_widget;
+                }
+            }
+            
         }
         
     }
@@ -209,6 +223,40 @@ body {
             }
         }
         
+        .no-result {
+            
+            margin-top: 12pt;
+            display: block;
+            
+            p {
+                
+                text-align: center;
+                font-weight: bold;
+            }
+            
+            .searchform {
+                
+                text-align: center;
+                
+                div {
+                    
+                    margin: 10pt auto;
+                    
+                    #s {                        
+                        
+                        @extend %search_input;
+                        
+                    }
+                    
+                    #searchsubmit {
+                        
+                        @extend %search_btn;
+                        
+                    }
+                }
+            }
+        }
+        
         .search_form {
             
             p {
@@ -227,19 +275,14 @@ body {
                     text-align: center;
                     margin: 7px auto;
                     
-                    #s {   
-
-                        padding: 5pt 5px;
-                        background: yellow;
-                        border: solid 3px black;
-                        border-radius: 6px;
+                    #s {  
+                        
+                        @extend %search_input_widget;
                     }
 
                     #searchsubmit {
                         
-                        padding: 6px;
-                        background: yellow;
-                        border: solid 3px black;
+                        @extend %search_btn;
                     }
                 }
             }

@@ -78,7 +78,7 @@ require "inc/header.php"; ?>
         <?php else : ?>
 
             <!-- No Post Found -->
-            <div class="search-entry no-result">
+            <div class="no-result">
             
                 <p>Sorry! there was no result returned for that term.</p>
                 
