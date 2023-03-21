@@ -51,12 +51,12 @@
             a {
                 font-size: 10pt;
                 
-                color: black;
+                color: $color-href-two;
                 transition: .2s color;                
                 
                 &:hover {
                     
-                    color: gold;
+                    color: $color-href-two-hvr;
                 }
             }
         }
