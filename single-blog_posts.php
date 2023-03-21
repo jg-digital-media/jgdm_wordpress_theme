@@ -52,7 +52,7 @@ require "inc/header.php"; ?>
                 
             <?php the_post(); ?> 
             
-            <aside> 
+            <aside class="author_details"> 
                 Author Name - <a class="author-link" href="#">
                     <?php //echo get_the_author_meta( 'nicename', $author_id ); ?>
                     <?php echo the_author_posts_link(); ?>
@@ -60,15 +60,21 @@ require "inc/header.php"; ?>
                     <?php //the_post(); ?>
                     <?php //echo get_usermeta($post->post_author,'author_url', 'a'); ?> </a> | 
                 
-                <a class="author-link" href="#">( <!-- 00 September 00 : 11:33pm --> <?php the_time('d M Y'); ?>)</a> </aside>
+                <a class="author-link" href="#">( <!-- 00 September 00 : 11:33pm --> <?php the_time('d M Y'); ?>)</a> 
+            </aside>
             
-            <h3> <?php the_title(); ?> <span>by <?php echo get_the_author(); ?> </span> </h3>
+            <div class="post_contents">
+                
+                <h3 class="post_content_title"> <?php the_title(); ?> 
+                    <span>by <?php echo get_the_author(); ?> </span>
             
-            <span>Posted on: <?php the_date('d M Y'); ?> </span>
+                    <span>Posted on: <?php the_date('d M Y'); ?> </span>
+                </h3>
 
-            <p> <?php the_field( "article_content" ); the_content(); ?> </p>  
+                <p> <?php the_field( "article_content" ); the_content(); ?> </p>  
+            </div>
             
-            <aside> 
+            <aside class="author_details"> 
                 Author Name - <a class="author-link" href="#">
                     <?php //echo get_the_author_meta( 'nicename', $author_id ); ?> 
                 

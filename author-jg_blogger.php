@@ -17,7 +17,7 @@ require "inc/header.php"; ?>
             $args = array(
                 
                 'post_type' => 'blog_posts', 
-                'post_author' => 'jg_blogger' 
+                'post_author' => 'jg_blogger'
             );
 
             $custom_query_args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;

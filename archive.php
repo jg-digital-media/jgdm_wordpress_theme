@@ -27,12 +27,12 @@ require "inc/header.php"; ?>
         <!-- categories for this post --> 
         <div class="the_category_list">
         <h3> the_category() - Categories related to this post </h3>
-           <?php the_category(' - '); ?> 
+           <?php the_category(' - '); ?>
         </div>
         <hr />
 
         <!-- Full list of categories -->
-        <h3><?php wp_list_categories( " - "); get_categories(); ?></h3> 
+        <h3><?php wp_list_categories( " - " ); get_categories(); ?></h3> 
 
         <h4 class="align-center">WordPress Post Archives for <?php the_time('F'); ?> in the year <?php the_time('Y'); ?></h4>
 

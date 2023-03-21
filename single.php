@@ -45,8 +45,8 @@ require "inc/header.php"; ?>
                 <?php next_post_link( $format = "%link >>", "Next Post" ); ?>
                 
             </div> 
-                
-            <?php the_post(); ?> 
+            
+            <?php the_post(); ?>
             
             <aside class="author_details"> 
                 Author Name - <a class="author-link" href="#">
@@ -56,13 +56,20 @@ require "inc/header.php"; ?>
                     <?php //the_post(); ?>
                     <?php //echo get_usermeta($post->post_author,'author_url', 'a'); ?> </a> | 
                 
-                <a class="author-link" href="#">( <!-- 00 September 00 : 11:33pm --> <?php the_time('d M Y'); ?>)</a> </aside>
+                <a class="author-link" href="#">( <!-- 00 September 00 : 11:33pm --> <?php the_time('d M Y'); ?>)</a> 
+            </aside>
+                
+            <div class="post_contents">
             
-            <h3> <?php the_title(); ?> <span>by <?php echo get_the_author(); ?> </span> </h3>
+                <h3 class="post_content_title"> <?php the_title(); ?> 
+                    <span>by <?php echo get_the_author(); ?> </span>
             
-            <span>Posted on: <?php the_date('d M Y'); ?> </span>
+                    <span>Posted on: <?php the_date('d M Y'); ?> </span>
+                </h3>
 
-            <p> <?php the_field( "article_content" ); the_content(); ?> </p>
+                <p> <?php the_field( "article_content" ); the_content(); ?> </p>                
+                
+            </div>
             
             <aside class="author_details"> 
                 Author Name - <a class="author-link" href="#">

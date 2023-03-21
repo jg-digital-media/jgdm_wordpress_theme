@@ -62,7 +62,7 @@
             // Reset the posts data 
             wp_reset_postdata();
         
-            the_posts_pagination(); 
+            the_posts_pagination();
         
             $wp_query = NULL;
             $wp_query = $temp_query;

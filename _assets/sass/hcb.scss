@@ -5,10 +5,19 @@
     .hcb-clipboard {}
     
     pre.prism {
+        
+        text-align: left;
 
         code {
             
+            span {
+                
+                text-align: left;
+                display: inline-block;
+            }
+            
         }
+        
     }
+    
 }
-
