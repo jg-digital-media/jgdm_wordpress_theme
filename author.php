@@ -8,50 +8,18 @@ require "inc/header.php"; ?>
 
 <section class="section_author">
     
-    <article class="author">        
-        
-        <?php 
-        
-            $args = array( 'post_type' => 'blog_posts' );
-
-            // wp query
-            $main_blog = new WP_Query( $args )
-                
-        ?>
+    <article class="author">
         
         <h2 class="post_headline"> <p>author.php</p> </h2>
-
-        <!--<p> <?php the_field( "article_content" ); the_content(); ?> </p>-->        
-
-
-        <!-- The WordPress Loop Begins -->
-        <?php if ( have_posts() ) : ?>
-
-        <!-- html -->
-        <?php while ( have_posts() ) : the_post(); ?>
-
-            <div class="archive-entry">
-
-                <h5> <a href="<?php the_permalink(); ?>"> <?php the_title(); ?> </a>  <span> By <?php echo get_the_author(); ?> on <?php echo get_the_date( 'd M Y' ); ?> </span> </h5>
-
-                <p> <?php the_excerpt(); the_field( "article_blurb" ); ?> </p> 
-
-            </div>
-
-        <?php endwhile; ?>
-
-        <?php else : ?>
-
-        <!-- No Post Found -->
-        <?php endif; ?>        
         
-        <h4>Authors List</h4>
+        <div class="post_authors">       
         
-        <div class="post_authors">
+            <h4>Authors List</h4>
         
             <ul>
                 <li><?php wp_list_authors(); ?></li>
             </ul>
+            
         </div>
         
         <div class="blog_posts_archive">
