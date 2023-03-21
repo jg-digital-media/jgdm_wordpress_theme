@@ -2,20 +2,26 @@
 
 body {
     
-    section {
+    .section {
 
         .page {
 
-            h2 {
+            h3.post_headline {
 
                 @extend %page_title;
             }
             
             @extend %link-colscheme-1;
             
-            div {
+            .page_container {
                 
                 @extend %post_formatting;
+                
+                .page_content_title {
+                    
+                    text-align: center;
+                }
+                
             }
             
             figure {
