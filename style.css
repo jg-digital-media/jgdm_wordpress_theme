@@ -1,4 +1,4 @@
-/* Last Update: 21/03/2023 - 13:30 */
+/* Last Update: 21/03/2023 - 16:35 */
 /*
 Theme Name: Jonnie Grieve Digital Media: Blog
 Theme URI: https://blog.jonniegrieve.co.uk
@@ -37,21 +37,27 @@ body .section_search h2, body section .primary span.post_headline {
   letter-spacing: 2px;
 }
 
+body .section_page .search-entry,
 body .section_page .author-entry,
 body .section_page .category-entry,
 body .section_page .archive-entry,
+body .section_single .search-entry,
 body .section_single .author-entry,
 body .section_single .category-entry,
 body .section_single .archive-entry,
+body .section_archive .search-entry,
 body .section_archive .author-entry,
 body .section_archive .category-entry,
 body .section_archive .archive-entry,
+body .section_author .search-entry,
 body .section_author .author-entry,
 body .section_author .category-entry,
 body .section_author .archive-entry,
+body .section_category .search-entry,
 body .section_category .author-entry,
 body .section_category .category-entry,
 body .section_category .archive-entry,
+body .section_search .search-entry,
 body .section_search .author-entry,
 body .section_search .category-entry,
 body .section_search .archive-entry {
@@ -64,21 +70,27 @@ body .section_search .archive-entry {
   background: #f5c7a6;
   transition: background 0.3s;
 }
+body .section_page .search-entry:hover,
 body .section_page .author-entry:hover,
 body .section_page .category-entry:hover,
 body .section_page .archive-entry:hover,
+body .section_single .search-entry:hover,
 body .section_single .author-entry:hover,
 body .section_single .category-entry:hover,
 body .section_single .archive-entry:hover,
+body .section_archive .search-entry:hover,
 body .section_archive .author-entry:hover,
 body .section_archive .category-entry:hover,
 body .section_archive .archive-entry:hover,
+body .section_author .search-entry:hover,
 body .section_author .author-entry:hover,
 body .section_author .category-entry:hover,
 body .section_author .archive-entry:hover,
+body .section_category .search-entry:hover,
 body .section_category .author-entry:hover,
 body .section_category .category-entry:hover,
 body .section_category .archive-entry:hover,
+body .section_search .search-entry:hover,
 body .section_search .author-entry:hover,
 body .section_search .category-entry:hover,
 body .section_search .archive-entry:hover {
@@ -193,7 +205,7 @@ body .section_search .page .page_container .post_contents h6 {
   width: 90%;
   text-align: left;
   background: none;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
 }
 body .section .page .page_container .post_contents h3, .section_single .blog_post_container .post_contents h3, body .section_page .page .page_container .post_contents h3,
 body .section_single .page .page_container .post_contents h3,
@@ -218,22 +230,6 @@ body .section_search .page .page_container .post_contents h3 span {
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-}
-body .section .page .page_container .post_content_title, .section_single .blog_post_container .post_content_title, body .section_page .page .page_container .post_content_title,
-body .section_single .page .page_container .post_content_title,
-body .section_archive .page .page_container .post_content_title,
-body .section_author .page .page_container .post_content_title,
-body .section_category .page .page_container .post_content_title,
-body .section_search .page .page_container .post_content_title,
-body .section .page .page_container .page_content_title,
-.section_single .blog_post_container .page_content_title,
-body .section_page .page .page_container .page_content_title,
-body .section_single .page .page_container .page_content_title,
-body .section_archive .page .page_container .page_content_title,
-body .section_author .page .page_container .page_content_title,
-body .section_category .page .page_container .page_content_title,
-body .section_search .page .page_container .page_content_title {
-  text-align: center;
 }
 body .section .page .page_container h1, .section_single .blog_post_container h1, body .section_page .page .page_container h1,
 body .section_single .page .page_container h1,
@@ -286,6 +282,24 @@ body .section_search .page .page_container h6 {
   margin: 5px auto;
   margin-top: 10pt;
   width: 90%;
+  letter-spacing: 0px;
+}
+body .section .page .page_container .post_content_title, .section_single .blog_post_container .post_content_title, body .section_page .page .page_container .post_content_title,
+body .section_single .page .page_container .post_content_title,
+body .section_archive .page .page_container .post_content_title,
+body .section_author .page .page_container .post_content_title,
+body .section_category .page .page_container .post_content_title,
+body .section_search .page .page_container .post_content_title,
+body .section .page .page_container .page_content_title,
+.section_single .blog_post_container .page_content_title,
+body .section_page .page .page_container .page_content_title,
+body .section_single .page .page_container .page_content_title,
+body .section_archive .page .page_container .page_content_title,
+body .section_author .page .page_container .page_content_title,
+body .section_category .page .page_container .page_content_title,
+body .section_search .page .page_container .page_content_title {
+  text-align: center;
+  letter-spacing: 1px;
 }
 body .section .page .page_container h3, .section_single .blog_post_container h3, body .section_page .page .page_container h3,
 body .section_single .page .page_container h3,
@@ -343,8 +357,9 @@ body .section_archive .page .page_container ol,
 body .section_author .page .page_container ol,
 body .section_category .page .page_container ol,
 body .section_search .page .page_container ol {
-  padding-left: 10px;
+  padding-left: 25pt;
   padding-top: 20pt;
+  width: 90%;
 }
 body .section .page .page_container ul li, .section_single .blog_post_container ul li, body .section_page .page .page_container ul li,
 body .section_single .page .page_container ul li,
@@ -457,6 +472,96 @@ body .section_search a:hover, body section .secondary .widget_area li a:hover, b
   color: green;
 }
 
+body .section_page .search_form .searchform div #searchsubmit,
+body .section_single .search_form .searchform div #searchsubmit,
+body .section_archive .search_form .searchform div #searchsubmit,
+body .section_author .search_form .searchform div #searchsubmit,
+body .section_category .search_form .searchform div #searchsubmit,
+body .section_search .search_form .searchform div #searchsubmit, body .section_page .no-result .searchform div #searchsubmit,
+body .section_single .no-result .searchform div #searchsubmit,
+body .section_archive .no-result .searchform div #searchsubmit,
+body .section_author .no-result .searchform div #searchsubmit,
+body .section_category .no-result .searchform div #searchsubmit,
+body .section_search .no-result .searchform div #searchsubmit {
+  background: wheat;
+  width: auto;
+  border: solid 3px black;
+  padding: 4px;
+  transition: background 0.3s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+body .section_page .search_form .searchform div #searchsubmit:hover,
+body .section_single .search_form .searchform div #searchsubmit:hover,
+body .section_archive .search_form .searchform div #searchsubmit:hover,
+body .section_author .search_form .searchform div #searchsubmit:hover,
+body .section_category .search_form .searchform div #searchsubmit:hover,
+body .section_search .search_form .searchform div #searchsubmit:hover, body .section_page .no-result .searchform div #searchsubmit:hover,
+body .section_single .no-result .searchform div #searchsubmit:hover,
+body .section_archive .no-result .searchform div #searchsubmit:hover,
+body .section_author .no-result .searchform div #searchsubmit:hover,
+body .section_category .no-result .searchform div #searchsubmit:hover,
+body .section_search .no-result .searchform div #searchsubmit:hover {
+  background: lightyellow;
+}
+
+body section .secondary .widget_search .wp-block-search__button {
+  background: yellow;
+  padding: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 56px;
+  border: solid black 3px;
+}
+body section .secondary .widget_search .wp-block-search__button:hover {
+  background: lightyellow;
+}
+
+body .section_page .no-result .searchform div #s,
+body .section_single .no-result .searchform div #s,
+body .section_archive .no-result .searchform div #s,
+body .section_author .no-result .searchform div #s,
+body .section_category .no-result .searchform div #s,
+body .section_search .no-result .searchform div #s {
+  padding: 6px;
+  border-radius: 5px;
+  transition: background 0.3s;
+  border: solid 3px black;
+  font-size: 12px;
+  background: wheat;
+}
+body .section_page .no-result .searchform div #s:hover,
+body .section_single .no-result .searchform div #s:hover,
+body .section_archive .no-result .searchform div #s:hover,
+body .section_author .no-result .searchform div #s:hover,
+body .section_category .no-result .searchform div #s:hover,
+body .section_search .no-result .searchform div #s:hover {
+  background: lightyellow;
+}
+
+body .section_page .search_form .searchform div #s,
+body .section_single .search_form .searchform div #s,
+body .section_archive .search_form .searchform div #s,
+body .section_author .search_form .searchform div #s,
+body .section_category .search_form .searchform div #s,
+body .section_search .search_form .searchform div #s, body section .secondary .widget_search .wp-block-search__input {
+  border: solid 3px black;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14pt;
+  transition: background 0.3s;
+  background: yellow;
+  border: solid 3px black;
+}
+body .section_page .search_form .searchform div #s:hover,
+body .section_single .search_form .searchform div #s:hover,
+body .section_archive .search_form .searchform div #s:hover,
+body .section_author .search_form .searchform div #s:hover,
+body .section_category .search_form .searchform div #s:hover,
+body .section_search .search_form .searchform div #s:hover, body section .secondary .widget_search .wp-block-search__input:hover {
+  background: lightyellow;
+}
+
 header {
   background: black;
   height: 80px;
@@ -481,6 +586,15 @@ header nav.navigation li a {
 }
 header nav.navigation li a:hover {
   text-decoration: none;
+}
+
+/* hcb.scss */
+.hcb_wrap pre.prism {
+  text-align: left;
+}
+.hcb_wrap pre.prism code span {
+  text-align: left;
+  display: inline-block;
 }
 
 /* main.scss - starts here */
@@ -581,7 +695,7 @@ body .section_archive,
 body .section_author,
 body .section_category,
 body .section_search {
-  border: orange 1px solid;
+  /* border: orange 1px solid; */
 }
 body .section_page h3 li,
 body .section_single h3 li,
@@ -637,6 +751,40 @@ body .section_category .number_of_results .total_results,
 body .section_search .number_of_results .total_results {
   color: red;
 }
+body .section_page .no-result,
+body .section_single .no-result,
+body .section_archive .no-result,
+body .section_author .no-result,
+body .section_category .no-result,
+body .section_search .no-result {
+  margin-top: 12pt;
+  display: block;
+}
+body .section_page .no-result p,
+body .section_single .no-result p,
+body .section_archive .no-result p,
+body .section_author .no-result p,
+body .section_category .no-result p,
+body .section_search .no-result p {
+  text-align: center;
+  font-weight: bold;
+}
+body .section_page .no-result .searchform,
+body .section_single .no-result .searchform,
+body .section_archive .no-result .searchform,
+body .section_author .no-result .searchform,
+body .section_category .no-result .searchform,
+body .section_search .no-result .searchform {
+  text-align: center;
+}
+body .section_page .no-result .searchform div,
+body .section_single .no-result .searchform div,
+body .section_archive .no-result .searchform div,
+body .section_author .no-result .searchform div,
+body .section_category .no-result .searchform div,
+body .section_search .no-result .searchform div {
+  margin: 10pt auto;
+}
 body .section_page .search_form p,
 body .section_single .search_form p,
 body .section_archive .search_form p,
@@ -655,27 +803,7 @@ body .section_search .search_form .searchform div {
   background: none;
   border: none;
   text-align: center;
-}
-body .section_page .search_form .searchform div #s,
-body .section_single .search_form .searchform div #s,
-body .section_archive .search_form .searchform div #s,
-body .section_author .search_form .searchform div #s,
-body .section_category .search_form .searchform div #s,
-body .section_search .search_form .searchform div #s {
-  padding: 5pt 5px;
-  background: yellow;
-  border: solid 3px black;
-  border-radius: 6px;
-}
-body .section_page .search_form .searchform div #searchsubmit,
-body .section_single .search_form .searchform div #searchsubmit,
-body .section_archive .search_form .searchform div #searchsubmit,
-body .section_author .search_form .searchform div #searchsubmit,
-body .section_category .search_form .searchform div #searchsubmit,
-body .section_search .search_form .searchform div #searchsubmit {
-  padding: 6px;
-  background: yellow;
-  border: solid 3px black;
+  margin: 7px auto;
 }
 body .section_page h4.align-center,
 body .section_single h4.align-center,
@@ -726,7 +854,7 @@ body .section_category navigation,
 body .section_search .pagination,
 body .section_search navigation {
   color: green;
-  border: solid yellow 1px;
+  /* border: solid yellow 1px; */
   text-align: center;
   padding: 15px 0;
   color: black;
@@ -825,11 +953,11 @@ body .section_search .post_authors h4 {
 }
 .section_single article.single .the_category_list a {
   font-size: 10pt;
-  color: black;
+  color: green;
   transition: 0.2s color;
 }
 .section_single article.single .the_category_list a:hover {
-  color: gold;
+  color: red;
 }
 .section_single article.single .comment-respond {
   margin-top: 20px;
