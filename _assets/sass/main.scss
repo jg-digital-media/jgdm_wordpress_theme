@@ -275,15 +275,18 @@ body {
             
             // post formatting
             
-            div {                
+             .page_container {                
                 
                 @extend %post_formatting;
             }
             
-        }
         
-        div {
-            
+        
+            div.blog_posts_archive {
+                
+                @extend %widget_areas;
+
+            }
         }
         
         .author-entry,

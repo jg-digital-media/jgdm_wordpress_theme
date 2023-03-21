@@ -18,10 +18,13 @@ require "inc/header.php"; ?>
         <?php if ( have_posts() ) : ?>
 
             <!-- html -->
+            
 
         <?php while ( have_posts() ) : the_post(); ?>
         
-            <div>
+            <div class="page_container">
+                
+                <h3 class="page_content_title"> <?php the_title(); ?> </h3>
 
                 <p>page.php title</p>
 
