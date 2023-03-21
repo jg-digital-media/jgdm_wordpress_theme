@@ -1,4 +1,4 @@
-# JGDM Blog Theme v2 (2023) - 20/03/2023 - 16:57
+# JGDM Blog Theme v2 (2023) - 21/03/2023 - 16:46
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -40,10 +40,20 @@
 + `[TODO: ]` - Categories - Listings and Pagination for individual categories
 + `[TODO: ]` - Customise the admin area with code
 + `[TODO: ]` - Plugin Development
-+ `[TODO: ]` - Pagination links
++ `[TODO: ]` - Pagination links for category templates (`category.php`... etc)
 + `[TODO: ]` - 404 Template
 + `[TODO: ]` - Show category counts on home.php and index.php
++ `[TODO: ]` - Search Form when there's no search result
++ `[TODO: ]` - Search button needs a cursor pointer
++ `[TODO: ]` - Search button needs a hover background
++ `[TODO: ]` - Add and produce a 404 Template
 
+### Known Bugs
+
++ `author-user_name.php` - Author Template pagination does not paginate on page 2 (same set of links)
++ `author-user_name.php` - last numbered pagination link reverts to index.php
++ `single.php` - date.php link is not working.
++ `single.php` - get_the_date('d M Y'); 
 
 ## Setup: 
 [Back to Top](#sections)
