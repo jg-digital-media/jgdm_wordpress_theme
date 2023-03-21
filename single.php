@@ -83,7 +83,7 @@ require "inc/header.php"; ?>
                     <?php //the_post(); ?>
                     <?php //echo get_usermeta($post->post_author,'author_url', 'a'); ?> </a> | 
                 
-                <a class="author-link" href="#">( <!-- 00 September 00 : 11:33pm --> <?php echo get_the_date('d M Y'); ?>)</a> 
+                <a class="author-link" href="#">( <!-- 00 September 0000 : 11:33pm --> <?php echo get_the_date('d M Y'); ?>)</a> 
             </aside>                
             
             <div class="posts-toggling">
