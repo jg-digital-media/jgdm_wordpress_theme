@@ -61,13 +61,16 @@ require "inc/header.php"; ?>
                 
             <div class="post_contents">
             
-                <h3 class="post_content_title"> <?php the_title(); ?> 
+                <h3 class="post_content_title"> 
+                    <?php the_title(); ?> 
                     <span>by <?php echo get_the_author(); ?> </span>
             
                     <span>Posted on: <?php the_date('d M Y'); ?> </span>
                 </h3>
 
-                <p> <?php the_field( "article_content" ); the_content(); ?> </p>                
+                <p> <?php the_field( "article_content" ); 
+                    the_content(); ?> 
+                </p>                
                 
             </div>
             
