@@ -1,4 +1,4 @@
-/* Last Update: 21/03/2023 - 16:35 */
+/* Last Update: 21/03/2023 - 16:14 */
 /*
 Theme Name: Jonnie Grieve Digital Media: Blog
 Theme URI: https://blog.jonniegrieve.co.uk
@@ -66,7 +66,7 @@ body .section_search .archive-entry {
   display: block;
   padding: 15px;
   margin: 15px auto;
-  width: 75%;
+  width: 50%;
   background: #f5c7a6;
   transition: background 0.3s;
 }
@@ -96,6 +96,32 @@ body .section_search .category-entry:hover,
 body .section_search .archive-entry:hover {
   background: #f8d8c2;
 }
+body .section_page .search-entry p,
+body .section_page .author-entry p,
+body .section_page .category-entry p,
+body .section_page .archive-entry p,
+body .section_single .search-entry p,
+body .section_single .author-entry p,
+body .section_single .category-entry p,
+body .section_single .archive-entry p,
+body .section_archive .search-entry p,
+body .section_archive .author-entry p,
+body .section_archive .category-entry p,
+body .section_archive .archive-entry p,
+body .section_author .search-entry p,
+body .section_author .author-entry p,
+body .section_author .category-entry p,
+body .section_author .archive-entry p,
+body .section_category .search-entry p,
+body .section_category .author-entry p,
+body .section_category .category-entry p,
+body .section_category .archive-entry p,
+body .section_search .search-entry p,
+body .section_search .author-entry p,
+body .section_search .category-entry p,
+body .section_search .archive-entry p {
+  margin-top: 10px;
+}
 
 .section_single article.single .comment-respond .comment-form .comment-form-comment #comment {
   background: #f7f7ab;
@@ -103,21 +129,29 @@ body .section_search .archive-entry:hover {
   margin: 10pt 0;
   border: solid 3px black;
   transition: background 0.3s;
+  font-family: "Quicksand";
+  font-size: 16px;
 }
 .section_single article.single .comment-respond .comment-form .comment-form-comment #comment:hover {
-  background: #fefef6;
+  background: #fafac7;
+}
+.section_single article.single .comment-respond .comment-form .comment-form-comment #comment::placeholder {
+  color: gray;
 }
 
 .section_single article.single .comment-respond .comment-form .form-submit .submit {
-  padding: 8px;
-  background: yellow;
-  margin: 10pt 0;
-  cursor: pointer;
-  transition: background 0.3s;
   border: solid 3px black;
+  padding: 10px;
+  font-family: "Quicksand";
+  font-weight: bold;
+  font-size: 16px;
+  background: #f7f7ab;
+  margin: 10pt 0;
+  transition: background 0.3s;
+  cursor: pointer;
 }
 .section_single article.single .comment-respond .comment-form .form-submit .submit:hover {
-  background: #ffff52;
+  background: #fafac7;
 }
 
 body .section .page .page_container, .section_single .blog_post_container, body .section_page .page .page_container,
@@ -126,7 +160,6 @@ body .section_archive .page .page_container,
 body .section_author .page .page_container,
 body .section_category .page .page_container,
 body .section_search .page .page_container {
-  background: yellow;
   background: #f5c7a6;
   display: block;
   margin: 15px auto;
@@ -134,102 +167,17 @@ body .section_search .page .page_container {
   width: 75%;
   border-radius: 10px;
   border: solid 3px black;
+  /* setting inline-code */
 }
-body .section .page .page_container .posts-toggling, .section_single .blog_post_container .posts-toggling, body .section_page .page .page_container .posts-toggling,
-body .section_single .page .page_container .posts-toggling,
-body .section_archive .page .page_container .posts-toggling,
-body .section_author .page .page_container .posts-toggling,
-body .section_category .page .page_container .posts-toggling,
-body .section_search .page .page_container .posts-toggling {
-  text-align: center;
-  margin: 5px auto;
-}
-body .section .page .page_container .post_contents, .section_single .blog_post_container .post_contents, body .section_page .page .page_container .post_contents,
-body .section_single .page .page_container .post_contents,
-body .section_archive .page .page_container .post_contents,
-body .section_author .page .page_container .post_contents,
-body .section_category .page .page_container .post_contents,
-body .section_search .page .page_container .post_contents {
-  color: black;
-  margin: 15pt 0;
-}
-body .section .page .page_container .post_contents h1, .section_single .blog_post_container .post_contents h1, body .section_page .page .page_container .post_contents h1,
-body .section_single .page .page_container .post_contents h1,
-body .section_archive .page .page_container .post_contents h1,
-body .section_author .page .page_container .post_contents h1,
-body .section_category .page .page_container .post_contents h1,
-body .section_search .page .page_container .post_contents h1,
-body .section .page .page_container .post_contents h2,
-.section_single .blog_post_container .post_contents h2,
-body .section_page .page .page_container .post_contents h2,
-body .section_single .page .page_container .post_contents h2,
-body .section_archive .page .page_container .post_contents h2,
-body .section_author .page .page_container .post_contents h2,
-body .section_category .page .page_container .post_contents h2,
-body .section_search .page .page_container .post_contents h2,
-body .section .page .page_container .post_contents h3,
-.section_single .blog_post_container .post_contents h3,
-body .section_page .page .page_container .post_contents h3,
-body .section_single .page .page_container .post_contents h3,
-body .section_archive .page .page_container .post_contents h3,
-body .section_author .page .page_container .post_contents h3,
-body .section_category .page .page_container .post_contents h3,
-body .section_search .page .page_container .post_contents h3,
-body .section .page .page_container .post_contents h4,
-.section_single .blog_post_container .post_contents h4,
-body .section_page .page .page_container .post_contents h4,
-body .section_single .page .page_container .post_contents h4,
-body .section_archive .page .page_container .post_contents h4,
-body .section_author .page .page_container .post_contents h4,
-body .section_category .page .page_container .post_contents h4,
-body .section_search .page .page_container .post_contents h4,
-body .section .page .page_container .post_contents h5,
-.section_single .blog_post_container .post_contents h5,
-body .section_page .page .page_container .post_contents h5,
-body .section_single .page .page_container .post_contents h5,
-body .section_archive .page .page_container .post_contents h5,
-body .section_author .page .page_container .post_contents h5,
-body .section_category .page .page_container .post_contents h5,
-body .section_search .page .page_container .post_contents h5,
-body .section .page .page_container .post_contents h6,
-.section_single .blog_post_container .post_contents h6,
-body .section_page .page .page_container .post_contents h6,
-body .section_single .page .page_container .post_contents h6,
-body .section_archive .page .page_container .post_contents h6,
-body .section_author .page .page_container .post_contents h6,
-body .section_category .page .page_container .post_contents h6,
-body .section_search .page .page_container .post_contents h6 {
-  display: block;
-  color: black;
-  font-size: 12pt;
-  width: 90%;
-  text-align: left;
-  background: none;
-  letter-spacing: 0px;
-}
-body .section .page .page_container .post_contents h3, .section_single .blog_post_container .post_contents h3, body .section_page .page .page_container .post_contents h3,
-body .section_single .page .page_container .post_contents h3,
-body .section_archive .page .page_container .post_contents h3,
-body .section_author .page .page_container .post_contents h3,
-body .section_category .page .page_container .post_contents h3,
-body .section_search .page .page_container .post_contents h3 {
-  /* display: inline-block; */
-  text-align: left;
-  width: 90%;
-}
-body .section .page .page_container .post_contents h3 span, .section_single .blog_post_container .post_contents h3 span, body .section_page .page .page_container .post_contents h3 span,
-body .section_single .page .page_container .post_contents h3 span,
-body .section_archive .page .page_container .post_contents h3 span,
-body .section_author .page .page_container .post_contents h3 span,
-body .section_category .page .page_container .post_contents h3 span,
-body .section_search .page .page_container .post_contents h3 span {
-  display: block;
-  font-weight: bold;
-  text-align: center;
-  color: red;
-  font-size: 12px;
-  display: inline-block;
-  vertical-align: middle;
+@media (max-width: 780px) {
+  body .section .page .page_container, .section_single .blog_post_container, body .section_page .page .page_container,
+body .section_single .page .page_container,
+body .section_archive .page .page_container,
+body .section_author .page .page_container,
+body .section_category .page .page_container,
+body .section_search .page .page_container {
+    width: 90%;
+  }
 }
 body .section .page .page_container h1, .section_single .blog_post_container h1, body .section_page .page .page_container h1,
 body .section_single .page .page_container h1,
@@ -308,6 +256,7 @@ body .section_author .page .page_container h3,
 body .section_category .page .page_container h3,
 body .section_search .page .page_container h3 {
   text-align: center;
+  text-align: left;
 }
 body .section .page .page_container span, .section_single .blog_post_container span, body .section_page .page .page_container span,
 body .section_single .page .page_container span,
@@ -318,7 +267,7 @@ body .section_search .page .page_container span {
   display: block;
   font-weight: bold;
   text-align: center;
-  color: red;
+  /* color: red; */
 }
 body .section .page .page_container strong, .section_single .blog_post_container strong, body .section_page .page .page_container strong,
 body .section_single .page .page_container strong,
@@ -357,9 +306,10 @@ body .section_archive .page .page_container ol,
 body .section_author .page .page_container ol,
 body .section_category .page .page_container ol,
 body .section_search .page .page_container ol {
-  padding-left: 25pt;
-  padding-top: 20pt;
   width: 90%;
+  margin: 0 auto;
+  padding: 10pt 0;
+  color: brown;
 }
 body .section .page .page_container ul li, .section_single .blog_post_container ul li, body .section_page .page .page_container ul li,
 body .section_single .page .page_container ul li,
@@ -384,6 +334,7 @@ body .section_search .page .page_container p {
   width: 90%;
   display: block;
   margin: 0 auto;
+  font-size: 16px;
 }
 body .section .page .page_container p s, .section_single .blog_post_container p s, body .section_page .page .page_container p s,
 body .section_single .page .page_container p s,
@@ -400,9 +351,41 @@ body .section_author .page .page_container p img,
 body .section_category .page .page_container p img,
 body .section_search .page .page_container p img {
   display: block;
-  margin: 0 auto;
+  margin: 10px auto;
   border-radius: 10px;
   border: solid 3px black;
+}
+body .section .page .page_container code, .section_single .blog_post_container code, body .section_page .page .page_container code,
+body .section_single .page .page_container code,
+body .section_archive .page .page_container code,
+body .section_author .page .page_container code,
+body .section_category .page .page_container code,
+body .section_search .page .page_container code {
+  color: #444444;
+}
+body .section .page .page_container sub, .section_single .blog_post_container sub, body .section_page .page .page_container sub,
+body .section_single .page .page_container sub,
+body .section_archive .page .page_container sub,
+body .section_author .page .page_container sub,
+body .section_category .page .page_container sub,
+body .section_search .page .page_container sub {
+  color: #444444;
+}
+body .section .page .page_container sup, .section_single .blog_post_container sup, body .section_page .page .page_container sup,
+body .section_single .page .page_container sup,
+body .section_archive .page .page_container sup,
+body .section_author .page .page_container sup,
+body .section_category .page .page_container sup,
+body .section_search .page .page_container sup {
+  color: #444444;
+}
+body .section .page .page_container .kdb, .section_single .blog_post_container .kdb, body .section_page .page .page_container .kdb,
+body .section_single .page .page_container .kdb,
+body .section_archive .page .page_container .kdb,
+body .section_author .page .page_container .kdb,
+body .section_category .page .page_container .kdb,
+body .section_search .page .page_container .kdb {
+  color: #444444;
 }
 body .section .page .page_container .has-text-align-center, .section_single .blog_post_container .has-text-align-center, body .section_page .page .page_container .has-text-align-center,
 body .section_single .page .page_container .has-text-align-center,
@@ -428,6 +411,16 @@ body .section_category .page .page_container .has-text-align-right,
 body .section_search .page .page_container .has-text-align-right {
   text-align: right;
 }
+body .section .page .page_container .wp-block-image, .section_single .blog_post_container .wp-block-image, body .section_page .page .page_container .wp-block-image,
+body .section_single .page .page_container .wp-block-image,
+body .section_archive .page .page_container .wp-block-image,
+body .section_author .page .page_container .wp-block-image,
+body .section_category .page .page_container .wp-block-image,
+body .section_search .page .page_container .wp-block-image {
+  display: block;
+  /* border: solid 2px black; */
+  margin: 0 auto;
+}
 @media (max-width: 780px) {
   body .section .page .page_container .wp-block-image, .section_single .blog_post_container .wp-block-image, body .section_page .page .page_container .wp-block-image,
 body .section_single .page .page_container .wp-block-image,
@@ -435,6 +428,364 @@ body .section_archive .page .page_container .wp-block-image,
 body .section_author .page .page_container .wp-block-image,
 body .section_category .page .page_container .wp-block-image,
 body .section_search .page .page_container .wp-block-image {
+    width: 90%;
+  }
+}
+body .section .page .page_container .wp-block-image figure, .section_single .blog_post_container .wp-block-image figure, body .section_page .page .page_container .wp-block-image figure,
+body .section_single .page .page_container .wp-block-image figure,
+body .section_archive .page .page_container .wp-block-image figure,
+body .section_author .page .page_container .wp-block-image figure,
+body .section_category .page .page_container .wp-block-image figure,
+body .section_search .page .page_container .wp-block-image figure {
+  text-align: center;
+}
+body .section .page .page_container .wp-block-image.alignleft, .section_single .blog_post_container .wp-block-image.alignleft, body .section_page .page .page_container .wp-block-image.alignleft,
+body .section_single .page .page_container .wp-block-image.alignleft,
+body .section_archive .page .page_container .wp-block-image.alignleft,
+body .section_author .page .page_container .wp-block-image.alignleft,
+body .section_category .page .page_container .wp-block-image.alignleft,
+body .section_search .page .page_container .wp-block-image.alignleft {
+  margin: 0 auto;
+  text-align: left;
+}
+body .section .page .page_container .wp-block-image.aligncenter, .section_single .blog_post_container .wp-block-image.aligncenter, body .section_page .page .page_container .wp-block-image.aligncenter,
+body .section_single .page .page_container .wp-block-image.aligncenter,
+body .section_archive .page .page_container .wp-block-image.aligncenter,
+body .section_author .page .page_container .wp-block-image.aligncenter,
+body .section_category .page .page_container .wp-block-image.aligncenter,
+body .section_search .page .page_container .wp-block-image.aligncenter {
+  margin: 0 auto;
+  text-align: center;
+}
+body .section .page .page_container .wp-block-image.alignright, .section_single .blog_post_container .wp-block-image.alignright, body .section_page .page .page_container .wp-block-image.alignright,
+body .section_single .page .page_container .wp-block-image.alignright,
+body .section_archive .page .page_container .wp-block-image.alignright,
+body .section_author .page .page_container .wp-block-image.alignright,
+body .section_category .page .page_container .wp-block-image.alignright,
+body .section_search .page .page_container .wp-block-image.alignright {
+  margin: 0 auto;
+  text-align: right;
+}
+body .section .page .page_container .wp-block-image img, .section_single .blog_post_container .wp-block-image img, body .section_page .page .page_container .wp-block-image img,
+body .section_single .page .page_container .wp-block-image img,
+body .section_archive .page .page_container .wp-block-image img,
+body .section_author .page .page_container .wp-block-image img,
+body .section_category .page .page_container .wp-block-image img,
+body .section_search .page .page_container .wp-block-image img {
+  width: 430px;
+  display: block;
+  margin: 10px auto;
+  border: solid gold 3px;
+}
+@media (max-width: 780px) {
+  body .section .page .page_container .wp-block-image img, .section_single .blog_post_container .wp-block-image img, body .section_page .page .page_container .wp-block-image img,
+body .section_single .page .page_container .wp-block-image img,
+body .section_archive .page .page_container .wp-block-image img,
+body .section_author .page .page_container .wp-block-image img,
+body .section_category .page .page_container .wp-block-image img,
+body .section_search .page .page_container .wp-block-image img {
+    width: 90%;
+  }
+}
+body .section .page .page_container .wp-block-media-text, .section_single .blog_post_container .wp-block-media-text, body .section_page .page .page_container .wp-block-media-text,
+body .section_single .page .page_container .wp-block-media-text,
+body .section_archive .page .page_container .wp-block-media-text,
+body .section_author .page .page_container .wp-block-media-text,
+body .section_category .page .page_container .wp-block-media-text,
+body .section_search .page .page_container .wp-block-media-text {
+  border: solid red 1px;
+  text-align: center;
+}
+body .section .page .page_container .wp-block-media-text .wp-block-media-text__media img, .section_single .blog_post_container .wp-block-media-text .wp-block-media-text__media img, body .section_page .page .page_container .wp-block-media-text .wp-block-media-text__media img,
+body .section_single .page .page_container .wp-block-media-text .wp-block-media-text__media img,
+body .section_archive .page .page_container .wp-block-media-text .wp-block-media-text__media img,
+body .section_author .page .page_container .wp-block-media-text .wp-block-media-text__media img,
+body .section_category .page .page_container .wp-block-media-text .wp-block-media-text__media img,
+body .section_search .page .page_container .wp-block-media-text .wp-block-media-text__media img {
+  width: 30%;
+}
+@media (max-width: 780px) {
+  body .section .page .page_container .wp-block-media-text .wp-block-media-text__media img, .section_single .blog_post_container .wp-block-media-text .wp-block-media-text__media img, body .section_page .page .page_container .wp-block-media-text .wp-block-media-text__media img,
+body .section_single .page .page_container .wp-block-media-text .wp-block-media-text__media img,
+body .section_archive .page .page_container .wp-block-media-text .wp-block-media-text__media img,
+body .section_author .page .page_container .wp-block-media-text .wp-block-media-text__media img,
+body .section_category .page .page_container .wp-block-media-text .wp-block-media-text__media img,
+body .section_search .page .page_container .wp-block-media-text .wp-block-media-text__media img {
+    width: 50px;
+  }
+}
+body .section .page .page_container .wp-block-cover, .section_single .blog_post_container .wp-block-cover, body .section_page .page .page_container .wp-block-cover,
+body .section_single .page .page_container .wp-block-cover,
+body .section_archive .page .page_container .wp-block-cover,
+body .section_author .page .page_container .wp-block-cover,
+body .section_category .page .page_container .wp-block-cover,
+body .section_search .page .page_container .wp-block-cover {
+  border: black solid 2px;
+}
+body .section .page .page_container .wp-block-verse, .section_single .blog_post_container .wp-block-verse, body .section_page .page .page_container .wp-block-verse,
+body .section_single .page .page_container .wp-block-verse,
+body .section_archive .page .page_container .wp-block-verse,
+body .section_author .page .page_container .wp-block-verse,
+body .section_category .page .page_container .wp-block-verse,
+body .section_search .page .page_container .wp-block-verse {
+  border: black solid 2px;
+  margin-top: 20px;
+  text-align: center;
+}
+body .section .page .page_container .wp-block-pullquote, .section_single .blog_post_container .wp-block-pullquote, body .section_page .page .page_container .wp-block-pullquote,
+body .section_single .page .page_container .wp-block-pullquote,
+body .section_archive .page .page_container .wp-block-pullquote,
+body .section_author .page .page_container .wp-block-pullquote,
+body .section_category .page .page_container .wp-block-pullquote,
+body .section_search .page .page_container .wp-block-pullquote {
+  border: black solid 2px;
+  padding: 0;
+  margin: 10pt 0;
+}
+body .section .page .page_container .wp-block-pullquote blockquote cite, .section_single .blog_post_container .wp-block-pullquote blockquote cite, body .section_page .page .page_container .wp-block-pullquote blockquote cite,
+body .section_single .page .page_container .wp-block-pullquote blockquote cite,
+body .section_archive .page .page_container .wp-block-pullquote blockquote cite,
+body .section_author .page .page_container .wp-block-pullquote blockquote cite,
+body .section_category .page .page_container .wp-block-pullquote blockquote cite,
+body .section_search .page .page_container .wp-block-pullquote blockquote cite {
+  font-size: 12px;
+}
+body .section .page .page_container .wp-block-table, .section_single .blog_post_container .wp-block-table, body .section_page .page .page_container .wp-block-table,
+body .section_single .page .page_container .wp-block-table,
+body .section_archive .page .page_container .wp-block-table,
+body .section_author .page .page_container .wp-block-table,
+body .section_category .page .page_container .wp-block-table,
+body .section_search .page .page_container .wp-block-table {
+  border: black solid 2px;
+}
+body .section .page .page_container .wp-caption, .section_single .blog_post_container .wp-caption, body .section_page .page .page_container .wp-caption,
+body .section_single .page .page_container .wp-caption,
+body .section_archive .page .page_container .wp-caption,
+body .section_author .page .page_container .wp-caption,
+body .section_category .page .page_container .wp-caption,
+body .section_search .page .page_container .wp-caption {
+  width: 90%;
+  display: block;
+  margin: 10pt auto;
+}
+body .section .page .page_container .hcb_wrap, .section_single .blog_post_container .hcb_wrap, body .section_page .page .page_container .hcb_wrap,
+body .section_single .page .page_container .hcb_wrap,
+body .section_archive .page .page_container .hcb_wrap,
+body .section_author .page .page_container .hcb_wrap,
+body .section_category .page .page_container .hcb_wrap,
+body .section_search .page .page_container .hcb_wrap {
+  border: black solid 2px;
+  width: 40%;
+  display: block;
+  margin: 20px auto;
+}
+body .section .page .page_container .hcb_wrap pre, .section_single .blog_post_container .hcb_wrap pre, body .section_page .page .page_container .hcb_wrap pre,
+body .section_single .page .page_container .hcb_wrap pre,
+body .section_archive .page .page_container .hcb_wrap pre,
+body .section_author .page .page_container .hcb_wrap pre,
+body .section_category .page .page_container .hcb_wrap pre,
+body .section_search .page .page_container .hcb_wrap pre {
+  display: block;
+}
+body .section .page .page_container .hcb_wrap pre code, .section_single .blog_post_container .hcb_wrap pre code, body .section_page .page .page_container .hcb_wrap pre code,
+body .section_single .page .page_container .hcb_wrap pre code,
+body .section_archive .page .page_container .hcb_wrap pre code,
+body .section_author .page .page_container .hcb_wrap pre code,
+body .section_category .page .page_container .hcb_wrap pre code,
+body .section_search .page .page_container .hcb_wrap pre code {
+  display: inline-block;
+  color: inherit;
+}
+body .section .page .page_container .hcb_wrap pre code span.line-numbers-rows, .section_single .blog_post_container .hcb_wrap pre code span.line-numbers-rows, body .section_page .page .page_container .hcb_wrap pre code span.line-numbers-rows,
+body .section_single .page .page_container .hcb_wrap pre code span.line-numbers-rows,
+body .section_archive .page .page_container .hcb_wrap pre code span.line-numbers-rows,
+body .section_author .page .page_container .hcb_wrap pre code span.line-numbers-rows,
+body .section_category .page .page_container .hcb_wrap pre code span.line-numbers-rows,
+body .section_search .page .page_container .hcb_wrap pre code span.line-numbers-rows {
+  display: block;
+}
+body .section .page .page_container .hcb_wrap pre code span, .section_single .blog_post_container .hcb_wrap pre code span, body .section_page .page .page_container .hcb_wrap pre code span,
+body .section_single .page .page_container .hcb_wrap pre code span,
+body .section_archive .page .page_container .hcb_wrap pre code span,
+body .section_author .page .page_container .hcb_wrap pre code span,
+body .section_category .page .page_container .hcb_wrap pre code span,
+body .section_search .page .page_container .hcb_wrap pre code span {
+  display: inline-block;
+}
+body .section .page .page_container .hcb_wrap pre code span span, .section_single .blog_post_container .hcb_wrap pre code span span, body .section_page .page .page_container .hcb_wrap pre code span span,
+body .section_single .page .page_container .hcb_wrap pre code span span,
+body .section_archive .page .page_container .hcb_wrap pre code span span,
+body .section_author .page .page_container .hcb_wrap pre code span span,
+body .section_category .page .page_container .hcb_wrap pre code span span,
+body .section_search .page .page_container .hcb_wrap pre code span span {
+  display: block;
+}
+body .section .page .page_container :where(img[class*=wp-image-]), .section_single .blog_post_container :where(img[class*=wp-image-]), body .section_page .page .page_container :where(img[class*=wp-image-]),
+body .section_single .page .page_container :where(img[class*=wp-image-]),
+body .section_archive .page .page_container :where(img[class*=wp-image-]),
+body .section_author .page .page_container :where(img[class*=wp-image-]),
+body .section_category .page .page_container :where(img[class*=wp-image-]),
+body .section_search .page .page_container :where(img[class*=wp-image-]) {
+  border: solid white 3px;
+}
+body .section .page .page_container .post_contents, .section_single .blog_post_container .post_contents, body .section_page .page .page_container .post_contents,
+body .section_single .page .page_container .post_contents,
+body .section_archive .page .page_container .post_contents,
+body .section_author .page .page_container .post_contents,
+body .section_category .page .page_container .post_contents,
+body .section_search .page .page_container .post_contents {
+  color: black;
+  margin: 15pt 0;
+}
+body .section .page .page_container .post_contents h1, .section_single .blog_post_container .post_contents h1, body .section_page .page .page_container .post_contents h1,
+body .section_single .page .page_container .post_contents h1,
+body .section_archive .page .page_container .post_contents h1,
+body .section_author .page .page_container .post_contents h1,
+body .section_category .page .page_container .post_contents h1,
+body .section_search .page .page_container .post_contents h1,
+body .section .page .page_container .post_contents h2,
+.section_single .blog_post_container .post_contents h2,
+body .section_page .page .page_container .post_contents h2,
+body .section_single .page .page_container .post_contents h2,
+body .section_archive .page .page_container .post_contents h2,
+body .section_author .page .page_container .post_contents h2,
+body .section_category .page .page_container .post_contents h2,
+body .section_search .page .page_container .post_contents h2,
+body .section .page .page_container .post_contents h3,
+.section_single .blog_post_container .post_contents h3,
+body .section_page .page .page_container .post_contents h3,
+body .section_single .page .page_container .post_contents h3,
+body .section_archive .page .page_container .post_contents h3,
+body .section_author .page .page_container .post_contents h3,
+body .section_category .page .page_container .post_contents h3,
+body .section_search .page .page_container .post_contents h3,
+body .section .page .page_container .post_contents h4,
+.section_single .blog_post_container .post_contents h4,
+body .section_page .page .page_container .post_contents h4,
+body .section_single .page .page_container .post_contents h4,
+body .section_archive .page .page_container .post_contents h4,
+body .section_author .page .page_container .post_contents h4,
+body .section_category .page .page_container .post_contents h4,
+body .section_search .page .page_container .post_contents h4,
+body .section .page .page_container .post_contents h5,
+.section_single .blog_post_container .post_contents h5,
+body .section_page .page .page_container .post_contents h5,
+body .section_single .page .page_container .post_contents h5,
+body .section_archive .page .page_container .post_contents h5,
+body .section_author .page .page_container .post_contents h5,
+body .section_category .page .page_container .post_contents h5,
+body .section_search .page .page_container .post_contents h5,
+body .section .page .page_container .post_contents h6,
+.section_single .blog_post_container .post_contents h6,
+body .section_page .page .page_container .post_contents h6,
+body .section_single .page .page_container .post_contents h6,
+body .section_archive .page .page_container .post_contents h6,
+body .section_author .page .page_container .post_contents h6,
+body .section_category .page .page_container .post_contents h6,
+body .section_search .page .page_container .post_contents h6 {
+  display: block;
+  color: black;
+  font-size: 16px;
+  width: 90%;
+  text-align: left;
+  background: none;
+  letter-spacing: 0px;
+}
+body .section .page .page_container .post_contents h3, .section_single .blog_post_container .post_contents h3, body .section_page .page .page_container .post_contents h3,
+body .section_single .page .page_container .post_contents h3,
+body .section_archive .page .page_container .post_contents h3,
+body .section_author .page .page_container .post_contents h3,
+body .section_category .page .page_container .post_contents h3,
+body .section_search .page .page_container .post_contents h3 {
+  /* display: inline-block; */
+  text-align: left;
+  width: 90%;
+}
+body .section .page .page_container .post_contents h3 span, .section_single .blog_post_container .post_contents h3 span, body .section_page .page .page_container .post_contents h3 span,
+body .section_single .page .page_container .post_contents h3 span,
+body .section_archive .page .page_container .post_contents h3 span,
+body .section_author .page .page_container .post_contents h3 span,
+body .section_category .page .page_container .post_contents h3 span,
+body .section_search .page .page_container .post_contents h3 span {
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  color: red;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+}
+body .section .page .page_container .post_contents .hcb_wrap, .section_single .blog_post_container .post_contents .hcb_wrap, body .section_page .page .page_container .post_contents .hcb_wrap,
+body .section_single .page .page_container .post_contents .hcb_wrap,
+body .section_archive .page .page_container .post_contents .hcb_wrap,
+body .section_author .page .page_container .post_contents .hcb_wrap,
+body .section_category .page .page_container .post_contents .hcb_wrap,
+body .section_search .page .page_container .post_contents .hcb_wrap {
+  border: black solid 2px;
+  width: 90%;
+  display: block;
+  margin: 20px auto;
+}
+body .section .page .page_container .post_contents .hcb_wrap pre, .section_single .blog_post_container .post_contents .hcb_wrap pre, body .section_page .page .page_container .post_contents .hcb_wrap pre,
+body .section_single .page .page_container .post_contents .hcb_wrap pre,
+body .section_archive .page .page_container .post_contents .hcb_wrap pre,
+body .section_author .page .page_container .post_contents .hcb_wrap pre,
+body .section_category .page .page_container .post_contents .hcb_wrap pre,
+body .section_search .page .page_container .post_contents .hcb_wrap pre {
+  display: block;
+}
+body .section .page .page_container .post_contents .hcb_wrap pre code, .section_single .blog_post_container .post_contents .hcb_wrap pre code, body .section_page .page .page_container .post_contents .hcb_wrap pre code,
+body .section_single .page .page_container .post_contents .hcb_wrap pre code,
+body .section_archive .page .page_container .post_contents .hcb_wrap pre code,
+body .section_author .page .page_container .post_contents .hcb_wrap pre code,
+body .section_category .page .page_container .post_contents .hcb_wrap pre code,
+body .section_search .page .page_container .post_contents .hcb_wrap pre code {
+  display: inline-block;
+  color: inherit;
+}
+body .section .page .page_container .post_contents .hcb_wrap pre code span.line-numbers-rows, .section_single .blog_post_container .post_contents .hcb_wrap pre code span.line-numbers-rows, body .section_page .page .page_container .post_contents .hcb_wrap pre code span.line-numbers-rows,
+body .section_single .page .page_container .post_contents .hcb_wrap pre code span.line-numbers-rows,
+body .section_archive .page .page_container .post_contents .hcb_wrap pre code span.line-numbers-rows,
+body .section_author .page .page_container .post_contents .hcb_wrap pre code span.line-numbers-rows,
+body .section_category .page .page_container .post_contents .hcb_wrap pre code span.line-numbers-rows,
+body .section_search .page .page_container .post_contents .hcb_wrap pre code span.line-numbers-rows {
+  display: block;
+}
+body .section .page .page_container .post_contents .hcb_wrap pre code span, .section_single .blog_post_container .post_contents .hcb_wrap pre code span, body .section_page .page .page_container .post_contents .hcb_wrap pre code span,
+body .section_single .page .page_container .post_contents .hcb_wrap pre code span,
+body .section_archive .page .page_container .post_contents .hcb_wrap pre code span,
+body .section_author .page .page_container .post_contents .hcb_wrap pre code span,
+body .section_category .page .page_container .post_contents .hcb_wrap pre code span,
+body .section_search .page .page_container .post_contents .hcb_wrap pre code span {
+  display: inline-block;
+}
+body .section .page .page_container .post_contents .hcb_wrap pre code span span, .section_single .blog_post_container .post_contents .hcb_wrap pre code span span, body .section_page .page .page_container .post_contents .hcb_wrap pre code span span,
+body .section_single .page .page_container .post_contents .hcb_wrap pre code span span,
+body .section_archive .page .page_container .post_contents .hcb_wrap pre code span span,
+body .section_author .page .page_container .post_contents .hcb_wrap pre code span span,
+body .section_category .page .page_container .post_contents .hcb_wrap pre code span span,
+body .section_search .page .page_container .post_contents .hcb_wrap pre code span span {
+  display: inline-block;
+}
+body .section .page .page_container figure img, .section_single .blog_post_container figure img, body .section_page .page .page_container figure img,
+body .section_single .page .page_container figure img,
+body .section_archive .page .page_container figure img,
+body .section_author .page .page_container figure img,
+body .section_category .page .page_container figure img,
+body .section_search .page .page_container figure img {
+  display: block;
+  width: 60%;
+  margin: 10px auto;
+  border: solid 3px black;
+  border-radius: 5px;
+}
+@media (max-width: 780px) {
+  body .section .page .page_container figure img, .section_single .blog_post_container figure img, body .section_page .page .page_container figure img,
+body .section_single .page .page_container figure img,
+body .section_archive .page .page_container figure img,
+body .section_author .page .page_container figure img,
+body .section_category .page .page_container figure img,
+body .section_search .page .page_container figure img {
     width: 90%;
   }
 }
@@ -486,9 +837,11 @@ body .section_search .no-result .searchform div #searchsubmit {
   background: wheat;
   width: auto;
   border: solid 3px black;
-  padding: 4px;
+  padding: 5px;
   transition: background 0.3s;
   cursor: pointer;
+  font-size: 14pt;
+  font-family: "Quicksand";
   border-radius: 5px;
 }
 body .section_page .search_form .searchform div #searchsubmit:hover,
@@ -502,19 +855,43 @@ body .section_archive .no-result .searchform div #searchsubmit:hover,
 body .section_author .no-result .searchform div #searchsubmit:hover,
 body .section_category .no-result .searchform div #searchsubmit:hover,
 body .section_search .no-result .searchform div #searchsubmit:hover {
-  background: lightyellow;
+  background: #fbf2e0;
+}
+body .section_page .search_form .searchform div #searchsubmit:focus,
+body .section_single .search_form .searchform div #searchsubmit:focus,
+body .section_archive .search_form .searchform div #searchsubmit:focus,
+body .section_author .search_form .searchform div #searchsubmit:focus,
+body .section_category .search_form .searchform div #searchsubmit:focus,
+body .section_search .search_form .searchform div #searchsubmit:focus, body .section_page .no-result .searchform div #searchsubmit:focus,
+body .section_single .no-result .searchform div #searchsubmit:focus,
+body .section_archive .no-result .searchform div #searchsubmit:focus,
+body .section_author .no-result .searchform div #searchsubmit:focus,
+body .section_category .no-result .searchform div #searchsubmit:focus,
+body .section_search .no-result .searchform div #searchsubmit:focus {
+  border: solid gold 3px;
 }
 
 body section .secondary .widget_search .wp-block-search__button {
-  background: yellow;
+  border: solid 3px black;
+  background: #ffff8e;
   padding: 3px;
   border-radius: 5px;
-  cursor: pointer;
+  font-size: 14pt;
+  font-family: "Quicksand";
+  font-weight: bold;
   width: 56px;
-  border: solid black 3px;
+  transition: background 0.3s;
+  cursor: pointer;
 }
 body section .secondary .widget_search .wp-block-search__button:hover {
-  background: lightyellow;
+  background: #ffff00;
+}
+body section .secondary .widget_search .wp-block-search__button::placeholder {
+  color: gray;
+  font-family: "Quicksand";
+}
+body section .secondary .widget_search .wp-block-search__button:focus {
+  border: gold 3px solid;
 }
 
 body .section_page .no-result .searchform div #s,
@@ -527,7 +904,8 @@ body .section_search .no-result .searchform div #s {
   border-radius: 5px;
   transition: background 0.3s;
   border: solid 3px black;
-  font-size: 12px;
+  font-size: 14pt;
+  font-family: "Quicksand";
   background: wheat;
 }
 body .section_page .no-result .searchform div #s:hover,
@@ -536,7 +914,15 @@ body .section_archive .no-result .searchform div #s:hover,
 body .section_author .no-result .searchform div #s:hover,
 body .section_category .no-result .searchform div #s:hover,
 body .section_search .no-result .searchform div #s:hover {
-  background: lightyellow;
+  background: #fbf2e0;
+}
+body .section_page .no-result .searchform div #s:focus,
+body .section_single .no-result .searchform div #s:focus,
+body .section_archive .no-result .searchform div #s:focus,
+body .section_author .no-result .searchform div #s:focus,
+body .section_category .no-result .searchform div #s:focus,
+body .section_search .no-result .searchform div #s:focus {
+  border: solid gold 3px;
 }
 
 body .section_page .search_form .searchform div #s,
@@ -549,9 +935,9 @@ body .section_search .search_form .searchform div #s, body section .secondary .w
   padding: 10px;
   border-radius: 5px;
   font-size: 14pt;
+  font-family: "Quicksand";
   transition: background 0.3s;
-  background: yellow;
-  border: solid 3px black;
+  background: #ffff8e;
 }
 body .section_page .search_form .searchform div #s:hover,
 body .section_single .search_form .searchform div #s:hover,
@@ -559,7 +945,24 @@ body .section_archive .search_form .searchform div #s:hover,
 body .section_author .search_form .searchform div #s:hover,
 body .section_category .search_form .searchform div #s:hover,
 body .section_search .search_form .searchform div #s:hover, body section .secondary .widget_search .wp-block-search__input:hover {
-  background: lightyellow;
+  background: #ffff00;
+}
+body .section_page .search_form .searchform div #s::placeholder,
+body .section_single .search_form .searchform div #s::placeholder,
+body .section_archive .search_form .searchform div #s::placeholder,
+body .section_author .search_form .searchform div #s::placeholder,
+body .section_category .search_form .searchform div #s::placeholder,
+body .section_search .search_form .searchform div #s::placeholder, body section .secondary .widget_search .wp-block-search__input::placeholder {
+  color: gray;
+  font-family: "Quicksand";
+}
+body .section_page .search_form .searchform div #s:focus,
+body .section_single .search_form .searchform div #s:focus,
+body .section_archive .search_form .searchform div #s:focus,
+body .section_author .search_form .searchform div #s:focus,
+body .section_category .search_form .searchform div #s:focus,
+body .section_search .search_form .searchform div #s:focus, body section .secondary .widget_search .wp-block-search__input:focus {
+  border: gold 3px solid;
 }
 
 header {
@@ -634,7 +1037,7 @@ body section .primary .entry {
   transition: background 0.3s;
 }
 body section .primary .entry:hover {
-  background: lightyellow;
+  background: #ffff3d;
 }
 body section .primary .entry h3 {
   text-align: center;
@@ -643,6 +1046,10 @@ body section .primary .entry h3 span {
   display: inline-block;
   font-size: 10px;
   font-style: italic;
+}
+body section .primary .entry h3 span.comment_count {
+  color: red;
+  font-weight: bold;
 }
 body section .primary .entry h1,
 body section .primary .entry h2,
@@ -677,17 +1084,23 @@ body section .secondary .widget_area {
   transition: background 0.3s;
   margin: 10px 0;
 }
+body section .secondary .widget_area p {
+  font-size: 16px;
+}
 body section .secondary .widget_area:hover {
-  background: lightyellow;
+  background: #ffff3d;
 }
 body section .secondary .widget_area h3,
 body section .secondary .widget_area label {
   margin-bottom: 10pt;
   font-weight: bold;
-  font-size: 14pt;
+  font-size: 18px;
 }
 body section .secondary .widget_area li {
   list-style: none;
+}
+body section .secondary .widget_area li p {
+  font-size: 16px;
 }
 body .section_page,
 body .section_single,
@@ -967,25 +1380,46 @@ body .section_search .post_authors h4 {
   font-size: 13pt;
 }
 .section_single article.single .comment-respond .comment-form {
-  border: solid 1px red;
+  /* border: solid 1px red; */
 }
 .section_single article.single .comment-respond .comment-form .logged-in-as {
   font-weight: bold;
-  font-size: 12pt;
+  font-size: 12px;
+}
+.section_single article.single .comment-respond .comment-form .logged-in-as .required-field-message {
+  /* color: red; */
+}
+.section_single article.single .comment-respond .comment-form .logged-in-as .required-field-message .required {
+  color: red;
 }
 .section_single article.single .comment-respond .comment-form .comment-form-comment {
-  border: solid red 1px;
+  /* border: solid red 1px; */
   margin-top: 10px;
 }
 .section_single article.single .comment-respond .comment-form .comment-form-comment label {
   font-weight: bold;
 }
+.section_single article.single .comment-respond .comment-form .comment-form-comment label .required {
+  color: red;
+}
 .section_single article.single .comment-respond .comment-form .comment-form-comment #comment {
   vertical-align: top;
   padding: 5px 10px;
 }
+.section_single article.single .comments-area h3.comments-title {
+  text-align: center;
+}
+.section_single article.single .comments-area .pagination {
+  background: #ade8f1;
+  border-radius: 10px;
+}
+.section_single article.single .comments-area .navigation,
+.section_single article.single .comments-area .comment-navigation {
+  display: none;
+}
 .section_single article.single .comments-area .comment-list {
-  border: solid red 1px;
+  list-style: none;
+  /* border: solid red 1px; */
 }
 .section_single article.single .comments-area .comment-list .comment.depth-2,
 .section_single article.single .comments-area .comment-list .byuser.depth-2 {
@@ -1037,24 +1471,16 @@ body .section_search .post_authors h4 {
   display: inline-block;
   width: auto;
 }
-.section_single .blog_post_container figure img {
-  display: block;
-  width: 60%;
-  margin: 10px auto;
-  border: solid 3px black;
-  border-radius: 5px;
-}
-@media (max-width: 780px) {
-  .section_single .blog_post_container figure img {
-    width: 90%;
-  }
-}
 .section_single .author_details {
   display: block;
   margin: 0 auto;
   text-align: center;
   font-size: 15px;
   font-weight: bold;
+}
+.section_single .posts-toggling {
+  text-align: center;
+  margin: 8pt auto;
 }
 .section_single .posts-toggling a {
   font-weight: bold;
