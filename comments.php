@@ -20,7 +20,7 @@
 
         <div id="comments" class="comments-area">
     
-            <h2 class="comments-title"> View comments people have posted: </h2>
+            <h3 class="comments-title"> View comments people have posted: </h3>
 
             <!-- Comments are closed message -->
             <?php if ( !comments_open() && get_comments_number() ) : ?> 
