@@ -2,7 +2,7 @@
 
 body {
     
-    background: $color-main;
+    background: $background-body;
     font-family: $font-main;
     
     section {
@@ -33,7 +33,7 @@ body {
                 margin: 10px auto;
                 border: solid red 1px;
                 padding: 10px;
-                background: yellow;
+                background: $background-post-entries;
                 text-align: center;
                 width: 70%;
                 
@@ -53,7 +53,7 @@ body {
                 padding: 10px;
                 width: 70%;
                 
-                background: yellow;
+                background: $background-post-entries;
                 transition: background .3s;
                 
                 &:hover {
@@ -129,7 +129,7 @@ body {
                 
                 &:hover {
                     
-                    background: lightyellow;
+                    background: lighten(yellow, 10%)
                 }
                 
                 h3,
