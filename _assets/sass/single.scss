@@ -40,7 +40,7 @@
             border: solid 2px red;
             border-radius: 10px;
             text-align: center;
-            background: #f2f7c4;
+            background: $background-category-list;
             margin: 5px auto;
             
             h2 {
@@ -87,7 +87,11 @@
                     
                     .required-field-message {
                         
+                        /* color: red; */
+                        
                         .required {
+                            
+                            color: $color-required;
                             
                         }
                     }
@@ -101,6 +105,11 @@
                     label {
                         
                         font-weight: bold;
+                        
+                        .required {
+                            
+                            color: $color-required;
+                        }
                         
                     }
                     
@@ -128,22 +137,35 @@
         
 
         .comments-area {
+            
 
-            .comments-title {
-                
+            h3.comments-title {
+            
+                text-align: center;
             }
+                
+            
 
             .pagination {
+                
+                background: #ade8f1;
+                border-radius: 10px;
+            }
+            
+            .navigation, 
+            .comment-navigation {
+                
+                display: none;
             }
 
             .comment-list {
                 
-                border: solid red 1px;
+                list-style:none;
+                
+                /* border: solid red 1px; */
                 
                 .comment,
                 .byuser {
-                    
-                    
                                 
                             
                     &.depth-2 {
@@ -290,6 +312,9 @@
     }            
 
     .posts-toggling {
+        
+        text-align: center;
+        margin: 8pt auto;
 
         a {
 
