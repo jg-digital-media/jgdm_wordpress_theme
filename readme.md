@@ -1,4 +1,4 @@
-# JGDM Blog Theme (2023) - v2 - 21/03/2023 - 17:19
+# JGDM Blog Theme (2023) - v2.1 - 22/03/2023 - 16:14
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -16,6 +16,8 @@
   + [Plugin List](#plugin-list)
   
   + [Links](#links)
+  
+  + [Log](#log)
 
 
 ## Goals:  
@@ -33,7 +35,7 @@
 + `[DONE]` - Working with Post Pagination
 + `[DONE]` - Archive Templates 
 + `[DONE]` - Search Templates 
-+ `[DONE]` - Single post Templates
++ `[DONE]` - Single Post Templates
 + `[DONE]` - Comment templates
 + `[TODO: ]` - Code Snippets
 + `[TODO: ]` - Simpifly Markup and CSS Styling - Requires reformat of markup
@@ -45,9 +47,6 @@
 + `[TODO: ]` - `single.php ` - Finalise styles for post and page formatting
 + `[TODO: ]` - 404 Template
 + `[TODO: ]` - Show category counts on home.php and index.php
-+ `[TODO: ]` - Search Form when there's no search result
-+ `[TODO: ]` - Search button needs a cursor pointer
-+ `[TODO: ]` - Search button needs a hover background
 + `[TODO: ]` - Add and produce a 404 Template
 
 ### Known Bugs
@@ -313,7 +312,9 @@ Allow post discussion in admin area
     + author.php
 
 
-    + Enable widgets
+### Enable widgets
+
+  + Enable the plugin  `Highlighting Code Block` -
     
 
 ## Code Snippets
@@ -376,7 +377,7 @@ Allow post discussion in admin area
     <?php endif; ?>      
 ```
 
-### The Loop (altermative Syntax)
+### The Loop (alternative Syntax)
 
 ```php
 
@@ -410,6 +411,16 @@ Allow post discussion in admin area
 
         <?php endif; ?>      
 
+    ?>
+
+```
+
+### Page Templates (page.php)
+
+```php
+    <?php
+
+        
     ?>
 
 ```
@@ -834,3 +845,12 @@ Allow post discussion in admin area
 ### Current author variable method. -  [Codex: Author Templates](https://codex.wordpress.org/Author_Templates)
 
 ### [Category Pagination](https://www.trickyenough.com/pagination-in-wordpress/)
+
+## Log
+
+### v2.1
++ Styling of Search form input fields
++ Refine Sass variables for easy design customisation
++ Styling of hover for widget and post entries in home.php and index.php
++ Added a comment count for each post in home.php and index.php
+
