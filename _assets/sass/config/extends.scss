@@ -18,13 +18,17 @@
     display: block;
     padding: 15px;
     margin: 15px auto;
-    width: 75%;
+    width: 50%;
     background: $background-post-entry;
     transition: background .3s;
     
     &:hover {
         
         background: lighten($background-post-entry, 6%);
+    }
+    
+    p {
+        margin-top: 10px;
     }
 }
 
@@ -39,22 +43,32 @@
     margin: 10pt 0;
     border: solid 3px black;
     transition: background .3s;    
+    font-family: $font-main;
+    font-size: 16px;
     
     &:hover {
         
        background: lighten( #f7f7ab, 6% );
     }
     
+    &::placeholder {
+        
+        color: gray;
+    }
+    
 }
 
 %comment_btn {    
-                        
-    padding: 8px;
+                  
+    
+    border: solid 3px black;
+    padding: 10px;
+    font-family: "Quicksand";
+    font-weight: bold;
     background: $background-widget;
     margin: 10pt 0;
-    cursor: pointer;
     transition: background .3s;
-    border: solid 3px black;
+    cursor: pointer;
     
     
     &:hover {

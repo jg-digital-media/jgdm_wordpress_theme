@@ -91,11 +91,11 @@ body {
                 p {
                     
                     padding: 10px 0;
-                    font-size: 12px
+                    font-size: $font-size-sm;
                 }
                 
                 ul, ol {
-                    font-size: 12px;
+                    font-size: $font-size-sm;
                 }
             }
         }
@@ -127,6 +127,10 @@ body {
                 transition: background .3s;
                 margin: 10px 0;
                 
+                p {
+                    font-size: $font-size-md;
+                }
+                
                 &:hover {
                     
                     background: lighten(yellow, 10%)
@@ -137,7 +141,7 @@ body {
                     
                     margin-bottom: 10pt;
                     font-weight: bold;
-                    font-size: 14pt;
+                    font-size: $font-size-lg;
                 }
                 
                 li {
@@ -145,6 +149,11 @@ body {
                     list-style: none;
                     
                     @extend %link-colscheme-1;
+                    
+                    p {
+                        
+                        font-size: $font-size-md;
+                    }
                 }
                 
             }
