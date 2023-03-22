@@ -84,6 +84,11 @@
     border-radius: 10px;
     border: solid 3px black;
     
+    @media (max-width: $breakpoint-sm) {
+        
+        width: 90%;
+    }
+    
     .blog_post_container {
         
         
@@ -162,6 +167,7 @@
     h3 {
         
         text-align: center;
+        text-align: left;
     }
     
     span {

@@ -17,8 +17,7 @@ require "inc/header.php"; ?>
         <!-- The WordPress Loop Begins -->
         <?php if ( have_posts() ) : ?>
 
-            <!-- html -->
-            
+            <!-- html -->            
 
         <?php while ( have_posts() ) : the_post(); ?>
         
@@ -26,18 +25,16 @@ require "inc/header.php"; ?>
                 
                 <h3 class="page_content_title"> <?php the_title(); ?> </h3>
 
-                <p>page.php title</p>
-
                 <?php the_content(); ?>
 
-            </div>
-        
+            </div>        
         
         <?php endwhile; ?>
 
         <?php else : ?>
 
         <!-- No Post Found -->
+        
         <?php endif; ?>     
         
         <div class="blog_posts_archive">
