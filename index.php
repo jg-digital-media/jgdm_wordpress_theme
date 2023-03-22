@@ -41,7 +41,7 @@
                 
         <div class = "entry">
                 
-            <h3> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <span> <br /> by <?php echo get_the_author(); ?> on <?php echo get_the_date( "d M Y" ); ?> </span> </h3>
+            <h3> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <span> <br /> by <?php echo get_the_author(); ?> on <?php echo get_the_date( "d M Y" ); ?> </span>  (<span class="comment_count"><?php echo get_comments_number(); ?></span>)  </h3>
             
             <p> <?php echo $main_blog->the_content(); ?> </p>
             
