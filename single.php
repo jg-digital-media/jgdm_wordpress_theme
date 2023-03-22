@@ -62,6 +62,7 @@ require "inc/header.php"; ?>
             <div class="post_contents">
             
                 <h3 class="post_content_title"> 
+                    
                     <?php the_title(); ?> 
                     <span>by <?php echo get_the_author(); ?> </span>
             

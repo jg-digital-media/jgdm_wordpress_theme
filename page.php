@@ -23,7 +23,9 @@ require "inc/header.php"; ?>
         
             <div class="page_container">
                 
-                <h3 class="page_content_title"> <?php the_title(); ?> </h3>
+                <h3 class="page_content_title"> 
+                    <?php the_title(); ?> 
+                </h3>
 
                 <?php the_content(); ?>
 

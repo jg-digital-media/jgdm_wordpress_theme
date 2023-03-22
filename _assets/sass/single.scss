@@ -276,32 +276,7 @@
     // single.php
     .blog_post_container {            
 
-        @extend %post_formatting;
-
-        figure {
-
-            img {
-
-                display: block;
-                width: 60%;
-                margin: 10px auto;
-                border: solid 3px black;
-                border-radius: 5px;
-
-                @media (max-width: $breakpoint-sm) {
-
-                    width: 90%;
-                }
-
-
-            }
-
-            &.alignleft,
-            &.aligncenter,
-            &.alignright {
-
-            }
-        }
+        @extend %post_formatting;        
 
     }
 

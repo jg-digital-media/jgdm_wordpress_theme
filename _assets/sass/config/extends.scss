@@ -10,6 +10,7 @@
     letter-spacing: 2px;
 }
 
+// BACKGROUNDS
 %post_entries {
             
     color: black;
@@ -27,14 +28,9 @@
     }
 }
 
-%page_formatting {
-    
-    
-}
+// BUTTONS
 
-// buttons
-
-//comment button
+// comment button
 
 %comment_textarea {  
     
@@ -67,15 +63,18 @@
     }
 }
 
+// [empty]
 %page_formatting {
     
 }
 
-// %content_formatting {}
+// [empty]
+%content_formatting {
+    
+}
 
 %post_formatting {
                     
-    background: yellow; 
     background: $background-page;
     display: block;
     margin: 15px auto;
@@ -89,58 +88,22 @@
         width: 90%;
     }
     
+    
+    // ?????
     .blog_post_container {
         
         
     }
     
+    // ????
     .posts-toggling {
         
         text-align: center;
         margin: 5px auto;
         
     }
-    
-    .post_contents {
-        
-        color: black;
-        margin: 15pt 0;
-        
-        h1,
-        h2,
-        h3, 
-        h4, 
-        h5, 
-        h6 {
-            
-            display: block;
-            color: black;
-            font-size: 12pt;
-            width: 90%;
-            text-align: left;
-            background: none;
-            letter-spacing: 0px;
-        }
-        
-        h3 {
-            
-            /* display: inline-block; */
-            text-align: left;
-            width: 90%;
-
-            span {
-
-                display: block;
-                font-weight: bold;
-                text-align: center;    
-                color: red;
-                font-size: 12px;
-                display: inline-block;
-                vertical-align: middle;
-            }
-        }
-    }
-    
+  
+    // page.php formatting selectors
     h1,
     h2,
     h3, 
@@ -162,7 +125,6 @@
         text-align: center;
         letter-spacing: 1px
     }
-
     
     h3 {
         
@@ -177,7 +139,6 @@
         text-align: center;    
         /* color: red; */
     }
-
     
     strong, b {
 
@@ -203,6 +164,7 @@
 
     }
 
+    // empty
     ul {
 
     }
@@ -225,7 +187,7 @@
         img {
             
             display: block;
-            margin: 0 auto;
+            margin: 10px auto;
             border-radius: 10px;
             border: solid 3px black;
         }
@@ -234,17 +196,25 @@
     /* setting inline-code */
     code {
         
+        color: #444444;
+        
     }
     
     sub {
+        
+        color: #444444;
         
     }
     
     sup {
         
+        color: #444444;
+        
     }
     
     .kdb {
+        
+        color: #444444;
         
         
     }
@@ -324,17 +294,40 @@
         
         border: solid red 1px;
         text-align: center;
+        
+        .wp-block-media-text__media {
+            
+            img {
+                
+                width: 30%;
+                
+                @media(max-width: $breakpoint-sm) {
+                    
+                    width: 50px;
+                }
+            }
+        }
     }
     
     .wp-block-cover {
+        
+        border: black solid 2px;
         
     }
     
     .wp-block-verse {
         
+        border: black solid 2px;
+        margin-top: 20px;
+        text-align: center;
+        
     }
     
     .wp-block-pullquote {
+        
+        border: black solid 2px;
+        padding: 0;
+        margin: 10pt 0;
         
         blockquote {
             
@@ -344,11 +337,14 @@
             
             cite {
                 
+                font-size: 12px
             }
         }
     }
     
     .wp-block-table {
+        
+        border: black solid 2px;
         
         table {
             
@@ -367,7 +363,9 @@
     // Highlighting Code Block - WP Block
     .hcb_wrap {
         
-        .hcb-clicpboard {
+        border: black solid 2px;
+        
+        .hcb-clipboard {
             
         }
         
@@ -385,32 +383,136 @@
                     
                     display: block;
                 }
+                
                 span {
                     
                     display: inline-block; 
                     
                     span {
+                        
                         display: block;
                     }
                     
                 }
             }
-        }
-        
+        }        
         
     }
     
     
     // inline-block    
-
     :where(img[class*=wp-image-]) {
 
         border: solid white 3px;
     }
-
-
     
-    // page formatting - wp-block-image
+    // page formatting - wp-block-image    
+      
+    .post_contents {
+        
+        color: black;
+        margin: 15pt 0;
+        
+        h1,
+        h2,
+        h3, 
+        h4, 
+        h5, 
+        h6 {
+            
+            display: block;
+            color: black;
+            font-size: 12pt;
+            width: 90%;
+            text-align: left;
+            background: none;
+            letter-spacing: 0px;
+        }
+        
+        h3 {
+            
+            /* display: inline-block; */
+            text-align: left;
+            width: 90%;
+
+            span {
+
+                display: block;
+                font-weight: bold;
+                text-align: center;    
+                color: red;
+                font-size: 12px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+        
+        // Highlighting Code Block - WP Block (Single Posts)
+        .hcb_wrap {
+        
+            border: black solid 2px;
+
+            .hcb-clipboard {
+
+            }
+        
+            pre {
+            
+                display: block;
+            
+                code {
+
+                    display: inline-block;
+                    color: inherit;
+
+
+                    span.line-numbers-rows {
+
+                        display: block;
+                    }
+
+                    span {
+
+                        display: inline-block; 
+
+                        span {
+
+                            display: inline-block;
+                        }
+
+                    }
+                }
+            }        
+        
+        }    
+    
+    }
+    
+    figure {
+
+            img {
+
+                display: block;
+                width: 60%;
+                margin: 10px auto;
+                border: solid 3px black;
+                border-radius: 5px;
+
+                @media (max-width: $breakpoint-sm) {
+
+                    width: 90%;
+                }
+
+
+            }
+
+            &.alignleft,
+            &.aligncenter,
+            &.alignright {
+
+            }
+        }
+    
 }
 
 %widget_areas {
@@ -440,6 +542,8 @@
     }
 }
 
+
+// Search Fields
 %search_btn {
     
     background: wheat;
