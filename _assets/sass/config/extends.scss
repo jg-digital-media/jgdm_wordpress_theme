@@ -38,17 +38,17 @@
 
 %comment_textarea {  
     
-    background: #f7f7ab;         
+    background: $background-widget;         
     padding: 8px;
     margin: 10pt 0;
     border: solid 3px black;
     transition: background .3s;    
     font-family: $font-main;
-    font-size: 16px;
+    font-size: $font-size-md;
     
     &:hover {
         
-       background: lighten( #f7f7ab, 6% );
+       background: lighten( $background-widget, 6% );
     }
     
     &::placeholder {
@@ -65,6 +65,7 @@
     padding: 10px;
     font-family: "Quicksand";
     font-weight: bold;
+    font-size: $font-size-md;
     background: $background-widget;
     margin: 10pt 0;
     transition: background .3s;
@@ -187,6 +188,7 @@
         width: 90%;
         display: block;
         margin: 0 auto;
+        font-size: $font-size-md;
         
         s {
             text-decoration: line-through;
@@ -430,7 +432,7 @@
             
             display: block;
             color: black;
-            font-size: 12pt;
+            font-size: $font-size-md;
             width: 90%;
             text-align: left;
             background: none;

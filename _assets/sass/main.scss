@@ -58,7 +58,7 @@ body {
                 
                 &:hover {
                     
-                    background: lightyellow;
+                    background: lighten($background-post-entries, 12%);
                 }
                 
                 h3 {
@@ -74,6 +74,12 @@ body {
                         font-size: 10px;
                         font-style: italic;
                         
+                    }
+                    
+                    span.comment_count {
+                        
+                        color: red;
+                        font-weight: bold;
                     }
                 }
                 
@@ -133,7 +139,7 @@ body {
                 
                 &:hover {
                     
-                    background: lighten(yellow, 10%)
+                    background: lighten(yellow, 12%)
                 }
                 
                 h3,
