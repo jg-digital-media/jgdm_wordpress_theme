@@ -1,4 +1,4 @@
-# JGDM Blog Theme v2 (2023) - 21/03/2023 - 16:46
+# JGDM Blog Theme (2023) - v2 - 21/03/2023 - 17:19
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -41,6 +41,8 @@
 + `[TODO: ]` - Customise the admin area with code
 + `[TODO: ]` - Plugin Development
 + `[TODO: ]` - Pagination links for category templates (`category.php`... etc)
++ `[TODO: ]` - `HCB` styling
++ `[TODO: ]` - `single.php ` - Finalise styles for post and page formatting
 + `[TODO: ]` - 404 Template
 + `[TODO: ]` - Show category counts on home.php and index.php
 + `[TODO: ]` - Search Form when there's no search result
@@ -50,23 +52,22 @@
 
 ### Known Bugs
 
++ `home.php - index.php` - secondary - widget areas should not have a hover effect
 + `author-user_name.php` - Author Template pagination does not paginate on page 2 (same set of links)
 + `author-user_name.php` - last numbered pagination link reverts to index.php
 + `single.php` - date.php link is not working.
-+ `single.php` - get_the_date('d M Y'); 
++ `single.php` - get_the_date('d M Y') "00 September 0000 : 11:33pm"; 
 
 ## Setup: 
 [Back to Top](#sections)
 
-Make sure your WordPress theme has the following minimum files
+### Make sure your WordPress theme has the following minimum files
 
-
-### Files required
   + index.php
   + functions.php
   + style.css
   + screenshot.png
-  + sass.scss (optional)
+  + sass.scss (optional - personally, I like to use SASS partials in my CSS development)
   + favicon.png (optional)
 
 1. Setup theme supports.
