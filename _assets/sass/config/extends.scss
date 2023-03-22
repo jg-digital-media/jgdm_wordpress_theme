@@ -175,7 +175,7 @@
         display: block;
         font-weight: bold;
         text-align: center;    
-        color: red;
+        /* color: red; */
     }
 
     
@@ -191,9 +191,10 @@
 
     ul, ol {
 
-        padding-left: 25pt;
         padding-top: 20pt;
         width: 90%;
+        margin: 0 auto;
+        color: brown;
 
         li {
 
@@ -230,6 +231,24 @@
         }
     }
     
+    /* setting inline-code */
+    code {
+        
+    }
+    
+    sub {
+        
+    }
+    
+    sup {
+        
+    }
+    
+    .kdb {
+        
+        
+    }
+    
     .has-text-align-center {
         
         text-align: center;
@@ -246,10 +265,52 @@
     }
 
     .wp-block-image {
+        
+        display: block;
+        /* border: solid 2px black; */
+        margin: 0 auto;
 
         @media (max-width: $breakpoint-sm) {
 
             width: 90%;
+        }
+        
+        figure {
+            
+            text-align: center;
+            
+        }
+        
+        
+        
+        &.alignleft {
+            
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        &.aligncenter {
+            
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        &.alignright {
+            
+            margin: 0 auto;
+            text-align: right;
+        }
+        
+        img {
+            
+            width: 430px;
+            display: block;
+            margin: 10px auto;
+            
+            @media (max-width: $breakpoint-sm) {
+                
+                width: 90%;
+            }
         }
         
         // style - post formatting - wp-block-image        
@@ -258,6 +319,96 @@
             
         }
     }
+    
+    .wp-block-media-text {
+        
+        border: solid red 1px;
+        text-align: center;
+    }
+    
+    .wp-block-cover {
+        
+    }
+    
+    .wp-block-verse {
+        
+    }
+    
+    .wp-block-pullquote {
+        
+        blockquote {
+            
+            p {
+                
+            }
+            
+            cite {
+                
+            }
+        }
+    }
+    
+    .wp-block-table {
+        
+        table {
+            
+            tbody {
+            
+                tr {
+
+                    td {
+
+                    }
+                }
+            }
+        }
+    }
+    
+    // Highlighting Code Block - WP Block
+    .hcb_wrap {
+        
+        .hcb-clicpboard {
+            
+        }
+        
+        pre {
+            
+            display: block;
+            
+            code {
+                
+                display: inline-block;
+                color: inherit;
+                
+                
+                span.line-numbers-rows {
+                    
+                    display: block;
+                }
+                span {
+                    
+                    display: inline-block; 
+                    
+                    span {
+                        display: block;
+                    }
+                    
+                }
+            }
+        }
+        
+        
+    }
+    
+    
+    // inline-block    
+
+    :where(img[class*=wp-image-]) {
+
+        border: solid white 3px;
+    }
+
+
     
     // page formatting - wp-block-image
 }
