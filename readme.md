@@ -45,6 +45,7 @@
 + `[TODO: ]` - `HCB` styling
 + `[TODO: ]` - `single.php ` - Finalise styles for post and page formatting
 + `[TODO: ]` - 404 Template
++ `[TODO: ]` - front-page.php Template
 + `[TODO: ]` - Show category counts on home.php and index.php
 + `[TODO: ]` - Add and produce a 404 Template
 
@@ -146,15 +147,20 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 
         <!-- The Loop -->
 
+        . . . 
+
 ```
 
 ### Reset the post data 
 
 ```php
+        . . . 
+
+        <!-- The Loop -->
       
     <?php  
 
-        <!-- post pagination -->  
+        // post pagination 
 
         // Reset the posts data 
         wp_reset_postdata(); 
