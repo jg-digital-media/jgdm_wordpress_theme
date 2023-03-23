@@ -19,7 +19,7 @@
             padding: 5px;
             background: $bg-template-title;
             color: white;
-            font-size: small;
+            font-size: $font-size-sm;
             letter-spacing: 2px;
         }
         
@@ -45,11 +45,12 @@
             
             h2 {
                 
-                font-size: 10pt;
+                font-size: $font-size-sm;
             }
             
             a {
-                font-size: 10pt;
+                
+                font-size: $font-size-sm;
                 
                 color: $color-href-two;
                 transition: .2s color;                
@@ -69,7 +70,7 @@
             
             h3 {
                 
-                font-size: 13pt;
+                font-size: $font-size-md;
             }
             
             .comment-form {

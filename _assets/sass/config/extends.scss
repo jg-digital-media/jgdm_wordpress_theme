@@ -8,7 +8,7 @@
     text-align: center;
     padding: 5px;
     color: $color-secondary;
-    font-size: 13px;
+    font-size: $font-size-sm;
     font-weight: bold;
     letter-spacing: 2px;
 }
@@ -117,7 +117,7 @@
     width: auto;
     padding: 5px;  
     transition: background .3s; 
-    font-size: 14pt;
+    font-size: $font-size-md;
     font-family: "Quicksand";
     border-radius: 5px;
     cursor: pointer;
@@ -140,7 +140,7 @@
     background: $bg-searchwidget-btn;
     padding: 3px;
     border-radius: 5px;
-    font-size: 14pt;
+    font-size: $font-size-md;
     font-family: $font-main;
     font-weight: bold; 
     width: 56px;
@@ -172,7 +172,7 @@
     padding: 6px;
     border-radius: 5px;
     transition: background .3s;
-    font-size: 14pt;
+    font-size: $font-size-md;
     font-family: "Quicksand"; 
     
     &:hover {
@@ -193,7 +193,7 @@
     background: $bg-searchwidget-input; 
     padding: 10px;
     border-radius: 5px;
-    font-size: 14pt;
+    font-size: $font-size-md;
     font-family: $font-main;
     transition: background .3s;
                         
@@ -464,7 +464,7 @@
             
             cite {
                 
-                font-size: 12px
+                font-size: $font-size-sm;
             }
         }
     }
@@ -585,7 +585,7 @@
                 font-weight: bold;
                 text-align: center;    
                 color: $color-info;
-                font-size: 12px;
+                font-size: $font-size-sm;
                 display: inline-block;
                 vertical-align: middle;
             }

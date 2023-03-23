@@ -71,14 +71,14 @@ body {
                     span {
                         
                         display: inline-block;
-                        font-size: 10px;
+                        font-size: $font-size-sm;
                         font-style: italic;
                         
                     }
                     
                     span.comment_count {
                         
-                        color: red;
+                        color: $color-info;
                         font-weight: bold;
                     }
                 }
@@ -90,7 +90,7 @@ body {
                 h5,
                 h6 {
                     margin-top: 10px;
-                    font-size: 12px;
+                    font-size: $font-size-sm;
                     text-align: left
                 }
                 
