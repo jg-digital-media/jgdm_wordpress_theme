@@ -79,7 +79,7 @@
                 .logged-in-as {
                     
                     font-weight: bold;
-                    font-size: 12px;
+                    font-size: $font-size-sm;
                     
                     a {
                         
@@ -182,7 +182,7 @@
                 
                     .comment-body {
                         
-                        font-size: 12pt;
+                        font-size: $font-size-md;
                         margin: 10px 0;
                         background: $bg-comment-entries;
                         padding: 5px;
@@ -308,7 +308,7 @@
         display: block;
         margin: 0 auto;
         text-align: center;
-        font-size: 15px;
+        font-size: $font-size-md;
         font-weight: bold;
     }            
 

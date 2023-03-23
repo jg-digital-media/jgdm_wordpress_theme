@@ -90,7 +90,7 @@ require "inc/header.php"; ?>
                 <a class="author-link" href="#">( <!-- 00 September 00 : 11:33pm --> <?php echo get_the_date('d M Y'); ?>)</a> 
             </aside>                  
             
-            <div class="posts-toggling">
+            <div class="posts-toggling-pagination">
                 
                 <?php previous_post_link( $format = "<< %link", "Previous Post" ); ?>
                 | 
