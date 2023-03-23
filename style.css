@@ -1,4 +1,4 @@
-/* Last Update: 21/03/2023 - 16:14 */
+/* Last Update: 21/03/2023 - 09:20 */
 /*
 Theme Name: Jonnie Grieve Digital Media: Blog
 Theme URI: https://blog.jonniegrieve.co.uk
@@ -28,11 +28,11 @@ body .section_author h2,
 body .section_category h2,
 body .section_search h2, body section .primary span.post_headline {
   display: block;
+  background: gray;
   text-align: center;
   padding: 5px;
-  background: gray;
   color: white;
-  font-size: small;
+  font-size: 12px;
   font-weight: bold;
   letter-spacing: 2px;
 }
@@ -61,13 +61,13 @@ body .section_search .search-entry,
 body .section_search .author-entry,
 body .section_search .category-entry,
 body .section_search .archive-entry {
-  color: black;
-  border: solid black 2px;
   display: block;
+  border: solid black 2px;
+  background: #f5c7a6;
+  color: black;
   padding: 15px;
   margin: 15px auto;
   width: 50%;
-  background: #f5c7a6;
   transition: background 0.3s;
 }
 body .section_page .search-entry:hover,
@@ -123,11 +123,45 @@ body .section_search .archive-entry p {
   margin-top: 10px;
 }
 
+body .section_page .page div.blog_posts_archive,
+body .section_single .page div.blog_posts_archive,
+body .section_archive .page div.blog_posts_archive,
+body .section_author .page div.blog_posts_archive,
+body .section_category .page div.blog_posts_archive,
+body .section_search .page div.blog_posts_archive {
+  display: block;
+  /* border: solid black 2px; */
+  background: #77d9f9;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 50%;
+  padding: 15px;
+}
+
+body .section .page a, body .section_page a,
+body .section_single a,
+body .section_archive a,
+body .section_author a,
+body .section_category a,
+body .section_search a, body section .secondary .widget_area li a, body section .primary .entry h3 a, body section .primary .pagination a {
+  color: red;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+body .section .page a:hover, body .section_page a:hover,
+body .section_single a:hover,
+body .section_archive a:hover,
+body .section_author a:hover,
+body .section_category a:hover,
+body .section_search a:hover, body section .secondary .widget_area li a:hover, body section .primary .entry h3 a:hover, body section .primary .pagination a:hover {
+  color: green;
+}
+
 .section_single article.single .comment-respond .comment-form .comment-form-comment #comment {
+  border: solid 3px black;
   background: #f7f7ab;
   padding: 8px;
   margin: 10pt 0;
-  border: solid 3px black;
   transition: background 0.3s;
   font-family: "Quicksand";
   font-size: 16px;
@@ -141,11 +175,11 @@ body .section_search .archive-entry p {
 
 .section_single article.single .comment-respond .comment-form .form-submit .submit {
   border: solid 3px black;
+  background: #f7f7ab;
   padding: 10px;
   font-family: "Quicksand";
   font-weight: bold;
   font-size: 16px;
-  background: #f7f7ab;
   margin: 10pt 0;
   transition: background 0.3s;
   cursor: pointer;
@@ -154,19 +188,161 @@ body .section_search .archive-entry p {
   background: #fafac7;
 }
 
+body .section_page .search_form .searchform div #searchsubmit,
+body .section_single .search_form .searchform div #searchsubmit,
+body .section_archive .search_form .searchform div #searchsubmit,
+body .section_author .search_form .searchform div #searchsubmit,
+body .section_category .search_form .searchform div #searchsubmit,
+body .section_search .search_form .searchform div #searchsubmit, body .section_page .no-result .searchform div #searchsubmit,
+body .section_single .no-result .searchform div #searchsubmit,
+body .section_archive .no-result .searchform div #searchsubmit,
+body .section_author .no-result .searchform div #searchsubmit,
+body .section_category .no-result .searchform div #searchsubmit,
+body .section_search .no-result .searchform div #searchsubmit {
+  border: solid 3px black;
+  background: wheat;
+  width: auto;
+  padding: 5px;
+  transition: background 0.3s;
+  font-size: 16px;
+  font-family: "Quicksand";
+  border-radius: 5px;
+  cursor: pointer;
+}
+body .section_page .search_form .searchform div #searchsubmit:hover,
+body .section_single .search_form .searchform div #searchsubmit:hover,
+body .section_archive .search_form .searchform div #searchsubmit:hover,
+body .section_author .search_form .searchform div #searchsubmit:hover,
+body .section_category .search_form .searchform div #searchsubmit:hover,
+body .section_search .search_form .searchform div #searchsubmit:hover, body .section_page .no-result .searchform div #searchsubmit:hover,
+body .section_single .no-result .searchform div #searchsubmit:hover,
+body .section_archive .no-result .searchform div #searchsubmit:hover,
+body .section_author .no-result .searchform div #searchsubmit:hover,
+body .section_category .no-result .searchform div #searchsubmit:hover,
+body .section_search .no-result .searchform div #searchsubmit:hover {
+  background: #fbf2e0;
+}
+body .section_page .search_form .searchform div #searchsubmit:focus,
+body .section_single .search_form .searchform div #searchsubmit:focus,
+body .section_archive .search_form .searchform div #searchsubmit:focus,
+body .section_author .search_form .searchform div #searchsubmit:focus,
+body .section_category .search_form .searchform div #searchsubmit:focus,
+body .section_search .search_form .searchform div #searchsubmit:focus, body .section_page .no-result .searchform div #searchsubmit:focus,
+body .section_single .no-result .searchform div #searchsubmit:focus,
+body .section_archive .no-result .searchform div #searchsubmit:focus,
+body .section_author .no-result .searchform div #searchsubmit:focus,
+body .section_category .no-result .searchform div #searchsubmit:focus,
+body .section_search .no-result .searchform div #searchsubmit:focus {
+  border: solid gold 3px;
+}
+
+body section .secondary .widget_search .wp-block-search__button {
+  border: solid 3px black;
+  background: #ffff8e;
+  padding: 3px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Quicksand";
+  font-weight: bold;
+  width: 56px;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+body section .secondary .widget_search .wp-block-search__button:hover {
+  background: #ffffc1;
+}
+body section .secondary .widget_search .wp-block-search__button::placeholder {
+  color: gray;
+  font-family: "Quicksand";
+}
+body section .secondary .widget_search .wp-block-search__button:focus {
+  border: gold 3px solid;
+}
+
+body .section_page .no-result .searchform div #s,
+body .section_single .no-result .searchform div #s,
+body .section_archive .no-result .searchform div #s,
+body .section_author .no-result .searchform div #s,
+body .section_category .no-result .searchform div #s,
+body .section_search .no-result .searchform div #s {
+  border: solid 3px black;
+  background: wheat;
+  padding: 6px;
+  border-radius: 5px;
+  transition: background 0.3s;
+  font-size: 16px;
+  font-family: "Quicksand";
+}
+body .section_page .no-result .searchform div #s:hover,
+body .section_single .no-result .searchform div #s:hover,
+body .section_archive .no-result .searchform div #s:hover,
+body .section_author .no-result .searchform div #s:hover,
+body .section_category .no-result .searchform div #s:hover,
+body .section_search .no-result .searchform div #s:hover {
+  background: #fbf2e0;
+}
+body .section_page .no-result .searchform div #s:focus,
+body .section_single .no-result .searchform div #s:focus,
+body .section_archive .no-result .searchform div #s:focus,
+body .section_author .no-result .searchform div #s:focus,
+body .section_category .no-result .searchform div #s:focus,
+body .section_search .no-result .searchform div #s:focus {
+  border: solid gold 3px;
+}
+
+body .section_page .search_form .searchform div #s,
+body .section_single .search_form .searchform div #s,
+body .section_archive .search_form .searchform div #s,
+body .section_author .search_form .searchform div #s,
+body .section_category .search_form .searchform div #s,
+body .section_search .search_form .searchform div #s, body section .secondary .widget_search .wp-block-search__input {
+  border: solid 3px black;
+  background: #ffff8e;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Quicksand";
+  transition: background 0.3s;
+}
+body .section_page .search_form .searchform div #s:hover,
+body .section_single .search_form .searchform div #s:hover,
+body .section_archive .search_form .searchform div #s:hover,
+body .section_author .search_form .searchform div #s:hover,
+body .section_category .search_form .searchform div #s:hover,
+body .section_search .search_form .searchform div #s:hover, body section .secondary .widget_search .wp-block-search__input:hover {
+  background: #ffffc1;
+}
+body .section_page .search_form .searchform div #s::placeholder,
+body .section_single .search_form .searchform div #s::placeholder,
+body .section_archive .search_form .searchform div #s::placeholder,
+body .section_author .search_form .searchform div #s::placeholder,
+body .section_category .search_form .searchform div #s::placeholder,
+body .section_search .search_form .searchform div #s::placeholder, body section .secondary .widget_search .wp-block-search__input::placeholder {
+  color: gray;
+  font-family: "Quicksand";
+}
+body .section_page .search_form .searchform div #s:focus,
+body .section_single .search_form .searchform div #s:focus,
+body .section_archive .search_form .searchform div #s:focus,
+body .section_author .search_form .searchform div #s:focus,
+body .section_category .search_form .searchform div #s:focus,
+body .section_search .search_form .searchform div #s:focus, body section .secondary .widget_search .wp-block-search__input:focus {
+  border: gold 3px solid;
+}
+
 body .section .page .page_container, .section_single .blog_post_container, body .section_page .page .page_container,
 body .section_single .page .page_container,
 body .section_archive .page .page_container,
 body .section_author .page .page_container,
 body .section_category .page .page_container,
 body .section_search .page .page_container {
-  background: #f5c7a6;
   display: block;
+  border: solid 3px black;
+  background: #f5c7a6;
   margin: 15px auto;
   padding: 10px;
   width: 75%;
   border-radius: 10px;
-  border: solid 3px black;
   /* setting inline-code */
 }
 @media (max-width: 780px) {
@@ -351,9 +527,9 @@ body .section_author .page .page_container p img,
 body .section_category .page .page_container p img,
 body .section_search .page .page_container p img {
   display: block;
+  border: solid 3px black;
   margin: 10px auto;
   border-radius: 10px;
-  border: solid 3px black;
 }
 body .section .page .page_container code, .section_single .blog_post_container code, body .section_page .page .page_container code,
 body .section_single .page .page_container code,
@@ -472,10 +648,10 @@ body .section_archive .page .page_container .wp-block-image img,
 body .section_author .page .page_container .wp-block-image img,
 body .section_category .page .page_container .wp-block-image img,
 body .section_search .page .page_container .wp-block-image img {
-  width: 430px;
   display: block;
-  margin: 10px auto;
   border: solid gold 3px;
+  width: 430px;
+  margin: 10px auto;
 }
 @media (max-width: 780px) {
   body .section .page .page_container .wp-block-image img, .section_single .blog_post_container .wp-block-image img, body .section_page .page .page_container .wp-block-image img,
@@ -564,8 +740,8 @@ body .section_archive .page .page_container .wp-caption,
 body .section_author .page .page_container .wp-caption,
 body .section_category .page .page_container .wp-caption,
 body .section_search .page .page_container .wp-caption {
-  width: 90%;
   display: block;
+  width: 90%;
   margin: 10pt auto;
 }
 body .section .page .page_container .hcb_wrap, .section_single .blog_post_container .hcb_wrap, body .section_page .page .page_container .hcb_wrap,
@@ -574,9 +750,9 @@ body .section_archive .page .page_container .hcb_wrap,
 body .section_author .page .page_container .hcb_wrap,
 body .section_category .page .page_container .hcb_wrap,
 body .section_search .page .page_container .hcb_wrap {
+  display: block;
   border: black solid 2px;
   width: 40%;
-  display: block;
   margin: 20px auto;
 }
 body .section .page .page_container .hcb_wrap pre, .section_single .blog_post_container .hcb_wrap pre, body .section_page .page .page_container .hcb_wrap pre,
@@ -691,6 +867,16 @@ body .section_search .page .page_container .post_contents h6 {
   background: none;
   letter-spacing: 0px;
 }
+body .section .page .page_container .post_contents h3.post_content_title, .section_single .blog_post_container .post_contents h3.post_content_title, body .section_page .page .page_container .post_contents h3.post_content_title,
+body .section_single .page .page_container .post_contents h3.post_content_title,
+body .section_archive .page .page_container .post_contents h3.post_content_title,
+body .section_author .page .page_container .post_contents h3.post_content_title,
+body .section_category .page .page_container .post_contents h3.post_content_title,
+body .section_search .page .page_container .post_contents h3.post_content_title {
+  text-align: center;
+  margin: 10px auto;
+  border-bottom: red solid 4px;
+}
 body .section .page .page_container .post_contents h3, .section_single .blog_post_container .post_contents h3, body .section_page .page .page_container .post_contents h3,
 body .section_single .page .page_container .post_contents h3,
 body .section_archive .page .page_container .post_contents h3,
@@ -721,9 +907,9 @@ body .section_archive .page .page_container .post_contents .hcb_wrap,
 body .section_author .page .page_container .post_contents .hcb_wrap,
 body .section_category .page .page_container .post_contents .hcb_wrap,
 body .section_search .page .page_container .post_contents .hcb_wrap {
+  display: block;
   border: black solid 2px;
   width: 90%;
-  display: block;
   margin: 20px auto;
 }
 body .section .page .page_container .post_contents .hcb_wrap pre, .section_single .blog_post_container .post_contents .hcb_wrap pre, body .section_page .page .page_container .post_contents .hcb_wrap pre,
@@ -774,9 +960,9 @@ body .section_author .page .page_container figure img,
 body .section_category .page .page_container figure img,
 body .section_search .page .page_container figure img {
   display: block;
+  border: solid 3px black;
   width: 60%;
   margin: 10px auto;
-  border: solid 3px black;
   border-radius: 5px;
 }
 @media (max-width: 780px) {
@@ -789,182 +975,6 @@ body .section_search .page .page_container figure img {
     width: 90%;
   }
 }
-body .section_page .page div.blog_posts_archive,
-body .section_single .page div.blog_posts_archive,
-body .section_archive .page div.blog_posts_archive,
-body .section_author .page div.blog_posts_archive,
-body .section_category .page div.blog_posts_archive,
-body .section_search .page div.blog_posts_archive {
-  display: block;
-  background: #77d9f9;
-  margin: 20px auto;
-  width: 50%;
-  padding: 15px;
-  border-radius: 10px;
-  /* border: solid black 2px; */
-}
-
-body .section .page a, body .section_page a,
-body .section_single a,
-body .section_archive a,
-body .section_author a,
-body .section_category a,
-body .section_search a, body section .secondary .widget_area li a, body section .primary .entry h3 a, body section .primary .pagination a {
-  color: red;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-body .section .page a:hover, body .section_page a:hover,
-body .section_single a:hover,
-body .section_archive a:hover,
-body .section_author a:hover,
-body .section_category a:hover,
-body .section_search a:hover, body section .secondary .widget_area li a:hover, body section .primary .entry h3 a:hover, body section .primary .pagination a:hover {
-  color: green;
-}
-
-body .section_page .search_form .searchform div #searchsubmit,
-body .section_single .search_form .searchform div #searchsubmit,
-body .section_archive .search_form .searchform div #searchsubmit,
-body .section_author .search_form .searchform div #searchsubmit,
-body .section_category .search_form .searchform div #searchsubmit,
-body .section_search .search_form .searchform div #searchsubmit, body .section_page .no-result .searchform div #searchsubmit,
-body .section_single .no-result .searchform div #searchsubmit,
-body .section_archive .no-result .searchform div #searchsubmit,
-body .section_author .no-result .searchform div #searchsubmit,
-body .section_category .no-result .searchform div #searchsubmit,
-body .section_search .no-result .searchform div #searchsubmit {
-  background: wheat;
-  width: auto;
-  border: solid 3px black;
-  padding: 5px;
-  transition: background 0.3s;
-  cursor: pointer;
-  font-size: 14pt;
-  font-family: "Quicksand";
-  border-radius: 5px;
-}
-body .section_page .search_form .searchform div #searchsubmit:hover,
-body .section_single .search_form .searchform div #searchsubmit:hover,
-body .section_archive .search_form .searchform div #searchsubmit:hover,
-body .section_author .search_form .searchform div #searchsubmit:hover,
-body .section_category .search_form .searchform div #searchsubmit:hover,
-body .section_search .search_form .searchform div #searchsubmit:hover, body .section_page .no-result .searchform div #searchsubmit:hover,
-body .section_single .no-result .searchform div #searchsubmit:hover,
-body .section_archive .no-result .searchform div #searchsubmit:hover,
-body .section_author .no-result .searchform div #searchsubmit:hover,
-body .section_category .no-result .searchform div #searchsubmit:hover,
-body .section_search .no-result .searchform div #searchsubmit:hover {
-  background: #fbf2e0;
-}
-body .section_page .search_form .searchform div #searchsubmit:focus,
-body .section_single .search_form .searchform div #searchsubmit:focus,
-body .section_archive .search_form .searchform div #searchsubmit:focus,
-body .section_author .search_form .searchform div #searchsubmit:focus,
-body .section_category .search_form .searchform div #searchsubmit:focus,
-body .section_search .search_form .searchform div #searchsubmit:focus, body .section_page .no-result .searchform div #searchsubmit:focus,
-body .section_single .no-result .searchform div #searchsubmit:focus,
-body .section_archive .no-result .searchform div #searchsubmit:focus,
-body .section_author .no-result .searchform div #searchsubmit:focus,
-body .section_category .no-result .searchform div #searchsubmit:focus,
-body .section_search .no-result .searchform div #searchsubmit:focus {
-  border: solid gold 3px;
-}
-
-body section .secondary .widget_search .wp-block-search__button {
-  border: solid 3px black;
-  background: #ffff8e;
-  padding: 3px;
-  border-radius: 5px;
-  font-size: 14pt;
-  font-family: "Quicksand";
-  font-weight: bold;
-  width: 56px;
-  transition: background 0.3s;
-  cursor: pointer;
-}
-body section .secondary .widget_search .wp-block-search__button:hover {
-  background: #ffff00;
-}
-body section .secondary .widget_search .wp-block-search__button::placeholder {
-  color: gray;
-  font-family: "Quicksand";
-}
-body section .secondary .widget_search .wp-block-search__button:focus {
-  border: gold 3px solid;
-}
-
-body .section_page .no-result .searchform div #s,
-body .section_single .no-result .searchform div #s,
-body .section_archive .no-result .searchform div #s,
-body .section_author .no-result .searchform div #s,
-body .section_category .no-result .searchform div #s,
-body .section_search .no-result .searchform div #s {
-  padding: 6px;
-  border-radius: 5px;
-  transition: background 0.3s;
-  border: solid 3px black;
-  font-size: 14pt;
-  font-family: "Quicksand";
-  background: wheat;
-}
-body .section_page .no-result .searchform div #s:hover,
-body .section_single .no-result .searchform div #s:hover,
-body .section_archive .no-result .searchform div #s:hover,
-body .section_author .no-result .searchform div #s:hover,
-body .section_category .no-result .searchform div #s:hover,
-body .section_search .no-result .searchform div #s:hover {
-  background: #fbf2e0;
-}
-body .section_page .no-result .searchform div #s:focus,
-body .section_single .no-result .searchform div #s:focus,
-body .section_archive .no-result .searchform div #s:focus,
-body .section_author .no-result .searchform div #s:focus,
-body .section_category .no-result .searchform div #s:focus,
-body .section_search .no-result .searchform div #s:focus {
-  border: solid gold 3px;
-}
-
-body .section_page .search_form .searchform div #s,
-body .section_single .search_form .searchform div #s,
-body .section_archive .search_form .searchform div #s,
-body .section_author .search_form .searchform div #s,
-body .section_category .search_form .searchform div #s,
-body .section_search .search_form .searchform div #s, body section .secondary .widget_search .wp-block-search__input {
-  border: solid 3px black;
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 14pt;
-  font-family: "Quicksand";
-  transition: background 0.3s;
-  background: #ffff8e;
-}
-body .section_page .search_form .searchform div #s:hover,
-body .section_single .search_form .searchform div #s:hover,
-body .section_archive .search_form .searchform div #s:hover,
-body .section_author .search_form .searchform div #s:hover,
-body .section_category .search_form .searchform div #s:hover,
-body .section_search .search_form .searchform div #s:hover, body section .secondary .widget_search .wp-block-search__input:hover {
-  background: #ffff00;
-}
-body .section_page .search_form .searchform div #s::placeholder,
-body .section_single .search_form .searchform div #s::placeholder,
-body .section_archive .search_form .searchform div #s::placeholder,
-body .section_author .search_form .searchform div #s::placeholder,
-body .section_category .search_form .searchform div #s::placeholder,
-body .section_search .search_form .searchform div #s::placeholder, body section .secondary .widget_search .wp-block-search__input::placeholder {
-  color: gray;
-  font-family: "Quicksand";
-}
-body .section_page .search_form .searchform div #s:focus,
-body .section_single .search_form .searchform div #s:focus,
-body .section_archive .search_form .searchform div #s:focus,
-body .section_author .search_form .searchform div #s:focus,
-body .section_category .search_form .searchform div #s:focus,
-body .section_search .search_form .searchform div #s:focus, body section .secondary .widget_search .wp-block-search__input:focus {
-  border: gold 3px solid;
-}
-
 header {
   background: black;
   height: 80px;
@@ -981,8 +991,8 @@ header nav.navigation {
   text-align: center;
 }
 header nav.navigation li {
-  height: auto;
   display: inline-block;
+  height: auto;
 }
 header nav.navigation li a {
   color: gold;
@@ -1044,7 +1054,7 @@ body section .primary .entry h3 {
 }
 body section .primary .entry h3 span {
   display: inline-block;
-  font-size: 10px;
+  font-size: 12px;
   font-style: italic;
 }
 body section .primary .entry h3 span.comment_count {
@@ -1119,6 +1129,7 @@ body .section_search h3 li {
   list-style: none;
   text-align: center;
   font-weight: bold;
+  margin-top: 10pt;
 }
 body .section_page h3 li ul,
 body .section_single h3 li ul,
@@ -1127,7 +1138,7 @@ body .section_author h3 li ul,
 body .section_category h3 li ul,
 body .section_search h3 li ul {
   display: block;
-  margin: 10px auto;
+  margin: 0 auto;
   text-align: center;
 }
 body .section_page h3 li ul li,
@@ -1225,6 +1236,14 @@ body .section_author h4.align-center,
 body .section_category h4.align-center,
 body .section_search h4.align-center {
   margin-top: 15px;
+}
+body .section_page h4.align-center span,
+body .section_single h4.align-center span,
+body .section_archive h4.align-center span,
+body .section_author h4.align-center span,
+body .section_category h4.align-center span,
+body .section_search h4.align-center span {
+  color: #737373;
 }
 body .section_page h4.align-center,
 body .section_page .posts_available,
@@ -1343,7 +1362,7 @@ body .section_search .post_authors h4 {
   padding: 5px;
   background: gray;
   color: white;
-  font-size: small;
+  font-size: 12px;
   letter-spacing: 2px;
 }
 .section_single article.single .link_home {
@@ -1362,10 +1381,10 @@ body .section_search .post_authors h4 {
   margin: 5px auto;
 }
 .section_single article.single .the_category_list h2 {
-  font-size: 10pt;
+  font-size: 12px;
 }
 .section_single article.single .the_category_list a {
-  font-size: 10pt;
+  font-size: 12px;
   color: green;
   transition: 0.2s color;
 }
@@ -1377,7 +1396,7 @@ body .section_search .post_authors h4 {
   text-align: center;
 }
 .section_single article.single .comment-respond h3 {
-  font-size: 13pt;
+  font-size: 16px;
 }
 .section_single article.single .comment-respond .comment-form {
   /* border: solid 1px red; */
@@ -1405,6 +1424,7 @@ body .section_search .post_authors h4 {
 .section_single article.single .comment-respond .comment-form .comment-form-comment #comment {
   vertical-align: top;
   padding: 5px 10px;
+  margin-top: 4px;
 }
 .section_single article.single .comments-area h3.comments-title {
   text-align: center;
@@ -1431,7 +1451,7 @@ body .section_search .post_authors h4 {
 }
 .section_single article.single .comments-area .comment-list .comment .comment-body,
 .section_single article.single .comments-area .comment-list .byuser .comment-body {
-  font-size: 12pt;
+  font-size: 16px;
   margin: 10px 0;
   background: #ade8f1;
   padding: 5px;
@@ -1475,19 +1495,19 @@ body .section_search .post_authors h4 {
   display: block;
   margin: 0 auto;
   text-align: center;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
 }
-.section_single .posts-toggling {
+.section_single .posts-toggling-pagination {
   text-align: center;
   margin: 8pt auto;
 }
-.section_single .posts-toggling a {
+.section_single .posts-toggling-pagination a {
   font-weight: bold;
   color: red;
   transition: 0.2s color;
 }
-.section_single .posts-toggling a:hover {
+.section_single .posts-toggling-pagination a:hover {
   color: green;
 }
 
