@@ -117,6 +117,7 @@
                         
                         vertical-align: top;
                         padding: 5px 10px;
+                        margin-top: 4px;
                         
                         @extend %comment_textarea;
                         
@@ -148,7 +149,7 @@
 
             .pagination {
                 
-                background: #ade8f1;
+                background: $bg-comment-entries;
                 border-radius: 10px;
             }
             
@@ -311,7 +312,7 @@
         font-weight: bold;
     }            
 
-    .posts-toggling {
+    .posts-toggling-pagination {
         
         text-align: center;
         margin: 8pt auto;
@@ -319,12 +320,12 @@
         a {
 
             font-weight: bold;
-            color: red;
+            color: $color-href;
             transition: .2s color; 
 
             &:hover {
 
-                color: green;
+                color: $color-href-hvr;
             }
         }
     }   

@@ -38,7 +38,7 @@ require "inc/header.php"; ?>
         <!-- blog content -->        
         <div class="blog_post_container">            
             
-            <div class="posts-toggling">
+            <div class="posts-toggling-pagination">
                 
                 <?php previous_post_link( $format = "<< %link", "Previous Post" ); ?>
                 | 
