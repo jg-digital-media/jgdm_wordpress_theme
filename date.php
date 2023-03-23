@@ -38,7 +38,7 @@ require "inc/header.php"; ?>
         </h3> 
 
         <!-- Align Center - start single blog entry -->
-        <h4 class="align-center">WordPress Post Archives for <?php the_time('F'); ?> in the year <?php the_time('Y'); ?></h4>   
+        <h4 class="align-center">WordPress Post Archives for <span><?php the_time('F'); ?> </span> in the year <span><?php the_time('Y'); ?> </span>.</h4>   
 
         <!-- Get total number of posts -->
         <?php

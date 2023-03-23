@@ -206,17 +206,21 @@ body {
                 list-style: none;
                 text-align: center;
                 font-weight: bold;
+                margin-top: 10pt;
                 
                 ul {
+                    
                     display: block;
-                    margin: 10px auto;
+                    margin: 0 auto;
                     text-align: center;
                     
                     li {
                         
                         display: inline-block;
                     }
+                    
                 }
+                
             }
             
         }
@@ -306,6 +310,11 @@ body {
         h4.align-center {
             
             margin-top: 15px;
+            
+            span {
+                
+                color: lighten( black, 45% )
+            }
         }
         
         h4.align-center,
