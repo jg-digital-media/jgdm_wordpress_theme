@@ -2,7 +2,7 @@
 
 body {
     
-    background: $background-body;
+    background: $bg-body;
     font-family: $font-main;
     
     section {
@@ -33,7 +33,7 @@ body {
                 margin: 10px auto;
                 border: solid red 1px;
                 padding: 10px;
-                background: $background-post-entries;
+                background: $bg-post-entries;
                 text-align: center;
                 width: 70%;
                 
@@ -53,12 +53,12 @@ body {
                 padding: 10px;
                 width: 70%;
                 
-                background: $background-post-entries;
+                background: $bg-post-entries;
                 transition: background .3s;
                 
                 &:hover {
                     
-                    background: lighten($background-post-entries, 12%);
+                    background: lighten($bg-post-entries, 12%);
                 }
                 
                 h3 {

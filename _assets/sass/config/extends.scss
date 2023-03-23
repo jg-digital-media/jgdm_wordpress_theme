@@ -1,30 +1,33 @@
+// BACKGROUNDS
+
+// File Markers
 %page_title {
     
     display: block;
+    background: $bg-template-title;
     text-align: center;
     padding: 5px;
-    background: gray;
     color: $color-secondary;
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 2px;
 }
 
-// BACKGROUNDS
+// Post and Archive Entries
 %post_entries {
             
-    color: black;
-    border: solid black 2px;
     display: block;
+    border: solid black 2px;
+    background: $bg-post-entry;
+    color: $color-main;
     padding: 15px;
     margin: 15px auto;
     width: 50%;
-    background: $background-post-entry;
     transition: background .3s;
     
     &:hover {
         
-        background: lighten($background-post-entry, 6%);
+        background: lighten($bg-post-entry, 6%);
     }
     
     p {
@@ -32,23 +35,52 @@
     }
 }
 
-// BUTTONS
+// Widget Areas
+%widget_areas {
+    
+    display: block;
+    /* border: solid black 2px; */
+    background: $bg-widget-areas;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 50%;
+    padding: 15px;
+}
 
-// comment button
+// Text Colour Schemes
+%link-colscheme-1 {
+    
+    a {
+        
+        color: $color-href;
+        font-weight: bold;
+        transition: color .3s;
+        
+        &:hover {
+            
+            color: $color-href-hvr;
+            
+        }
+    }
+}
 
+
+// FORM FILELDS
+
+// post comments button
 %comment_textarea {  
     
-    background: $background-widget;         
+    border: solid 3px black;
+    background: $bg-widget;         
     padding: 8px;
     margin: 10pt 0;
-    border: solid 3px black;
     transition: background .3s;    
     font-family: $font-main;
     font-size: $font-size-md;
     
     &:hover {
         
-       background: lighten( $background-widget, 6% );
+       background: lighten( $bg-widget, 6% );
     }
     
     &::placeholder {
@@ -58,45 +90,140 @@
     
 }
 
-%comment_btn {    
-                  
+%comment_btn {                      
     
     border: solid 3px black;
+    background: $bg-widget;
     padding: 10px;
     font-family: "Quicksand";
     font-weight: bold;
     font-size: $font-size-md;
-    background: $background-widget;
     margin: 10pt 0;
     transition: background .3s;
-    cursor: pointer;
-    
+    cursor: pointer;    
     
     &:hover {
         
-       background: lighten( $background-widget, 6% );
+       background: lighten( $bg-widget, 6% );
     }
 }
 
-// [empty]
-%page_formatting {
+
+// Search Buttons
+%search_btn {
+    
+    border: solid 3px black;
+    background: $bg-search-btn;
+    width: auto;
+    padding: 5px;  
+    transition: background .3s; 
+    font-size: 14pt;
+    font-family: "Quicksand";
+    border-radius: 5px;
+    cursor: pointer;
+    
+    &:hover {
+        
+        background: lighten($bg-search-btn, 10%);
+    }
+    
+    &:focus {
+        
+        border: solid gold 3px;
+    }
     
 }
 
-// [empty]
-%content_formatting {
+%search_btn_widget {
+    
+    border: solid 3px black ;
+    background: $bg-searchwidget-btn;
+    padding: 3px;
+    border-radius: 5px;
+    font-size: 14pt;
+    font-family: $font-main;
+    font-weight: bold; 
+    width: 56px;
+    transition: background .3s;
+    cursor: pointer;   
+    
+    &:hover {
+        
+        background: lighten($bg-searchwidget-btn, 10%);
+    } 
+    
+    &::placeholder {
+        
+        color: gray;
+        font-family: $font-main;
+    }
+    
+    &:focus {
+        
+        border: gold 3px solid;
+    }
+}
+
+// Search Input Field Styles
+%search_input {    
+    
+    border: solid 3px black;
+    background: $bg-search-input;   
+    padding: 6px;
+    border-radius: 5px;
+    transition: background .3s;
+    font-size: 14pt;
+    font-family: "Quicksand"; 
+    
+    &:hover {
+        
+        background: lighten($bg-search-input, 10%);
+    }
+    
+    &:focus {
+        
+        border: solid gold 3px;
+    }
     
 }
 
+%search_input_widget {
+
+    border: solid 3px black;
+    background: $bg-searchwidget-input; 
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14pt;
+    font-family: $font-main;
+    transition: background .3s;
+                        
+    &:hover {
+
+        background: lighten($bg-searchwidget-input, 10%);
+    }
+    
+    &::placeholder {
+        
+        color: $color-placeholder;
+        font-family: $font-main;
+    }
+    
+    &:focus {
+        
+        border: gold 3px solid;
+    }
+}
+
+// WordPress Post/Page Formatting
 %post_formatting {
-                    
-    background: $background-page;
+         
     display: block;
+    border: solid 3px black;           
+    background: $bg-page;
     margin: 15px auto;
     padding: 10px;
     width: 75%;
     border-radius: 10px;
-    border: solid 3px black;
     
     @media (max-width: $breakpoint-sm) {
         
@@ -150,12 +277,12 @@
     
     strong, b {
 
-        color: darkgreen;
+        color: $post-formatting-strong;
     }
 
     em, i {
 
-        color: #fd1c44;
+        color: $post-formatting-em;
     }
 
     ul, ol {
@@ -163,7 +290,7 @@
         width: 90%;
         margin: 0 auto;
         padding: 10pt 0;
-        color: brown;
+        color: $post_formatting-lists;
 
         li {
 
@@ -197,31 +324,31 @@
         img {
             
             display: block;
+            border: solid 3px black;
             margin: 10px auto;
             border-radius: 10px;
-            border: solid 3px black;
         }
     }
     
     /* setting inline-code */
     code {
         
-        color: #444444;      
+        color: $post-formatting-code;      
     }
     
     sub {
         
-        color: #444444;      
+        color: $post-formatting-code;      
     }
     
     sup {
         
-        color: #444444;      
+        color: $post-formatting-code;      
     }
     
     .kdb {
         
-        color: #444444;
+        color: $post-formatting-code;
     }
     
     .has-text-align-center {
@@ -276,10 +403,10 @@
         
         img {
             
-            width: 430px;
             display: block;
-            margin: 10px auto;
             border: solid gold 3px;
+            width: 430px;
+            margin: 10px auto;
             
             @media (max-width: $breakpoint-sm) {
                 
@@ -362,8 +489,8 @@
     
     .wp-caption {
         
-        width: 90%;
         display: block;
+        width: 90%;
         margin: 10pt auto;
         
     }
@@ -371,9 +498,9 @@
     // Highlighting Code Block - WP Block
     .hcb_wrap {
                 
+        display: block;
         border: black solid 2px;
         width: 40%;
-        display: block;
         margin: 20px auto;
         
         .hcb-clipboard {
@@ -420,7 +547,7 @@
       
     .post_contents {
         
-        color: black;
+        color: $color-main;
         margin: 15pt 0;
         
         h1,
@@ -431,7 +558,7 @@
         h6 {
             
             display: block;
-            color: black;
+            color: $color-main;
             font-size: $font-size-md;
             width: 90%;
             text-align: left;
@@ -450,7 +577,7 @@
                 display: block;
                 font-weight: bold;
                 text-align: center;    
-                color: red;
+                color: $color-info;
                 font-size: 12px;
                 display: inline-block;
                 vertical-align: middle;
@@ -460,9 +587,9 @@
         // Highlighting Code Block - WP Block (Single Posts)
         .hcb_wrap {
         
+            display: block;
             border: black solid 2px;
             width: 90%;
-            display: block;
             margin: 20px auto;
 
             .hcb-clipboard {
@@ -506,9 +633,9 @@
             img {
 
                 display: block;
+                border: solid 3px black;
                 width: 60%;
                 margin: 10px auto;
-                border: solid 3px black;
                 border-radius: 5px;
 
                 @media (max-width: $breakpoint-sm) {
@@ -528,134 +655,12 @@
     
 }
 
-%widget_areas {
-    
-    display: block;
-    background: #77d9f9;
-    margin: 20px auto;
-    width: 50%;
-    padding: 15px;
-    border-radius: 10px;
-    /* border: solid black 2px; */
-}
-
-%link-colscheme-1 {
-    
-    a {
-        
-        color: $color-href;
-        font-weight: bold;
-        transition: color .3s;
-        
-        &:hover {
-            
-            color: $color-href-hvr;
-            
-        }
-    }
-}
-
-
-// Search Fields
-%search_btn {
-    
-    background: $bg-search-btn;
-    width: auto;
-    border: solid 3px black;
-    padding: 5px;  
-    transition: background .3s; 
-    cursor: pointer;
-    font-size: 14pt;
-    font-family: "Quicksand";
-    border-radius: 5px;
-    
-    &:hover {
-        
-        background: lighten($bg-search-btn, 10%);
-    }
-    
-    &:focus {
-        
-        border: solid gold 3px;
-    }
+// [empty]
+%page_formatting {
     
 }
 
-%search_btn_widget {
+// [empty]
+%content_formatting {
     
-    border: solid 3px black ;
-    background: $bg-searchwidget-input;
-    padding: 3px;
-    border-radius: 5px;
-    font-size: 14pt;
-    font-family: $font-main;
-    font-weight: bold; 
-    width: 56px;
-    transition: background .3s;
-    cursor: pointer;   
-    
-    &:hover {
-        
-        background: #ffff00;
-    } 
-    
-    &::placeholder {
-        
-        color: gray;
-        font-family: $font-main;
-    }
-    
-    &:focus {
-        
-        border: gold 3px solid;
-    }
-}
-
-%search_input {    
-    
-    padding: 6px;
-    border-radius: 5px;
-    transition: background .3s;
-    border: solid 3px black;
-    font-size: 14pt;
-    font-family: "Quicksand";
-    background: $bg-search-input;    
-    
-    &:hover {
-        
-        background: lighten($bg-search-input, 10%);
-    }
-    
-    &:focus {
-        
-        border: solid gold 3px;
-    }
-    
-}
-
-%search_input_widget {
-
-    border: solid 3px black;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 14pt;
-    font-family: $font-main;
-    transition: background .3s;
-    background: $bg-searchwidget-input; 
-                        
-    &:hover {
-
-        background: #ffff00;
-    }
-    
-    &::placeholder {
-        
-        color: gray;
-        font-family: $font-main;
-    }
-    
-    &:focus {
-        
-        border: gold 3px solid;
-    }
 }

@@ -17,7 +17,7 @@
             
             text-align: center;
             padding: 5px;
-            background: gray;
+            background: $bg-template-title;
             color: white;
             font-size: small;
             letter-spacing: 2px;
@@ -40,7 +40,7 @@
             border: solid 2px red;
             border-radius: 10px;
             text-align: center;
-            background: $background-category-list;
+            background: $bg-category-list;
             margin: 5px auto;
             
             h2 {
@@ -183,7 +183,7 @@
                         
                         font-size: 12pt;
                         margin: 10px 0;
-                        background: $background-comment-entries;
+                        background: $bg-comment-entries;
                         padding: 5px;
                         border-radius: 10px;
                         

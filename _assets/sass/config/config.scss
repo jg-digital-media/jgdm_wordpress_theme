@@ -1,30 +1,36 @@
 // Blog Design Colour Scheme: #1
-
-
 $background-header: black;
 $background-footer: $background-header;
 
-$background-post-entry: #f5c7a6;
-$background-post-entries: yellow;
-$background-category-list: #f2f7c4;
-$background-comment-entries: #ade8f1;
-$background-comment-field: #f7f7ab;
+$bg-post-entry: #f5c7a6;
+$bg-post-entries: yellow;
+$bg-category-list: #f2f7c4;
+$bg-comment-entries: #ade8f1;
+$bg-comment-field: #f7f7ab;
+$bg-template-title: gray;
 
 $bg-search-input: wheat;
 $bg-search-btn: wheat;
 $bg-searchwidget-input: #ffff8e;
 $bg-searchwidget-btn: #ffff8e;
 
-$background-body: lightblue;
-$background-widget: #f7f7ab;
-$background-page: #f5c7a6;
+$bg-body: lightblue;
+$bg-widget: #f7f7ab;
+$bg-widget-areas: #77d9f9;
+$bg-page: #f5c7a6;
 
-$font-main: "Quicksand";
 
-$color-main: lightblue;
+$color-main: black;
 $color-secondary: white;
+$color-placeholder: gray;
 $color-nav: gold;
 $color-required: red;
+$color-info: red;
+
+$post-formatting-strong: darkgreen;
+$post-formatting-em: #fd1c44;
+$post-formatting-lists: brown;
+$post-formatting-code: #444444;
 
 // link colours
 $color-href: red;
