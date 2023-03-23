@@ -1,4 +1,4 @@
-# JGDM Blog Theme (2023) - v2.1 - 22/03/2023 - 16:14
+# JGDM Blog Theme (2023) - v2.2 - 23/03/2023 - 09:49
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -38,7 +38,6 @@
 + `[DONE]` - Single Post Templates
 + `[DONE]` - Comment templates
 + `[TODO: ]` - Code Snippets
-+ `[TODO: ]` - Simpifly Markup and CSS Styling - Requires reformat of markup
 + `[TODO: ]` - Categories - Listings and Pagination for individual categories
 + `[TODO: ]` - Customise the admin area with code
 + `[TODO: ]` - Plugin Development
@@ -418,10 +417,41 @@ Allow post discussion in admin area
 ### Page Templates (page.php)
 
 ```php
-    <?php
 
+    
+
+    <!-- strictly speaking the loop isn't required for page.php but it is common practice to include it -->
+    <article class="page">  
+
+        <h2 class="post_headline"> <p>page.php</p> </h2>
+        <a href="<?php bloginfo("home"); ?>">Home</a> 
+
+        <!-- The WordPress Loop Begins -->
+        <?php if ( have_posts() ) : ?>
+
+            <!-- html -->            
+
+        <?php while ( have_posts() ) : the_post(); ?>
+
+            <div class="page_container">
+
+                <h3 class="page_content_title"> 
+                    <?php the_title(); ?> 
+                </h3>
+
+                <?php the_content(); ?>
+
+            </div>        
+
+        <?php endwhile; ?>
+
+            <?php else : ?>
+
+            <!-- No Post Found -->    
         
-    ?>
+        <?php endif; ?>     
+
+    </article>
 
 ```
 
@@ -429,7 +459,7 @@ Allow post discussion in admin area
 
 ```php
 
-    <!-- WP list categories - wp_list_categories() -->
+    <!-- WP List Categories - wp_list_categories() -->
     <p>wp_list_categories();</p>
 
     <?php $args = array ("separator => ' - ' ") ?>
@@ -473,7 +503,7 @@ Allow post discussion in admin area
     <!-- Categories assigned to a particular post -->
     <h3>
         <?php 
-            the_category( " - "); 
+            the_category( " - " ); 
         ?>
     </h3> 
 ```
@@ -527,7 +557,6 @@ Allow post discussion in admin area
 + <?php `the_post();` ?> - helps WordPress identify the correct post to use and then gives access to all the author methods
 
 + <?php `//echo get_usermeta($post->post_author,'author_url', 'a');` ?>  
-
 	
 ### WordPress Pagination
 
@@ -557,6 +586,8 @@ Allow post discussion in admin area
     <!-- Pagination --> 
     <?php the_posts_pagination(); ?>
 ```
+
+<!-- WordPress Pagination (CPT) -->
 
 ```php 
 
@@ -633,8 +664,7 @@ Allow post discussion in admin area
             ) );
         }
 
-        add_action( 'init', 'main_menu' );  
-
+        add_action( 'init', 'main_menu' ); 
 
 ```
 
@@ -649,7 +679,7 @@ Allow post discussion in admin area
 	?>                             
 
 	<!-- Place the WP Menu -->
-    <!-- <?php echo dynamic_sidebar( "main_site_menu" ); ?> -->
+    <?php echo dynamic_sidebar( "main_site_menu" ); ?>
                     
 ```
 
@@ -711,7 +741,8 @@ Allow post discussion in admin area
         
     <?php echo "<p class='number_of_results'>Number of results:  " . "<span class='total_results'>" . $total_results . "</span></p>"; ?>
         
-    <?php // get_search_form(); ?>    
+    <!-- Outputs search form to the screen -->
+    <?php get_search_form(); ?>    
 
 ```
 
@@ -740,9 +771,11 @@ Allow post discussion in admin area
 ```
 
 ```php
+
+    <!-- Outputs a list of Pages in the site
     <?php 
 
-        // outputs a list of Pages in the site
+        
         wp_list_pages(); 
         
     ?>
@@ -754,16 +787,20 @@ Allow post discussion in admin area
 
     <!-- Categories for this post --> 
     <div class="the_category_list">
-    <h3> the_category() - Categories related to this post </h3>
-       <?php the_category(' - '); ?> 
+    
+        <h3> the_category() - Categories related to this post </h3>
+    
+        <?php the_category(' - '); ?> 
+    
     </div>
+
     <hr />
 		
-    <?php echo get_the_author(); ?>  - outputs the text of the author of a post. It can be placed in a link but doesn't link to the page for an author.
+    + <?php echo get_the_author(); ?>  - outputs the text of the author of a post. It can be placed in a link but doesn't link to the page for an author.
 
-    <?php echo the_author_posts_link(); ?> - outputs a link to the author page
+    + <?php echo the_author_posts_link(); ?> - outputs a link to the author page
 
-    <?php echo get_the_author_meta( 'nicename', $author_id ); ?> - 
+    + <?php echo get_the_author_meta( 'nicename', $author_id ); ?> - 
 
 ```
 
@@ -847,6 +884,11 @@ Allow post discussion in admin area
 ### [Category Pagination](https://www.trickyenough.com/pagination-in-wordpress/)
 
 ## Log
+
+### v2.2
++ Completed SASS Variables for Site Configuration
++ 
++ 
 
 ### v2.1
 + Styling of Search form input fields
