@@ -1,4 +1,4 @@
-# JGDM Blog Theme (2023) - v2.2 - 23/03/2023 - 09:49
+# JGDM Blog Theme (2023) - v2.2 - 23/03/2023 - 09:56
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -59,16 +59,16 @@
 ## Setup: 
 [Back to Top](#sections)
 
-### Make sure your WordPress theme has the following minimum files
+1. Make sure your WordPress theme has the following minimum files
 
-  + index.php
-  + functions.php
-  + style.css
-  + screenshot.png
-  + sass.scss (optional - personally, I like to use SASS partials in my CSS development)
-  + favicon.png (optional)
+  + `index.php`
+  + `functions.php`
+  + `style.css`
+  + `screenshot.png`
+  + `sass.scss` (optional - personally, I like to use SASS partials in my CSS development)
+  + `favicon.png` (optional)
 
-1. Setup theme supports.
+2. Setup theme supports.
 
 Make sure to include support for dynamic menus for navigation and widgets in your theme.
 
@@ -79,7 +79,7 @@ Make sure to include support for dynamic menus for navigation and widgets in you
         add_theme_support( "menus" );
 ```
     
-2. Enqueue Styles and Scripts
+3. Enqueue Styles and Scripts
 
 
 ```php
@@ -99,15 +99,15 @@ Make sure to include support for dynamic menus for navigation and widgets in you
         }
 ```
 
-3. Menu
+4. Menu
 
    + link to index.php (e.g. `http://localhost/jgdm_blog/blog_posts/2/page/1/`)
    + link to home.php (e.g. `http://localhost/blog_posts`)
    + links to pages `(page.php)`
 
-4. Setup Widgets
+5. Setup Widgets
 
-Use functions.php to register an individual widget area
+### Use functions.php to register an individual widget area
 
 ```php
 
@@ -123,7 +123,7 @@ Use functions.php to register an individual widget area
     ?>
 ``` 
 
-Call the dynamic sidebar function and put it in your chosen place for your design.
+### Call the dynamic sidebar function and put it in your chosen place for your design.
 
 ```php
 
@@ -170,11 +170,12 @@ Call the dynamic sidebar function and put it in your chosen place for your desig
 
 6. Custom Post Types
 
-```not currently created in code - uses Plugins
+```
+    NOTE: not currently created in code - uses Plugins
 
-   Plugins 
-   - Advanced Custom Fields by WP Engine
-   - Custom Post Type UI: by WebDev Studios
+    Plugins 
+    - Advanced Custom Fields by WP Engine
+    - Custom Post Type UI: by WebDev Studios
 
 ``` 
 
@@ -214,7 +215,7 @@ Call the dynamic sidebar function and put it in your chosen place for your desig
 
 7. Single Post Page Comments
 
-Allow post discussion in admin area
+### Allow post discussion in admin area
 
 ```php
         
@@ -231,6 +232,7 @@ Allow post discussion in admin area
 
 ```php
 
+    <!-- If a Single Post has comments, show them
 	<?php if ( have_comments() ) : ?>
 
     <?php endif; ?>
@@ -239,7 +241,7 @@ Allow post discussion in admin area
 
 ```php
 
-    <!-- Comments are closed message -->
+    <!-- If comments are closed message, display a message -->
     <?php if ( !comments_open() && get_comments_number() ) : ?> 
             
         <p class="no-comments"><?php _e( 'Comments are closed.', 'textdomain' ); ?></p>
@@ -250,7 +252,7 @@ Allow post discussion in admin area
 
 ```php 
 
-    <!-- Numbered Pagination Links using paginage_comment_links() -->
+    <!-- Numbered Pagination Links using paginate_comment_links() -->
     <div class="pagination">
         <?php paginate_comments_links(); ?>
     </div>
@@ -259,7 +261,7 @@ Allow post discussion in admin area
 
 ```php 
 
-    <!-- Pagination -->
+    <!-- Check for Comment Pagination -->
     <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>                 
 
     <nav class="navigation comment-navigation" role="navigation">
@@ -277,6 +279,7 @@ Allow post discussion in admin area
 ```php
 
     <?php comment_form(); ?>
+
 ```
 
 ### Directories required
@@ -313,8 +316,7 @@ Allow post discussion in admin area
 
 ### Enable widgets
 
-  + Enable the plugin  `Highlighting Code Block` -
-    
+  + Enable the plugin `Highlighting Code Block` -    
 
 ## Code Snippets
 [Back to Top](#sections)
@@ -327,13 +329,13 @@ Allow post discussion in admin area
 	 
 	<?php while ( have_posts() ) : the_post(); ?>        
 	
-	   <div class = "entry"> . . . </div>
+        <div class = "entry"> . . . </div>
 	
 	<?php endwhile; ?>  
 	
 	<?php else: ?>        
 	
-	   <p>No content</p>
+	    <p>No content</p>
 	
 	<?php endif; ?>         
 
