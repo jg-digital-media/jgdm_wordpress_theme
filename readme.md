@@ -1,4 +1,4 @@
-# JGDM Blog Theme (2023) - v2.3 - 27/03/2023 - 14:58
+# JGDM Blog Theme (2023) - v2.3 - 27/03/2023 - 16:23
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -32,7 +32,7 @@
 
 ### TODO's
 + `[DONE]` - Enqueue styling and script file
-+ `[DONE]` - Working with Post Pagination
++ `[DONE]` - Working with Post Pagination - `home.php`
 + `[DONE]` - Archive Templates 
 + `[DONE]` - Search Templates 
 + `[DONE]` - Single Post Templates
@@ -54,7 +54,7 @@
 + `author-user_name.php` - last numbered pagination link reverts to index.php
 + `single.php` - link to `date.php` template is not working.
 + `single.php` - get_the_date('d M Y') "00 September 0000 : 11:33pm"; 
-+ `category-{slug}` - Pagination reverts to `index.php` temlate on page 3 onwards
++ `category-{slug}` - Pagination reverts to `404.php` temlate on page 3 onwards
 
 ## Setup: 
 [Back to Top](#sections)
@@ -132,7 +132,7 @@ Make sure to include support for dynamic menus for navigation and widgets in you
             'orderby' => 'menu_order'
         ) );                         
 
-        //dynamic sidebar with reference to menu slug
+        // Dynamic sidebar with reference to menu slug
         echo dynamic_sidebar( "main_site_menu" ); ?>
 
 
@@ -977,11 +977,14 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 
 ### [Category Pagination](https://www.trickyenough.com/pagination-in-wordpress/)
 
+### [Get Day Link](https://developer.wordpress.org/reference/functions/get_day_link/) get_day_link() - Has 3 required parameters, Year of post, month of post, day of post
+
 ## Log
 
 ### v2.3
 + Category Templates - included specific category slug templates
 + Added a 404 Page Template
++ Link to date.php for the date posted of a single.php template
 
 ### v2.2
 + Completed SASS Variables for Site Configuration
