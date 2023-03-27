@@ -1,4 +1,4 @@
-# JGDM Blog Theme (2023) - v2.2 - 23/03/2023 - 16:45
+# JGDM Blog Theme (2023) - v2.2 - 23/03/2023 - 09:56
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -895,6 +895,8 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 
 ### v2.2
 + Completed SASS Variables for Site Configuration
++ 
++ 
 
 ### v2.1
 + Styling of Search form input fields
