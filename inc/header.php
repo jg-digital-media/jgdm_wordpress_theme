@@ -72,14 +72,16 @@
                     
                     <!-- Main Nav Menu -->
                     <?php wp_nav_menu( array( 
+    
                         'theme_location'  => 'Main Menu',
                         'menu' => 'Main Menu',
                         'orderby' => 'menu_order'
                         ) );
+                    
                     ?>                             
             
                     <!-- WP Menu -->
-                    <!-- <?php echo dynamic_sidebar( "main_site_menu" ); ?> -->
+                    <?php echo dynamic_sidebar( "main_site_menu" ); ?>
                     
                 </nav>
             
