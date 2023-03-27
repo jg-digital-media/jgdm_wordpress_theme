@@ -17,7 +17,7 @@
         
         <div class = "entry">
                 
-            <h3> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <span> <br /> by <?php the_author(); ?> on <?php echo get_the_date( "d M Y" ); ?> </span> (<span class="comment_count"><?php echo get_comments_number(); ?></span>) </h3>
+            <h3> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <span> <br /> by <?php echo the_author_posts_link(); ?> on <a href="<?php echo get_day_link( get_post_time('Y'), get_post_time('m'), get_post_time('j') ) ?>"><?php echo get_the_date( "d M Y" ); ?></a> </span> (<span class="comment_count"><?php echo get_comments_number(); ?></span>) </h3>
             
             <p> <?php echo the_excerpt(); ?> </p>
             
