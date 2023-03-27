@@ -1,4 +1,4 @@
-# JGDM Blog Theme (2023) - v2.3 - 27/03/2023 - 10:07
+# JGDM Blog Theme (2023) - v2.3 - 27/03/2023 - 14:58
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -46,7 +46,6 @@
 + `[TODO: ]` - `single.php ` - Finalise styles for post and page formatting
 + `[TODO: ]` - front-page.php Template
 + `[TODO: ]` - Show category counts on home.php and index.php
-+ `[TODO: ]` - Add and produce a 404 Template
 
 ### Known Bugs
 
@@ -263,7 +262,7 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 ```
     NOTE: not currently created in code - uses Plugins
 
-    Plugins 
+    Plugins Used: 
     - Advanced Custom Fields by WP Engine
     - Custom Post Type UI: by WebDev Studios
 
@@ -311,7 +310,7 @@ Make sure to include support for dynamic menus for navigation and widgets in you
         
     <?php
     
-        // single.php - Pull in the comments template - If comments are open or we have at least one comment, load up the comment template.
+        /* single.php - Pull in the comments template - If comments are open or we have at least one comment, load up the comment template. */
         if ( comments_open() || get_comments_number() ) :
 
             comments_template();
@@ -322,10 +321,13 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 
 ```php
 
-    <!-- If a Single Post has comments, show them
-	<?php if ( have_comments() ) : ?>
+	<?php 
+    
+    /*  If a Single Post has comments, show them  */
+    if ( have_comments() ) : ?>
 
     <?php endif; ?>
+    ?>
 
 ```
 
@@ -979,6 +981,7 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 
 ### v2.3
 + Category Templates - included specific category slug templates
++ Added a 404 Page Template
 
 ### v2.2
 + Completed SASS Variables for Site Configuration
