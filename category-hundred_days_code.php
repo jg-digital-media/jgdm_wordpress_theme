@@ -10,7 +10,7 @@
                 
                 'post_type' => 'post',
                 'post_type' => 'blog_posts', 
-                // 'posts_per_page' => 4,
+                'posts_per_page' => 8,
                 'paged' => $paged,
                 // 'category' => 'hundred_days_code',
                 'category_name' => 'hundred_days_code',
