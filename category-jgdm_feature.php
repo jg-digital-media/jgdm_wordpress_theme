@@ -9,7 +9,7 @@
             $args = array(
                 
                 'post_type' => 'blog_posts',
-                //'post_type' => 'blog_posts', 
+                //'post_type' => 'post', 
                 'category_name' => 'jgdm_feature'
             );
 
