@@ -1,4 +1,4 @@
-# JGDM Blog Theme (2023) - v2.3 - 27/03/2023 - 10:52
+# JGDM Blog Theme (2023) - v2.3 - 27/03/2023 - 10:07
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -98,13 +98,52 @@ Make sure to include support for dynamic menus for navigation and widgets in you
             wp_enqueue_script( 'app', get_template_directory_uri() . '/_assets/scripts/app.js' );
 
         }
+    ?>
 ```
 
 4. Menu
 
-   + link to index.php (e.g. `http://localhost/jgdm_blog/blog_posts/2/page/1/`)
-   + link to home.php (e.g. `http://localhost/blog_posts`)
-   + links to pages `(page.php)`
++ Register the menu area in `functions.php`.
+
+```php
+    <?php 
+
+        // Register Nav Menus
+        function main_jgdm_menu(){
+
+            register_nav_menus( array(
+                'main_menu' => __( 'main_site_menu', 'jgdm_blog' )
+            ) );
+        }
+
+        add_action( 'init', 'main_jgdm_menu' );   ?>
+    ?>
+```
+
++ Place the menu in your design (e.g. header.php)
+
+```php
+    <?php 
+
+        // Main Nav Menu
+        wp_nav_menu( array( 
+
+            'theme_location'  => 'Main Menu',
+            'menu' => 'Main Menu',
+            'orderby' => 'menu_order'
+        ) );                         
+
+        //dynamic sidebar with reference to menu slug
+        echo dynamic_sidebar( "main_site_menu" ); ?>
+
+
+    ?>
+```
+
++ Custom menu links 
+  + link to index.php (e.g. `http://localhost/jgdm_blog/blog_posts/2/page/1/`)
+  + link to home.php (e.g. `http://localhost/blog_posts`)
+  + links to pages `(page.php)`
 
 5. Setup Widgets
 
