@@ -18,6 +18,8 @@
         ?>
 
         <h2 class="post_headline"> <p>category.php (news and comment)</p> </h2>
+
+        <a href="<?php bloginfo("home"); ?>">Home</a>     
         
         <?php require "template-parts/category-list.php"; ?>
         

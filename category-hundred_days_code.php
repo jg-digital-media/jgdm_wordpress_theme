@@ -19,6 +19,8 @@
         ?>
 
         <h2 class="post_headline"> <p>category.php (hundred_days_code)</p> </h2>
+
+        <a href="<?php bloginfo("home"); ?>">Home</a>     
         
         <?php require "template-parts/category-list.php"; ?>
 
