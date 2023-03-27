@@ -25,8 +25,11 @@ body {
             }       
             
             h2 {
+                
+                text-align: center;
+                margin-top: 10pt;
             }
-            
+                        
             .pagination {
                 
                 display: block;
@@ -98,10 +101,12 @@ body {
                     
                     padding: 10px 0;
                     font-size: $font-size-sm;
+                    text-align: left;
                 }
                 
                 ul, ol {
                     font-size: $font-size-sm;
+                    text-align: left;
                 }
             }
         }
@@ -116,9 +121,10 @@ body {
                 width: auto;
             }
             
-            h2 {
+            h2 {                
                 
-                
+                text-align: center;
+                margin-top: 10pt; 
             }
             
             aside {

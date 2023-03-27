@@ -1025,6 +1025,10 @@ body section .primary {
     width: auto;
   }
 }
+body section .primary h2 {
+  text-align: center;
+  margin-top: 10pt;
+}
 body section .primary .pagination {
   display: block;
   margin: 10px auto;
@@ -1074,9 +1078,11 @@ body section .primary .entry h6 {
 body section .primary .entry p {
   padding: 10px 0;
   font-size: 12px;
+  text-align: left;
 }
 body section .primary .entry ul, body section .primary .entry ol {
   font-size: 12px;
+  text-align: left;
 }
 body section .secondary {
   display: inline-block;
@@ -1086,6 +1092,10 @@ body section .secondary {
   body section .secondary {
     width: auto;
   }
+}
+body section .secondary h2 {
+  text-align: center;
+  margin-top: 10pt;
 }
 body section .secondary .widget_area {
   border: solid red 1px;
