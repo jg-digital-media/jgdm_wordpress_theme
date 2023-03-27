@@ -6,23 +6,42 @@
         
         <?php 
         
-            $args = array(
+            $args = array( 
                 
-                'post_type' => 'blog_posts',
-                //'post_type' => 'post', 
-                'category_name' => 'webdesign_news_comment'
+                'post_type' => 'post',
+                'post_type' => 'blog_posts', 
+                // 'posts_per_page' => 4,
+                'paged' => $paged,
+                // 'category' => 'webdesign_news_comment',
+                'category_name' => 'webdesign_news_comment',
+                // 'category_in' => 'webdesign_news_comment'
             );
 
             // wp query
-            $main_blog = new WP_Query( $args )
+            $main_blog = new WP_Query( $args );        
+
+            $temp_query = $wp_query;
+            $wp_query = NULL;
+            $wp_query = $main_blog;
                 
         ?>
 
-        <h2 class="post_headline"> <p>category.php (web design news and comment)</p> </h2>
+        <h2 class="post_headline"> <p>category-webdesign_news_comment.php</p> </h2>
 
         <a href="<?php bloginfo("home"); ?>">Home</a>     
         
         <?php require "template-parts/category-list.php"; ?>
+        
+        <?php         
+        
+            // WP Query pagination
+        
+            // paged pagination and query args
+            $custom_query_args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+        
+            // pagination method
+            the_posts_pagination();  
+        ?>
         
         
         <!-- The WordPress Loop Begins -->
@@ -44,10 +63,21 @@
 
         <?php else : ?>
 
-        <!--  No Post Found -->
-        <?php endif; ?>
+        <!-- No Post Found -->
+        
+        <?php endif; ?>            
             
-        <!-- post pagination -->  
+        <!-- post pagination -->
+        <?php  
+        
+            // Reset the posts data 
+            wp_reset_postdata(); 
+        
+            the_posts_pagination(); 
+        
+            $wp_query = NULL;
+            $wp_query = $temp_query;
+        ?>
         
         <div class="blog_posts_archive">
         
@@ -58,7 +88,6 @@
             </ul>
             
         </div>
-
         
     </article>
     

@@ -47,18 +47,9 @@ require "inc/header.php"; ?>
 
         <?php else : ?>
 
-        <!--  No Post Found -->
+        <!-- No Post Found -->
+        
         <?php endif; ?>
-            
-        <!-- post pagination -->  
-        
-        <?php  
-        
-            // Reset the posts data 
-            wp_reset_postdata(); 
-        
-            the_posts_pagination(); 
-        ?>
         
         <div class="blog_posts_archive">
         
@@ -69,7 +60,6 @@ require "inc/header.php"; ?>
             </ul>
             
         </div>
-
         
     </article>
     
