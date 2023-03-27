@@ -188,7 +188,12 @@ body .section_search a:hover, body section .secondary .widget_area li a:hover, b
   background: #fafac7;
 }
 
-body .section_page .search_form .searchform div #searchsubmit,
+body .section_page .page .page_container .searchform div #searchsubmit,
+body .section_single .page .page_container .searchform div #searchsubmit,
+body .section_archive .page .page_container .searchform div #searchsubmit,
+body .section_author .page .page_container .searchform div #searchsubmit,
+body .section_category .page .page_container .searchform div #searchsubmit,
+body .section_search .page .page_container .searchform div #searchsubmit, body .section_page .search_form .searchform div #searchsubmit,
 body .section_single .search_form .searchform div #searchsubmit,
 body .section_archive .search_form .searchform div #searchsubmit,
 body .section_author .search_form .searchform div #searchsubmit,
@@ -209,7 +214,12 @@ body .section_search .no-result .searchform div #searchsubmit {
   border-radius: 5px;
   cursor: pointer;
 }
-body .section_page .search_form .searchform div #searchsubmit:hover,
+body .section_page .page .page_container .searchform div #searchsubmit:hover,
+body .section_single .page .page_container .searchform div #searchsubmit:hover,
+body .section_archive .page .page_container .searchform div #searchsubmit:hover,
+body .section_author .page .page_container .searchform div #searchsubmit:hover,
+body .section_category .page .page_container .searchform div #searchsubmit:hover,
+body .section_search .page .page_container .searchform div #searchsubmit:hover, body .section_page .search_form .searchform div #searchsubmit:hover,
 body .section_single .search_form .searchform div #searchsubmit:hover,
 body .section_archive .search_form .searchform div #searchsubmit:hover,
 body .section_author .search_form .searchform div #searchsubmit:hover,
@@ -222,7 +232,12 @@ body .section_category .no-result .searchform div #searchsubmit:hover,
 body .section_search .no-result .searchform div #searchsubmit:hover {
   background: #fbf2e0;
 }
-body .section_page .search_form .searchform div #searchsubmit:focus,
+body .section_page .page .page_container .searchform div #searchsubmit:focus,
+body .section_single .page .page_container .searchform div #searchsubmit:focus,
+body .section_archive .page .page_container .searchform div #searchsubmit:focus,
+body .section_author .page .page_container .searchform div #searchsubmit:focus,
+body .section_category .page .page_container .searchform div #searchsubmit:focus,
+body .section_search .page .page_container .searchform div #searchsubmit:focus, body .section_page .search_form .searchform div #searchsubmit:focus,
 body .section_single .search_form .searchform div #searchsubmit:focus,
 body .section_archive .search_form .searchform div #searchsubmit:focus,
 body .section_author .search_form .searchform div #searchsubmit:focus,
@@ -259,7 +274,12 @@ body section .secondary .widget_search .wp-block-search__button:focus {
   border: gold 3px solid;
 }
 
-body .section_page .no-result .searchform div #s,
+body .section_page .page .page_container .searchform div #s,
+body .section_single .page .page_container .searchform div #s,
+body .section_archive .page .page_container .searchform div #s,
+body .section_author .page .page_container .searchform div #s,
+body .section_category .page .page_container .searchform div #s,
+body .section_search .page .page_container .searchform div #s, body .section_page .no-result .searchform div #s,
 body .section_single .no-result .searchform div #s,
 body .section_archive .no-result .searchform div #s,
 body .section_author .no-result .searchform div #s,
@@ -273,7 +293,12 @@ body .section_search .no-result .searchform div #s {
   font-size: 16px;
   font-family: "Quicksand";
 }
-body .section_page .no-result .searchform div #s:hover,
+body .section_page .page .page_container .searchform div #s:hover,
+body .section_single .page .page_container .searchform div #s:hover,
+body .section_archive .page .page_container .searchform div #s:hover,
+body .section_author .page .page_container .searchform div #s:hover,
+body .section_category .page .page_container .searchform div #s:hover,
+body .section_search .page .page_container .searchform div #s:hover, body .section_page .no-result .searchform div #s:hover,
 body .section_single .no-result .searchform div #s:hover,
 body .section_archive .no-result .searchform div #s:hover,
 body .section_author .no-result .searchform div #s:hover,
@@ -281,7 +306,12 @@ body .section_category .no-result .searchform div #s:hover,
 body .section_search .no-result .searchform div #s:hover {
   background: #fbf2e0;
 }
-body .section_page .no-result .searchform div #s:focus,
+body .section_page .page .page_container .searchform div #s:focus,
+body .section_single .page .page_container .searchform div #s:focus,
+body .section_archive .page .page_container .searchform div #s:focus,
+body .section_author .page .page_container .searchform div #s:focus,
+body .section_category .page .page_container .searchform div #s:focus,
+body .section_search .page .page_container .searchform div #s:focus, body .section_page .no-result .searchform div #s:focus,
 body .section_single .no-result .searchform div #s:focus,
 body .section_archive .no-result .searchform div #s:focus,
 body .section_author .no-result .searchform div #s:focus,
@@ -530,6 +560,14 @@ body .section_search .page .page_container p img {
   border: solid 3px black;
   margin: 10px auto;
   border-radius: 10px;
+}
+body .section .page .page_container p.content_404, .section_single .blog_post_container p.content_404, body .section_page .page .page_container p.content_404,
+body .section_single .page .page_container p.content_404,
+body .section_archive .page .page_container p.content_404,
+body .section_author .page .page_container p.content_404,
+body .section_category .page .page_container p.content_404,
+body .section_search .page .page_container p.content_404 {
+  text-align: center;
 }
 body .section .page .page_container code, .section_single .blog_post_container code, body .section_page .page .page_container code,
 body .section_single .page .page_container code,
@@ -1151,13 +1189,15 @@ body .section_search h3 li ul {
   margin: 0 auto;
   text-align: center;
 }
-body .section_page h3 li ul li,
-body .section_single h3 li ul li,
-body .section_archive h3 li ul li,
-body .section_author h3 li ul li,
-body .section_category h3 li ul li,
-body .section_search h3 li ul li {
+body .section_page h3 li ul li.cat-item,
+body .section_single h3 li ul li.cat-item,
+body .section_archive h3 li ul li.cat-item,
+body .section_author h3 li ul li.cat-item,
+body .section_category h3 li ul li.cat-item,
+body .section_search h3 li ul li.cat-item {
   display: inline-block;
+  text-align: center;
+  margin-left: 10px;
 }
 body .section_page h3.search_term,
 body .section_single h3.search_term,
@@ -1301,6 +1341,14 @@ body .section_search navigation {
   padding: 15px 0;
   color: black;
   font-weight: bold;
+}
+body .section_page .page .page_container .searchform div,
+body .section_single .page .page_container .searchform div,
+body .section_archive .page .page_container .searchform div,
+body .section_author .page .page_container .searchform div,
+body .section_category .page .page_container .searchform div,
+body .section_search .page .page_container .searchform div {
+  text-align: center;
 }
 body .section_page .post_authors li,
 body .section_single .post_authors li,
