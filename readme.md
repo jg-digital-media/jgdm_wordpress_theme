@@ -1,4 +1,4 @@
-# JGDM Blog Theme (2023) - v2.2 - 23/03/2023 - 09:56
+# JGDM Blog Theme (2023) - v2.3 - 27/03/2023 - 10:52
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -44,7 +44,6 @@
 + `[TODO: ]` - Pagination links for category templates (`category.php`... etc)
 + `[TODO: ]` - `HCB` styling
 + `[TODO: ]` - `single.php ` - Finalise styles for post and page formatting
-+ `[TODO: ]` - 404 Template
 + `[TODO: ]` - front-page.php Template
 + `[TODO: ]` - Show category counts on home.php and index.php
 + `[TODO: ]` - Add and produce a 404 Template
@@ -54,8 +53,9 @@
 + `home.php - index.php` - secondary - widget areas should not have a hover effect
 + `author-user_name.php` - Author Template pagination does not paginate on page 2 (same set of links)
 + `author-user_name.php` - last numbered pagination link reverts to index.php
-+ `single.php` - date.php link is not working.
++ `single.php` - link to `date.php` template is not working.
 + `single.php` - get_the_date('d M Y') "00 September 0000 : 11:33pm"; 
++ `category-{slug}` - Pagination reverts to `index.php` temlate on page 3 onwards
 
 ## Setup: 
 [Back to Top](#sections)
@@ -119,8 +119,7 @@ Make sure to include support for dynamic menus for navigation and widgets in you
             'id' => 'html_block_one',
             'description' => __( 'HTML Block 1 - Widget Description Goes Here') 
            )
-        ); 
-
+        );
     ?>
 ``` 
 
@@ -171,7 +170,53 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 
 ```  
 
-```upcoming - WP QUERY Pagination``` 
+```php
+    <?php
+
+        // paged pagination
+        $args = array( 
+
+            'post_type' => 'post',
+            'post_type' => 'blog_posts', 
+            // 'posts_per_page' => 4,
+            'paged' => $paged,
+            // 'category' => 'webdesign_news_comment',
+            'category_name' => 'webdesign_news_comment',
+            // 'category_in' => 'webdesign_news_comment'
+        );
+
+        // wp query
+        $main_blog = new WP_Query( $args );        
+
+        $temp_query = $wp_query;
+        $wp_query = NULL;
+        $wp_query = $main_blog;
+
+        // paged pagination and query args
+        $custom_query_args['paged'] = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+
+        // pagination method
+        the_posts_pagination();  
+    ?>
+
+    <?php 
+
+        // The Loop - and content 
+    ?>
+
+    <?php
+        
+        // Reset the posts data 
+        wp_reset_postdata(); 
+
+        the_posts_pagination(); 
+
+        $wp_query = NULL;
+        $wp_query = $temp_query;
+
+    ?>        
+
+``` 
 
 
 6. Custom Post Types
@@ -893,10 +938,12 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 
 ## Log
 
+### v2.3
++ Category Templates - included specific category slug templates
+
 ### v2.2
 + Completed SASS Variables for Site Configuration
-+ 
-+ 
+
 
 ### v2.1
 + Styling of Search form input fields
