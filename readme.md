@@ -1,4 +1,4 @@
-# JGDM Blog Theme (2023) - v2.3 - 27/03/2023 - 16:23
+# JGDM Blog Theme (2023) - v2.3 - 27/03/2023 - 16:45
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -984,11 +984,10 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 ### v2.3
 + Category Templates - included specific category slug templates
 + Added a 404 Page Template
-+ Link to date.php for the date posted of a single.php template
++ Links to Author and Date Archives WordPress Poats single.php template and home.php
 
 ### v2.2
 + Completed SASS Variables for Site Configuration
-
 
 ### v2.1
 + Styling of Search form input fields
