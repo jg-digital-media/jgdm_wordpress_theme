@@ -23,6 +23,7 @@
         
         <?php require "template-parts/category-list.php"; ?>
         
+        
         <!-- The WordPress Loop Begins -->
         <?php if ( $main_blog->have_posts() ) : ?>
 
@@ -35,6 +36,7 @@
                 <h5> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h5>
 
                 <p> <?php the_excerpt(); the_field( "article_blurb" ); ?> </p>
+                
             </div>
 
         <?php endwhile; ?>

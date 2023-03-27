@@ -23,9 +23,7 @@
         <a href="<?php bloginfo("home"); ?>">Home</a>     
         
         <?php require "template-parts/category-list.php"; ?>
-
-        <!-- <p> wp_list_categories(); </p>
-        <h3><?php wp_list_categories('post_type=blog_posts'); get_categories(); ?></h3> -->
+        
         
         <!-- The WordPress Loop Begins -->
         <?php if ( $main_blog->have_posts() ) : ?>
