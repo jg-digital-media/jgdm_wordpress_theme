@@ -26,7 +26,7 @@
                 
         ?>
 
-        <h2 class="post_headline"> <p>category-eeb_design.php</p> </h2>
+        <h2 class="post_headline"> <p>category-web_design.php</p> </h2>
 
         <a href="<?php bloginfo("home"); ?>">Home</a>     
         
