@@ -220,9 +220,11 @@ body {
                     margin: 0 auto;
                     text-align: center;
                     
-                    li {
+                    li.cat-item {
                         
                         display: inline-block;
+                        text-align: center;
+                        margin-left: 10px;
                     }
                     
                 }
@@ -352,6 +354,29 @@ body {
              .page_container {                
                 
                 @extend %post_formatting;
+                 
+                     
+                     .searchform {
+                         
+                         div {
+
+                             text-align: center;
+
+                                 #s {
+
+                                     @extend %search_input;
+                                 }
+
+                                 #searchsubmit {
+
+                                     @extend %search_btn;                         
+                                 }
+
+                             }
+                        }                    
+                     
+                 
+                 
             }
             
         
