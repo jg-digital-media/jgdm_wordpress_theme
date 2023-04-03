@@ -536,7 +536,7 @@
                 span {
 
                     text-align: left;
-                    display: inline-block;
+                    /*display: inline-block;*/
                 } 
 
             }
@@ -746,8 +746,9 @@
             &.alignright {
 
             }
-        }    
+        }
     }
+    
 }
 
 // [empty]

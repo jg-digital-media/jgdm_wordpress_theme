@@ -1,4 +1,4 @@
-/* Last Update: 03/04/2023 - 14:50 */
+/* Last Update: 03/04/2023 - 15:03 */
 /*
 Theme Name: Jonnie Grieve Digital Media: Blog
 Theme URI: https://blog.jonniegrieve.co.uk
@@ -834,7 +834,7 @@ body .section_author .page .page_container .hcb_wrap pre.prism code span,
 body .section_category .page .page_container .hcb_wrap pre.prism code span,
 body .section_search .page .page_container .hcb_wrap pre.prism code span {
   text-align: left;
-  display: inline-block;
+  /*display: inline-block;*/
 }
 body .section .page .page_container .hcb_wrap pre, .section_single .blog_post_container .hcb_wrap pre, body .section_page .page .page_container .hcb_wrap pre,
 body .section_single .page .page_container .hcb_wrap pre,
