@@ -1,4 +1,4 @@
-# JGDM Blog Theme (2023) - v2.3 - 27/03/2023 - 16:45
+# JGDM Blog Theme (2023) - v2.4 - -03/04/2023 - 13:04
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -823,7 +823,7 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 
 ```php 
 
-	<!-- Get total number of posts -->
+	<!-- Get total number of return posts for a search -->
     <?php
         global $wp_query;
         $total_results = $wp_query->found_posts;
@@ -864,11 +864,11 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 	
 ```
 
+
 ```php
 
-    <!-- Outputs a list of Pages in the site
+    <!-- Outputs a list of Pages in the site --> 
     <?php 
-
         
         wp_list_pages(); 
         
@@ -878,25 +878,27 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 ### Author and Archival Templates
 
 ```php
-
-    <!-- Categories for this post --> 
     <div class="the_category_list">
-    
+
         <h3> the_category() - Categories related to this post </h3>
-    
-        <?php the_category(' - '); ?> 
-    
+
+        <p> <?php the_category(' - '); ?> </p>
+
     </div>
 
     <hr />
-		
-    + <?php echo get_the_author(); ?>  - outputs the text of the author of a post. It can be placed in a link but doesn't link to the page for an author.
-
-    + <?php echo the_author_posts_link(); ?> - outputs a link to the author page
-
-    + <?php echo get_the_author_meta( 'nicename', $author_id ); ?> - 
 
 ```
+
+### Author methods
+
++ ``` <?php echo get_the_author(); ?> ```  - outputs the text of the author of a post. It can be placed in a link but doesn't link to the page for an author.
+
++ ``` <?php echo the_author_posts_link(); ?> ``` - outputs a link to the author page.
+
++ ``` <?php echo get_the_author_meta( 'nicename', $author_id ); ?> ``` - a catch all function that retrieves and displays the requested data for a post author/ 
+
+
 
 ### Customise the admin area
 
@@ -980,6 +982,10 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 ### [Get Day Link](https://developer.wordpress.org/reference/functions/get_day_link/) get_day_link() - Has 3 required parameters, Year of post, month of post, day of post
 
 ## Log
+
+### v2.4
++ The idea was to have 2 lists of posts... the main Blog post type `home.php` and the Blog Posts custom post type `index.php`. It's technically impossible but works if you don't include a 404 template. `index.php` is the catch-all template and that is what it is used for.  It's the Template Hierarchy.
+
 
 ### v2.3
 + Category Templates - included specific category slug templates
