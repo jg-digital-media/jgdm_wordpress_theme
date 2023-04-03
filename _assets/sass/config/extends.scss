@@ -329,8 +329,7 @@
             border-radius: 10px;
         }
         
-    }
-    
+    }    
     
     p.content_404 {
             
@@ -512,16 +511,58 @@
         
         .hcb-clipboard {
             
+            /* background: #ededbc; */
+            background-color: $bg-hcb-code; 
+
+            &::before {
+
+                color: red;
+                background-color: $bg-hcb-code;
+            }           
+            
+        }
+    
+        pre.prism {
+
+            &::before {
+
+                background: $bg-hcb-code;
+            }
+
+            text-align: left;
+
+            code {
+
+                span {
+
+                    text-align: left;
+                    display: inline-block;
+                } 
+
+            }
+
         }
         
         pre {
             
             display: block;
+            background-color: gray;
+            background-color: $bg-hcb-code;
+            
+            &::before {
+                
+                background-color: $bg-hcb-code;
+                color: $color-hcb;
+                font-weight: bold;
+                font-size: 9pt;
+                font-family: quicksand;
+            }
             
             code {
                 
                 display: inline-block;
                 color: inherit;
+                background: $bg-hcb-code;
                 
                 
                 span.line-numbers-rows {
@@ -550,8 +591,7 @@
         border: solid white 3px;
     }
     
-    // page formatting - wp-block-image    
-      
+    // page formatting - wp-block-image 
     .post_contents {
         
         color: $color-main;
@@ -605,19 +645,63 @@
             border: black solid 2px;
             width: 90%;
             margin: 20px auto;
-
+        
             .hcb-clipboard {
 
+                /* background: #ededbc; */
+                background-color: $bg-hcb-code; 
+
+                &::before {
+
+                    color: red;
+                    background-color: $bg-hcb-code;
+                }           
+
             }
+    
+            pre.prism {
+
+                &::before {
+
+                    background: $bg-hcb-code;
+                }
+
+                text-align: left;
+
+                code {
+
+                    span {
+
+                        text-align: left;
+                        display: inline-block;
+                    } 
+
+                }
+
+            }
+            
+            
         
             pre {
-            
+
                 display: block;
-            
+                background-color: gray;
+                background-color: $bg-hcb-code;
+
+                &::before {
+
+                    background-color: $bg-hcb-code;
+                    color: $color-hcb;
+                    font-weight: bold;
+                    font-size: 9pt;
+                    font-family: quicksand;
+                }
+
                 code {
 
                     display: inline-block;
                     color: inherit;
+                    background: $bg-hcb-code;
 
 
                     span.line-numbers-rows {
@@ -631,18 +715,15 @@
 
                         span {
 
-                            display: inline-block;
+                            display: block;
                         }
 
                     }
                 }
-            }        
-        
-        }    
+            }    
+        }
     
-    }
-    
-    figure {
+        figure {
 
             img {
 
@@ -665,8 +746,8 @@
             &.alignright {
 
             }
-        }
-    
+        }    
+    }
 }
 
 // [empty]

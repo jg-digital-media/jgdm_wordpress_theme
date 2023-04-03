@@ -1,4 +1,4 @@
-/* Last Update: 21/03/2023 - 09:20 */
+/* Last Update: 03/04/2023 - 14:50 */
 /*
 Theme Name: Jonnie Grieve Digital Media: Blog
 Theme URI: https://blog.jonniegrieve.co.uk
@@ -793,6 +793,49 @@ body .section_search .page .page_container .hcb_wrap {
   width: 40%;
   margin: 20px auto;
 }
+body .section .page .page_container .hcb_wrap .hcb-clipboard, .section_single .blog_post_container .hcb_wrap .hcb-clipboard, body .section_page .page .page_container .hcb_wrap .hcb-clipboard,
+body .section_single .page .page_container .hcb_wrap .hcb-clipboard,
+body .section_archive .page .page_container .hcb_wrap .hcb-clipboard,
+body .section_author .page .page_container .hcb_wrap .hcb-clipboard,
+body .section_category .page .page_container .hcb_wrap .hcb-clipboard,
+body .section_search .page .page_container .hcb_wrap .hcb-clipboard {
+  /* background: #ededbc; */
+  background-color: #ededbc;
+}
+body .section .page .page_container .hcb_wrap .hcb-clipboard::before, .section_single .blog_post_container .hcb_wrap .hcb-clipboard::before, body .section_page .page .page_container .hcb_wrap .hcb-clipboard::before,
+body .section_single .page .page_container .hcb_wrap .hcb-clipboard::before,
+body .section_archive .page .page_container .hcb_wrap .hcb-clipboard::before,
+body .section_author .page .page_container .hcb_wrap .hcb-clipboard::before,
+body .section_category .page .page_container .hcb_wrap .hcb-clipboard::before,
+body .section_search .page .page_container .hcb_wrap .hcb-clipboard::before {
+  color: red;
+  background-color: #ededbc;
+}
+body .section .page .page_container .hcb_wrap pre.prism, .section_single .blog_post_container .hcb_wrap pre.prism, body .section_page .page .page_container .hcb_wrap pre.prism,
+body .section_single .page .page_container .hcb_wrap pre.prism,
+body .section_archive .page .page_container .hcb_wrap pre.prism,
+body .section_author .page .page_container .hcb_wrap pre.prism,
+body .section_category .page .page_container .hcb_wrap pre.prism,
+body .section_search .page .page_container .hcb_wrap pre.prism {
+  text-align: left;
+}
+body .section .page .page_container .hcb_wrap pre.prism::before, .section_single .blog_post_container .hcb_wrap pre.prism::before, body .section_page .page .page_container .hcb_wrap pre.prism::before,
+body .section_single .page .page_container .hcb_wrap pre.prism::before,
+body .section_archive .page .page_container .hcb_wrap pre.prism::before,
+body .section_author .page .page_container .hcb_wrap pre.prism::before,
+body .section_category .page .page_container .hcb_wrap pre.prism::before,
+body .section_search .page .page_container .hcb_wrap pre.prism::before {
+  background: #ededbc;
+}
+body .section .page .page_container .hcb_wrap pre.prism code span, .section_single .blog_post_container .hcb_wrap pre.prism code span, body .section_page .page .page_container .hcb_wrap pre.prism code span,
+body .section_single .page .page_container .hcb_wrap pre.prism code span,
+body .section_archive .page .page_container .hcb_wrap pre.prism code span,
+body .section_author .page .page_container .hcb_wrap pre.prism code span,
+body .section_category .page .page_container .hcb_wrap pre.prism code span,
+body .section_search .page .page_container .hcb_wrap pre.prism code span {
+  text-align: left;
+  display: inline-block;
+}
 body .section .page .page_container .hcb_wrap pre, .section_single .blog_post_container .hcb_wrap pre, body .section_page .page .page_container .hcb_wrap pre,
 body .section_single .page .page_container .hcb_wrap pre,
 body .section_archive .page .page_container .hcb_wrap pre,
@@ -800,6 +843,20 @@ body .section_author .page .page_container .hcb_wrap pre,
 body .section_category .page .page_container .hcb_wrap pre,
 body .section_search .page .page_container .hcb_wrap pre {
   display: block;
+  background-color: gray;
+  background-color: #ededbc;
+}
+body .section .page .page_container .hcb_wrap pre::before, .section_single .blog_post_container .hcb_wrap pre::before, body .section_page .page .page_container .hcb_wrap pre::before,
+body .section_single .page .page_container .hcb_wrap pre::before,
+body .section_archive .page .page_container .hcb_wrap pre::before,
+body .section_author .page .page_container .hcb_wrap pre::before,
+body .section_category .page .page_container .hcb_wrap pre::before,
+body .section_search .page .page_container .hcb_wrap pre::before {
+  background-color: #ededbc;
+  color: black;
+  font-weight: bold;
+  font-size: 9pt;
+  font-family: quicksand;
 }
 body .section .page .page_container .hcb_wrap pre code, .section_single .blog_post_container .hcb_wrap pre code, body .section_page .page .page_container .hcb_wrap pre code,
 body .section_single .page .page_container .hcb_wrap pre code,
@@ -809,6 +866,7 @@ body .section_category .page .page_container .hcb_wrap pre code,
 body .section_search .page .page_container .hcb_wrap pre code {
   display: inline-block;
   color: inherit;
+  background: #ededbc;
 }
 body .section .page .page_container .hcb_wrap pre code span.line-numbers-rows, .section_single .blog_post_container .hcb_wrap pre code span.line-numbers-rows, body .section_page .page .page_container .hcb_wrap pre code span.line-numbers-rows,
 body .section_single .page .page_container .hcb_wrap pre code span.line-numbers-rows,
@@ -950,6 +1008,49 @@ body .section_search .page .page_container .post_contents .hcb_wrap {
   width: 90%;
   margin: 20px auto;
 }
+body .section .page .page_container .post_contents .hcb_wrap .hcb-clipboard, .section_single .blog_post_container .post_contents .hcb_wrap .hcb-clipboard, body .section_page .page .page_container .post_contents .hcb_wrap .hcb-clipboard,
+body .section_single .page .page_container .post_contents .hcb_wrap .hcb-clipboard,
+body .section_archive .page .page_container .post_contents .hcb_wrap .hcb-clipboard,
+body .section_author .page .page_container .post_contents .hcb_wrap .hcb-clipboard,
+body .section_category .page .page_container .post_contents .hcb_wrap .hcb-clipboard,
+body .section_search .page .page_container .post_contents .hcb_wrap .hcb-clipboard {
+  /* background: #ededbc; */
+  background-color: #ededbc;
+}
+body .section .page .page_container .post_contents .hcb_wrap .hcb-clipboard::before, .section_single .blog_post_container .post_contents .hcb_wrap .hcb-clipboard::before, body .section_page .page .page_container .post_contents .hcb_wrap .hcb-clipboard::before,
+body .section_single .page .page_container .post_contents .hcb_wrap .hcb-clipboard::before,
+body .section_archive .page .page_container .post_contents .hcb_wrap .hcb-clipboard::before,
+body .section_author .page .page_container .post_contents .hcb_wrap .hcb-clipboard::before,
+body .section_category .page .page_container .post_contents .hcb_wrap .hcb-clipboard::before,
+body .section_search .page .page_container .post_contents .hcb_wrap .hcb-clipboard::before {
+  color: red;
+  background-color: #ededbc;
+}
+body .section .page .page_container .post_contents .hcb_wrap pre.prism, .section_single .blog_post_container .post_contents .hcb_wrap pre.prism, body .section_page .page .page_container .post_contents .hcb_wrap pre.prism,
+body .section_single .page .page_container .post_contents .hcb_wrap pre.prism,
+body .section_archive .page .page_container .post_contents .hcb_wrap pre.prism,
+body .section_author .page .page_container .post_contents .hcb_wrap pre.prism,
+body .section_category .page .page_container .post_contents .hcb_wrap pre.prism,
+body .section_search .page .page_container .post_contents .hcb_wrap pre.prism {
+  text-align: left;
+}
+body .section .page .page_container .post_contents .hcb_wrap pre.prism::before, .section_single .blog_post_container .post_contents .hcb_wrap pre.prism::before, body .section_page .page .page_container .post_contents .hcb_wrap pre.prism::before,
+body .section_single .page .page_container .post_contents .hcb_wrap pre.prism::before,
+body .section_archive .page .page_container .post_contents .hcb_wrap pre.prism::before,
+body .section_author .page .page_container .post_contents .hcb_wrap pre.prism::before,
+body .section_category .page .page_container .post_contents .hcb_wrap pre.prism::before,
+body .section_search .page .page_container .post_contents .hcb_wrap pre.prism::before {
+  background: #ededbc;
+}
+body .section .page .page_container .post_contents .hcb_wrap pre.prism code span, .section_single .blog_post_container .post_contents .hcb_wrap pre.prism code span, body .section_page .page .page_container .post_contents .hcb_wrap pre.prism code span,
+body .section_single .page .page_container .post_contents .hcb_wrap pre.prism code span,
+body .section_archive .page .page_container .post_contents .hcb_wrap pre.prism code span,
+body .section_author .page .page_container .post_contents .hcb_wrap pre.prism code span,
+body .section_category .page .page_container .post_contents .hcb_wrap pre.prism code span,
+body .section_search .page .page_container .post_contents .hcb_wrap pre.prism code span {
+  text-align: left;
+  display: inline-block;
+}
 body .section .page .page_container .post_contents .hcb_wrap pre, .section_single .blog_post_container .post_contents .hcb_wrap pre, body .section_page .page .page_container .post_contents .hcb_wrap pre,
 body .section_single .page .page_container .post_contents .hcb_wrap pre,
 body .section_archive .page .page_container .post_contents .hcb_wrap pre,
@@ -957,6 +1058,20 @@ body .section_author .page .page_container .post_contents .hcb_wrap pre,
 body .section_category .page .page_container .post_contents .hcb_wrap pre,
 body .section_search .page .page_container .post_contents .hcb_wrap pre {
   display: block;
+  background-color: gray;
+  background-color: #ededbc;
+}
+body .section .page .page_container .post_contents .hcb_wrap pre::before, .section_single .blog_post_container .post_contents .hcb_wrap pre::before, body .section_page .page .page_container .post_contents .hcb_wrap pre::before,
+body .section_single .page .page_container .post_contents .hcb_wrap pre::before,
+body .section_archive .page .page_container .post_contents .hcb_wrap pre::before,
+body .section_author .page .page_container .post_contents .hcb_wrap pre::before,
+body .section_category .page .page_container .post_contents .hcb_wrap pre::before,
+body .section_search .page .page_container .post_contents .hcb_wrap pre::before {
+  background-color: #ededbc;
+  color: black;
+  font-weight: bold;
+  font-size: 9pt;
+  font-family: quicksand;
 }
 body .section .page .page_container .post_contents .hcb_wrap pre code, .section_single .blog_post_container .post_contents .hcb_wrap pre code, body .section_page .page .page_container .post_contents .hcb_wrap pre code,
 body .section_single .page .page_container .post_contents .hcb_wrap pre code,
@@ -966,6 +1081,7 @@ body .section_category .page .page_container .post_contents .hcb_wrap pre code,
 body .section_search .page .page_container .post_contents .hcb_wrap pre code {
   display: inline-block;
   color: inherit;
+  background: #ededbc;
 }
 body .section .page .page_container .post_contents .hcb_wrap pre code span.line-numbers-rows, .section_single .blog_post_container .post_contents .hcb_wrap pre code span.line-numbers-rows, body .section_page .page .page_container .post_contents .hcb_wrap pre code span.line-numbers-rows,
 body .section_single .page .page_container .post_contents .hcb_wrap pre code span.line-numbers-rows,
@@ -989,14 +1105,14 @@ body .section_archive .page .page_container .post_contents .hcb_wrap pre code sp
 body .section_author .page .page_container .post_contents .hcb_wrap pre code span span,
 body .section_category .page .page_container .post_contents .hcb_wrap pre code span span,
 body .section_search .page .page_container .post_contents .hcb_wrap pre code span span {
-  display: inline-block;
+  display: block;
 }
-body .section .page .page_container figure img, .section_single .blog_post_container figure img, body .section_page .page .page_container figure img,
-body .section_single .page .page_container figure img,
-body .section_archive .page .page_container figure img,
-body .section_author .page .page_container figure img,
-body .section_category .page .page_container figure img,
-body .section_search .page .page_container figure img {
+body .section .page .page_container .post_contents figure img, .section_single .blog_post_container .post_contents figure img, body .section_page .page .page_container .post_contents figure img,
+body .section_single .page .page_container .post_contents figure img,
+body .section_archive .page .page_container .post_contents figure img,
+body .section_author .page .page_container .post_contents figure img,
+body .section_category .page .page_container .post_contents figure img,
+body .section_search .page .page_container .post_contents figure img {
   display: block;
   border: solid 3px black;
   width: 60%;
@@ -1004,12 +1120,12 @@ body .section_search .page .page_container figure img {
   border-radius: 5px;
 }
 @media (max-width: 780px) {
-  body .section .page .page_container figure img, .section_single .blog_post_container figure img, body .section_page .page .page_container figure img,
-body .section_single .page .page_container figure img,
-body .section_archive .page .page_container figure img,
-body .section_author .page .page_container figure img,
-body .section_category .page .page_container figure img,
-body .section_search .page .page_container figure img {
+  body .section .page .page_container .post_contents figure img, .section_single .blog_post_container .post_contents figure img, body .section_page .page .page_container .post_contents figure img,
+body .section_single .page .page_container .post_contents figure img,
+body .section_archive .page .page_container .post_contents figure img,
+body .section_author .page .page_container .post_contents figure img,
+body .section_category .page .page_container .post_contents figure img,
+body .section_search .page .page_container .post_contents figure img {
     width: 90%;
   }
 }
@@ -1039,15 +1155,43 @@ header nav.navigation li a:hover {
   text-decoration: none;
 }
 
-/* hcb.scss */
-.hcb_wrap pre.prism {
-  text-align: left;
-}
-.hcb_wrap pre.prism code span {
-  text-align: left;
-  display: inline-block;
-}
+/* hcb.scss - partial file */
+/* 
+.hcb_wrap {
 
+    .hcb-clipboard {
+
+        background: #ededbc;        
+
+        &::before {
+
+            color: red;
+        }
+
+    }
+
+    pre.prism {
+
+        &::before {
+
+            background: #ededbc;
+        }
+
+        text-align: left;
+
+        code {
+
+            span {
+
+                text-align: left;
+                display: inline-block;
+            } 
+
+        }
+
+    }
+
+} */
 /* main.scss - starts here */
 body {
   background: lightblue;
