@@ -1,4 +1,4 @@
-# JGDM Blog Theme (2023) - v2.4 - -03/04/2023 - 13:04
+# JGDM Blog Theme (2023) - v2.4 - 03/04/2023 - 15:16
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -37,6 +37,7 @@
 + `[DONE]` - Search Templates 
 + `[DONE]` - Single Post Templates
 + `[DONE]` - Comment templates
++ `[DONE]` - Show comment counts on home.php and index.php
 + `[TODO: ]` - Code Snippets
 + `[TODO: ]` - Categories - Listings and Pagination for individual categories
 + `[TODO: ]` - Customise the admin area with code
@@ -45,7 +46,6 @@
 + `[TODO: ]` - `HCB` styling
 + `[TODO: ]` - `single.php ` - Finalise styles for post and page formatting
 + `[TODO: ]` - front-page.php Template
-+ `[TODO: ]` - Show category counts on home.php and index.php
 
 ### Known Bugs
 
@@ -54,7 +54,7 @@
 + `author-user_name.php` - last numbered pagination link reverts to index.php
 + `single.php` - link to `date.php` template is not working.
 + `single.php` - get_the_date('d M Y') "00 September 0000 : 11:33pm"; 
-+ `category-{slug}` - Pagination reverts to `404.php` temlate on page 3 onwards
++ `category-{slug}` - Pagination reverts to `404.php` temlate on page 3 onwards for all category templates
 
 ## Setup: 
 [Back to Top](#sections)
@@ -985,7 +985,7 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 
 ### v2.4
 + The idea was to have 2 lists of posts... the main Blog post type `home.php` and the Blog Posts custom post type `index.php`. It's technically impossible but works if you don't include a 404 template. `index.php` is the catch-all template and that is what it is used for.  It's the Template Hierarchy.
-
++ Added styling for `Highlighting Code Block`plugin area for Posts and Page Templates
 
 ### v2.3
 + Category Templates - included specific category slug templates
