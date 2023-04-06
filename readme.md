@@ -1,4 +1,4 @@
-# JGDM Blog Theme (2023) - v2.4 - 03/04/2023 - 15:16
+# JGDM Blog Theme (2023) - v2.5 - 06/04/2023 - 14:55
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -911,6 +911,102 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 
 ### Plugin Development (in code)
 
+Directory `plugins` - A location in your theme to develop a plugin
+
+`wp-contents/plugins/jgdm-plugin-dev`
+
+3 files
+
++ `app.css` - plugin stylesheet
++ `app.js` - plugin JavaScript file
++ `jgdm-plugin-dev.php` - Main Plugin File 
+
+
+#### Plugin Comments Header
+
+```php 
+
+    <?php 
+
+    /**
+    * Plugin Name: JGDM Development Plugin
+    * Plugin URI: https://wordpress.jonniegrieve.co.uk
+    * Description: JGDM Development Plugin - The goal of this plugin is to answer the problem of using a custom post type to handle post pagination correctly.
+    * Version: 1.0.0
+    * Author: Jonathan Grieve @jg_digitalMedia
+    * Author URI: https://www.jonniegrieve.co.uk
+    * License: GPL2
+    * Text Domain: jgdm_blog
+
+    */
+```
+
+#### Load Plugin Assets
+
+```php
+    <?php
+
+    /***
+
+    Plugin Assets
+
+    ****/
+    $plugin_styling = plugins_url( 'app.css', 'jgdm-plugin-dev.php' );
+    $plugin_script = plugins_url( 'app.js', 'jgdm-plugin-dev.php' );
+    //returns full URL to myscript.js, such as example.com/wp-content/plugins/myplugin/myscript.js.
+
+    wp_enqueue_script( 'jgdm_plugin_script', $plugin_script, false, false, false );
+    wp_enqueue_style( 'jgdm_plugin_stylesheet', $plugin_styling, false, false, false );
+
+```
+
+#### Plugin Activation and Deactivation
+
+```php
+
+    <?php
+
+    // activate plugin
+    function activate_jgdm_plugin() {
+
+        // add_option( 'Activated_Plugin', 'Plugin-Slug' );
+
+        /* activation code here */
+        var_dump("activation function");
+    }
+
+    register_activation_hook( 'activate_jgdm-plugin-dev.php', 'activate_jgdm_plugin' );
+
+
+    // deactivate plugin
+    function deactivate_jgdm_plugin() {
+
+        // add_option( 'Activated_Plugin', 'Plugin-Slug' );
+
+        /* activation code here */
+        var_dump("deactivation function");
+    }
+  
+    register_activation_hook( 'deactivate_jgdm-plugin-dev.php', 'deactivate_jgdm_plugin' );
+```
+
+#### Plugin functionality
+
+```php
+
+    <?php
+    function jgdm_dev_register_cpt() { 
+
+        // functionality goes here
+        jgdm_dev_register
+    }
+
+
+    add_action( 'init', 'jgdm_dev_register_cpt' );  
+    //hook blog posts custom post type function
+
+```
+
 ```php 
 
     <?php
@@ -918,6 +1014,26 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 
 ```  
 
+
+#### Run the Code
+
+```php
+
+    <?php
+
+    /********
+    * Run the Code
+    *******/
+    function run_jgdm_dev_plugin() {
+
+        $plugin = new Plugin_Name();
+        $plugin->run();
+
+    }
+
+    run_jgdm_dev_plugin();
+ 
+```
 ## Plugin List
 [Back to Top](#sections)
 
@@ -982,6 +1098,12 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 ### [Get Day Link](https://developer.wordpress.org/reference/functions/get_day_link/) get_day_link() - Has 3 required parameters, Year of post, month of post, day of post
 
 ## Log
+
+### v2.5
+
++ Add plugin directory
++ Add plugin directory  `app.css` - `app,js` - `jgdm-plugin-dev.php`
++ dd
 
 ### v2.4
 + The idea was to have 2 lists of posts... the main Blog post type `home.php` and the Blog Posts custom post type `index.php`. It's technically impossible but works if you don't include a 404 template. `index.php` is the catch-all template and that is what it is used for.  It's the Template Hierarchy.
