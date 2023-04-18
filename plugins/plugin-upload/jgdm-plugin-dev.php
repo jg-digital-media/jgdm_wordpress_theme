@@ -29,7 +29,7 @@ wp_enqueue_style( 'jgdm_plugin_stylesheet', $plugin_styling, false, false, false
 
 
 //activate plugin
-function jgdm_plugin_dev_activate() {
+function activate_jgdm_plugin() {
 
     add_option( 'Activated_Plugin', 'jgdm-plugin-dev' );
   
@@ -37,28 +37,28 @@ function jgdm_plugin_dev_activate() {
     var_dump("activation function");
 }
   
-register_activation_hook( 'jgdm-plugin-dev.php', 'jgdm_plugin_dev_activate' );
+register_activation_hook( 'activate_jgdm-plugin-dev.php', 'activate_jgdm_plugin' );
 
 
 //deactivate plugin
-function jgdm_plugin_dev_deactivate() {
+function deactivate_jgdm_plugin() {
 
-    add_option( 'Deactivated_Plugin', 'jgdm-plugin-dev' );
+    add_option( 'Activated_Plugin', 'jgdm-plugin-dev' );
 
     /* activation code here */
     var_dump("deactivation function");
 }
   
-register_activation_hook( 'jgdm-plugin-dev.php', 'jgdm_plugin_dev_deactivate' );
+register_activation_hook( 'deactivate_jgdm-plugin-dev.php', 'deactivate_jgdm_plugin' );
 
 
 //hook to uninstall plugin
-function jgdm_plugin_dev_uninstall(){
+function jgdm_uninstall_plugin(){
     //register_uninstall_hook( 'jgdm-plugin-dev', 'jgdm_uninstall_plugin' );
     var_dump("uninstall function");
 }
 
-register_uninstall_hook('jgdm-plugin-dev.php', 'jgdm_plugin_dev_uninstall');
+register_uninstall_hook('jgdm-plugin-dev', 'jgdm_uninstall_plugin');
 
 
 /*********
