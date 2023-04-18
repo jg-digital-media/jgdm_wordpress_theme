@@ -1,4 +1,4 @@
-# JGDM Blog Theme (2023) - v2.5 - 06/04/2023 - 14:55
+# JGDM Blog Theme (2023) - v2.6 - 18/04/2023 - 14:54
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -43,9 +43,8 @@
 + `[TODO: ]` - Customise the admin area with code
 + `[TODO: ]` - Plugin Development
 + `[TODO: ]` - Pagination links for category templates (`category.php`... etc)
-+ `[TODO: ]` - `HCB` styling
++ `[TODO: ]` - `HCB` styling to ensure
 + `[TODO: ]` - `single.php ` - Finalise styles for post and page formatting
-+ `[TODO: ]` - front-page.php Template
 
 ### Known Bugs
 
@@ -59,7 +58,7 @@
 ## Setup: 
 [Back to Top](#sections)
 
-1. Make sure your WordPress theme has the following minimum files
+1. Make sure your WordPress theme has as a minimum, the following files.
 
   + `index.php`
   + `functions.php`
@@ -142,7 +141,7 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 + Custom menu links 
   + link to index.php (e.g. `http://localhost/jgdm_blog/blog_posts/2/page/1/`)
   + link to home.php (e.g. `http://localhost/blog_posts`)
-  + links to pages `(page.php)`
+  + links to pages (`page.php`)
 
 5. Setup Widgets
 
@@ -899,15 +898,153 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 + ``` <?php echo get_the_author_meta( 'nicename', $author_id ); ?> ``` - a catch all function that retrieves and displays the requested data for a post author/ 
 
 
-
 ### Customise the admin area
 
-```php 
+  + in `functions.php`
+  
+    ```php 
 
-    <?php 
-        // To Come:	
+        <?php 
+            // To Come:	
+
+    ```
+    
+#### Adding Custom Links in Your WordPress Admin Bar
+
+```php
+
+   <?php 
+
+    function modify_admin_toolbar( $admin_bar ) {
+    
+     // https://wpklik.com/wordpress-tutorials/modify-wordpress-dashboard/
+    }
+
+    add_action( 'admin_bar_menu', 'modify_admin_toolbar', 100 );
 
 ```
+
+#### Adding Custom Text to Your Dashboard Footer
+
+```php
+    <?php
+
+        function modify_admin_footer() {
+    
+            echo '<span>Developed by <a href="#" target="_blank" rel="noopener noreferrer">JGDM</a>.</span>';
+                                
+        }
+
+        add_filter( 'admin_footer_text', 'modify_admin_footer' );
+
+```
+
+
+#### Removing a Menu From WordPress Admin Panel
+
+```php
+  <?php
+
+        function wi_remove_menu_pages() {
+    
+            remove_menu_page(‘edit.php?post_type=page’);	
+        }
+
+        add_action( 'admin_menu', 'wi_remove_menu_pages' );
+
+
+```
+
+#### Removing Submenu
+
+```php
+  <?php
+        function wi_remove_menu_pages() {
+    
+	       remove_submenu_page( 'edit.php?post_type=page', 'post-new.php?post_type=page' );
+        }
+
+        add_action( 'admin_menu', 'wi_remove_menu_pages' );
+
+```
+
+#### Renaming the Main Menu Item
+
+```php
+  <?php
+
+    function custom_admin_menu_name() {  
+        global $menu;
+        $menu[20][0] = 'My Pages'; 
+    } 
+
+    add_action( 'admin_menu', 'custom_admin_menu_name' );
+
+```
+
+#### Renaming the Submenus
+
+```php
+  <?php
+
+    function edit_admin_menu_name() {  
+        global $menu;  
+        global $submenu;  
+                                     
+        $menu[20][0] = 'My Pages'; // Changing the name of Page
+            $submenu['edit.php?post_type=page'][5][0] = 'All My Pages';  
+            $submenu['post-new.php?post_type=page'][10][0] = 'Add a New Page';   
+    }  
+    
+    add_action( 'admin_menu', 'edit_admin_menu_name’);
+
+
+```
+
+#### Changing the Order of the Main Menu Items
+
+```php
+  <?php
+
+    function my_custom_menu_order( $menu_ord ) {
+        if ( !menu_ord )
+            return true;
+        return array( 'index.php', 'edit.php', 'edit.php?post_type=page', 'separator1', 'edit-comments.php' );
+    }
+
+    add_filter( 'custom_menu_order', 'my_custom_menu_order' );
+    add_filter( 'menu_order', 'my_custom_menu_order' );
+
+
+```
+
+#### Removing Widgets From The WordPress Dashboard `if not required`
+
+```php
+  <?php
+
+    function remove_dashboard_widgets() {
+        global $wp_meta_boxes;
+        unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_comments']);
+                                         
+    //Removed recent comments widget
+        unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);
+                                         
+    //Removed incoming links widget
+
+        unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
+     //Removed Other WordPress News widget
+        unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']); 
+    //Removed WordPress Blog widget
+}
+
+    add_action('wp_dashboard_setup', 'remove_dashboard_widgets');
+
+
+```
+
+
+
 
 ### Plugin Development (in code)
 
@@ -1034,6 +1171,38 @@ Directory `plugins` - A location in your theme to develop a plugin
     run_jgdm_dev_plugin();
  
 ```
+
+### Front Page Template
+
++ Rename `frontpage.php` to `front-page.php`.
+  + It contains the information you need for a Site Front Page Template. 
+  
++ In Reading Settings of the Admin area, select "A Static Page" in "Your homepage displays".
+
++ Select one of your page templates to be your "Posts" page. 
+
++ e.g. 
+
+```php
+    <?php if ( $main_blog->have_posts() ):  ?> 
+         
+    <?php while ( $main_blog->have_posts() ) : $main_blog->the_post(); ?>
+                
+    <div class = "entry">
+    
+    </div>
+
+      
+        
+    <?php endwhile; ?>  
+
+    <?php else: ?>        
+
+       <p>No content</p>
+
+    <?php endif; ?> 
+```
+
 ## Plugin List
 [Back to Top](#sections)
 
@@ -1067,7 +1236,7 @@ Directory `plugins` - A location in your theme to develop a plugin
 
 + Highlighting Code Block - `Version 1.6.1 | By LOOS, Inc. | Activated`
 
-+ JGDM Development Plugin - `Version 1.0.0 | By Jonathan Grieve @jg_digitalMedia | Deactivated`
++ JGDM Development Plugin - `Version 1.0.0 | By Jonathan Grieve @jg_digitalMedia | Deactivated - Awaiting Development - WP 6.2 - Dolphy`
 
 + Select LightStart - `Version 2.6.2 | By Themeisle | Activated`
 
@@ -1097,13 +1266,31 @@ Directory `plugins` - A location in your theme to develop a plugin
 
 ### [Get Day Link](https://developer.wordpress.org/reference/functions/get_day_link/) get_day_link() - Has 3 required parameters, Year of post, month of post, day of post
 
+### [Modify WordPress Dashboard #1](https://wpklik.com/wordpress-tutorials/modify-wordpress-dashboard/)
+  + Adding Custom Links in Your WordPress Admin Bar
+  + Adding Custom Text to Your Dashboard Footer
+    
+### [WordPress Integration](https://www.wordpressintegration.com/blog/tips-and-tricks-to-customize-your-wordpress-admin-dashboard/)
+
+  + Removing a Menu From WordPress Admin Panel
+    + Removing Submenu
+    + Renaming the Main Menu Item
+    + Renaming the Submenus
+    + Changing the Order of the Main Menu Items
+    + Removing Widgets From The WordPress Dashboard `if not required`
+   
+
 ## Log
+
+### v2.6
+
++ Set up file and instructions for inclusion of `front-page.php` templates. 
++ Set up for adding code snippets for customising the admin area.
 
 ### v2.5
 
 + Add plugin directory
 + Add plugin directory  `app.css` - `app,js` - `jgdm-plugin-dev.php`
-+ dd
 
 ### v2.4
 + The idea was to have 2 lists of posts... the main Blog post type `home.php` and the Blog Posts custom post type `index.php`. It's technically impossible but works if you don't include a 404 template. `index.php` is the catch-all template and that is what it is used for.  It's the Template Hierarchy.
