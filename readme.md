@@ -1,4 +1,4 @@
-# JGDM Blog Theme (2023) - v2.6 - 18/04/2023 - 14:54
+# JGDM Blog Theme (2023) - v2.6 - 18/04/2023 - 16:45
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -1265,6 +1265,14 @@ Directory `plugins` - A location in your theme to develop a plugin
 ### [Category Pagination](https://www.trickyenough.com/pagination-in-wordpress/)
 
 ### [Get Day Link](https://developer.wordpress.org/reference/functions/get_day_link/) get_day_link() - Has 3 required parameters, Year of post, month of post, day of post
+
+Plugins
+
+### [Plugins #1](https://www.dreamhost.com/blog/how-to-create-your-first-wordpress-plugin/)
+
+### [Plugins #2](https://www.hostinger.co.uk/tutorials/how-to-create-wordpress-plugin#Filters_and_Filter_Hooks)
+
+WordPress Admin Srea Customisations
 
 ### [Modify WordPress Dashboard #1](https://wpklik.com/wordpress-tutorials/modify-wordpress-dashboard/)
   + Adding Custom Links in Your WordPress Admin Bar
