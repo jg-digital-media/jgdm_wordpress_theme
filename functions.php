@@ -7,6 +7,7 @@
 
     // Remove wp version number from scripts and styles
     function remove_css_js_version( $src ) {
+        
         if( strpos( $src, '?ver=' ) )
             $src = remove_query_arg( 'ver', $src );
         return $src;
@@ -16,8 +17,8 @@
     add_filter( 'script_loader_src', 'remove_css_js_version', 9999 );
 
 
-   // Add and Enqueue Theme Assets 
-   function add_theme_assets() {
+    // Add and Enqueue Theme Assets 
+    function add_theme_assets() {
 
         // register styles
         wp_enqueue_style( 'style', get_stylesheet_uri() );     
@@ -30,7 +31,8 @@
 
     add_action( 'wp_enqueue_scripts', 'add_theme_assets' );  
 
-    // Dynamic Sidebars and Widget Area
+
+    // Dynamic Sidebars and Widget Areas
     register_sidebar( array (
 
         'name' => __( 'HTML Block 1'),
@@ -72,9 +74,6 @@
     );   
 
 
-    // Registers the main nav menu
-
-
     // Register Nav Menus
     function main_jgdm_menu(){
         
@@ -86,10 +85,52 @@
     add_action( 'init', 'main_jgdm_menu' );  
 
 
+    /* Customising the Admin Area */
+    function modify_admin_toolbar( $admin_bar ) {
+    
+        // admin toolbar first level item
+        $admin_bar->add_menu( array(
+    
+            'id' => 'quick-links',
+            'title' => 'Quick Links',
+            'href' => '#',
+            'meta' => array(
+              'title' => __( 'Quick Links'),
+            ),
+                                    
+        ));
+        
+        
+        // admin bar second level item
+        $admin_bar->add_menu( array(
+            
+            'id' => 'quick-link-one',
+            'parent' => 'quick-links',
+            'title' => 'All Settings',
+            'href' => admin_url( 'options.php' ),
+            'meta' => array(
+                'title' => __( 'All Settings'),
+                'class' => 'quick-links-class'
+            ),
+        ));
+    }
+
+    add_action( 'admin_bar_menu', 'modify_admin_toolbar', 100 );
+    // Source: https://wpklik.com/wordpress-tutorials/modify-wordpress-dashboard/    
+
+    
+    // Adding Custom Text to Your Dashboard Footer
+    function modify_admin_footer() {
+
+        echo '<span>Developed by <a href="https://www.jonniegrieve.co.uk" target="_blank" rel="noopener noreferrer">JGDM</a>.</span>';
+
+    }
+
+    add_filter( 'admin_footer_text', 'modify_admin_footer' );
+
+
 
 ?>
-
-
 
 <?php
 
