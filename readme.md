@@ -1,4 +1,4 @@
-# JGDM Blog Theme (2023) - v2.6 - 18/04/2023 - 16:45
+# JGDM Blog Theme (2023) - v2.7 - 19/04/2023 - 15:30
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -1272,7 +1272,7 @@ Plugins
 
 ### [Plugins #2](https://www.hostinger.co.uk/tutorials/how-to-create-wordpress-plugin#Filters_and_Filter_Hooks)
 
-WordPress Admin Srea Customisations
+WordPress Admin Area Customisations
 
 ### [Modify WordPress Dashboard #1](https://wpklik.com/wordpress-tutorials/modify-wordpress-dashboard/)
   + Adding Custom Links in Your WordPress Admin Bar
@@ -1289,6 +1289,10 @@ WordPress Admin Srea Customisations
    
 
 ## Log
+
+### v2.7
+
++ Plugin Checked and functional
 
 ### v2.6
 
