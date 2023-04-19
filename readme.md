@@ -1,4 +1,4 @@
-# JGDM Blog Theme (2023) - v2.7 - 19/04/2023 - 15:30
+# JGDM Blog Theme (2023) - v2.7 - 19/04/2023 - 16:00
 
 **URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
 
@@ -37,13 +37,14 @@
 + `[DONE]` - Search Templates 
 + `[DONE]` - Single Post Templates
 + `[DONE]` - Comment templates
++ `[DONE]` - Plugin Development
 + `[DONE]` - Show comment counts on home.php and index.php
 + `[TODO: ]` - Code Snippets
 + `[TODO: ]` - Categories - Listings and Pagination for individual categories
-+ `[TODO: ]` - Customise the admin area with code
-+ `[TODO: ]` - Plugin Development
 + `[TODO: ]` - Pagination links for category templates (`category.php`... etc)
-+ `[TODO: ]` - `HCB` styling to ensure
++ `[TODO: ]` - `HCB` styling to ensure lines break inside container element
++ `[TODO: ] `- Finish - Customise the admin area
++ `[TODO: ]` - Plugin Code Snippets
 + `[TODO: ]` - `single.php ` - Finalise styles for post and page formatting
 
 ### Known Bugs
@@ -905,6 +906,7 @@ Make sure to include support for dynamic menus for navigation and widgets in you
     ```php 
 
         <?php 
+
             // To Come:	
 
     ```
@@ -913,29 +915,41 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 
 ```php
 
-   <?php 
+    <?php 
 
     function modify_admin_toolbar( $admin_bar ) {
     
-     // https://wpklik.com/wordpress-tutorials/modify-wordpress-dashboard/
+        // admin toolbar first level item
+        $admin_bar->add_menu( array(
+    
+            'id' => 'quick-links',
+            'title' => 'Quick Links',
+            'href' => '#',
+            'meta' => array(
+            'title' => __( 'Quick Links'),
+        ),
+                                    
+        ));
     }
-
+                                                 
+   
     add_action( 'admin_bar_menu', 'modify_admin_toolbar', 100 );
 
 ```
+[More](https://wpklik.com/wordpress-tutorials/modify-wordpress-dashboard/)
 
 #### Adding Custom Text to Your Dashboard Footer
 
 ```php
     <?php
 
-        function modify_admin_footer() {
-    
-            echo '<span>Developed by <a href="#" target="_blank" rel="noopener noreferrer">JGDM</a>.</span>';
-                                
-        }
+    function modify_admin_footer() {
 
-        add_filter( 'admin_footer_text', 'modify_admin_footer' );
+        echo '<span>Developed by <a href="#" target="_blank" rel="noopener noreferrer">JGDM</a>.</span>';
+
+    }
+
+    add_filter( 'admin_footer_text', 'modify_admin_footer' );
 
 ```
 
@@ -945,12 +959,12 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 ```php
   <?php
 
-        function wi_remove_menu_pages() {
-    
-            remove_menu_page(‘edit.php?post_type=page’);	
-        }
+    function wi_remove_menu_pages() {
 
-        add_action( 'admin_menu', 'wi_remove_menu_pages' );
+        remove_menu_page(‘edit.php?post_type=page’);	
+    }
+
+    add_action( 'admin_menu', 'wi_remove_menu_pages' );
 
 
 ```
@@ -959,12 +973,13 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 
 ```php
   <?php
-        function wi_remove_menu_pages() {
-    
-	       remove_submenu_page( 'edit.php?post_type=page', 'post-new.php?post_type=page' );
-        }
 
-        add_action( 'admin_menu', 'wi_remove_menu_pages' );
+    function wi_remove_menu_pages() {
+
+       remove_submenu_page( 'edit.php?post_type=page', 'post-new.php?post_type=page' );
+    }
+
+    add_action( 'admin_menu', 'wi_remove_menu_pages' );
 
 ```
 
@@ -1042,7 +1057,7 @@ Make sure to include support for dynamic menus for navigation and widgets in you
 
 
 ```
-
+[MORE](https://www.wordpressintegration.com/blog/tips-and-tricks-to-customize-your-wordpress-admin-dashboard/)
 
 
 
@@ -1293,6 +1308,7 @@ WordPress Admin Area Customisations
 ### v2.7
 
 + Plugin Checked and functional
++ Added some Admin area customisations to `functions.php`
 
 ### v2.6
 
