@@ -1,6 +1,6 @@
-# JGDM Blog Theme (2023) - v2.7 - 19/04/2023 - 16:00
+# JGDM Blog Theme (2023) - v2.7 - 06/09/2024 - 13:28
 
-**URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme)
+**URL:** [Local](http://localhost/wordpress/jgdmblog_2023) - [Repo](https://github.com/jg-digital-media/jgdm_wordpress_theme) - [JGDM Blog Website](https://blog.jonniegrieve.co.uk)
 
 `git clone https://github.com/jg-digital-media/jgdm_wordpress_theme`
 
